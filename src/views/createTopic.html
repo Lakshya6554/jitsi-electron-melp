@@ -1,0 +1,55 @@
+<!-- Create Topic Popup -->
+<section id='createTopic'>
+   <div class="teamPopup-common">
+      <!-- Modal content -->
+      <div class="create-team-main-section">
+         <!--  body section start -->
+         <div class="new-teamSection">
+            <div class="create-team-title">{{LB10}}</div>
+            <!--create-group-pop-section-start-here-->
+            <div class="topic-inner-section group-padding-popup">
+               <div class="upload-main-section clearfix">
+                  <!-- input-details-box-start-->
+                  <div class="input-create-section">
+                     <div class="topic-name-section">
+                        <span class="topic-title">{{LB11}} </span><span class="topic-start">*</span>
+                     </div>
+                     <div class="topic-input-section">
+                        <input type="text" id="topicName" name="" class="group-input" placeholder="{{PH07}}"
+                           maxlength="50">
+                        <div class="teamOrGroupDescCount">
+                           <input type="hidden" name="teamNameCarLimit" id="topicNameCarLimit" value="50">
+                           <span class="teamOrGroupDescIncCount" id="topicNameCounter">0</span>
+                           <span class="limitcharacter">/ 50</span>
+                        </div>
+                     </div>
+                     <!-- input-details-box-end-->
+                     <!-- description-details-box-start-->
+                     <div class="description-details">
+                        <span class="topic-title">{{LB05}}</span>
+                     </div>
+                     <div class="description-area">
+                        <textarea id="topicDesc" class="group-area" placeholder="{{PH08}}" maxlength="300"></textarea>
+                        <div class="teamOrGroupDescCount">
+                           <input type="hidden" name="descCarLimit" value="300" id="topicDescCarLimit">
+                           <span class="teamOrGroupDescIncCount" id="topicDescriptionCounter">0</span>
+                           <span class="limitcharacter">/ 300</span>
+                        </div>
+                     </div>
+                     <!-- description-details-box-end-->
+                  </div>
+               </div>
+               <div class="clearboth"></div>
+               <!--cacel-save button-start-->
+               <div class="cancle-save-btn add_group">
+                  <button class="cancelButtonGlobal" onclick="hidePopup('topic');">{{BT03}}</button>
+                  <button class="submitButtonGlobal inActiveBtn" disabled="disabled" onclick="saveTopic()"
+                     id='topicBtn'>{{BT04}}</button>
+               </div>
+               <!--cacel-save button-end-->
+            </div>
+            <!--create-group-pop-section-end-here-->
+         </div>
+      </div>
+   </div>
+</section>

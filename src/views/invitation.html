@@ -1,0 +1,171 @@
+<!--Invite Contact start-->
+<div class="myNetworkContainer networkPanel" id="invite-contact">
+    <!-- style="display: none;" -->
+    <div class="myNetworkRow mySuggestionStrip">
+        <div class="myNetworkFullColum">
+            <div class="myInviTab">
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                        <ul class="nav nav-tabs" id="invitation-tab-ul">
+                            <li>
+                                <span onclick="openInviteTab('suggestionHead', 'suggetionTab')" data-toggle="tab" class="tabName active" id="suggestionHead">{{LB06}}</span>
+                            </li>
+                            <li class="contactDirectoryLi">
+                                <span onclick="openContactDirectoryOption(event)" data-toggle="tab" class="tabName contactDirectoryOption" id="contactDirectoryHead">{{LB05}} </span>
+                                <div class="common-sort-dropdown hideCls" id="contactDirectoryOption">
+                                    <ul class="filter-list-item ">
+                                        <li onclick="openInviteTab('contactDirectoryHead', 'contactDirectoryTab', 'all')" id="all-contacts">{{LB02}}
+                                        </li>
+                                        <li onclick="openInviteTab('contactDirectoryHead', 'contactDirectoryTab', 'gmail')" id="google-contacts">Google {{LB28}}
+                                        </li>
+                                        <li onclick="openInviteTab('contactDirectoryHead', 'contactDirectoryTab', 'outlook')" id="microsoft-contacts">
+                                            Microsoft {{LB28}}</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="inviteBtnSec inviteBtnSecCenter">
+                <div class="inviteSelectAllDiv" id="inviteSelectAll" onclick="selectAllInvite()">
+                    <div class="contact-check-default inviteSelectAllIcon"></div>
+                    <span class="inviteSelectAllTxt">Select All</span>
+                </div>
+                <button id="inviteNowBtn" class="invite inviteBtnWidth" onclick="multipleInvitePopup()">
+                {{LB04}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="myNetworkRow myImortContact">
+        <div class="myImportTopStrip">
+            <div class="myImortColum">
+                <div class="myImortColumHeading">
+                {{LB07}}
+                </div>
+                <div class="myImortColumBtn tourColum">
+                    <div class="socialButtonsWrapper">
+                    <button class="invite-social" onclick="googleImport(event)" id="import-from-google" tooltip="{{PH01}}" flow="down">
+                        <img src="images/google-invite-cont.svg">
+                        <span class="google-invite-text google-invite-texts">{{PH01}}</span>
+                    </button>
+                    <button class="invite-social" onclick="officeImport()" tooltip="{{PH03}}" flow="down">
+                        <img src="images/icons/office.png" class="micosoftIcon">
+                        <span class="google-invite-text google-invite-texts">Microsoft</span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="myShareColum" id="share-app">
+                <div class="shareApp" id="shareApp">
+                <div class="myImortColumHeading">
+                    {{LB08}}
+                </div>
+                <div class="myImortColumBtn tourShare">
+                <button class="invite-social main-social" onclick="shareonfb()" tooltip="{{PH02}}" flow="down"><img
+                        src="images/facebook-messenger-invite-cont.svg"><span id="shareMessenger"
+                        class="google-invite-text">{{PH02}}</span></button>
+                        <button class="invite-social" onclick="shareontwitter()" tooltip="{{TT01}}" flow="down"><img
+                        src="images/twitter-bird-invite-cont.svg"><span class="google-invite-text">Twitter</span></button>
+                        <button class="invite-social" onclick="shareonlinkedin()" tooltip="{{TT02}}" flow="down"><img
+                        src="images/linked-in-invite-cont.svg"><span class="google-invite-text">LinkedIn</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="myUploadColum" id="upload-invite">
+                <div class="myImortColumHeading">
+                    {{LB09}}
+                </div>
+                <div class="myImortColumBtn tourUpload">
+                    <div class="upload-div" onclick="showCsvPopup()" tooltip="{{BT01}}" flow="down">
+                        <span id="uploadTextData" class="uploadText">{{BT01}}</span>
+                        <img src="images/attachmentss.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myNetworkRow myNetworkTabs">
+        <!-- Loader start -->
+        <div id="InviteLoader">
+            <!-- <div id="loading-bar-spinner" class="spinner">
+            <div class="spinner-icon"></div>
+         </div> -->
+            <div id="loading-bar-spinner" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                <div class="ldio-dpbvxcmmyw">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader end -->
+        <div class="tab-content">
+            <div class="allcontactempty" id="allcontactempty" style="display: none;">
+                <img src="images/contact-directory-Empty.svg">
+                <!-- class="new-user-empty-icon" -->
+                <div class="empty-state-text">
+                    <div class="new-empty-state-title">{{ES01}}</div>
+                    <p class="new-empty-state-subtitle">{{ES02}}</p>
+                    <div class="new-empty-state-btn">
+                        <!-- <span class="google-import" onclick="authClickNew(event);">
+                     <img src="images/icons/google.svg" alt="" class="">
+                     <span class="google-import-label">Google</span>
+                    </span> -->
+                    <button class="invite-social" onclick="googleImport(event)" title="{{AN}}">
+                        <img src="images/google-invite-cont.svg">
+                        <span class="google-invite-text google-invite-texts">{{AN}}</span>
+                    </button>
+                    <button class="invite-social" onclick="officeImport()" title="{{PH03}}">
+                        <img src="images/icons/office.png" class="micosoftIcon">
+                        <span class="google-invite-text google-invite-texts">Microsoft</span>
+                    </button>
+                        <!-- <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=3425a58b-23f5-488e-b2ee-a7b8f4c0da70&response_type=code&redirect_uri=https://www.app.melp.us/auth2_login&tenant=common&prompt=consent&response_mode=query&scope=openid+Contacts.Read+openid+Mail.Send+openid+User.ReadBasic.All+openid+openid+User.Read+offline_access&state=12345&nonce=678910"> -->
+                        <!-- <span class="office-import" onclick="outlookauth();">
+                     <a
+                        href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=3425a58b-23f5-488e-b2ee-a7b8f4c0da70&amp;response_type=code&amp;redirect_uri=https://www.app.melp.us/auth_calendar_sync&amp;tenant=common&amp;prompt=consent&amp;response_mode=query&amp;scope=openid+Contacts.Read+openid+Mail.Send+openid+User.ReadBasic.All+openid+openid+User.Read+offline_access&amp;state=12345&amp;nonce=678910">
+                        <img src="images/icons/office.png">
+                        <span class="google-import-label">Microsoft</span>
+                     </a>
+                  </span> -->
+                    </div>
+                </div>
+            </div>
+            <div id="contactDirectoryTab" class="tab-pane" option="all">
+                <div id="contactDirectory" data-page="0" class="invitation-tab-data contactDirectoryTab suggestionDirectoryDiv">
+                    <span id="contactDirectoryEmpty" class="peopleYouMayKnowEmpty hideCls">We haven't found any results on<b
+                     class="matchStr" id="contactDirectoryEmptyMsg"></b></span>
+                    <ul class="contactDirectoryListing"></ul>
+                </div>
+            </div>
+            <div class="tab-pane invitation-tab-data active" id="suggetionTab" data-page="0">
+                <div id="suggestionsdirectorydata" class="suggestionDirectoryDiv screenHeight">
+                    <ul class="suggestionsdirectorydatapageScroll" id="invitation-suggestion"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Invite Contact end-->

@@ -1,0 +1,227 @@
+html {
+    font-family: 'Montserrat';
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;
+}
+  
+body {
+    padding-top: 7.6rem;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.sticky-offset {
+    top: 7.8rem;
+}
+
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+#sidebar-container {
+    min-height: 100vh;   
+    background-color: #554d4d;
+    padding: 0;
+}
+
+/* Sidebar sizes when expanded and expanded */
+.sidebar-expanded {
+    width: 7rem ;
+}
+.sidebar-collapsed {
+    width: 6rem;
+}
+
+/* Menu item*/
+#sidebar-container .list-group a {
+    height: 5rem;
+    color: white;
+}
+
+/* Submenu item*/
+#sidebar-container .list-group .sidebar-submenu a {
+    height: 4.5rem;
+    padding-left: 3rem;
+}
+.sidebar-submenu {
+    font-size: 0.9rem;
+}
+
+/* Separators */
+.sidebar-separator-title {
+    background-color: #554d4d;
+    text-align: center;
+    /* height: 35px; */
+}
+.sidebar-separator {
+    background-color: #333;
+    height: 2.5rem;
+}
+.logo-separator {
+    background-color: #554d4d;    
+    /* height: 60px; */
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 1rem;
+}
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 1rem;
+}
+/* custom own css */
+/* header logo padding */
+.navbar-brand{
+    padding-top: unset;
+    padding-bottom: unset;
+}
+/* top header background color */
+.bg-primary{
+    background-color: #ffffff !important;
+    padding: 2.4rem;
+    border-bottom: 0.1rem solid #d6dbe1;
+}
+/* body background color */
+.col.py-3{
+    background-color: #f8f8f8;
+}
+.col.py-3 div{
+    float: left;
+}
+.navbar-left{
+    border-right: 0.1rem solid #d6dbe1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7rem;
+    background-image: url(../../images/main/transparent-logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 4.8rem;
+}
+.navbar-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 94.2%;
+}
+.navbar-nav{
+    float: right;
+}
+.navbar-nav li:hover{
+    background-color: #f2f2f2;
+}
+.nav-item{
+    padding: 1.65rem;
+}
+.navbar-title{
+    width: 25%;
+    position: absolute;
+    padding: 1.65rem;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.9rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #000000;
+}
+/* red-border*/
+.red-border{
+    border: 0.1rem solid #ee4136;
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+}
+/* single menu */
+.list-group-item{
+    padding: 1.5rem 1rem;
+}
+.menu-style{
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 0.7rem ;
+    font-weight: 600 ;
+    font-stretch: normal ;
+    font-style: normal ;
+    line-height: 1.6rem ;
+    letter-spacing: 0.10rem ;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+/* menu border */
+.list-group-item{
+    border: unset;
+    cursor: pointer;
+}
+.padding-unset{
+    padding: unset;
+}
+/* menu hover*/
+.sidebar-separator-title:hover{
+    background-color: #737070;
+}
+.profile-menu:hover > ul{
+    display: block;
+}
+.recent-menu:hover > ul{
+    display: block;
+}
+.contacts-menu:hover > ul{
+    display: block;
+}
+.network-menu:hover > ul{
+    display: block;
+}
+/* sub menu */
+.list-group-item ul{
+    width: 13rem;
+    position: absolute;
+    background-color: #554d4d;
+    list-style: none;
+    left: 11.1rem;
+    top: 0;
+    padding-bottom: 0.8rem;
+    display: none;
+}
+.list-group-item ul li{
+    padding-top: 0.8rem;
+    text-align: left;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 0.8rem ;
+    font-weight: 600 ;
+    font-stretch: normal ;
+    font-style: normal ;
+    line-height: 1.6rem ;
+    letter-spacing: 0.10rem ;
+    color: #ffffff;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.list-group-item ul li span{
+    background-color: #737070;
+    padding: 0rem 0.4rem;
+    height: 1.5rem;
+    float: right;
+    margin-right: 1rem;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 0.8rem ;
+    font-weight: 600 ;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.16rem ;
+    text-align: center ;
+    color: #ffffff ;
+    border-radius: 0.2rem ;
+}

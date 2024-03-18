@@ -1,0 +1,395 @@
+<!-- create meeting start -->
+<div class="meeting-popup-section hideCls" id="createMeetingPopup">
+    <!-- conflict popup start here-->
+    <div class="conflictingpopup-center hideCls" id="conflictingpopup-modal">
+        <div class="conflictingpopup-modal">
+            <!-- Modal content -->
+            <div class="conflictingpopup-modal-content">
+                <span class="conflictingpopup-close" onclick="hideConflictPopup()">
+                    <img src="images/cancel.svg">
+                </span>
+                <div class="conflictingpopup-title">{{LB23}}</div>
+                <div class="conflictingpopup-listall">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- conflict popup end -->
+    <!-- conflicting booking start here-->
+    <div class="conflictingpopup-booking-center hideCls conflicutSpace" id="conflictingpopup-booking-modal">
+        <div class="conflictingpopup-booking-modal">
+            <!-- Modal content -->
+            <div class="conflictingpopup-booking-modal-content">
+                <div class="conflictingpopup-booking-title">{{LB21}}</div>
+                <div class="conflictingpopup-booking-main">
+                    <div class="conflictingpopup-booking-title-text">
+                        <span class="conflictingpopup-booking-title-text-span">{{LB22}}
+                        </span>
+                    </div>
+                    <div class="single-user-main">
+                        <ul></ul>
+                    </div>
+                    <div class="conflictingpopup-booking-end-text">
+                        <span class="conflictingpopup-booking-end-text-span">{{AL26}}</span>
+                    </div>
+                    <div class="conflictingpopup-booking-end-btn">
+                        <button class="cancelButtonGlobal" onclick="hideConflictPopup()">
+                            <span class="conflictingpopup-booking-end-cancel-span">{{BT01}}</span>
+                        </button>
+                        <button id="conflictProceed" class="submitButtonGlobal" onclick="conflictSaveMeeting()">
+                            <span class="conflictingpopup-booking-end-proceed-span" id="conflictBtn">{{BT07}}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- conflicting booking end here-->
+    <!--Recurrence Instance Popup Start-->
+    <section class="teamPopup-common removeBg hideCls" id="updateRecurring">
+        <div class="deleteRecurrenceBody">
+            <div class="deleteRecurrenceContent">
+                <div class="deleteRecurrenceTitle">{{LB76}}</div>
+                <div class="dataSection">
+                    <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(1, 'currentInstance')">
+                        <span class=""><i class="currentInstance unCheckInstance"></i></span>
+                        <div class="instance">{{LB77}}</div>
+                    </div>
+                    <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(0, 'allInstance')">
+                        <span class=""><i class="allInstance unCheckInstance"></i></span>
+                        <div class="instance">{{LB78}}</div>
+                    </div>
+                </div>
+                <div class="saveUpdateCancel notifyBtn">
+                    <button class="cancelButtonGlobal" onclick="hideDeleteRecurrence()"> {{BT01}}</button>
+                    <button class="submitButtonGlobal" id="updateRecurrenceBtn" onclick="deleteRecurrence()">
+                        {{BT15}}</button>
+                </div>
+            </div>
+    </section>
+    <!--Recurrence Instance Popup End Here-->
+    <div class="meeting-popup-body-section">
+        <!-- main-event-section start -->
+        <div class="meeting-popup-header meetin-popup-clearfix">
+            <div class="meeting-left-header">
+                <span class="meeting-header-icon">
+                    <img src="images/icons/calendar-icon-header-new.svg" class="calendar-icons">
+                </span>
+                <span class="meeting-header-label">{{BT06}}</span>
+            </div>
+            <div class="meeting-right-header-btn">
+                <button class="cancelButtonGlobal" onclick="hideCreateMeeting()">{{BT01}}</button>
+                <button class="submitButtonGlobal inActiveBtn" disabled id="meeting-save-btn"
+                    onclick="saveMeeting()">{{BT02}}</button>
+            </div>
+        </div>
+        <!-- main-event-section end -->
+        <!-- check edit meeting is true or false Start-->
+        <input type="hidden" name="editmeetingcheck" value="" id="editmeetingcheck">
+        <input type="hidden" name="editMeetingVal" value="" id="editMeetingVal">
+        <input type="hidden" name="meetingDuration" value="" id="meetingDuration">
+        <input type="hidden" name="meetingRepeat" value="" id="meetingRepeat">
+        <!-- check edit meeting is true or false End -->
+        <!-- meeting inerpart section start here -->
+        <div class="main-meetin-inner-section">
+            <div class="meeting-inner-body meetin-popup-clearfix">
+                <div class="meeting-left-part">
+                    <div class="meeting-common-margin">
+                        <!-- meeting-common-margin section start here -->
+                        <div class="m-top-label">
+                            <span class="meeting-common-label meeting-span">
+                                {{LB20}}
+                            </span>
+                            <span class="meeting-start meeting-span">
+                                *
+                            </span>
+                        </div>
+                        <div class="">
+                            <input type="text" class="common-input-label-meeting" placeholder="{{PH02}}"
+                                autocomplete="off" id="eventtitle" onkeyup="isValidateButton('calendar')">
+                        </div>
+                        <!-- common-error-field -->
+                        <!-- <div class="common-error-field hideCls">
+                                <span class="common-info-icons-section"><img src="images/info-red.svg"
+                                        class="common-info-icons"> </span>
+                                <span class="common-error-field-label">Please enter event title</span>
+                            </div> -->
+                        <!--invietees main section start here  -->
+                        <div class="invitees-main-section" id="invitees-section">
+                            <div class="add-invite-section" onclick="rightContactPanel('calendar', false, true)">
+                                <div class="invitie-padding meetin-popup-clearfix">
+                                    <div class="add-invite-title">
+                                        <div>
+                                            <span class="invites-label">
+                                                {{PH01}}
+                                            </span>
+                                            <span class="invites-plus">
+                                                <img src="images/icons/add.svg" class="">
+                                            </span>
+                                        </div>
+                                        <div class="add-invite-icon">
+                                            <img src="images/icons/duration-selection.svg" class="">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- search invite start here -->
+                            <div class="input-invite-section">
+                                <!-- addinvite section  start-->
+                                <div class="add-invite-member" id="createMeetingMember"></div>
+                                <!-- addinvite section end -->
+                                <input type="text" class="common-input-label-meeting meeting_border meetingPlaceHolder"
+                                    autocomplete="off" placeholder="{{LB01}}" onkeyup="searchContact('calendar')"
+                                    id="searchUser" style="border: none;">
+                                <!-- search listing invite  section-->
+                                <div class="search-listing-invite add-invitees-popup-main monthSearch"
+                                    style="display: none;">
+                                </div>
+                            </div>
+                            <!-- search invite end here -->
+                        </div>
+                        <!-- You can add up to 150 people to the meeting.  -->
+                        <div class="more-people-section" style="display:none">
+                            <span class="warning-icon-section">
+                                <img src="images/info-red.svg" class="warning-icon">
+                            </span>
+                            <span class="more-people">
+                                You can add up to 150 people to the meeting.
+                            </span>
+                        </div>
+                        <!-- You can add up to 150 people to the meeting.  -->
+                        <!--invietees main section end here  -->
+                        <!-- date duration section start here -->
+                        <div class="data-duration-section  meetin-popup-clearfix">
+                            <div class="date-left ">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB02}}
+                                </span>
+                                <span class="meeting-start meeting-span">
+                                    *
+                                </span>
+                                <div class="common-bg-dropdown" id="checkDate" onclick="showDatePopup(event, 'checkDate')">
+                                    <input type="hidden" id="checkDateVal">
+                                    <div class="dateDropdown dropdown-flex">
+                                        <div class="dropdown-inner-label ">
+                                            <div class="newevent-calender-text">
+                                                <span class="newevent-calender-texttext-span">November 23,
+                                                    2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="dateDropdown dropdown-calender-icon-section">
+                                            <img src="images/icons/calendar.svg"
+                                                class="dateDropdown calender-icons">
+                                        </div>
+                                    </div>
+                                    <!-- date hrml -->
+                                    <div id="datePopup" class="calendar-in-meeting-schedule" style="display: none;">
+                                        <div class="newevent-calendar-popup">
+                                            <div class="dateDropdown date-inner-header">
+                                                <div class="newevent-calendar-popup-left">
+                                                    <span class="newevent-calendar-popup-date">November 23,
+                                                        2021</span>
+                                                </div>
+                                                <div class="newevent-calendar-popup-right">
+                                                    <span class="dateDropdown newevent-calendar-popup-arrow-left">
+                                                        <img src="images/icons/chevron-left-l.svg"
+                                                            class="chevron-left dateDropdown"
+                                                            onclick="changeMonthInEvent(-1, event, 'checkDateVal')">
+                                                        <img src="images/icons/chevron-right-r.svg"
+                                                            class="chevron-right dateDropdown"
+                                                            onclick="changeMonthInEvent(1, event, 'checkDateVal')">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="newevent-calendar-popup-days">
+                                                <div class="popup-days"><span class="popup-days-span">{{LB52}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB53}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB54}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB55}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB56}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB57}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB58}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="newevent-calendar-popup-line"></div>
+                                            <div class="newevent-calendar-popup-date-main"></div>
+                                            <div class="newevent-calendar-popup-line-down"></div>
+                                        </div>
+                                    </div>
+                                    <!-- date html end -->
+                                </div>
+                            </div>
+                            <div class="duration-right">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB03}}
+                                </span>
+                                <span class="meeting-start meeting-span">
+                                    *
+                                </span>
+                                <div class="durationDropdown common-bg-dropdown" id="date-open"
+                                    onclick="showHideDuration()">
+                                    <div class="durationDropdown dropdown-flex">
+                                        <div class="durationDropdown dropdown-inner-label" id="date-duration">15
+                                            minutes </div>
+                                        <div class="durationDropdown dropdown-calender-icon-section">
+                                            <img src="images/dateChev.svg" class="durationDropdown dropdown-icons">
+                                        </div>
+                                    </div>
+                                    <!--  drodown start here -->
+                                    <ul class="common-dropdown-ul" id="durationDropdown" style="display:none;"></ul>
+                                    <!--  drodown end here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- date duration section end here -->
+                        <!-- titmezone section -->
+                        <div class="titmezone-section">
+                            <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                {{LB04}}
+                            </span>
+                            <span class="meeting-start meeting-span">
+                                *
+                            </span>
+                            <div class="timezoneDropdown common-bg-dropdown" id="timezone-open"
+                                onclick="showHideTimeZone()">
+                                <div class="timezoneDropdown dropdown-flex">
+                                    <div class="timezoneDropdown dropdown-inner-label" id="selectTimeZone">
+                                        Select
+                                    </div>
+                                    <div class="timezoneDropdown dropdown-calender-icon-section">
+                                        <img src="images/dateChev.svg" class="timezoneDropdown dropdown-icons">
+                                    </div>
+                                </div>
+                                <!--  drodown start here -->
+                                <div id="timeZoneDropdown" class="dropdown-content timezoneDropdown"
+                                    style="display: none;">
+                                    <input type="text" placeholder="{{PH03}}" id="timeZoneInput"
+                                        onkeyup="filterTimeZone()" class="timezoneDropdown" autocomplete="off"
+                                        onclick="focusTimeZone(event)">
+                                    <ul class="common-dropdown-ul" id="timezone-toogle"></ul>
+                                </div>
+                                <!--  drodown end here -->
+                            </div>
+                        </div>
+                        <!-- titmezone section -->
+                        <!-- recurrence reminder sectiom -->
+                        <div class="data-duration-section  meetin-popup-clearfix">
+                            <div class="date-left">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB05}}
+                                </span>
+                                <div class="recurrenceDropdown common-bg-dropdown" id="recurrence-open"
+                                    onclick="showHideRecurrence()">
+                                    <div class="recurrenceDropdown dropdown-flex">
+                                        <input type="hidden" id="recurrenceVal">
+                                        <div class="recurrenceDropdown dropdown-inner-label" id="recurrentDiv">Once
+                                        </div>
+                                        <div class="recurrenceDropdown dropdown-calender-icon-section">
+                                            <img src="images/dateChev.svg" class="recurrenceDropdown dropdown-icons">
+                                        </div>
+                                    </div>
+                                    <!--  drodown start here -->
+                                    <ul class="common-dropdown-ul" id="recurrence-toogle" style="display: none;">
+                                    </ul>
+                                    <!--  drodown end here -->
+                                </div>
+                            </div>
+                            <div class="duration-right">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB06}}
+                                </span>
+                                <div class="reminderDropdown common-bg-dropdown" id="reminder-open"
+                                    onclick="showHideReminder()">
+                                    <div class="reminderDropdown dropdown-flex">
+                                        <div class="reminderDropdown dropdown-inner-label" id="reminderDiv">{{AL01}}
+                                        </div>
+                                        <div class="reminderDropdown dropdown-calender-icon-section">
+                                            <img src="images/dateChev.svg" class="reminderDropdown dropdown-icons">
+                                        </div>
+                                    </div>
+                                    <!--  drodown start here -->
+                                    <ul class="common-dropdown-ul" id="reminder-toogle" style="display: none;"></ul>
+                                    <!--  drodown end here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- recurrence reminder sectiom  end-->
+                        <!-- Text editor  section start here -->
+                        <div class="editor-main-section" id="description-section">
+                            <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                {{LB07}}
+                            </span>
+                            <!-- Description Editor -->
+                            <div class="summernote" id="summernote"> </div>
+                        </div>
+                        <!-- Text editor section end here -->
+                        <!-- attchment section start here -->
+                        <div class="attachment-main-section">
+                            <div class="data-duration-section  meetin-popup-clearfix">
+                                <div class="date-left">
+                                    <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                        {{LB08}}
+                                    </span>
+                                    <span style="float: right;"
+                                        class="meeting-common-label meeting-span meeting-mt-mb">{{LB09}}: 2MB</span>
+                                    <div class="common-bg-dropdown-attach" id="uploadCalendarArea">
+                                        <div class="">
+                                            <label class="uplaodfileMonthView">
+                                                <span class="upoladFileLabel">{{LB18}}</span>
+                                                <span id="file-count" class="file-count">0</span>
+                                                <img src="images/attachment.svg" title="Attachment file"
+                                                    class="attachmentIconMeeting">
+                                                <input type="file" id="upload-calendar-file" multiple=""
+                                                    onchange="uploadAttachment(event)">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="duration-right">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- uploaded file -->
+                        <div class="uploaded-section-area" style="display: block;"></div>
+                        <!-- attchment section start end -->
+                    </div>
+                    <!-- meeting-common-margin section end here -->
+                </div>
+                <!-- "meeting-right-part start here -->
+                <div class="meeting-right-part" id="meeting-right-part">
+                    <div class="availble-section">
+                        <div class="m-top-label">
+                            <span class="meeting-common-label meeting-span">
+                                {{LB10}}
+                            </span>
+                            <span class="meeting-start meeting-span">
+                                *
+                            </span>
+                        </div>
+                        <!-- availble inner par section -->
+                        <div class="availble-inner-part">
+                            <section class="center-loader" style="display: none;">
+                                <div class="pleaseWait">
+                                    {{LB11}}
+                                </div>
+                            </section>
+                            <ul class="availble-ul"></ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- "meeting-right-part end here -->
+            </div>
+        </div>
+        <!-- meeting inerpart section end here -->
+    </div>
+</div>
+<!-- create meeting end -->

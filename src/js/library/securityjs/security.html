@@ -1,0 +1,99 @@
+<html>
+<!--script type="text/javascript" src="require.js"></script-->
+<!--script type="text/javascript" src="ecdh-master/index.js"></script-->
+<script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
+<!--script type="text/javascript" src="ecdh-master/examples/ecdh.js"></script-->
+<script type="text/javascript" src="sha256.js"></script>
+<script type="text/javascript" src="base64js.min.js"></script>
+<script>
+    
+    
+   function encrypt(key_hashed,text)
+    {
+    var key = aesjs.utils.hex.toBytes(key_hashed);  
+    var iv = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70];
+    var textBytes = aesjs.utils.utf8.toBytes(text);
+textBytes = aesjs.padding.pkcs7.pad(textBytes);
+var aesCbc = new aesjs.ModeOfOperation.cbc(key, iv);
+var encryptedBytes = aesCbc.encrypt(textBytes);
+ 
+// To print or store the binary data, you may convert it to hex 
+var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+console.log(encryptedHex);
+var base64String = base64js.fromByteArray(encryptedBytes);
+
+console.log("base64 encoded value " + base64String);
+return base64String;
+    } 
+    
+function decrypt(key_hashed,base64String)
+    {
+    var key = aesjs.utils.hex.toBytes(key_hashed);  
+    var iv = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70];
+    // When ready to decrypt the hex string, convert it back to bytes 
+//var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
+var fromBase64 = base64js.toByteArray(base64String);
+// The cipher-block chaining mode of operation maintains internal 
+// state, so to decrypt a new instance must be instantiated. 
+var aesCbc = new aesjs.ModeOfOperation.cbc(key, iv);
+var frombase64decryptedBytes = aesCbc.decrypt(fromBase64);
+var aesCbc1 = new aesjs.ModeOfOperation.cbc(key, iv);
+var decryptedBytes = aesCbc.decrypt(encryptedBytes);
+
+// Convert our bytes back into text 
+var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
+var frombase64decryptedText = aesjs.utils.utf8.fromBytes(frombase64decryptedBytes);
+console.log("decrypted text from base 64 "+frombase64decryptedText);
+return frombase64decryptedText;
+    } 
+    
+var keyTest = "226770544adc0bf14336cece6309e35634ac67ed24a246e853380f7852c6c2b1";
+
+
+var key = aesjs.utils.hex.toBytes(keyTest);
+
+// The initialization vector (must be 16 bytes) 
+var iv = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70];
+ 
+// Convert text to bytes (text must be a multiple of 16 bytes) 
+var text = 'this is test message 0';
+var textBytes = aesjs.utils.utf8.toBytes(text);
+textBytes = aesjs.padding.pkcs7.pad(textBytes);
+var aesCbc = new aesjs.ModeOfOperation.cbc(key, iv);
+var encryptedBytes = aesCbc.encrypt(textBytes);
+ 
+// To print or store the binary data, you may convert it to hex 
+var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+console.log(encryptedHex);
+var base64String = base64js.fromByteArray(encryptedBytes);
+
+console.log("base64 encoded value " + base64String);
+// "104fb073f9a131f2cab49184bb864ca2" 
+ 
+// When ready to decrypt the hex string, convert it back to bytes 
+var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
+var fromBase64 = base64js.toByteArray(base64String);
+// The cipher-block chaining mode of operation maintains internal 
+// state, so to decrypt a new instance must be instantiated. 
+var aesCbc = new aesjs.ModeOfOperation.cbc(key, iv);
+var frombase64decryptedBytes = aesCbc.decrypt(fromBase64);
+var aesCbc1 = new aesjs.ModeOfOperation.cbc(key, iv);
+var decryptedBytes = aesCbc.decrypt(encryptedBytes);
+
+// Convert our bytes back into text 
+var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
+var frombase64decryptedText = aesjs.utils.utf8.fromBytes(frombase64decryptedBytes);
+console.log("decrypted text from base 64 "+frombase64decryptedText);
+
+//SHA256 calculations
+var hash = sha256.create();
+hash.update('Message to hash');
+var hashedValue = hash.hex();
+alert("Hashed Value is " + hashedValue);
+
+</script>
+<body>
+hello security world
+</body>
+</html>
+

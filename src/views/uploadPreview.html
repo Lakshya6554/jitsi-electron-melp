@@ -1,0 +1,38 @@
+<!--file-priview popup-start-Here-->
+<section id="uploadPreview" class="teamPopup-common">
+    <div class="commoneSec">
+        <div id="chatFileSection" class="upload-chat-section" style="display: none;">
+            <div class="upload-chat-title">
+                {{LB37}} (<span class="totalFile">1</span>)
+            </div>
+            <ul class="list"></ul>
+        </div>
+        <div id="mediaSection" class="file-priview-upload-body" style="display: none;">
+            <div class="priview-title">
+                {{LB41}} (<span class="totalFile">1</span>)
+            </div>
+            <!-- image show -->
+            <div class="upload-img-single-show" id="single-media-section">
+                <img src="">
+                <video class="file-main-img-second" src="" controls="" id="single-video"
+                    style="width: 100%; display: none;"></video>
+            </div>
+            <div class="full-images-file-section">
+                <div class="img-scrolls-section">
+                    <section class="all-img-area" id="all-images-section"></section>
+                </div>
+            </div>
+            <!-- send cancel section  -->
+
+            <!-- send cancel section  -->
+        </div>
+        <div class="saveUpdateCancel uploadBtn fileSecBtn">
+            <div class="note-subtitle">{{LB38}}</div>
+            <div class="rightUploadBtn">
+                <button class="cancelButtonGlobal" onclick="hideFileUploadForChat()"> {{BT09}}</button>
+                <button class="submitButtonGlobal" id="chatFileSendBtn" onclick="sendFile()"> {{BT02}}</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--file-priview popup-end-Here-->

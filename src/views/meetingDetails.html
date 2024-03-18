@@ -1,0 +1,88 @@
+<!-- meeting details popup start -->
+<div class="calendarModalPop" id="meetingpopup-modal" style="display: none;">
+    <div class="meetingpopup-center">
+        <div class="meetingpopup-modal">
+            <!-- Modal content -->
+            <div class="meetingpopup-modal-content">
+                <div class="meetingpopup-top"></div>
+
+                <div class="meetingpopup-heading">
+                    <span class="meetingpopup-Oval"></span><span class="meetingpopup-title">NYC Marketing Team
+                        Meetup</span>
+                    <div class="meetingpopup-day">
+                        <span class="meetingpopup-date">09/10/2024</span>
+                        <span class="meetingpopup-date">|</span>
+                        <span class="meetingpopup-date">04:00 - 05:00 PM</span>
+                    </div>
+                </div>
+                <div class="meetingpopup-organiser">
+                    <i class="meetingpopup-user-icon" title="User Name"></i><span class="meetingpopup-user-name">John
+                        Doe</span><span class="meetingpopup-invited">{{LB30}}</span>
+                </div>
+                <div class="total-participants">
+                    <span class="total-participants-style">{{LB31}} (<span id="all-participants"></span>)</span>
+
+                </div>
+                <div class="meetingpopup-user">
+                </div>
+                <div class="meetingpopup-description">
+                    <div class="meetingpopup-description-heading">
+                        <i title="Description" class="meetingpopup-description-icon"></i>
+                        <span class="meetingpopup-desc">{{LB07}}</span>
+                    </div>
+                    <div class="meetingpopup-description-details"></div>
+                </div>
+                <div class="meetingpopup-notification">
+                    <i class="meetingpopup-notification-icon" title="Notification"></i><span
+                        class="meetingpopup-notification-content">15 minutes before</span>
+                </div>
+                <div class="meetingpopup-notification attachment">
+
+                </div>
+
+            </div>
+            <div class="attendingshowhide">
+                <div class="meetingpopup-attending">
+                    <div class="meetingpopup-attending-title">{{LB24}}</div>
+                    <div class="meetingpopup-attending-content">
+                        <span class="meetingpopup-accept" title="{{LB25}}">{{LB25}}</span>
+                        <span class="meetingpopup-decline" title="{{LB27}}">{{LB27}}</span>
+                        <span class="meetingpopup-tentative" title="{{LB29}}">{{LB29}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="meetingpopup-notifyme">
+                <div class="meetingpopup-notify-button meetingpopup-notify-button-flex" id="notifyButtonPanel">
+                    <span id="notifyBtn"></span>
+                    <span id="joinBtn"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Recurrence Instance Popup Start-->
+    <section class="teamPopup-common removeBg hideCls" id="deleteRecurring">
+        <div class="deleteRecurrenceBody">
+            <div class="deleteRecurrenceContent">
+                <div class="deleteRecurrenceTitle">{{LB76}}</div>
+                <div class="dataSection">
+                    <input type="hidden" id="updateDeleteInstance">
+                    <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(1, 'currentInstance')">
+                        <span class=""><i class="currentInstance unCheckInstance"></i></span>
+                        <div class="instance">{{LB77}}</div>
+                    </div>
+                    <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(0, 'allInstance')">
+                        <span class=""><i class="allInstance unCheckInstance"></i></span>
+                        <div class="instance">{{LB78}}</div>
+                    </div>
+                </div>
+                <div class="saveUpdateCancel notifyBtn">
+                    <button class="cancelButtonGlobal" onclick="hideDeleteRecurrence()"> {{BT01}}</button>
+                    <button class="saveBtn-profile-page" id="deleteRecurrenceBtn" onclick="deleteRecurrence('8hxe3goddvy8', '1686751200000', 'weekly', '15', 'GMT', '8hxe3goddvy8')">
+                        {{BT15}}</button>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!--Recurrence Instance Popup End Here-->
+</div>
+<!-- meeting details popup end -->

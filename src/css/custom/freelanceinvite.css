@@ -1,0 +1,314 @@
+body {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+}
+.cityname {
+	text-transform: capitalize;
+}
+.statename {
+	text-transform: uppercase;
+}
+.csortname {
+	text-transform: uppercase;
+}
+.external-wrapper {
+	width: 100%;
+	margin: 0rem;
+	padding: 0rem;
+}
+.melplogo {
+	width: auto;
+	height: 5rem;
+	margin-top: 0.5rem;
+}
+.freelance-invite-section {
+	/*position: fixed;*/
+	width: 80%;
+	/*margin: 0 auto;
+    bottom: 87px;
+    left: 0px;
+    right: 0px;
+    top: 197px;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--white);
+	padding: 1.4rem 0rem 1.4rem 0rem;
+	border-radius: 0.3rem;
+	border: 0.1rem solid var(--gray);
+}
+.invite-main-title {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+	font-size: 1.7rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.05;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--black);
+	padding-top: 0rem;
+}
+.freelance-invite-subtile {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: var(--brown);
+}
+/* freelance card css  */
+.freelnce-scroll-section {
+	overflow-y: scroll;
+	height: calc(100vh - 37.3rem);
+}
+.freelance-common-width {
+	width: 95%;
+	margin: 0 auto;
+}
+.allClearfixWidth::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.card-main-section {
+	width: 100%;
+}
+.freelnace-common-card {
+	padding: 1.6rem 1.6rem 1.6rem 1.7rem;
+	border: solid 0.1rem var(--gray);
+	background-color: var(--white);
+	width: 24%;
+	min-height: 27.7rem;
+	float: left;
+	margin: 0.5rem;
+}
+.freelncer-ulLIst {
+	padding: 0rem;
+	margin: 0rem;
+	list-style-type: none;
+}
+.contact-directory-div-image {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 1.7rem;
+}
+.margin0 {
+	margin:0px !important
+}
+.contact-directory-div-image img {
+	border-radius: 0.4rem;
+	/* border: solid 0.1rem var(--red) !important; */
+	padding: 0.2rem;
+	margin-top: 5rem;
+}
+.contact-directory-div-data {
+	padding-left: 1rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 21rem;
+}
+.fullname-contact-suggestion {
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.2rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+	white-space: nowrap;
+	width: 20rem;
+	margin-bottom: 0.2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.email-contact-suggestion {
+	padding: 0;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	text-align: left;
+	margin-bottom: 0.3rem;
+	text-transform: capitalize;
+}
+.phone-contact-suggestion {
+	padding: 0;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	text-align: left;
+	margin-bottom: 0.3rem;
+}
+.company-invite {
+	margin-bottom: 1.5rem;
+}
+.profession-heading-text {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+	font-size: 1rem;
+	font-weight: 600;
+	font-style: normal;
+	display: inline-block;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--black);
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+}
+.dept-invite {
+	margin-bottom: 2rem;
+}
+.profession-heading {
+	border-radius: 0.4rem;
+	padding: 0.5rem 1rem;
+	background-color: var(--dark-white);
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato !important;
+	color: var(--dark-gray);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-right: 0.4rem;
+	max-width: 25rem;
+	display: inline-block;
+	text-transform: capitalize;
+}
+.contact-directory-div-button {
+	margin-top: 1.4rem;
+}
+
+button:focus {
+	outline: unset !important;
+}
+@media (max-width: 1600px) {
+	.freelnace-common-card {
+		width: 32.4%;
+	}
+}
+@media (max-width: 1500px) {
+	.freelnace-common-card {
+		width: 32.3%;
+	}
+}
+@media (max-width: 1400px) {
+	.freelnace-common-card {
+		width: 32.2%;
+	}
+	.invite-main-title {
+		font-size: 1.6rem;
+	}
+	.freelnce-scroll-section {
+		/* overflow-y: scroll;
+		height: calc(100vh - 302px); */
+	}
+}
+
+@media (max-width: 1300px) {
+	.freelnace-common-card {
+		width: 32.2%;
+	}
+	.invite-main-title {
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 1200px) {
+	.freelnace-common-card {
+		width: 32.1%;
+	}
+}
+@media (max-width: 1100px) {
+	.freelnace-common-card {
+		width: 32%;
+	}
+}
+@media (max-width: 1024px) {
+	.freelnace-common-card {
+		width: 32%;
+	}
+}
+
+@media (max-width: 1023px) {
+	.freelnace-common-card {
+		width: 100%;
+		float: none;
+	}
+}
+.contact-directory-professional-data {
+    height: 10rem;
+}
+.invited {
+	width         : 100%;
+	border-radius : 0.3rem;
+	font-family   : "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato;
+	font-weight   : 600;
+	font-stretch  : normal;
+	font-style    : normal;
+	line-height   : 1.9rem;
+	letter-spacing: 0.1rem !important;
+	text-align    : center;
+	outline       : none;
+	font-size     : 1.3rem;
+	padding       : 0.8rem 1.5rem;
+	text-transform  : uppercase;
+	background-color: var(--white) !important;
+	border          : solid 0.1rem var(--dark-gray) !important;
+	color           : var(--dark-gray) !important;
+	cursor          : not-allowed !important;
+}
+.invited:hover{
+	background-color: var(--white) !important;
+	border          : solid 0.1rem var(--dark-gray) !important;
+	color           : var(--dark-gray) !important;
+}
+.invited:focus {
+	border: solid 0.1rem var(--gray);
+}
+
+.invite {
+	width         : 100%;
+	border-radius : 0.3rem;
+	font-family   : "Montserrat", "Open Sans", "Source Sans Pro", sans-serif, Lato;
+	border        : solid 0.1rem var(--dark-gray);
+	font-weight   : 600;
+	font-stretch  : normal;
+	font-style    : normal;
+	line-height   : 1.9rem;
+	letter-spacing: 0.1rem !important;
+	text-align    : center;
+	color         : var(--white);
+	outline       : none;
+	font-size     : 1.3rem;
+	padding       : 0.8rem 1.5rem;
+	text-transform: uppercase;
+	background    : var(--dark-gray);
+	cursor        : pointer;
+}
+
+.invite:focus {
+	border: solid 0.1rem var(--dark-gray);
+}
+.invite:hover{
+	background    : var(--red);
+	border        : solid 0.1rem var(--red);
+}

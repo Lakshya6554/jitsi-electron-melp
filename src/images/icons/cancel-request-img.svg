@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Cancel Request</title>
+    <g id="Web-App-Prototype" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.7_MelpApp_Recent_Messages_Chat-UI_Image-Upload_21th-Jan" transform="translate(-788.000000, -699.000000)">
+            <g id="Cancel-Request" transform="translate(789.000000, 700.000000)">
+                <rect id="Rectangle-" stroke="#EE4136" fill="#EE4136" x="0" y="0" width="16" height="16" rx="1"></rect>
+                <polygon id="Shape" stroke="#FFFFFF" stroke-width="0.5" fill="#FFFFFF" fill-rule="nonzero" points="11.3333333 5.33809524 10.6619048 4.66666667 8 7.32857143 5.33809524 4.66666667 4.66666667 5.33809524 7.32857143 8 4.66666667 10.6619048 5.33809524 11.3333333 8 8.67142857 10.6619048 11.3333333 11.3333333 10.6619048 8.67142857 8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

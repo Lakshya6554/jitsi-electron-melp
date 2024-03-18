@@ -1,0 +1,114 @@
+<!--  sign in section starts -->
+<!-- <section class="container signup-login-m ">
+    <div class="main-box"> -->
+
+<section id="login-template" class="signIn-form-new box-login  signIn-form-new box-login login-common-box-style">
+    <div class="common-padding-login">
+        <div class="display-flex-login">
+            <div class="flex-left form-cont">
+                <div class="loginSignupRighContainer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="login-logo-commmon log-m-top">
+                                <img src="images/melpapp-logo.svg" class='login-logo' importance="low" loading="lazy">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="signup-text">{{LB01}}
+                                <span class="border-bottom-sign"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <section class="common-login-w">
+                                <div class="text-input-div m-new-login" id="formlogin">
+                                    <!-- left section login  -->
+                                    <section class="InputMb">
+                                        <div class="floating-label-group">
+                                            <input type="text" id="username" name="email" class="loginInput" autocomplete="off" autofocus />
+                                            <label class="floating-label">{{LB02}} *</label>
+                                        </div>
+                                        <div class="tooltips-fullname tooltips-common-error toolTipsCommonErrors" id="emailerrortooltip" style="display:none">
+                                            <div class="tooltipTextFullName">
+                                                <div class="subtitle-error-fullName subTitleErrorBox" id="emailerrortext">
+                                                </div>
+                                            </div>
+                                            <!-- error msg full name end -->
+                                        </div>
+                                    </section>
+                                    <!-- error msg full name end -->
+                                </div>
+                                <div class="InputMb">
+                                    <div class="floating-label-group">
+                                        <input type="password" name="password" id="password" placeholder="" class="loginInput" autocomplete="new-password">
+                                        <label class="floating-label">{{LB03}} *</label>
+                                        <div class="newEyeIcon" onclick="showPassword('password')" loading="lazy" id="passwordEye"></div>
+                                    </div>
+                                    <!-- error msg full name start Darshan & Ram -->
+                                    <div class="tooltips-fullname tooltips-common-error toolTipsCommonErrors" id="loginerrortooltip" style="display:none">
+                                        <div class="tooltipTextFullName">
+                                            <div class="subtitle-error-fullName subTitleErrorBox" id="signinpassworderror">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- error msg full name end -->
+                                </div>
+                                <div class="sign-checkbox">
+                                    <span class="check-login" onclick="toggleIcon(this)"></span>
+                                    <span class="remember-login">
+                                        {{CB01}}
+                                    </span>
+                                    <a class="signIn-forgot" href="#forgot">{{BT01}}
+                                    </a>
+                                </div>
+                                <div class="password-signUp" style="visibility: hidden;">
+                                    <input type="password" name="password" placeholder="{{LB03}} *">
+                                </div>
+                                <div class="saveButton" style="margin-top: 0px;">
+                                    <button id="loginNewBtn" type="button" onclick="login();" class="">{{BT02}}</button>
+                                </div>
+                            </section>
+                            <!-- right section login  -->
+                            <section class="">
+                                <div class="or-spacing login">
+                                    <span class="or-text">{{LB04}}</span>
+                                </div>
+                                <div class=" text-social-div">
+                                    <div class="signUp-social-icons float-left-google commonUserloginBtn">
+                                        <a onclick="getGoogleLoginUrl('login')" href="javascript:void(0);">
+                                            <img class="email-info-google" src="images/google-sign.svg" loading="lazy">
+                                            <span id="signin-google">{{BT03}}</span>
+                                        </a>
+                                    </div>
+                                    <div class="signUp-social-icons float-left-office commonUserloginBtn">
+                                        <a onclick="getOfficeLoginUrl('login')" href="javascript:void(0);">
+                                            <img class="email-info-outlook" src="images/icons/office.png" loading="lazy">
+                                            <span id="signin-office"> {{BT04}} </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <span class="signup-privacy">
+                                            {{LB05}}
+                                            <a class="signup-privacy-a" href="#signupuser">
+                                                {{BT05}}
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <section>
+                                    <!--right part end here  -->
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SignUp Section Ends -->

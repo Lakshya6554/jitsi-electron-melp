@@ -1,0 +1,1088 @@
+<!-- Cloud Calendar End -->
+<section id="subCalender-view" class="subsubCalender">
+    <div class="calendarTopStrip">
+        <div class="calendarLeftBar">
+            <div class="subCalenderTabs">
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                        <ul class="nav subCalenderTab">
+                            <li>
+                                <span class="active settingTab" onclick="settingTab(this, 'calendarSetting')">
+                                    {{LB81}} </span>
+                            </li>
+                            <li>
+                                <span class="settingTab" onclick="settingTab(this, 'eventType')">
+                                    {{LB109}} </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calendarRightBar">
+            <div class="viewCalender">
+                <!-- <button class="cancelButtonGlobal headerBtn calendarSetting"
+                    onclick="switchPage('calendar', '', event)">
+                    <img src="images/icons/blockIcon.svg" class="blockIcon">BLOCK USER
+                </button> -->
+                <button class="cancelButtonGlobal headerBtn calendarSetting"
+                    onclick="switchPage('calendar', '', event)">
+                    {{LB87}}
+                </button>
+
+                <button class="submitButtonGlobal headerBtn eventType hideCls" onclick="createEventType()">
+                    <span class="New-Event">{{LB92}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="calendarbody">
+        <input type="hidden" id="startDateVal">
+        <input type="hidden" id="endDateVal">
+        <!-- calendar Setting start -->
+        <div class="main-meetin-inner-section subCalenderType subCalendarBody calendarSetting">
+            <div class="meeting-inner-body meetin-popup-clearfix">
+                <div class="meeting-left-part">
+                    <div class="meeting-common-margin">
+
+                        <!--  Welcome MESSAGE section -->
+                        <div class="titmezone-section">
+                            <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                {{LB83}}
+                                <div class="infoDropDown" id="infoPopup" style="display:none">
+                                    <span class="dropDownCaret"></span>
+                                    <h2>{{LB83}}</h2>
+                                    <p>{{LB84}}</p>
+                                </div>
+                                <div class="subCalenderInfoParent" tooltip="Info" flow="down">
+                                    <img src="images/icons/message-on-info-icon.svg" class="subCalenderInfoIcon"
+                                        onclick="toggleInfo(event, 'infoPopup')">
+                                </div>
+                            </span>
+                            <div class="subCalenderInfo">
+                                <textarea id="calendarSettingDesc" class="calenderMsgBar"
+                                    placeholder="{{LB86}}"
+                                    maxlength="250" onkeyup="calendarSettingDescCount()"></textarea>
+                                <div class="subCalenderCount">
+                                    <input type="hidden" name="descCarLimit" value="250">
+                                    <div class="calenderCount" id="calendarSettingCount">0</div>
+                                    <div class="calenderlimitcharacter">/ 250</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  Welcome MESSAGE section -->
+                        <!-- date duration section start here -->
+                        <div class="data-duration-section  meetin-popup-clearfix">
+                            <div class="date-left">
+                                <div class="titmezone-section">
+                                    <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                        {{LB04}}
+                                    </span>
+                                    <span class="meeting-start meeting-span">
+                                        *
+                                    </span>
+
+                                    <div class="timezoneDropdown common-bg-dropdown" id="timezone-open"
+                                        onclick="showHideTimeZone(event)">
+                                        <div class="timezoneDropdown dropdown-flex">
+                                            <div class="timezoneDropdown dropdown-inner-label" id="selectTimeZone">
+                                                Select
+                                            </div>
+                                            <div class="timezoneDropdown dropdown-calender-icon-section">
+                                                <img src="images/dateChev.svg" class="timezoneDropdown dropdown-icons">
+                                            </div>
+                                        </div>
+                                        <div id="timeZoneDropdown" class="dropdown-content timezoneDropdown"
+                                            style="display: none;">
+                                            <input type="text" placeholder="{{PH03}}" id="timeZoneInput"
+                                                onkeyup="filterTimeZone()" class="timezoneDropdown" autocomplete="off"
+                                                onclick="focusTimeZone(event)">
+                                            <ul class="common-dropdown-ul submeetingLink" id="timezone-toogle">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  Time Format  -->
+                            <div class="duration-right">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB03}}
+                                </span>
+                                <span class="meeting-start meeting-span">
+                                    *
+                                </span>
+                                <div class="settingDuration common-bg-dropdown" id="date-open"
+                                    onclick="showHideDuration()">
+                                    <div class="settingDuration dropdown-flex">
+                                        <div class="settingDuration dropdown-inner-label date-duration"
+                                            id="settingDuration">15
+                                            minutes </div>
+                                        <div class="settingDuration dropdown-calender-icon-section">
+                                            <img src="images/dateChev.svg" class="settingDuration dropdown-icons">
+                                        </div>
+                                    </div>
+                                    <!--  drodown start here -->
+                                    <ul class="common-dropdown-ul durationCalendarSetting submeetingLink" id="durationCalendarSetting"
+                                        style="display:none;">
+                                    </ul>
+                                    <!--  drodown end here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--  Time Format End  -->
+                    </div>
+                </div>
+                <!-- "meeting-right-part start here -->
+                <div class="meeting-right-part">
+                    <div class="availble-section">
+                        <div class="m-top-label mTobFlex">
+                            <span class="meeting-common-label meeting-span marginLeft">
+                                {{LB88}}
+                                <div class="subCalenderInfoParent workHoursInfoMain" tooltip="Info" flow="down">
+                                    <img src="images/icons/message-on-info-icon.svg" class="subCalenderInfoIcon"
+                                        onclick="toggleInfo(event, 'workHoursInfo')">
+                                    <div class="infoDropDown" id="workHoursInfo" style="display:none">
+                                        <span class="dropDownCaret"></span>
+                                        <h2>{{LB100}}</h2>
+                                        <p>{{LB89}}</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="workingHoursColumRight enable-Work-hours" onclick="enableWorkHours()">
+                                <input type="checkbox" hidden="hidden" id="enableWorkHours" class="timeSlot">
+                                <label class="switch" for="enableWorkHours"></label>
+                            </div>
+                        </div>
+                        <!-- availble inner par section -->
+                        <div class="subCalenderInner" id="calendarSetting">
+                            <div class="availble-inner-part subCalenderInnerPart">
+
+                                <!--workingHoursRow-start-->
+                                <div class="workingHoursRow">
+                                    <div class="subCalendarOpacity" id="calSettingSlots"></div>
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayFirst">MONDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle hideCls" id="day1">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle" id="1Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('1', 'calendarSetting', event)">
+                                            <input type="checkbox" hidden="hidden" id="switch1" class="timeSlot">
+                                            <label class="switch" for="switch1"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="daySecond">TUESDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle hideCls" id="day2">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle" id="2Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('2', 'calendarSetting', event)">
+                                            <input type="checkbox" hidden="hidden" id="switch2" class="timeSlot">
+                                            <label class="switch" for="switch2"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayThird">WEDNESDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle hideCls" id="day3">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle" id="3Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('3', 'calendarSetting', event)">
+                                            <input type="checkbox" hidden="hidden" id="switch3" class="timeSlot">
+                                            <label class="switch" for="switch3"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayFour">THURSDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle hideCls" id="day4">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle" id="4Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('4', 'calendarSetting', event)">
+                                            <input type="checkbox" hidden="hidden" id="switch4" class="timeSlot">
+                                            <label class="switch" for="switch4"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayFive">FRIDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle hideCls" id="day5">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle" id="5Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('5', 'calendarSetting', event)">
+                                            <input type="checkbox" hidden="hidden" id="switch5" class="timeSlot">
+                                            <label class="switch" for="switch5"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="daySix">SATURDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle hideCls" id="day6">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle" id="6Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('6', 'calendarSetting', event)">
+                                            <input type="checkbox" hidden="hidden" id="switch6" class="timeSlot">
+                                            <label class="switch" for="switch6"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="daySeven">SUNDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle hideCls" id="day7">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle" id="7Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('7', 'calendarSetting', event)">
+                                            <input type="checkbox" hidden="hidden" id="switch7" class="timeSlot">
+                                            <label class="switch" for="switch7"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursRow-start-->
+                                </div>
+                            </div>
+                            <!-- <section class="center-loader" style="display: none;">
+                                <div class="pleaseWait">
+                                    Please wait...
+                                </div>
+                            </section> -->
+                            <!-- <ul class="availble-ul"></ul> -->
+
+                            <div class="meeting-right-header-btn subCalenderBtn">
+                                <button class="cancelButtonGlobal"
+                                    onclick="switchPage('calendar', '', event)">{{BT14}}</button>
+                                <button type="button" id="saveCalendarSetting" onclick="updateSetting()" class="submitButtonGlobal">{{LB91}}</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- "meeting-right-part end here -->
+            </div>
+        </div>
+        <!-- Calendar Setting end -->
+        <!-- Event Type start -->
+        <div class="main-meetin-inner-section subCalenderType createEventType hideCls">
+            <div class="meeting-inner-body meetin-popup-clearfix">
+                <div class="meeting-left-part">
+                    <div class="meeting-common-margin">
+                        <!-- meeting-common-margin section start here -->
+                        <div class="m-top-label">
+                            <span class="meeting-common-label meeting-span">
+                                {{LB93}}
+                            </span>
+                            <span class="meeting-start meeting-span">
+                                *
+                            </span>
+                        </div>
+                        <div class="">
+                            <input type="text" class="common-input-label-meeting" placeholder="{{LB94}}"
+                                autocomplete="off" id="eventtitle">
+                        </div>
+
+
+                        <!-- Text editor  section start here -->
+                        <div class="editor-main-section">
+                            <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                {{LB07}}
+                            </span>
+                            <!-- Description Editor -->
+                            <div class="summernote" id="summernote"> </div>
+                        </div>
+                        <!-- Text editor section end here -->
+                        <!--invietees main section end here  -->
+                        <!-- date duration section start here -->
+                        <div class="data-duration-section  meetin-popup-clearfix">
+                            <div class="date-left ">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB95}}
+                                </span>
+                                <span class="meeting-start meeting-span">
+                                    *
+                                </span>
+                                <div class="common-bg-dropdown calender-open" id="startDate"
+                                    onclick="showDatePopup(event, 'startDate')">
+                                    <div class="dateDropdown dropdown-flex">
+                                        <div class="dropdown-inner-label ">
+                                            <div class="newevent-calender-text">
+                                                <span class="newevent-calender-texttext-span">November 23,
+                                                    2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="dateDropdown dropdown-calender-icon-section">
+                                            <img src="images/icons/calendar.svg"
+                                                class="dateDropdown calender-icons">
+                                        </div>
+                                    </div>
+                                    <!-- date hrml -->
+                                    <div id="datePopup" class="calendar-in-meeting-schedule" style="display: none;">
+                                        <div class="newevent-calendar-popup">
+                                            <div class="dateDropdown date-inner-header">
+                                                <div class="newevent-calendar-popup-left">
+                                                    <span class="newevent-calendar-popup-date">November 23,
+                                                        2021</span>
+                                                </div>
+                                                <div class="newevent-calendar-popup-right">
+                                                    <span class="dateDropdown newevent-calendar-popup-arrow-left">
+                                                        <img src="images/icons/chevron-left-l.svg"
+                                                            class="chevron-left dateDropdown"
+                                                            onclick="changeMonthInEvent(-1, event, 'startDate')">
+                                                        <img src="images/icons/chevron-right-r.svg"
+                                                            class="chevron-right dateDropdown"
+                                                            onclick="changeMonthInEvent(1, event, 'startDate')">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="newevent-calendar-popup-days">
+                                                <div class="popup-days"><span class="popup-days-span">{{LB52}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB53}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB54}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB55}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB56}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB57}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB58}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="newevent-calendar-popup-line"></div>
+                                            <div class="newevent-calendar-popup-date-main"></div>
+                                            <div class="newevent-calendar-popup-line-down"></div>
+                                        </div>
+                                    </div>
+                                    <!-- date html end -->
+                                </div>
+                            </div>
+                            <div class="date-left ">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB96}}
+                                </span>
+                                <span class="meeting-start meeting-span">
+                                    *
+                                </span>
+                                <div class="common-bg-dropdown calender-open" id="endDate"
+                                    onclick="showDatePopup(event, 'endDate')">
+                                    <div class="dateDropdown dropdown-flex">
+                                        <div class="dropdown-inner-label ">
+                                            <div class="newevent-calender-text">
+                                                <span class="newevent-calender-texttext-span">November 23,
+                                                    2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="dateDropdown dropdown-calender-icon-section">
+                                            <img src="images/icons/calendar.svg"
+                                                class="dateDropdown calender-icons">
+                                        </div>
+                                    </div>
+                                    <!-- date hrml -->
+                                    <div id="datePopup" class="calendar-in-meeting-schedule" style="display: none;">
+                                        <div class="newevent-calendar-popup">
+                                            <div class="dateDropdown date-inner-header">
+                                                <div class="newevent-calendar-popup-left">
+                                                    <span class="newevent-calendar-popup-date">November 23,
+                                                        2021</span>
+                                                </div>
+                                                <div class="newevent-calendar-popup-right">
+                                                    <span class="dateDropdown newevent-calendar-popup-arrow-left">
+                                                        <img src="images/icons/chevron-left-l.svg"
+                                                            class="chevron-left dateDropdown"
+                                                            onclick="changeMonthInEvent(-1, event, 'endDate')">
+                                                        <img src="images/icons/chevron-right-r.svg"
+                                                            class="chevron-right dateDropdown"
+                                                            onclick="changeMonthInEvent(1, event, 'endDate')">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="newevent-calendar-popup-days">
+                                                <div class="popup-days"><span class="popup-days-span">{{LB52}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB53}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB54}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB55}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB56}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB57}}</span>
+                                                </div>
+                                                <div class="popup-days"><span class="popup-days-span">{{LB58}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="newevent-calendar-popup-line"></div>
+                                            <div class="newevent-calendar-popup-date-main"></div>
+                                            <div class="newevent-calendar-popup-line-down"></div>
+                                        </div>
+                                    </div>
+                                    <!-- date html end -->
+                                </div>
+                            </div>
+                            <div class="date-left ">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB97}}
+                                </span>
+                                <span class="meeting-start meeting-span">
+                                    *
+                                </span>
+                                <div class="maxDurationDropdown common-bg-dropdown" id="maxDuration">
+                                    <div class="maxDurationDropdown dropdown-flex">
+                                        <div class="maxDurationDropdown dropdown-inner-label" id="maxDurationText">
+                                            15 {{LB43}} 
+                                        </div>
+                                        <div class="maxDurationDropdown dropdown-calender-icon-section">
+                                            <img src="images/dateChev.svg" class="maxDurationDropdown dropdown-icons">
+                                        </div>
+                                    </div>
+                                    <ul class="common-dropdown-ul submeetingLink" id="maxDurationDropdown" style="display:none;">
+                                        <li data-index="1" onclick="selectBuffer(5)"
+                                            class="common-dropdown-li duration-click">
+                                            <div class="dropdown-list-items">
+                                                5 {{LB43}} </div>
+                                        </li>
+                                        <li data-index="1" onclick="selectBuffer(10)"
+                                            class="common-dropdown-li duration-click">
+                                            <div class="dropdown-list-items">
+                                                10 {{LB43}} </div>
+                                        </li>
+                                        <li data-index="1" onclick="selectBuffer(15)"
+                                            class="common-dropdown-li duration-click">
+                                            <div class="dropdown-list-items">
+                                                15 {{LB43}} </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="date-left dateMeetingLeftItem">
+                                <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                    {{LB98}}
+                                </span>
+                                <span class="meeting-start meeting-span">
+                                    *
+                                </span>
+                                <div class="bufferTimeDropdown common-bg-dropdown" id="bufferTime">
+                                    <div class="bufferTimeDropdown dropdown-flex">
+                                        <div class="bufferTimeDropdown dropdown-inner-label" id="bufferTimeText">
+                                            None
+                                        </div>
+                                        <div class="bufferTimeDropdown dropdown-calender-icon-section">
+                                            <img src="images/dateChev.svg" class="bufferTimeDropdown dropdown-icons">
+                                        </div>
+                                    </div>
+                                    <ul class="common-dropdown-ul submeetingLink" id="bufferTimeDropdown" style="display:none;">
+                                        <li data-index="1" onclick="selectBuffer(5)"
+                                            class="common-dropdown-li duration-click">
+                                            <div class="dropdown-list-items">
+                                                5 {{LB43}} </div>
+                                        </li>
+                                        <li data-index="1" onclick="selectBuffer(10)"
+                                            class="common-dropdown-li duration-click">
+                                            <div class="dropdown-list-items">
+                                                10 {{LB43}} </div>
+                                        </li>
+                                        <li data-index="1" onclick="selectBuffer(15)"
+                                            class="common-dropdown-li duration-click">
+                                            <div class="dropdown-list-items">
+                                                15 {{LB43}} </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- date duration section end here -->
+
+                        <!-- Advance setting section start here -->
+                        <div class="advanceStting">
+                            <div class="advancesettingRow">
+                                <div class="duration-right">
+                                    <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                        {{LB99}}
+                                    </span>
+                                    <span class="meeting-start meeting-span">
+                                        *
+                                    </span>
+                                    <div class="meetingLimitDropdown common-bg-dropdown" id="meetingLimit">
+                                        <div class="meetingLimitDropdown dropdown-flex">
+                                            <div class="meetingLimitDropdown dropdown-inner-label"
+                                                id="meetingLimitText">
+                                                None
+                                            </div>
+                                            <div class="meetingLimitDropdown dropdown-calender-icon-section">
+                                                <img src="images/dateChev.svg"
+                                                    class="meetingLimitDropdown dropdown-icons">
+                                            </div>
+                                        </div>
+                                        <!--  drodown start here -->
+                                        <ul class="common-dropdown-ul submeetingLink" id="meetingLimitDropdown" style="display:none;">
+                                            <li data-index="1" onclick="selectLimit(1)"
+                                                class="common-dropdown-li duration-click">
+                                                <div class="dropdown-list-items">
+                                                    1</div>
+                                            </li>
+                                            <li data-index="1" onclick="selectLimit(2)"
+                                                class="common-dropdown-li duration-click">
+                                                <div class="dropdown-list-items">
+                                                    2</div>
+                                            </li>
+                                            <li data-index="1" onclick="selectLimit(3)"
+                                                class="common-dropdown-li duration-click">
+                                                <div class="dropdown-list-items">
+                                                    3</div>
+                                            </li>
+                                        </ul>
+                                        <!--  drodown end here -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Advance setting section end here -->
+                        <!-- Advance setting section start here -->
+
+                        <!-- <div class="advanceStting">
+                            <div class="advancesettingRow">
+
+                                <div class="date-left ">
+
+                                    <span class="meeting-common-label meeting-span meeting-mt-mb ">
+                                        MEETING LIMIT
+                                    </span>
+                                    <span class="meeting-start meeting-span">
+                                        *
+                                    </span>
+                                    <div class="durationDropdown common-bg-dropdown" id="date-open"
+                                        onclick="showHideDuration()">
+                                        <div class="durationDropdown dropdown-flex">
+                                            <div class="durationDropdown dropdown-inner-label" id="date-duration">Custom
+                                            </div>
+                                            <div class="durationDropdown dropdown-calender-icon-section">
+                                                <img src="images/dateChev.svg"
+                                                    class="durationDropdown dropdown-icons">
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div> -->
+                        <!-- Advance setting section end here -->
+                        <!-- block user section start here -->
+                        <!-- <div class="blockUser">
+                            <div class="blockUserRow">
+                                <div class="blockUserHead">
+                                    <h2>Block User</h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- block user section end here -->
+                    </div>
+
+                    <!-- meeting-common-margin section end here -->
+                </div>
+                <!-- "meeting-right-part start here -->
+                <div class="meeting-right-part">
+                    <div class="availble-section">
+                        <div class="m-top-label">
+                            <span class="meeting-common-label meeting-span marginLeft">
+                                {{LB100}}
+                                <div class="subCalenderInfoParent availabilityInfoMain">
+                                    <img src="images/icons/message-on-info-icon.svg" class="subCalenderInfoIcon"
+                                        onclick="toggleInfo(event, 'availabilityInfo')">
+                                    <div class="infoDropDown" id="availabilityInfo" style="display:none">
+                                        <span class="dropDownCaret"></span>
+                                        <h2>{{LB100}}</h2>
+                                        <p>{{LB101}}</p>
+                                    </div>
+                                </div>
+                            </span>
+
+                        </div>
+                        <!-- availble inner par section -->
+                        <div class="subCalenderInner" id="createEventType">
+                            <div class="availble-inner-part subCalenderInnerPart">
+                                <!--workingHoursRow-start-->
+                                <div class="workingHoursRow">
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum" id="column1">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayFirst">MONDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle allTimeRow hideCls" id="day1">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle UnAvailable" id="1Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('1', 'createEventType', event)">
+                                            <input type="checkbox" hidden="hidden" id="toggle1"
+                                                class="timeSlot eventToggle">
+                                            <label class="switch" for="toggle1"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum" id="column2">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="daySecond">TUESDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle allTimeRow hideCls" id="day2">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle UnAvailable" id="2Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('2', 'createEventType', event)">
+                                            <input type="checkbox" hidden="hidden" id="toggle2"
+                                                class="timeSlot eventToggle">
+                                            <label class="switch" for="toggle2"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum" id="column3">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayThird">WEDNESDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle allTimeRow hideCls" id="day3">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle UnAvailable" id="3Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('3', 'createEventType', event)">
+                                            <input type="checkbox" hidden="hidden" id="toggle3"
+                                                class="timeSlot eventToggle">
+                                            <label class="switch" for="toggle3"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum" id="column4">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayFour">THURSDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle allTimeRow hideCls" id="day4">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle UnAvailable" id="4Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('4', 'createEventType', event)">
+                                            <input type="checkbox" hidden="hidden" id="toggle4"
+                                                class="timeSlot eventToggle">
+                                            <label class="switch" for="toggle4"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum" id="column5">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="dayFive">FRIDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle allTimeRow hideCls" id="day5">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle UnAvailable" id="5Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('5', 'createEventType', event)">
+                                            <input type="checkbox" hidden="hidden" id="toggle5"
+                                                class="timeSlot eventToggle">
+                                            <label class="switch" for="toggle5"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum" id="column6">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="daySix">SATURDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle allTimeRow hideCls" id="day6">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle UnAvailable" id="6Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('6', 'createEventType', event)">
+                                            <input type="checkbox" hidden="hidden" id="toggle6"
+                                                class="timeSlot eventToggle">
+                                            <label class="switch" for="toggle6"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursColum-start-->
+                                    <div class="workingHoursColum" id="column7">
+                                        <div class="workingHoursColumLeft">
+                                            <h2 class="daySeven">SUNDAY</h2>
+                                        </div>
+                                        <div class="workingHoursColumMiddle allTimeRow hideCls" id="day7">
+
+                                        </div>
+                                        <div class="workingHoursColumMiddle UnAvailable" id="7Unavailable">
+                                            <div class="workingHoursColumMiddle">
+                                                <div class="workingHoursColumMiddleRow">
+                                                    <h3>{{LB90}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="workingHoursColumRight"
+                                            onclick="enableDisableSwitch('7', 'createEventType', event)">
+                                            <input type="checkbox" hidden="hidden" id="toggle7"
+                                                class="timeSlot eventToggle">
+                                            <label class="switch" for="toggle7"></label>
+                                        </div>
+                                    </div>
+                                    <!--workingHoursColum-end-->
+                                    <!--workingHoursRow-start-->
+                                </div>
+                            </div>
+                            <!-- <section class="center-loader" style="display: none;">
+                                <div class="pleaseWait">
+                                    Please wait...
+                                </div>
+                            </section> -->
+                            <!-- <ul class="availble-ul"></ul> -->
+
+                            <div class="meeting-right-header-btn subCalenderBtn">
+                                <button class="cancelButtonGlobal" onclick="hideCreateEventType()">{{BT14}}</button>
+                                <button class="submitButtonGlobal inActiveBtn" disabled id="createEventBtn"
+                                    onclick="saveEventType()">{{BT02}}
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- "meeting-right-part end here -->
+            </div>
+        </div>
+        <div
+            class="main-meetin-inner-section meeting-popup-section evebtBg subCalenderType subCalendarBody eventType hideCls">
+            <div class="eventTypeRow">
+                <div class="eventScrool">
+                    <div class="eventRow" id="eventTypeList">
+                    </div>
+                    <div class="event-type-empty hideCls" id="eventTypeEmptyState">
+                        <img src="images/emptystate/subCalendar-Empty.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="">
+    <!-- <div class="" id="rightPanelOpacity"></div> -->
+    <!--selected-member-section-start-->
+    <div class="selected-member-list hideCls">
+        <div class="selected-head-title">
+            <div class="selected-member-title">
+                <span id="">Block or unblock user</span> (<span id="userCount">0</span>)
+            </div>
+            <div class="add_group">
+                <!-- <button class="save-topic">Done</button> -->
+                <div class="iconsGroups" title="Close">
+                    <img src="images/cancel-modal.svg" class="display-default-cancle">
+                </div>
+            </div>
+        </div>
+        <div class="blockUserSearchType">
+            <div class="blockUserSearchTypeColum">
+                <input type="text" class="blockUserSearchBar" autocomplete="off"
+                    placeholder="Add by name or email address">
+                <!-- <span class="serchHeaderClose" id="serchHeaderClose" onclick="clearGlbSearch()"></span> -->
+                <ul class="externalUserList hideCls">
+                    <li class="list-section validEmail">
+                        <div class="common-d-list">
+                            <div class="common-user-icon">
+                                <img src="images/default_avatar_male.svg" class="common-icons-size vertical-m" alt="">
+                            </div>
+                            <div class="common-user-list">
+                                <div class="user-label color-black">
+                                    <span class="user-label color-black ">vikash@gmail.com</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="blockUserList">
+            <div class="blockUserTabs">
+                <ul class="blockNavs">
+                    <li><span class="active">
+                            ALL CONTACTS <span class="bloskUserCount">845
+                            </span></span></li>
+                    <li><span>
+                            BLOCKED CONTACTS<span class="bloskUserCount">845 </span></span>
+                    </li>
+                </ul>
+            </div>
+            <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing clearBoth">
+
+                <li class="list-section contact">
+                    <div class="common-postion">
+                        <div class="common-d-list networkMiddle">
+                            <div class="common-user-icon cursorPoint">
+                                <img src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m" alt="AD" title="Learn more about Aakash Dubey">
+                            </div>
+                            <div class="common-user-list">
+                                <div class="UserTitle">
+                                    <span class="user-label color-black allListCommonWrapUserContact">Aakash
+                                        Dubey</span>
+                                    <span class="coworker-label">Co-Worker</span>
+                                </div>
+                                <div class="userProfile">
+                                    <span class="user-team-label color-grey common-name-trancate allListCommonWrap">Sr
+                                        Technical
+                                        Recruiter</span>
+                                </div>
+                                <div class="useraddress" title="Noida, Uttar Pradesh, India">
+                                    <span
+                                        class="user-team-label color-grey common-name-trancate allListCommonWrap">Noida,
+                                        UP, IN</span>
+                                    <span class="hideCls">Noida, Uttar Pradesh, India</span>
+
+                                </div>
+                            </div>
+
+                            <!-- <div class="check-box-icon" title="Remove">
+                                <div class="contact-cross-default"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="columCallScreen inviteCallBtn">
+                <div class="callInviteUser">
+                    <span class="add-invite-main">
+                        <span class="invite-short-name invite-short-dp">
+                            <span class="callDp">
+                                <img src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m callScreenDp" alt="Aakash Dubey"
+                                    title="Aakash Dubey">
+                                <span class="invitees-close-new invitees-close-new-icon">
+                                    <img src="images/icons/blockUserRighIcon.svg" class="remove-invite">
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="add-invite-main">
+                        <span class="invite-short-name invite-short-dp">
+                            <span class="callDp">
+                                <img src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m callScreenDp" alt="Aakash Dubey"
+                                    title="Aakash Dubey">
+                                <span class="invitees-close-new invitees-close-new-icon">
+                                    <img src="images/icons/blockUserRighIcon.svg" class="remove-invite">
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="add-invite-main">
+                        <span class="invite-short-name invite-short-dp">
+                            <span class="callDp">
+                                <img src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m callScreenDp" alt="Aakash Dubey"
+                                    title="Aakash Dubey">
+                                <span class="invitees-close-new invitees-close-new-icon">
+                                    <img src="images/icons/blockUserRighIcon.svg" class="remove-invite">
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="add-invite-main">
+                        <span class="invite-short-name invite-short-dp">
+                            <span class="callDp">
+                                <img src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m callScreenDp" alt="Aakash Dubey"
+                                    title="Aakash Dubey">
+                                <span class="invitees-close-new invitees-close-new-icon">
+                                    <img src="images/icons/blockUserRighIcon.svg" class="remove-invite">
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="add-invite-main">
+                        <span class="invite-short-name invite-short-dp">
+                            <span class="callDp">
+                                <img src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m callScreenDp" alt="Aakash Dubey"
+                                    title="Aakash Dubey">
+                                <span class="invitees-close-new invitees-close-new-icon">
+                                    <img src="images/icons/blockUserRighIcon.svg" class="remove-invite">
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+            <button class="indvitaiuonInvite">BLOCK</button>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+</section>
+<!-- Time Dropdown -->
+<!-- <ul class="common-dropdown-ul subCalenderDropDown" style="display: none;">
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            10:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            11:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            12:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            11:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            12:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            11:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            12:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            11:00 </div>
+    </li>
+    <li class="common-dropdown-li duration-click">
+        <div class="dropdown-list-items">
+            12:00 </div>
+    </li>
+</ul> -->

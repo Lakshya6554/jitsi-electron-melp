@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="175" height="170" viewBox="0 0 175 170">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <path fill="#D6DBE1" fill-rule="nonzero" d="M24.382 132.749h-6.264C8.128 132.749 0 124.622 0 114.631c0-9.99 8.127-18.117 18.118-18.117h3.894v10.16h-3.894c-4.389 0-7.959 3.57-7.959 7.957 0 4.389 3.57 7.959 7.959 7.959h6.264v10.159zM25.06 63.327h-6.942C8.128 63.327 0 55.199 0 45.209c0-9.99 8.127-18.117 18.118-18.117h3.894V37.25h-3.894c-4.389 0-7.959 3.57-7.959 7.958s3.57 7.958 7.959 7.958h6.942v10.16z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <path fill="#605757" fill-rule="nonzero" d="M153.745 141.892L173.386 141.892 173.386 98.884 163.904 95.498 153.745 98.884 150.02 119.88z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <path fill="#7E7B7B" fill-rule="nonzero" d="M153.745 98.884L173.386 98.884 173.386 55.876 163.904 53.845 153.745 55.876 149.004 76.873z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <path fill="#A6A0A0" fill-rule="nonzero" d="M153.745 55.876L173.386 55.876 173.386 12.869 153.745 12.869 150.02 34.542z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <path fill="#FFF" fill-rule="nonzero" d="M22.012 0L153.745 0 153.745 146.972 22.012 146.972z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <path fill="#D6DBE1" fill-rule="nonzero" d="M22.012 146.972V170h131.733v-23.028H22.012z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <path fill="#9C9696" fill-rule="nonzero" d="M88.048 146.972L153.745 146.972 153.745 170 88.048 170z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <path fill="#D6DBE1" fill-rule="nonzero" d="M20.657 96.514L46.056 96.514 46.056 106.673 20.657 106.673zM19.641 27.092L46.056 27.092 46.056 37.251 19.641 37.251zM87.833 0L153.531 0 153.531 146.972 87.833 146.972z" transform="translate(-917 -443) translate(613 443) translate(304)"/>
+                    <g fill="#A6A0A0" transform="translate(-917 -443) translate(613 443) translate(304) translate(62.333 51)">
+                        <ellipse cx="25.042" cy="10.709" fill-rule="nonzero" rx="10.732" ry="10.709"/>
+                        <path d="M25.863 26.177c9.665 0 16.77 2.523 20.7 4.386 2.16 1.024 3.522 3.284 3.522 5.768v8.885H0V36.33c0-2.484 1.362-4.744 3.521-5.768 3.93-1.863 11.036-4.386 20.7-4.386.277 0 .551.003.822.009.27-.006.543-.009.82-.009z"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

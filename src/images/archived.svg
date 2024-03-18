@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Archive</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Archive">
+            <rect id="Rectangle-Copy" fill="#9C9696" x="0" y="0" width="24" height="24" rx="2"></rect>
+            <path d="M17.693,7.487 L16.767,6.367 C16.587,6.14 16.313,6 16,6 L8,6 C7.687,6 7.413,6.14 7.227,6.367 L6.307,7.487 C6.113,7.713 6,8.013 6,8.333 L6,16.667 C6,17.4 6.6,18 7.333,18 L16.667,18 C17.4,18 18,17.4 18,16.667 L18,8.333 C18,8.013 17.887,7.713 17.693,7.487 Z M12,15.667 L8.333,12 L10.667,12 L10.667,10.667 L13.333,10.667 L13.333,12 L15.667,12 L12,15.667 Z M7.413,7.333 L7.953,6.667 L15.953,6.667 L16.58,7.333 L7.413,7.333 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+<!--activeCalls popup-Start-Here-->
+<section class="teamPopup-common" id="callAtteneesPanel">
+   <div class="attendeestoCallBody">
+      <div id="">
+         <div class="attendess-header"><span>TOTAL ATTENDEES</span>
+            <span class="close-invite-Incall" onclick="closePopup('callAtteneesPanel')">
+               <img src="images/icons/close.svg" class="">
+            </span>
+         </div>
+         <div class="mainDiv">
+            <div class="attendessTab">
+               <ul>
+                  <li class="tabli active" onclick="selectAttendeesPanel(this, 'inCallTab')">IN CALL</li>
+                  <li class="tabli" onclick="selectAttendeesPanel(this, 'notInCallTab')">NOT IN CALL</li>
+               </ul>
+            </div>
+            <!-- in-call-start -->
+            <div class="accordionItem open" id="inCallTab">
+               <div class="accordionItemContent">
+                  <ul class="common-ul-section ul-padd-m-none">
+                     <div class="panel-body">
+                        <div class="scroll-section team-innerscroll">
+                           <ul class="addListingCallScroll"></ul>
+                        </div>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <!-- in-call-end -->
+            <!-- not-in-call -->
+            <div class="accordionItem hideCls" id="notInCallTab">
+               <div class="accordionItemContent">
+                  <ul class="common-ul-section ul-padd-m-none">
+                     <div class="panel-body">
+                        <div class="scroll-section team-innerscroll">
+                           <ul class="addListingCallScroll"></ul>
+                        </div>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <!-- not-in-call-end -->
+         </div>
+      </div>
+   </div>
+</section>
+<!--activeConference popup-end-Here-->

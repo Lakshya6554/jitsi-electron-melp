@@ -1,0 +1,632 @@
+/*global-header-start*/
+.globalMain{
+  width: 100%;
+}
+.global-header{
+  height: 7.6rem;
+  background-color: var(--white);
+  border-top: solid 0.1rem var(--gray);
+  border-bottom: solid 0.1rem var(--gray);
+}
+.global-tabbing {
+  list-style-type: none;
+  padding-left: 2rem;
+}
+.global-tabbing li {
+  display: inline-block;
+  height: 7.6rem;
+  padding: 0rem 1.2rem;
+}
+.global-tabbing li span {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9rem;
+  letter-spacing: 0.1rem;
+  color: var(--black);
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 2.8rem 0rem;
+  cursor: pointer;
+}
+.addborder-global-all{
+  border-bottom: 0.1rem solid var(--red);
+  color:var(--red) !important;
+}
+/*global-header-end*/
+
+/*search-result-header-start*/
+
+.search-result-header{
+  height: 3.6rem;
+  background-color: var(--dark-white);
+  border-bottom: solid 0.1rem var(--gray);
+  padding-left: 0.5rem;
+}
+.search-text-here{
+ font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;
+ font-size: 1.3rem;
+ font-weight: 600;
+ font-stretch: normal;
+ font-style: normal;
+ line-height: 1.46;
+ letter-spacing: 0.06rem;
+ color: var(--black);
+ padding-left: 1.5rem;
+ padding-top: 0.7rem;
+ top: -5.7rem;
+}
+/*search-result-header-end*/
+
+
+/*all-global-data-strat*/
+.globalData {
+  height: calc(102vh - 20rem);
+  overflow: auto;
+  overflow-x: hidden;
+}
+.globalBody {
+  padding-top: 1rem;
+  overflow: auto;
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: 1rem;
+}
+.globalBody ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  grid-auto-flow: row dense;
+  grid-gap: 1vw;
+  padding-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  padding: 0rem 1.5rem;
+}
+.globalBody ul li {
+  position: relative;
+  height: auto;
+  border-radius: 0.4rem;
+  border: solid 0.1rem var(--gray);
+  background-color: var(--white);
+  /* padding-bottom: 1.3rem; */
+}
+.globalBody  .suggestions-people {
+  /* padding: 1.7rem 1.7rem 0.5rem; */
+  padding-left: 0.5rem;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
+}
+.globalBody  ul li .contact-directory-div-image {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.7rem;
+}
+.globalBody  ul li .contact-directory-div-image img {
+  border-radius: 0.4rem;
+  border: solid 0.1rem var(--red)!important;
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+}
+.globalBody  ul li .contact-directory-div-image .contact-directory-div-data {
+  padding-left: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 21rem;
+}
+.peopleSeeMore{
+  padding-left: 1.5rem;
+}
+.fullname-contact-suggestion {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.06rem;
+  color: var(--black);
+}
+.email-contact-suggestion {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9rem;
+  letter-spacing: 0.06rem;
+  color: var(--brown);
+}
+.phone-contact-suggestion {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9rem;
+  letter-spacing: 0.06rem;
+  color: var(--brown);
+}
+.globalBody  ul li .contact-directory-professional-data .company-invite {
+  margin-bottom: 2rem;
+}
+ .profession-heading-text {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-style: normal;
+  display: inline-block;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.global-call-section {
+  width: 100%;
+  border-top: 0.1rem solid var(--gray);
+}
+.global-voice{
+	float: left;
+	width: 33%;
+	text-align: center;
+	padding: 1.7rem 0rem;
+	border-right: 0.1rem solid var(--gray);
+  cursor: pointer;
+}
+.global-video{
+	float: left;
+	width: 33%;
+	text-align: center;
+	padding: 1.8rem 0rem;
+	border-right: 0.1rem solid var(--gray);
+  cursor: pointer;
+}
+.global-msg{
+	float: left;
+	width: 33%;
+	text-align: center;
+  cursor: pointer;
+}
+.global-call-section .global-msg{
+  padding: 1.8rem 0rem;
+}
+/* .contact-directory-div-button .invited {
+  width: 92%;
+  margin: 0rem 1rem;
+  border-radius: 0.3rem;
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 0.9rem 1.5rem;
+  text-transform: uppercase;
+  background-color: var(--gray);
+  border: solid 1px var(--gray);
+  color: var(--white);
+  cursor: not-allowed;
+} */
+
+/*seemore-btn-start-here*/
+#globalPeopleData .seemore-global{
+  margin-left:  1.5rem;
+}
+.seemore-global {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 11px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+  color: var(--slate-gray);
+  text-transform: uppercase;
+  margin-top: 0.1rem;
+  cursor: pointer;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  width: 10.1rem;
+  height: 2.8rem;
+  border: 1px solid var(--slate-gray);
+  box-sizing: border-box;
+  border-radius: 2px;
+  line-height: 2.9rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.seemore-global:before {
+  content: '';
+  background-image: url(../../images/icons/seemore.svg);
+  width: 3rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  font-weight: 1;
+  /* align-items: center; */
+  /* margin-right: 0.5rem; */
+  position: absolute;
+  top: -2px;
+  right: 0;
+  background-position: center right 8px;
+}
+/*seemore-btn-end-here*/
+
+
+/*global-message-header-start*/
+.global-message-header {
+  height: 3.6rem;
+  background-color: var(--dark-white);
+  border-bottom: solid 0.1rem var(--gray);
+  border-top: solid 0.1rem var(--gray);
+}
+.search-text-here {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: 0.06rem;
+  color: var(--black);
+  padding-left: 1.5rem;
+  padding-top: 0.7rem;
+}
+/*global-message-header-end*/
+
+
+/*global-msg-list-section-start*/
+.global-msg-list-section {
+  margin-left: 1.5rem;
+  /* margin-top: 20px; */
+  /* width: 100rem; */
+  /* max-width: 98.5rem; */
+  /* display: flex; */
+  /* clear: both; */
+}
+.message-scroll{
+  overflow: scroll;
+  overflow-x: hidden;
+  height: calc(100vh - 20rem);
+}
+.global-ul-list-msg {
+  list-style-type: none;
+  padding-left: 0rem;
+  /* height: calc(100vh - 200px); */
+  overflow: auto;
+  /* overflow-x: hidden; */
+  /* width: 90rem; */
+}
+.global-ul-list-msg li {
+  /* padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; */
+  padding: 1rem 1rem 1rem 0;
+  background-color: var(--white);
+  margin-top: 1.5rem;
+  cursor: pointer;
+  /* display: block; */
+  float: left;
+  width: 99%;
+  position: relative;
+}
+.global-main-message-list {
+  /* width: 100%; */
+  /* max-width: 100rem !important; */
+}
+.global-msg-contact-icon {
+  float: left;
+  /* width: 4%; */
+  margin-right: 1.5rem;
+}
+.global-msg-contact-icon img {
+  border-radius: 0.4rem;
+  border: solid 0.1rem var(--red);
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+#globalMessageData .global-msg-contact-name{
+  padding-top: 1rem;
+}
+.global-msg-contact-name {
+  /* float: left; */
+  /* width: 100%; */
+  /* max-width: 95rem; */
+  /* margin-top: 11px; */
+  padding-right: 1rem;
+}
+.global-name {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+  letter-spacing: 0.06rem;
+  color: var(--black);
+}
+.global-message {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: 0.06rem;
+  color: var(--slate-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* width: 100%; */
+  /* max-width: 165rem; */
+  word-break: break-word;
+}
+.global-date-data {
+    /* width: 13%; */
+    /* float: left; */
+    /* float: right; */
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-stretch: normal;
+    font-style: normal;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0.06rem;
+    color: var(--brown);
+    text-transform: capitalize;
+    /* padding: 2rem 0rem; */
+    /* padding-bottom: 2rem; */
+}
+.arrow-global {
+  float: right;
+  /* width: 2%; */
+  text-align: right;
+  /* margin-top: 2rem; */
+  /* display: flex; */
+  align-items: center;
+  /* height: 100%; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
+  margin-left: 8rem;
+  position: absolute;
+  right: 0;
+  top: 55%;
+}
+/*global-msg-list-section-end*/
+
+/*globalFileData-start*/
+#globalFileData .inner-file-data {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* height: unset; */
+  padding: 2rem 0rem;
+}
+/* #globalFileData .file-type {
+  width: 5%;
+  display: inline-block;
+} */
+#globalFileData .file-commmon-font{
+display: table-cell;
+font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+font-stretch: normal;
+font-style: normal;
+font-size: 1.1rem;
+font-weight: 600;
+line-height: 1.6rem;
+letter-spacing: 0.1rem;
+color: var(--black);
+vertical-align: middle;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+display: inline-block;
+}
+
+#globalFileData .file-commmon-font img {
+  padding-left: 0.7rem;
+}
+
+#globalFileData .file-name {
+  /* width: 44.5%; */
+  /* width: 38.5%; */
+  display: inline-block;
+}
+#globalFileData .file-name-data {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-stretch: normal;
+    font-style: normal;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0.06rem;
+    color: var(--black);
+    /* text-transform: capitalize; */
+}
+/* #globalFileData .file-size {
+  width: 12%;
+} */
+#globalFileData .file-size-data {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  letter-spacing: 0.06rem;
+  color: var(--brown);
+  text-transform: capitalize;
+  padding-right: 3%;
+}
+/* #globalFileData .file-shared-by {
+  width: 15%;
+} */
+#globalFileData .file-shared-data {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  letter-spacing: 0.06rem;
+  color: var(--brown);
+  text-transform: capitalize;}
+
+  /* #globalFileData .file-shared-on {
+    width: 13%;
+} */
+#globalFileData .file-shared-on{
+font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+font-stretch: normal;
+font-style: normal;
+font-size: 1.3rem;
+font-weight: 500;
+line-height: 1.9rem;
+letter-spacing: 0.06rem;
+color: var(--brown);
+text-transform: capitalize;}
+
+/* #globalFileData .file-downloaded {
+  text-align: right;
+  width: 13%;
+} */
+/*globalFileData-end*/
+/*all-global-data-end*/
+
+
+/*global-file-section-data-start*/
+.global-file-section-data  {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 98.5%;
+  height: calc(100vh - 20rem);
+  overflow: auto;
+}
+
+.global-file-section-data .file-tab-start {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.3rem;
+  border: 0.1rem solid var(--gray);
+}
+.global-file-section-data .file-main-header-fixed {
+  display: table;
+  width: 100%;
+  height: 7rem;
+  border-bottom: 0.1rem solid var(--gray);
+  padding-left: 2rem;
+  padding-top: 2.5rem;
+}
+.global-file-section-data .inner-file-main-section ul li {
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 3rem;
+  height: 7rem;
+  border-bottom: 0.1rem solid var(--gray);
+}
+.global-file-section-data  .inner-file-data {
+  display: inline-flex;
+  width: 100%;
+  /* height: 7rem; */
+}
+.global-file-section-data .file-name-data {
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  letter-spacing: 0.06rem;
+  color: var(--black);
+  /* text-transform: capitalize; */
+}
+#fileData .file-commmon-font {
+  font-size: 1.3rem;
+  color: var(--black);
+  font-weight: 500;
+}
+#fileData .file-name {
+  font-size: 1.3rem;
+  color: var(--black);
+  text-transform: capitalize;
+
+}
+.global-ul-list-msg .file-type, .global-file-section-data .file-type{
+  width: 5%;
+}
+.global-ul-list-msg .file-name, .global-file-section-data .file-name{
+  width: 47%;
+  padding-right: 3%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.global-ul-list-msg .file-size, .global-file-section-data .file-size{
+  width: 10%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.global-ul-list-msg .file-shared-by, .global-file-section-data .file-shared-by{
+  width: 20%;
+  padding-right: 3%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sharedOn{
+  width: 15% !important;
+}
+
+.global-ul-list-msg .file-shared-on, .global-file-section-data .file-shared-on{
+  width: 12%;
+}
+.global-ul-list-msg .file-downloaded, .global-file-section-data .file-downloaded{
+  width: 6%;
+}
+/*global-file-section-data-end*/
+
+/* .invite{
+  width: 92%;
+  margin: 0rem 1rem;
+    border-radius: 0.3rem;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', sans-serif, Lato;
+    border: solid 0.1rem var(--red);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.1rem !important;
+    text-align: center;
+    color: var(--red);
+    outline: none;
+    font-size: 1.3rem;
+    padding: 0.9rem 1.5rem;
+    text-transform: uppercase;
+    background: none;
+} */
+/*empty-state-text-start*/
+.empty-state-text {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 30%);
+  height: 100vh;
+}
+
+/*empty-state-text-end*/
+
+#topicData .global-ul-list-msg {
+  height: calc(102vh - 20rem);
+}

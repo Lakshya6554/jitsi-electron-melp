@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-version="162.0.0">
+
+<head>
+	<script src="./lang/en.js"></script>
+	<link defer rel="stylesheet" href="./lang/pt.css?v=162.0.0">
+	<meta charset="utf-8">
+	<title>MelpApp | Team Conferencing, Chat, Calendar and More</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+
+	<!-- Font libraries starts -->
+	<link defer rel="stylesheet" href="./css/plugins/fontStyle/font-awesome.min.css">
+	<link defer href="./css/plugins/fontStyle/font-montserrat.css" rel="stylesheet">
+	<link defer href="./css/plugins/fontStyle/font-lato.css" rel="stylesheet" importance="low">
+	<!-- Font libraries Ends -->
+
+	<!-- CSS Library Include Area Starts -->
+	<link defer rel="stylesheet" href="./css/plugins/bootstrap/css/bootstrap.min.css">
+	<link defer rel="stylesheet" href="./css/plugins/fonts/style.css">
+	<link defer rel="stylesheet" href="./css/custom/login.css?v=162.0.0">
+	<link defer rel="stylesheet" href="./css/custom/signup_flow.css?v=162.0.0">
+
+	<link defer rel="stylesheet" href="css/custom/melpDrive.css?v=162.0.0">
+
+	<!-- CSS Library Include Area Starts -->
+
+	<link defer rel="icon" href="images/favicon.png" type="image/png" sizes="16x16" importance="low">
+	<script defer src="./js/library/elastic-apm-rum.umd.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@jitsi/electron-sdk@6.0.29/index.min.js"></script>
+</head>
+<div class="spinner-body mainPage" id="bodyloader" style="visibility: hidden;">
+	<div id="body-spinner-bar" class="ldio-dpbvxcmmyw spinner">
+		<div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+		</div>
+	</div>
+</div>
+<span id="loadingMsg" class="hideCls">Just a moment, we're getting things ready for you..</span>
+
+<body style="line-height: 0;background-color: #f8f8f8;">
+	<div class="connection-empty-state" id="loaderDiv" style="display: none;">
+		<div id="loading-bar-spinner" class="spinner">
+			<div class="spinner-icon"></div>
+		</div>
+	</div>
+
+	<form name="ecdhtest">
+		<input name="alice_priv" type="hidden" value="">
+		<input name="alice_pub_x" type="hidden" value="">
+		<input name="alice_pub_y" type="hidden" value="">
+		<input name="alice_key_x" type="hidden" value="">
+		<input name="alice_key_y" type="hidden" value="">
+		<input name="bob_priv" type="hidden" value="">
+		<input name="bob_pub_x" type="hidden" value="">
+		<input name="bob_pub_y" type="hidden" value="">
+		<input name="bob_key_x" type="hidden" value="">
+		<input name="bob_key_y" type="hidden" value="">
+		<input name="status" type="hidden">
+		<input name="q" type="hidden">
+		<input name="a" type="hidden">
+		<input name="b" type="hidden">
+		<input name="gx" type="hidden">
+		<input name="gy" type="hidden">
+		<input name="n" type="hidden">
+	</form>
+	<div class="sign-up-flow">
+		<div class="sign-up-flow-cont forgetPass">
+			<!-- Logout menu for user profile form  -->
+			<div class="collapse navbar-collapse" id="myNavbar"
+				style="display: none;position: absolute;right: 2rem;top: 2rem;">
+				<ul class="nav navbar-nav navbar-nav-form navbar-right">
+					<li>
+						<button id="logoutBtn" type="button" class="cancelButtonGlobal logout-text"
+							onclick="logout();">Logout</button>
+						<!-- <a href="javascript:void(0);" onclick="logout();" class="logout-text">Logout</a> -->
+					</li>
+				</ul>
+			</div>
+			<div class="logo" id="signupProcess">
+				<div class="hideCls" id="signupprocesss">
+					<a href="https://www.melp.us/">
+						<img src="images/melpapp-logo.svg" alt="Click to visit melp.us ">
+					</a>
+				</div>
+				<div class="languageWrap">
+					<div class="languageBtn hideCls" style="display:none"
+						onclick="showLanguage('languageDropDown', this)" id="languageName">English</div>
+					<div class="languageDropDown hideCls" style="display:none">
+						<ul>
+							<li onclick="changePreferredLang('en')">English</li>
+							<li onclick="changePreferredLang('es')">Español</li>
+							<li onclick="changePreferredLang('pt')">Português</li>
+							<li onclick="changePreferredLang('de')">German</li>
+
+							<!-- <li>Russian</li>
+					<li>French</li>
+					<li>German</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main container where all screens will be rendered -->
+
+
+			<div class="container signup-login-m login-common-box-style" id="loadable_content">
+				<section id="notsupproted-template" class="extra-features-section sectop" style="display: none;">
+					<div class="container">
+						<div id="emailunverified" class="email-signUp-forms">
+							<div class="row">
+								<div class="col-sm-12 company-user-nameImg">
+									<img class="email-info" importance="low" loading="lazy"
+										src="images/icons/info-Icons.svg">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 company-user-name">
+									<span class="user_welcomename">MelpApp does not support IE.</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 company-text">
+									<span class="company-texts-cont">For best experience switch to Chrome, Mozilla,
+										Edge, etc</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<!--successfully msg Strat here-->
+	<section class="teamPopup-common hideCls" id="alertPopup">
+		<div class="successfullySection">
+			<div class="succesfullyContent">
+				<div class="succesfullyHeading" id="alertContent"></div>
+				<div class="succesfullyFooter">
+					<button type="button" class="submitButtonGlobal" onclick="hideAlert('alertPopup')">OK</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--successfully msg Strat here-->
+
+	<!--Confirm pop-up msg Strat here-->
+	<section class="teamPopup-common hideCls" id="confirmPopup">
+		<div class="successfullySection">
+			<div class="succesfullyContent">
+				<div class="succesfullyHeading" id="confirmContent"></div>
+				<div class="succesfullyFooter">
+					<button class="cancelBtn" id="confirmCancel" onclick="hideAlert('confirmPopup')"> Cancel</button>
+					<button class="submitButtonGlobal" id="confirmDone">OK</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Confirm pop-up msg Strat here-->
+
+	<footer class="footer-lik-signup">
+		<ul>
+			<li><a href="" class="unset-over">MelpApp © 2022 </a></li>
+			<li><a href="https://melp.us/terms-condition" target="_blank">User Agreement </a></li>
+			<li><a href="https://melp.us/privacy-policy" target="_blank">Privacy Policy </a></li>
+			<li><a href="https://melp.us/privacy-policy" target="_blank">Cookie Policy </a></li>
+		</ul>
+	</footer>
+</body>
+<script src="js/library/mustache.min.js"></script>
+<script src="./helpers/heightAdjust_melper.js?v=162.0.0"></script>
+
+<script defer src="./js/library/jquery-3.4.1.min.js"></script>
+<script defer src="./constant.min.js?v=162.0.0"></script>
+
+<!-- Route Libraries Starts -->
+<script defer src="./bower_components/js-signals/dist/signals.min.js"></script>
+<script defer src="./bower_components/crossroads/dist/crossroads.min.js"></script>
+<script defer src="./bower_components/Hasher-master/dist/js/hasher.min.js"></script>
+<script defer src="./route.js?v=162.0.0"></script>
+<!-- Route Libraries Ends -->
+
+
+<!-- JS Library Include Area Starts -->
+<script defer src="./js/library/bootstrap/js/bootstrap.min.js"></script>
+<script defer src="./js/library/momentjs/moment.min.js"></script>
+<script defer src="./js/library/momentjs/momenttimezone.js"></script>
+<!-- JS Library Include Area Stops -->
+
+<!-- Google Analytics Libraries Starts -->
+<script defer src="./js/library/analytics/analytics.js"></script>
+<script defer async src="./js/library/analytics/gtag.js?id=UA-71451202-1"></script>
+<script defer type="module" src="./helpers/ga_login_helper.js?v=162.0.0"></script>
+<!-- Google Analytics Libraries Ends -->
+<script defer src="./js/library/securityjsNew/jsbn.js"></script>
+<script defer src="./js/library/securityjsNew/jsbn2.js"></script>
+<script defer src="./js/library/securityjsNew/prng4.js"></script>
+<script defer src="./js/library/securityjsNew/rng.js"></script>
+<script defer src="./js/library/securityjsNew/ec.js"></script>
+<script defer src="./js/library/securityjsNew/sec.js"></script>
+<script defer src="./js/library/securityjsNew/sha256.min.js"></script>
+<script defer src="./js/library/securityjsNew/base64js.min.js"></script>
+<script defer src="./js/library/securityjsNew/index.js"></script>
+<script defer src="./js/custom/encryption.js?v=162.0.0"></script>
+
+<script defer type="module" src="./js/custom/login.js?v=162.0.0"></script>
+<script defer type="module" src="./controller/profile_controller.js?v=162.0.0" importance="low"></script>
+
+<link defer rel="stylesheet" type="text/css" href="./css/custom/footerStrip.css?v=162.0.0" importance="low">
+<link defer rel="stylesheet" type="text/css" href="./css/custom/businessuser.css?v=162.0.0" importance="low">
+
+<script>
+	function detectIEEdge() {
+		let ua = window.navigator.userAgent;
+		let msie = ua.indexOf('MSIE ');
+		if (msie > 0) {
+			// IE 10 or older => return version number
+			return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+		}
+
+		let trident = ua.indexOf('Trident/');
+		if (trident > 0) {
+			// IE 11 => return version number
+			let rv = ua.indexOf('rv:');
+			return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+		}
+		// other browser
+		return false;
+	}
+
+	// $(document).ready(function (event) {
+	// 	if (detectIEEdge() != false) {
+	// 		$("#notsupproted-template").show();
+	// 		return false;
+	// 	}
+
+	// 	if (screen.width < 768 && !hasher.getURL().includes('emailverification')) {
+	// 		window.location.href = `https://${BASE_LINK}/download-application`;
+	// 	}
+	// });
+
+	function isChrome() {
+		const userAgent = navigator.userAgent;
+		const vendor = navigator.vendor;
+		// Chrome's unique combination: Contains "Chrome", vendor is "Google Inc.", and does not contain "Edg" (to exclude Edge)
+		return /Chrome/.test(userAgent) && vendor === "Google Inc." && !/Edg/.test(userAgent);
+	}
+
+
+	document.addEventListener('DOMContentLoaded', () => {
+		if (detectIEEdge() != false) {
+			document.getElementById('notsupproted-template').style.display = "block";
+			return false;
+		}
+
+		if (screen.width < 768 && !hasher.getURL().includes('emailverification')) {
+			window.location.href = `https://${BASE_LINK}/download-application`;
+		}
+
+		elasticApm.init({
+			serviceName: SERVER_NAME,
+			serverUrl: 'https://static-dev.melpapp.com/track/',
+			serviceVersion: "162.0.0",
+			environment: ENVIRONMENT
+		});
+		if (isChrome()) {
+			//console.log("Yes, it's Chrome");
+			var link = document.createElement('link');
+			link.rel = 'manifest';
+			link.href = './manifest.json';
+			document.head.appendChild(link);
+		}
+	});
+</script>
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Info Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Signup-Flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MelpApp/-Styleguide/-Signup-Form/-Link-Expired-Screen" transform="translate(-710.000000, -307.000000)">
+            <g id="Info-Icon" transform="translate(712.000000, 309.000000)">
+                <path d="M8.17124146e-14,29.5319747 C8.17124146e-14,45.8429432 13.2235579,59.0639495 29.5332505,59.0639495 L29.5332505,59.0639495 C45.8429432,59.0639495 59.0652253,45.8429432 59.0652253,29.5319747 L59.0652253,29.5319747 C59.0652253,13.2222821 45.8429432,3.19744231e-14 29.5332505,3.19744231e-14 L29.5332505,3.19744231e-14 C13.2235579,3.19744231e-14 8.17124146e-14,13.2222821 8.17124146e-14,29.5319747 L8.17124146e-14,29.5319747 Z" id="Clip-7" stroke="#9C9696" stroke-width="4" stroke-linecap="round"></path>
+                <path d="M31.8279185,21.8922532 L28,21.8922532 L28,18 L31.8279185,18 L31.8279185,21.8922532 Z M31.8279185,40.485 L28,40.485 L28,24.401309 L31.8279185,24.401309 L31.8279185,40.485 Z" id="i" fill="#9C9696" fill-rule="nonzero" transform="translate(29.913959, 29.242500) scale(1, -1) translate(-29.913959, -29.242500) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

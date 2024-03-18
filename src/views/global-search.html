@@ -1,0 +1,140 @@
+<section class="globalMain" id="globalSearch">
+   <div class="main-wrapper margin-newglobal" style="margin-top: 12px;">
+      <!-- Loader start -->
+      <div id="globalSearchLoader">
+         <div id="loading-bar-spinner" class="spinner">
+            <div class="spinner-icon"></div>
+         </div>
+      </div>
+      <!-- Loader end -->
+      <div class="global-header">
+         <ul class="global-tabbing">
+            <li onclick="allSectionShow()"><span id="allSection" class="addborder-global-all">All</span></li>
+            <li onclick="peopleSectionShow()"><span id="peopleSection">People</span></li>
+            <li onclick="messageSectionShow()"><span id="messageSection">Message</span></li>
+            <li onclick="topicSectionShow()"><span id="topicSection">Topic</span></li>
+            <li onclick="fileSectionShow()"><span id="fileSection">Files</span></li>
+         </ul>
+      </div>
+      <!--  -->
+      <!-- <div class="search-result-header">
+         <div class="search-text-here">
+            Search result for “<span id="global-search-text"></span>“
+         </div>
+      </div> -->
+      <!--  all  section  satrt here-->
+      <div id="all-global-data" class="globalData pageWidthAdjust">
+         <!-- card section all  section  satrt here-->
+         <div class="globalBody hideCls" id="globalPeopleData">
+            <ul></ul>
+            <div class="seemore-global peopleSeeMore" onclick="peopleSectionShow()">
+               SEE MORE
+            </div>
+         </div>
+         <!-- card section all  section  satrt here-->
+         <!--  message here start here-->
+         <div id="messageHeading" class="hideCls">
+            <div class="global-message-header">
+               <div class="search-text-here">
+                  Messages
+               </div>
+            </div>
+            <!--  message list item start here-->
+            <div class="global-msg-list-section">
+               <div class="" id="globalMessageData">
+                  <ul class="global-ul-list-msg"></ul>
+               </div>
+               <div class="seemore-global" onclick="messageSectionShow()">
+                  SEE MORE
+               </div>
+            </div>
+         </div>
+         <!--  message here end here-->
+         <!--  file here start here-->
+         <div id="fileHeading" class="hideCls">
+            <div class="global-message-header">
+               <div class="search-text-here">
+                  Files
+               </div>
+            </div>
+            <!--  file list item start here-->
+            <div class="global-msg-list-section">
+               <div id="globalFileData">
+                  <ul class="global-ul-list-msg"></ul>
+               </div>
+               <div class="seemore-global" onclick="fileSectionShow()">
+                  SEE MORE
+               </div>
+            </div>
+         </div>
+         <!--  message here end here-->
+         <!--  file here start here-->
+         <div id="topicHeading" class="hideCls">
+            <div class="global-message-header">
+               <div class="search-text-here">
+                  Topics
+               </div>
+            </div>
+            <!--  file list item start here-->
+            <div class="global-msg-list-section">
+               <div id="globalTopicData">
+                  <ul class="global-ul-list-msg"></ul>
+               </div>
+               <div class="seemore-global peopleSeeMore" onclick="topicSectionShow()">
+                  SEE MORE
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  all  section  end here-->
+      <!--  people  section  satrt here-->
+      <div id="peopleData" class="PeploeDataScroll" style="display:none;">
+         <!-- card poeple  section  satrt here-->
+         <div class="globalBody">
+            <ul></ul>
+         </div>
+         <!-- card poeple  section  satrt here-->
+      </div>
+      <!--  people  section  end here-->
+      <!--  message  section  start here-->
+      <div id="messageData" class="pageWidthAdjust" style="display:none;">
+         <div class="global-msg-list-section">
+            <ul class="global-ul-list-msg message-scroll"></ul>
+         </div>
+      </div>
+      <!--  message  section  end here-->
+      <!-- topic section start here -->
+      <div id="topicData" class="pageWidthAdjust" style="display:none;">
+         <div class="global-msg-list-section">
+            <ul class="global-ul-list-msg"></ul>
+         </div>
+      </div>
+      <!-- topic section end here -->
+      <!--  file  section  end here-->
+      <div class="global-file-section-data" id="fileData" style="display:none;">
+         <div class="file-tab-start">
+            <div class="file-main-header-fixed">
+               <div class="file-type file-commmon-font fileTypeHeading">TYPE</div>
+               <div class="file-name file-commmon-font">NAME</div>
+               <div class="file-size file-commmon-font">SIZE</div>
+               <div class="file-shared-by file-commmon-font">SHARED BY</div>
+               <div class="file-shared-on file-commmon-font sharedOn">SHARED ON</div>
+               <div class="file-downloaded file-commmon-font"></div>
+            </div>
+            <div class="inner-file-main-section">
+               <ul></ul>
+            </div>
+         </div>
+      </div>
+      <!--  file  section  end here-->
+      <div class="outers globalsearch-empty" id="empty-state" style="display: none;">
+         <div class="empty-state-text globalSearchTabSize">
+            <img src="images/empty-files-images.svg">
+            <div class="align-center">
+               <p class="start-msg">NO MATCHES FOUND</p>
+               <p class="textempty-p">Try to search in other tabs</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

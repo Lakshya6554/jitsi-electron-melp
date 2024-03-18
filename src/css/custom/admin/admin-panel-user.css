@@ -1,0 +1,851 @@
+/* User listing css start here */
+
+::-webkit-scrollbar{
+  height: 0.4rem;
+  width:0.4rem;
+  background: var(--dark-gray);
+}
+::-webkit-scrollbar-thumb:horizontal{
+  background: var(--dark-gray);
+  border-radius: 10px;
+}
+
+.adminUserListing {
+  padding-top: 1.2rem;
+}
+.adminUserListingContainer {
+  padding: 0% 0% 0 0%;
+  background: var(--white);
+  /* border: 1px solid #D6DBE1; */
+  border-radius: 9.5842px;
+  margin-left: 0.2rem;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.adminListingTop {
+  /* display: flex; */
+  background: var(--white);
+  /* height: 5rem; */
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-radius: 0.2rem;
+  /* justify-content: space-between; */
+  padding: 0px 3rem;
+  /* position: fixed; */
+  flex-wrap: wrap;
+  /* width: 100vw; */
+  background: #fff;
+  z-index: 9;
+}
+.adminSearch {min-width: 4.8rem;position: relative;/* top: 20px; */float: left;}
+.adminListUser {
+  display: flex;
+  width: 100%;
+  /* flex-wrap: wrap; */
+  /* overflow: auto; */
+  /* width: calc(100vw - -33rem); */
+  /* max-width: calc(100vw - -17rem); */
+  /* position: fixed; */
+  /* left: 0; */
+  /* background: #fff; */
+}
+.adminListingFilter {min-width: 25.2rem;/* width: 20%; */float: left;width: auto;}
+.teamMarginRight{min-width: 30.2rem}
+.shortIcon {
+  background-image: url(../../../images/icons/adminShort.svg);
+  background-repeat: no-repeat;
+  background-position: right 1% center;
+  padding-right: 1.8rem !IMPORTANT;
+  cursor: pointer;
+  /* background-size: 5%; */
+}
+.adminAddress {
+  min-width: 23.9rem;
+  float: left;
+  width: auto;
+}
+.adminListigBg img {
+  width: 100%;
+  max-width: 2rem;
+  height: 2rem;
+}
+.adminStatus {
+  min-width: 19.7rem;
+  position: relative;
+  float: left;
+  width: auto;
+}
+.adminInnerStatus {
+  cursor: pointer;
+}
+.adminListigBg {
+  /* background: rgba(214, 219, 225, 0.79); */
+  border-radius: 2px;
+  /* padding: 0.4rem 1rem; */
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--brown);
+}
+.adminInnerStatus img {
+  padding-left: 0.7rem;
+}
+.adminInnerStatusDropDown {
+  position: absolute;
+  width: 100%;
+  background: var(--white);
+/* Dialog Shadow */
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  max-width: 18.8rem;
+  z-index: 999;
+  padding: 1rem;
+  top: 3rem;
+  display: none;
+}
+.domainFilterDropdown{
+  top: 16rem;
+  right: 1rem;
+  padding: unset;
+}
+.form__radio-group:hover {
+  background: #f2f2f2;
+}
+.form__radio-input {
+  display: none;
+}
+.form__radio-group {
+    padding: 0.5rem 1.3rem;
+}
+.form__label-radio {
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 2.5rem;
+  font-weight: 500;
+}
+
+.form__radio-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid #969696;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+}
+.form__radio-button::after {
+  content: "";
+  display: block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff0000;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.activeLabelRadio:checked + .form__radio-button  {
+  background: red;
+}
+.pdUnset{
+  padding-left: unset !important;
+}
+/* .activeLabelRadio:after {
+  content: "";
+  display: block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff0000;
+  opacity: 0;
+  transition: opacity 0.2s;
+} */
+.form__radio-input:checked ~ .form__label-radio .form__radio-button::after {
+  opacity: 1;
+}
+.adminListingScroll {
+  /* max-height: calc(100vh - 17rem) !important; */
+  /* overflow-x: hidden; */
+  /* min-width: calc(100vw - -69rem); */
+  /* width: 100%; */
+  /* width: fit-content; */
+  /* min-width: 55vw; */
+  /* overflow-y: scroll; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  max-width: 100%;
+  /* max-width: 119vw; */
+  /* min-width: 100vw; */
+  /* overflow: auto; */
+  max-height: calc(100vh - 24rem) !important;
+  overflow: auto;
+  width: 100%;
+  /* overflow-y: hidden; */
+  /* padding-top: 5rem; */
+  min-width: fit-content;
+}
+.adminScrollAddInvite {
+  max-width: 100%;
+  max-height: calc(100vh - 16.2rem) !important;
+  overflow: auto;
+  width: auto !important;
+  min-width: fit-content;
+  height: auto;
+}
+.adminListingWrapA2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 18rem;
+    width: 100%;
+    /* line-height: 1.4rem !important; */
+}
+
+.skillColWidth {
+    min-width: 15rem !important;
+}
+
+/* .designationCol {
+    min-width: 25rem !important;
+    text-align: left;
+} */
+
+
+.deactivateDateCol {
+    /* min-width: 20rem; */
+    /* text-align: center; */
+}
+
+
+.adminFiles {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D6DBE1;
+  padding: 1rem 3rem;
+  /* margin-bottom: 0.2rem; */
+  /* cursor: pointer; */
+  text-align: left;
+  /* min-width: 21.8%; */
+  /* float: left; */
+  /* display: inline-block; */
+  clear: both;
+  width: 100%;
+}
+.adminListCommonA2 {
+  width: auto !important;
+  min-width: 34rem !important;
+}
+.adminInfo {
+  min-width: 30.3rem;
+  display: flex;
+  align-items: center;
+  width: auto;
+  float: left;
+}
+.adminCheckbox {
+  margin-right: 2.5rem;
+}
+.adminCheckbox{
+  background-image: url(../../../images/contact.svg);
+  background-repeat: no-repeat;
+  width: 1.65rem;
+  background-position: center center;
+  height: 2.5rem;
+  /* border: 1px solid #f2f2f2; */
+  cursor: pointer;
+  float: left;
+  background-size: contain;
+}
+.disableCheckBox{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.adminCheckboxaActive, .defaultChecked, .addColumnChecked {
+  background-image: url(../../../images/accept.svg);
+  background-repeat: no-repeat;
+  width: 1.65rem;
+  /* background-position: top 0.88rem center; */
+  height: 2.5rem;
+  /* border: 1px solid #f2f2f2; */
+  cursor: pointer;
+  float: left;
+}
+.adminUserPic {
+  margin-right: 2rem;
+  position: relative;
+}
+.adminUserPic img {
+  width: 100%;
+  max-height: 2.2rem;
+  vertical-align: middle;
+  max-width: 2.2rem;
+}
+.adUserProfile {
+    width: 100%;
+    max-width: 3rem !important;
+    max-height: 3rem !important;
+}
+.adminUserName {
+  font-weight: 500;
+  font-size: 1.31rem;
+  line-height: 1.9rem;
+/* identical to box height, or 129% */
+  letter-spacing: 0.1rem;
+  color: var(--brown);
+  white-space: nowrap;
+}
+.adminEmail {
+  /* width: 14%; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  /* min-width: 20.8rem; */
+  /* width: 15%; */
+  /* padding-right: 4%; */
+  float: left;
+  min-width: 23.9rem;
+  float: left;
+  width: auto;
+}
+.adminEmail span {
+  font-weight: 500;
+  font-size: 1.31rem;
+  line-height: 1.9rem;
+  letter-spacing: 1px;
+  color: var(--brown);
+  display: inline;
+}
+.adminListingStatus {
+  min-width: 19.8rem;
+  position: relative;
+  float: left;
+  width: 10.8%;
+  /* min-width: 15rem; */
+  width: auto;
+  float: left;
+  /* width: 11%; */
+}
+.adminListingStatus span {
+  font-weight: 500;
+  font-size: 1.31rem;
+  line-height: 1.9rem;
+  letter-spacing: 1px;
+  color: var(--brown);
+}
+.addminListingStatusIcons {
+  margin-right: 0.7rem;
+}
+.addminListingStatusIcons img {
+  vertical-align: baseline;
+  /* margin-top: 0.4rem; */
+}
+.adminDate {
+      min-width: 20.5rem;
+      width: auto;
+      /* min-width: 14.5rem; */
+      /* width: 19.5%; */
+      /* float: left; */
+      /* text-align: center; */
+      display: inline;
+}
+.adminDate span {
+  font-weight: 500;
+  font-size: 1.31rem;
+  line-height: 1.9rem;
+  letter-spacing: 1px;
+  color: var(--brown);
+  display: inline;
+}
+.adminActiveItem {
+      min-width: 18rem;
+      text-align: center;
+      width: auto;
+      /* margin-left: 8rem; */
+      /* margin-right: 11rem; */
+      /* min-width: 15rem; */
+      text-align: center;
+      /* width: 25%; */
+      /* text-align: center; */
+      float: left;
+      /* width: 14%; */
+}
+/* switch Btn */
+.switchItem {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 1.8rem;
+  margin-bottom: 0;
+  /* text-align: center; */
+}
+
+.switchItem input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sliderAd {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #D6DBE1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.sliderAd:before {
+  position: absolute;
+  content: "";
+  height: 1.3rem;
+  width: 1.3rem;
+  left: 0.19rem;
+  bottom: 0.26rem;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .sliderAd {
+  background-color: var(--red);
+}
+
+input:focus + .sliderAd {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .sliderAd:before {
+  -webkit-transform: translateX(1.9rem);
+  -ms-transform: translateX(2.6rem);
+  transform: translateX(2.6ren);
+}
+.adminCheck:checked + .sliderAd { background: red; }
+/* Rounded sliders */
+.sliderAd.round {
+  border-radius: 3.4rem;
+}
+
+.sliderAd.round:before {
+  border-radius: 50%;
+}
+/* switch btn end */
+.adminMoreOptionIcon img {
+  width: 100%;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+.paginationWrap {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1.5rem 0; */
+  border-top: 1px solid #D6DBE1;
+  padding-left: 3rem;
+  padding-right: 0;
+  position: relative;
+  align-items: center;
+  /* padding-top: 1.3rem; */
+  /* padding-bottom: 4%; */
+  /* height: 100%; */
+  /* max-height: 7.8rem; */
+  /* min-height: 6rem; */
+  position: fixed;
+  bottom: 0.5rem;
+  width: 100%;
+  /* right: -25rem; */
+  max-width: 84.3%;
+  background: #fff;
+  z-index: 999;
+}
+.paginationResult {
+  /* display: flex; */
+  /* align-items: center; */
+  /* position: relative; */
+}
+.resultBox span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-right: 1.3rem;
+  color: #333333;
+}
+.paginationResultBox {
+  /* width: 7.0rem; */
+  /* height: 4.2rem; */
+  /* background: var(--white); */
+  /* border: 1px solid #DDDDDD; */
+  /* border-radius: 8px; */
+}
+span#pagesize {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: var(--white);
+  border: 0.1rem solid #DDDDDD;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  line-height: 2rem;
+  display: inline-block;
+}
+.paginationResultBox img {
+  /* width: 100%; */
+  max-width: 1rem;
+  max-height: 1rem;
+}
+.pagination {
+  display: inline-block;
+}
+.paginationDropDown ul {
+    margin-bottom: 0px;
+    max-width: 17rem;
+    overflow-y: scroll;
+    height: calc(100vh - 72rem);
+    padding-bottom: 0px !important;
+}
+
+
+
+
+.pagination a {
+  color: white;
+  float: left;
+  padding: 0.3rem 1.3rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  background: var(--white);
+  border: 1px solid #F1F1F1;
+  border-radius: 0.4rem;
+  color: #333333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.pagination .active {
+  background: var(--red);
+  color: var(--white);
+}
+
+.paginationResult {
+  display: flex;
+  align-items: center;
+  padding-top: 0.8rem;
+}
+
+.resultBox {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.paginationResultBox {
+  /* width: 6rem; */
+  /* height: 3.8rem; */
+  /* background: var(--white); */
+  /* border: 1px solid #DDDDDD; */
+  /* border-radius: 0.8rem; */
+  text-align: center;
+  line-height: 3.8rem;
+  color: #333333;
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  /* width: 100%; */
+}
+.paginationDropDown {
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    /* max-width: 19rem; */
+    /* overflow: scroll; */
+    /* height: calc(100vh - 72rem); */
+    border-bottom: 1px solid #D6DBE1;
+    background: var(--white);
+    box-shadow: 0px 2px 24px rgb(0 0 0 / 10%);
+    display: none;
+}
+
+.paginationDropDown ul li {
+    border-bottom: 1px solid #D6DBE1;
+    list-style: none;
+    font-size: 1.2rem;
+    list-style: none;
+    cursor: pointer;
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+    text-align: left;
+    padding-left: 1rem;
+    font-weight: 600;
+}
+.paginationDropDown ul li.selected {
+    color: red;
+    font-weight: 600;
+}
+.resultBox {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.paginationBgNone {
+  background: none !important;
+  border: none !important;
+}
+
+#userStatusContainer .adminListingFilter {
+    width: 25%;
+}
+.adResultA2 {
+    display: flex;
+}
+
+.adPaginationA2 {
+}
+
+.paginationDropDown ul li:hover {
+    background: var(--dark-white);
+}
+
+.paginationDropDown ul li:last-child {
+    border-bottom: navajowhite;
+}
+
+#userStatusContainer .adminAddress {
+    width: 25%;
+}
+
+#userStatusContainer .adminStatus {
+    width: 25%;
+}
+
+#userStatusContainer .adminJoining {
+    width: 25%;
+}
+
+#userStatusContainer .adminInfo {
+    /* width: 25%; */
+}
+
+#userStatusContainer .adminEmail {
+    width: 25%;
+    /* max-width: inherit; */
+    /* padding-right: 4%; */
+}
+
+#userStatusContainer .adminListingStatus {
+    /* width: 25%; */
+}
+.adminFiles:last-child {
+  border-bottom: none;
+}
+.adminAddCilumA1 {
+    min-width: 11%;
+    text-align: center;
+}
+
+.adminAddA1 {
+    min-width: 15%;
+    font-weight: 500;
+    font-size: 1.31rem;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: var(--brown);
+    text-align: left;
+    /* width: 100%; */
+    padding-left: 1%;
+}
+
+.adminMoreOption {
+    min-width: 12.5rem;
+    text-align: right;
+    width: auto;
+    float: left;
+    padding-right: 2%;
+    cursor: pointer;
+}
+
+.adminActiveDeactive {
+    min-width: 17.5rem;
+    text-align: center;
+    width: auto;
+}
+
+.adminJoining {
+    min-width: 20.5rem;
+    width: auto;
+}
+.adminScrollA2 {
+  height: calc(100vh - 21rem) !important;
+  /* overflow: auto; */
+  /* overflow-y: hidden; */
+  /* min-width: 100vw; */
+  /* width: 100vw; */
+  /* overflow-y: hidden; */
+  /* width: calc(100vw - 27rem); */
+  /* border-collapse: collapse; */
+  /* width: 99%; */
+  /* overflow-x: scroll; */
+  display: block;
+  /* overflow-y: hidden; */
+  /* overflow: auto; */
+  /* overflow-y: hidden; */
+  /* padding-right: 22%; */
+}
+.adminScrollA4 {
+    overflow: auto;
+    overflow-y: hidden;
+}
+.adminUserListHeader {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.adminListingClassWidth {
+  min-width: inherit !important;
+  /* max-width: 144rem !important; */
+  /* min-width: calc(100vw - -69rem) !important; */
+  /* max-width: 100vw; */
+}
+
+
+
+/* table */
+.table-responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+
+table.table-condensed.table-striped {
+  border-collapse: collapse;
+  /* width: 1200px; */
+  overflow-x: scroll;
+  display: block;
+}
+.table-condensed.table-striped thead, .table-condensed.table-striped tbody {
+  display: block;
+}
+.table-condensed.table-striped tbody {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 420px;
+}
+.table>thead>tr>th {
+  vertical-align: bottom;
+  border-bottom: 2px solid transparent;
+}
+.table-condensed.table-striped td, .table-condensed.table-striped th {
+  min-width: 150px;
+  height: 25px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+} 
+.tablehead {
+  background-color: #5e5e60;
+  color: #fff;
+}
+.table-condensed>thead.tablehead>tr>th {
+  padding: 20px 10px 20px 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+}
+.table-condensed>tbody.tablebody>tr>td {
+  padding: 15px 10px 15px 20px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4d4d4f;
+}
+.table-striped>tbody>tr:nth-of-type(even) {
+  background-color: #e4e4e5;
+  min-width: 100%;
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #f6f6f6;
+  min-width: 100%;
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+}
+
+
+.adColumA1 {
+    min-width: 15rem !important;
+    /* float: left; */
+    /* text-align: left; */
+    width: auto;
+}
+.departmentWidth {
+    min-width: 20rem !important;
+    display: flex;
+}
+.adminEmailWrap{
+  min-width: 15rem !important;
+    display: flex !important;
+}
+.adminEmailWrap .adminListingWrapA2 {
+  max-width: 20rem;
+}
+.departmentWidth .adminListingWrapA2 {
+  max-width: 20rem;
+}
+.departmentWidth {
+    min-width: 25rem !important;
+}
+
+
+.designationColWidth {
+    min-width: 25rem;
+    display: flex;
+}
+
+.deactivateDateColWidth {
+    min-width: 20rem !important;
+}
+
+.locationWidth {
+    min-width: 25rem;
+    display: flex;
+}
+.filterIcon {
+  background-size: auto;
+}
+#adUserStatusArea .adminInfo {
+  min-width: 35rem;
+}
+
+#adUserStatusArea .adminEmail {
+  min-width: 33.3rem;
+  width: 20rem;
+}
+
+#adUserStatusArea .adminListingStatus {
+  width: 100%;
+  max-width: 35.5rem;
+  float: left;
+}
+#adUserStatusArea .adminEmail span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 58%;
+}
+#adUserStatusArea .adminListingStatus {
+    width: 24.5%;
+    /* width: auto; */
+}

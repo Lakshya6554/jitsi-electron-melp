@@ -1,0 +1,144 @@
+.panel-body {
+    background-color: var(--dark-slate-gray);
+}
+.team-innerscroll ul {
+    padding-left: 0rem;
+    list-style: none;
+}
+.team-innerscroll ul li {
+    border-bottom: solid 0.1rem var(--gray);
+    cursor: pointer;
+    padding: 0rem;
+    margin: 0rem;
+    display: inline-block;
+    width: 100%;
+    /* background: var(--white); */
+    /* border-top: solid 0.1rem var(--gray); */
+    /*  */
+}
+.teamGroupScroll, .teamGroupScroll> * {
+    max-height: calc(100vh - 14rem) !important;
+    overflow: auto;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+li.no_Topics {
+    padding: 1.8rem 3.0rem !important;
+    font-size: 1.4rem;
+    color: var(--slate-gray);
+    line-height: 2.4rem;
+    font-weight: 600;
+}
+.no-team-info, .no-team-calander, .no-team-create-topic, .no-team-video, .no-team-audio {
+    width: 100%;
+    float: left;
+    text-align: center;
+    border-left: 0.1rem solid var(--gray);
+    height: 7.6rem;
+    padding: 2.8rem 0rem;
+    position: relative;
+    background: var(--dark-slate-gray);
+    margin: 0rem auto;
+    text-align: center;
+    display: inline-block;
+    max-width: 20%;
+}
+.display-default-icon-team {
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    right: auto;
+    height: 1.8rem;
+    margin: 0rem auto;
+    text-align: center;
+    transform: translate(-1rem, 0.1rem);
+}
+.no-team-video:hover .display-hover-icon-team {
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    right: auto;
+    transform: translate(-1rem, 0.1rem);
+}
+.display-hover-icon-team {
+    display: none;
+    height: 1.8rem;
+}
+.no-team-audio:hover .display-hover-icon-team {
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    right: auto;
+    transform: translate(-1rem, 0.1rem);
+}
+.no-team-create-topic:hover .display-hover-icon-team {
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    right: auto;
+    transform: translate(-1rem, 0.1rem);
+}
+.no-team-calander:hover .display-hover-icon-team {
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    right: auto;
+    transform: translate(-1rem, 0.1rem);
+}
+.size-calender {
+    width: 1.8rem;
+}
+.no-team-info:hover .display-hover-icon-team {
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    right: auto;
+    transform: translate(-1rem, 0.1rem);
+}
+.collapse-team-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.96rem;
+    letter-spacing: 0.06rem;
+    color: var(--slate-gray);
+    text-transform: capitalize;
+    margin-bottom: 0.4rem;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.collapse-team-messgae {
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.82rem;
+    letter-spacing: 0.08rem;
+    /* text-transform: capitalize; */
+    width: 100%;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.collapse-team-messgae {
+    /* text-transform: capitalize; */
+}
+.team-collapse-section {
+    padding: 1.3rem 3.2rem;
+    clear: both;
+}
+.item_content {
+    border-top: none !important;
+}
+.team-message-name {
+    color: var(--slate-gray);
+}
+.team-message-body {
+    color: var(--slate-gray);
+}
+.team-collapse-section:hover {
+    background: var(--dark-white);
+}

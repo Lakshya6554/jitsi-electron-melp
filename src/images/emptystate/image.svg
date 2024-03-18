@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="301" height="287" viewBox="0 0 301 287">
+    <defs>
+        <linearGradient id="a" x1="50.003%" x2="50.003%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+        </linearGradient>
+        <linearGradient id="b" x1="41.17%" x2="58.825%" y1="61.837%" y2="37.982%">
+            <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+        </linearGradient>
+        <linearGradient id="c" x1="37.577%" x2="62.435%" y1="62.949%" y2="37.047%">
+            <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+        </linearGradient>
+        <linearGradient id="d" x1="38.989%" x2="61.043%" y1="55.307%" y2="45.231%">
+            <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+        </linearGradient>
+        <linearGradient id="e" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+        </linearGradient>
+        <linearGradient id="f" x1="49.998%" x2="49.998%" y1="100%" y2="-.004%">
+            <stop offset="0%" stop-color="#B3B3B3" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="#B3B3B3" stop-opacity=".1"/>
+            <stop offset="100%" stop-color="#B3B3B3" stop-opacity=".05"/>
+        </linearGradient>
+        <linearGradient id="g" x1="49.998%" x2="49.998%" y1="100.005%" y2="0%">
+            <stop offset="0%" stop-color="#B3B3B3" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="#B3B3B3" stop-opacity=".1"/>
+            <stop offset="100%" stop-color="#B3B3B3" stop-opacity=".05"/>
+        </linearGradient>
+        <rect id="h" width="221" height="147" x=".029" y=".01" rx="8.85"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="url(#a)" fill-rule="nonzero" d="M255.018 283.025H211.6v-176.43h81.073z"/>
+        <path fill="#F5F5F5" fill-rule="nonzero" d="M252.856 283.025H210.3v-176.43h79.462z"/>
+        <path fill="url(#b)" fill-rule="nonzero" d="M6.166 23.107H187.01v69.526H6.166z" transform="rotate(-15.62 96.588 57.87)"/>
+        <path fill="#F4F4F4" fill-rule="nonzero" d="M2.221 49.2L173.475 1.32l18.12 64.814-171.253 47.879z"/>
+        <path fill="#F5F5F5" fill-rule="nonzero" d="M55.131 58.915l43.086-12.046.92 3.287L56.05 62.202z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M58.806 72.058l43.086-12.046.92 3.287-43.087 12.046zM56.966 65.485l69.24-19.358.918 3.287-69.239 19.358z"/>
+        <circle cx="38.989" cy="72.286" r="7.964" fill="#FFF" fill-rule="nonzero" transform="rotate(-15.62 38.989 72.286)"/>
+        <path fill="url(#c)" fill-rule="nonzero" d="M58.252 44.462h181.695v70.482H58.252z" transform="rotate(-20.42 149.1 79.703)"/>
+        <path fill="#F7F7F7" fill-rule="nonzero" d="M54.016 79.477l166.646-62.041 23.48 63.07-166.645 62.04z"/>
+        <path fill="#F5F5F5" fill-rule="nonzero" d="M107.553 84.729l41.927-15.61 1.19 3.2-41.926 15.609z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M112.317 97.519l41.927-15.61 1.19 3.2-41.926 15.609zM110.647 91.242l67.58-25.163 1.196 3.208-67.58 25.163z"/>
+        <circle cx="92.586" cy="99.407" r="7.964" fill="#FFF" fill-rule="nonzero" transform="rotate(-20.42 92.586 99.407)"/>
+        <path fill="url(#d)" fill-rule="nonzero" d="M169.64 20h70.894v181.234h-70.893z" transform="rotate(-79.9 205.087 110.617)"/>
+        <path fill="#FAFAFA" fill-rule="nonzero" d="M122.945 61.483L298.01 92.666l-11.802 66.256-175.065-31.184z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M165.799 96.556l.598-3.36 44.045 7.845-.598 3.36zM163.408 109.998l.598-3.361 44.045 7.845-.598 3.361zM164.6 103.277l.6-3.361 70.78 12.608-.6 3.36z"/>
+        <circle cx="146.05" cy="98.235" r="7.964" fill="#FFF" fill-rule="nonzero" transform="rotate(-79.9 146.05 98.235)"/>
+        <path fill="url(#e)" fill-rule="nonzero" d="M70.88 104.52L41.576 84.002H1v202.271h253.59V104.52z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M71.976 106.596L43.119 86.679H3.17v196.346h249.686v-176.43z"/>
+        <path fill="url(#f)" fill-rule="nonzero" d="M196.263 241.387a2.985 2.985 0 0 1-2.969 2.998H62.736a2.985 2.985 0 0 1-2.969-2.998v-89.188a2.985 2.985 0 0 1 2.969-2.998h130.558a2.985 2.985 0 0 1 2.969 2.998"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M194.727 239.933a2.882 2.882 0 0 1-2.882 2.883H64.296a2.882 2.882 0 0 1-2.882-2.883v-86.215a2.882 2.882 0 0 1 2.882-2.882h127.532a2.882 2.882 0 0 1 2.883 2.882"/>
+        <rect width="123.27" height="84.313" x=".049" y=".35" fill="url(#g)" fill-rule="nonzero" rx="8.85" transform="translate(66.442 154.472)"/>
+        <rect width="120.108" height="79.886" x="68.006" y="156.876" fill="#FFF" fill-rule="nonzero" rx="8.85"/>
+        <g transform="translate(64.854 121.942)">
+            <mask id="i" fill="#fff">
+                <use xlink:href="#h"/>
+            </mask>
+            <path fill="#D2DADD" fill-rule="nonzero" d="M21.804 100.47l18.822-21.66a3.736 3.736 0 0 1 5.302-.348l5.265 4.67a3.734 3.734 0 0 0 4.89.058l16.109-13.598a3.735 3.735 0 0 1 5.186.345l19.768 21.854c.55.608.887 1.38.959 2.198l.763 8.62a3.773 3.773 0 0 1-.968 2.874 3.74 3.74 0 0 1-2.765 1.223H24.628a3.754 3.754 0 0 1-3.744-3.65c-.029-.947.3-1.87.92-2.585z" mask="url(#i)"/>
+        </g>
+        <circle cx="82.472" cy="169.686" r="7.436" fill="#D2DADD" fill-rule="nonzero"/>
+    </g>
+</svg>

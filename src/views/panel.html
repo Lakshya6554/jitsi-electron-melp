@@ -1,0 +1,957 @@
+<div id="action-panel" class="main-section-body">
+   <input type="hidden" id="updateDeleteInstance">
+   <!--Top Example-->
+   <!--Second Example-->
+   <!-- middle list section start here -->
+   <div class="middle-section">
+      <div class="opacity" onclick="hideMiddlePanel()"></div>
+      <!-- header start here -->
+      <section class="common-list-header afterClearFixed">
+         <div class="title-section teamsGroups">
+            <div class="title text-uppercase color-black chatHeaderCursor" id="header-info" data-type="">
+               Topic
+            </div>
+            <div class="title text-uppercase color-black chatHeaderCursor" id="all-Contact" data-type="">
+
+            </div>
+         </div>
+         <div class="middleIcons">
+            <div class="search-section" id="search-icon" onclick="leftPanelSearchIcon()" tooltip="{{SPH}}" flow="down">
+               <div class="search-icon">
+                  <img src="images/icons/search-icons.svg" class="default-search-icons" tooltip="{{SPH}}" alt="search" flow="down"/>
+                  <img src="images/icons/search-active-icon.svg" class="hover-search" tooltip="{{SPH}}" flow="down"
+                     alt="search-active" />
+               </div>
+            </div>
+            <!-- search section start here -->
+            <div class="common-search-box" id="common-search-box" style="display: none;">
+               <input type="text" autocomplete="off" placeholder="{{SPH}}" class="search-input user-search-input"
+                  onkeyup="leftPanelSearch()" id="middlePanelTxt">
+               <div class="fr" id="search-close" onclick="leftPanelSearchClose()">
+                  <!-- <img src="images/close-11.svg" class="close-size1" > -->
+               </div>
+            </div>
+            <!-- search section end here -->
+            <div class="sort-section sort-common-icon" id="sort-section" onclick="sortUnorderedList(this, 'name', event)"
+               style="display:none;"  tooltip="Sort" flow="down">
+               <div class="filter-icon"></div>
+            </div>
+            <div class="filter-section filtert-common-icon" id="filter-section" onclick="leftPanelDropdown()"
+               style="display:none;"  flow="down">
+               <div class="filter-icon"></div>
+            </div>
+            <div class="select-all-icon hideCls" id="selectAll" onclick="selectAllContact()" tooltip="Select All Contact" flow="down">
+               <div class="filter-icon"></div>
+            </div>
+            <!-- filter popup start here -->
+            <div class="common-sort-dropdown" id="common-sort-dropdown" style="display: none;">
+               <ul class="filter-list-item "></ul>
+            </div>
+         </div>
+         <!-- filter popup end here -->
+      </section>
+      <!-- header end here -->
+      <!-- contact module end here -->
+      <!-- listing section call start here scrol-listing-->
+      <section class="common-listing-section screenHeight" id="middleList">
+         <div class="common-position-middle">
+            <div class="main-section-recent bg-listing contact-scroll-listing" id="middleDataSection">
+
+               <div id="middle-data-list" class="middle-data-list">
+                  <ul class="common-ul-section ul-padd-m-none commom-chat-listing"></ul>
+               </div>
+               <!-- Create Group / Team button starts -->
+               <div class="cretae-team-box hideCls" id="groupBtn">
+                  <div class="margin-team-cretae">
+                     <span class="creat-team-icon-section">
+                        <img src="images/icons/teams-icon.svg" class="team-icon-create-taem">
+                     </span>
+                     <span class="create-team-link" onclick="createTeamPopup('group')">Create Group</span>
+                  </div>
+               </div>
+               <!-- Create Group / Team button Ends -->
+               <div class="connection-empty-state recentloadersection" id="recentloadersection">
+                  <!-- <div id="loading-bar-spinner" class="spinner">
+                     <div class="spinner-icon"></div>
+                  </div> -->
+                  <div id="loading-bar-spinner" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                     <div class="ldio-dpbvxcmmyw">
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- empty state start here -->
+               <section class="noData" id="rightEmptyState" style="display: none;">
+                  <img src="" class="common-empty-img" />
+                  <div class="empty-text-area">
+                     <p class="textempty-h wordBreak" id="noData">No data.</p>
+                  </div>
+               </section>
+               <!-- empty state end here -->
+            </div>
+         </div>
+      </section>
+      <!-- listing section end call here -->
+      <!-- listing section location start here -->
+      <section class="common-contact-section " id="accordion-section">
+         <div class="common-position-middle">
+            <div class="" id="accordion">
+               <section class="noData" id="accordionMiddleEmpty" style="display: none;">
+                  <div class="empty-text-area">
+                     <p class="textempty-h">No Team</p>
+                  </div>
+               </section>
+               <div class="main-section-recent bg-listing" id="accordion-tab">
+                  <div class="accordionWrapper screenHeight11" id="scrollTeam"></div>
+               </div>
+            </div>
+            <!-- Create Group / Team button Ends -->
+            <div class="connection-empty-state" id="accordionloadersection">
+               <!-- <div id="loading-bar-spinner" class="spinner">
+                  <div class="spinner-icon"></div>
+               </div> -->
+               <div id="loading-bar-spinner" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                  <div class="ldio-dpbvxcmmyw">
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- listing section location end here -->
+   </div>
+   <!-- body empty state start here -->
+   <section class="empty-state-body middleEmty hideCls body-empty-state" id="body-empty-state">
+      <div class="middleInner tabSize">
+         <img src="images/emptystate/network-empty-state.svg" class="common-empty-img" />
+         <div class="empty-text-area">
+            <p class="textempty-h"></p>
+            <p class="textempty-p"></p>
+            <div class="bodyEmptyBtn middleEmtyCta"><button class="submitButtonGlobal m-t-25px" id="bodyBtn"></button></div>
+         </div>
+      </div>
+   </section>
+   <!-- body empty state end here -->
+   <!-- right chat section start here -->
+   <div class="right-section">
+      <div class="righSectionInner">
+         <div class="network hideCls" id="network-chat">
+            <!-- Right panel empty state start here -->
+            <section class="empty-state-center hideCls" id="rightSugges-empty-state">
+               <div class="middleInner">
+                  <img src="images/emptystate/network-empty-state.svg" width="60%" />
+                  <p class="textempty-h">Select a user to connect</p>
+                  <p class="textempty-p">Select users from left panel to connect with
+                     <br>
+                     or invite to build network instantly
+                  </p>
+                  <button class="submitButtonGlobal m-t-25px">invite</button>
+               </div>
+            </section>
+            <!-- Right panel empty state end here -->
+            <!-- hideCls -->
+            <div class="right-header">
+               <div class="connection-title-left allclearfix connection-height">
+                  <div class="connection-right-header">
+                     <div class="recentMeetingHeading"></div>
+                  </div>
+                  <div class="connection-search-right">
+                     <section class="connection-right-search-position">
+                        <div class="connection-search-icon">
+                           <div id="connectionSearchRight" class="" onclick="openConnectionSearch()" tooltip="Search" flow="left">
+                              <!-- <img src="images/searchicons.svg" title="Search people" class=""
+                                 id="connection-search-icons"> -->
+                           </div>
+                        </div>
+                  </div>
+                  <div class="connection-search-box hideCls" id="connection-search-box">
+                     <input type="search" placeholder="{{SPH}}" id="invitationSearch" class="search-connection"
+                        autocomplete="off">
+                  </div>
+                  </section>
+               </div>
+            </div>
+            <div id="peopleYouMayKnowList" data-page="0" class="invitaionSec screenHeight suggestionDirectoryDiv">
+               <div id="loaderState" class="hideCls">
+                  <div id="loading-you-may-know" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                     <div class="ldio-dpbvxcmmyw">
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                        <div>
+                           <div></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <ul class="suggestionsdirectorydatapageScroll receviedScroll"></ul>
+               <section class="hideCls" id="peopleYMKEmptyState">
+                     <img src="images/emptystate/peopleYMKEmpty.svg" width="60%">
+                     <p class="textempty-h" id="PYMKemptyMsg">We haven't found any suggestion</p>
+               </section>
+            </div>
+            <!-- old recent meeting details -->
+         </div>
+         <!--Chat-Start-Here-->
+         <div class="main-section-chat">
+            <!-- Right panel empty state start here -->
+            <section class="empty-state-center middleEmty" id="middle-empty-state">
+               <div class="middleInner">
+                  <img src="images/emptystate/network-empty-state.svg" class="common-empty-img" />
+                  <div class="empty-text-area">
+                     <p class="textempty-h">Select a user to connect</p>
+                     <p class="textempty-p">Select users from left panel to connect with
+                        <br>
+                        or invite to build network instantly
+                     </p>
+                     <div class="middleEmptyBtn middleEmtyCta"><button class="submitButtonGlobal m-t-25px"
+                           onclick="inviteRedirectOnEmpty()">invite</button></div>
+                  </div>
+               </div>
+            </section>
+            <!-- Right panel empty state end here -->
+            <section class="chat-inner-section hideCls" id="chatPanelSection">
+               <div class="common-position">
+                  <div class="all-section-chat-hide">
+                     <!-- chat header section start here -->
+                     <section class="chat-header-section">
+                        <div class="chat-header-bg">
+                           <div class="chat-header-display afterClearFixed">
+                              <!-- chat user left part -->
+                              <section class="chat-user-details ">
+                                 <div class="display-flex-chat" id="chatInfoEvent">
+                                    <div class="chat-common-user-icon">
+                                       <img src="images/default_avatar_male.svg" id="chatThumbNail"
+                                          class="common-icons-size vertical-m-call" alt="user" onerror="this.onerror=null; this.src='images/teamGrp.svg'">
+                                    </div>
+                                    <div class="chat-common-user-list">
+                                       <div class="user-label color-black chatHeaderWrap  cupsoerPointerLabel"
+                                          id="receiverName"></div>
+                                       <!-- <div class="user-label color-black networkHeading">PEOPLE YOU MAY KNOW</div> -->
+                                       <div>
+                                          <span class="user-designation color-black chatHeaderWrap  cupsoerPointerLabel"
+                                             id="receiverTopicName">
+                                          </span>
+                                          <span id="userTyping" class="user-designation hideCls"></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </section>
+                              <!-- middle section -->
+                              <section class="chat-user-msg-file">
+                                 <div class="middle-part">
+                                    <div class="middel-inner-section">
+                                       <div class="right-header-message right-header-file">
+                                          <div class="message-title addcolor-message commonMsgTitle" id="message-show"
+                                             onclick="openMessageTab()"><span>{{LB01}}</span></div>
+                                       </div>
+                                       <div class="right-header-file" id="file-show" onclick="openFileTab()">
+                                          <div class="message-file commonMsgTitle" id="message-file"><span>{{LB02}}</span></div>
+                                       </div>
+                                       <div class="right-header-file" id="link-show" onclick="openLinkTab()">
+                                          <div class="message-file commonMsgTitle" id="message-link"><span>{{LB03}}</span></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </section>
+                              <!-- right call section start-->
+                              <section class="chat-user-callsection">
+                                 <section class="userGroupList">
+                                    <ul>
+                                       <!-- <li class="headerSearchIcons"><a href="#"></a></li> -->
+                                       <li id="chatAudioEvent" class="audioCall" tooltip="{{TT01}}" flow="down"><span
+                                             id="chatAudioIcon" class="oneToOneAudioIcon">{{TT01}}</span>
+                                       </li>
+                                       <li id="chatVideoEvent" class="videoCal" tooltip="{{TT02}}" flow="down"><span
+                                             id="chatVideoIcon" class="oneToOneVideoIcon">{{TT02}}</span>
+                                       </li>
+                                       <li id="chatMeetingEvent" class="meeting" tooltip="{{TT03}}" flow="down"><span>{{TT03}}</span>
+                                       </li>
+                                       <!-- <li id="chatInfoEvent" class="info" title="Info"><span>Info</span></li> -->
+                                       <li id="chatMoreEvent" class="moreOptions" tooltip="{{TT05}}" flow="left">
+                                          <span>More Options</span>
+                                          <div class="common-sort-dropdown chatSort" id="chatMoreDropDown"
+                                             style="display: none;">
+                                             <ul class="filter-list-item">
+                                                <li id="callAttendeesDiv" title="{{DD10}}"><img
+                                                   src="images/icons/protfolioCall.svg" class="moreCommonIcon">{{DD10}}</li>
+                                                <li id="writeAndShare" onclick="openSharePost(true)" title="{{DD01}}"><img
+                                                      src="images/icons/postIcon.svg" class="moreCommonIcon">{{DD01}}</li>
+                                                <li id="openEmailChat" onclick="openEmailChat(true)" title="{{DD02}}"><img
+                                                      src="images/icons/mailIcon.svg" class="emailMoreIcon">{{DD02}}
+                                                </li>
+                                                <li onclick="editDiscussion()" id="moreEditTopic" style="display: none;"
+                                                   title="{{DD03}}">
+                                                   <img src="images/icons/editIcon.svg" class="moreCommonIcon">
+                                                   <div id="editTopicText"> {{DD01}}</div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </section>
+                              </section>
+                              <!-- right call section end -->
+                           </div>
+                        </div>
+                     </section>
+                     <!-- internet-connection-error -->
+                     <div class="internet-connection-error" id="chatError" style="display: none;"></div>
+                     <!-- internet-connection-established-->
+                     <!-- User Bloked Start here -->
+                     <div class="userBlockedStrip hideCls" id="blockReportMessage"><span class="text">USER
+                           BLOCKED</span></div>
+                     <!-- User Bloked End here -->
+                     <div class="internet-connection-established" id="chatConnection" style="display: none;"></div>
+                     <!-- chat header section end here -->
+                     <!-- language Detection start here (Comment for now) -->
+                     <!-- <div class="languageDetection" id="languageDetection" style="display: none;">
+                        <div class="languageDetectionStrip">
+                           <div class="languageDetectionStripLeft">{{LB18}}? </div>
+                           <div class="languageDetectionStripRight">
+                              <button class="languageDetectionEnable" id="langEnable">{{BT04}}</button>
+                              <button class="languageDetectionEnableCancel" id="langDecline">{{BT03}}</button>
+                           </div>
+                        </div>
+                     </div> -->
+                     <!-- language Detection end here -->
+                     <!-- body part chat section start here -->
+                     <!-- message tab section satrt here -->
+                     <section class="message-tabe" id="message-tab">
+                        <div class="new-msg-box" id="detectNewMsg" onclick="gotoBottom(false, true)"
+                           style="display: none;">
+                           <span>{{LB19}}</span>
+                        </div>
+                        <!-- Loader start here -->
+                        <div id="waitingState" class="hideCls">
+                           <!-- <div id='loading-bar' class='spinner'>
+                              <div class='spinner-icon'></div>
+                           </div> -->
+
+                           <!-- replace new loader -->
+                           <div id="loading-bar" class="loadingio-spinner-spin-pjazkec4jh9 spinner">
+                              <div class="ldio-0iipvzwq519n">
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- replace new loader-end -->
+
+
+                           <!-- <div id="loading-bar" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                              <div class="ldio-dpbvxcmmyw">
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                                 <div>
+                                    <div></div>
+                                 </div>
+                              </div>
+                           </div> -->
+                        </div>
+                        <!-- Loader end here -->
+                        <div class="empty-tab hideCls" id="msg-empty-tab">
+                           <img src="images/empty-state.svg">
+                           <h1>{{LB04}}</h1>
+                           <p>{{LB05}}</p>
+                        </div>
+                        <div id="chatPanel" class="common-position chatPanel" style="display: none;">
+                           <div class="mesg-chat-area padding-chat message-container" id="message-container">
+                              <div class="message-chat-padding">
+                                 <div class="msg-chat-border">
+                                    <!-- msg area start here -->
+                                    <section class="mes-diplay-s afterClearFixed" id="chatCellPanel">
+                                       <div class="reciever-ul">
+                                          <ul class=""></ul>
+                                          <div class="tapUnblock" id="blockMsgDiv"></div>
+                                       </div>
+                                    </section>
+                                    <!-- msg area end here -->
+                                 </div>
+                              </div>
+                              <!--Chat-End-Here-->
+                              <!--my invitations-start-->
+                           </div>
+                           <!--Chat-End-Here-->
+                           <section class="chat-input-section" id="chatInputArea">
+
+                              <div class="input-chat-border">
+                                 
+                                 <!--chat-replysection-start- #1903-->
+                                 <div id="chatReply-section" class="chatreply-section hideCls" data-reply="">
+                                    <div id="cancelEvent" class="reply-close-icon" onclick="cancelReply()"><img
+                                          src="images/icons/cancel-requests.svg" class="replyCloseImage"></div>
+                                    <div class="replybox replyboxnew">
+                                       <div class="reply-image-section">
+                                          <div class="reply-image-new">
+                                             <div id="replyThumbImg" class="reply-image-new-inner"><img src=""></div>
+                                          </div>
+                                       </div>
+                                       <div id="replycontent" class="relpyContentBox">
+                                          <h5 class="modal-title replyusername" id="replyusername"></h5>
+                                          <p class="replymsgnew" id="replymsg"></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--chat-replysection-end- #1903-->
+                                 <div class="voiceMemo voiceMemoActive1" id="voiceMemo">
+                                    <div class="voiceWave">
+                                       <div class="voiceMemoProp">
+                                          <span class="voiceDelIcon hideCls"></span>
+                                          <span class="listen-recording hideCls"></span>
+                                          <span class="not-listen-recording hideCls"></span>
+                                          <span class="countdown-timer hideCls">2:00</span>
+                                       </div>
+                                       <div class="voiceMemoWave hideCls">
+                                          <div id="recorder-slider">
+                                             <input type="range" min="0" max="120000" value="0" id="knob" >
+                                          </div>
+                                          <img src="images/icons/voicerRcorder.svg" class="">
+                                       </div>
+                                       <span class="voiceRecorderTest hideCls">0:00</span>
+                                       <span class="countdown-spacing"></span>
+                                    </div>
+                                    <div class="voiceMemoIcon" onclick="startVoiceRecording()" id="start-recording" tooltip="Microphone"></div>
+                                    <div class="stop-recording hideCls"> <span> </span></div>
+                                    <div class="play-audio pause-recording hideCls"><span></span></div>
+                                    <div class="resume-recording hideCls"></div>
+                                 </div>
+                                 <!-- characterlimit start-->
+                                 <div class="characterlimit" id="chatCharacterCountWrapper">
+                                    <div class="characterlimitInput" id="chatMessageCount">0</div>
+                                    <div class="characterlimittest">&nbsp;/ 2000</div>
+                                 </div>
+                                  <!-- characterlimit end-->
+                                 <div class="input-chat-main-section">
+                                    <div class="input-field-chat">
+                                       <div class="chat-input-area chat-input-label" id="textInputField"></div>
+                                    </div>
+                                    <!--Tag and Detect language translation pop-up-start #1903-->
+                                    <section id="tagpeople" class="tagTopicPepole hideCls">
+                                       <div class="tagpeople-main">
+                                          <ul></ul>
+                                       </div>
+                                    </section>
+                                 </div>
+
+                              </div>
+                              <!--input Chat Icons-->
+                              <div class="chatIconsBar">
+                                 <div class="attached-section">
+                                    <div class="file-attch-r" onclick="showUploadOption()" tooltip="Attachment" flow="up">
+                                       <img src="images/icons/attachmentIcon.svg" class="default-search-icons-file">
+                                       <img src="images/icons/attachmentIconhover.svg" class="hover-search-file">
+                                       <div class="fileUploadOption hideCls" id="uploadOption">
+                                          <ul>
+                                            
+                                             <!-- <li onclick="googleDriveAuthenticate()"> <span class="uploadDriveIcons"><img src="images/icons/googleDrive.svg" class="driveIcons"></span>Google Drive</li> -->
+                                             <li onclick="getOneDriveFiles()">  <span class="uploadDriveIcons"><img src="images/icons/oneDrive.svg" class="driveIcons"></span>OneDrive</li>
+                                             <li>
+                                                <span class="uploadDriveIcons"><img src="images/icons/myComputer.svg" class="driveIcons"></span>
+                                                <input type="file" id="uploadFileOnChat"
+                                                   class="file-hide-chat uploadFileOnChat" multiple=""
+                                                   onchange="sendDocument(event)" />
+                                                My Computer
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="fileUploadOption hideCls" id="driveAuthenticOption">
+                                          <ul>
+                                             <li>
+                                                <!--Add buttons to initiate auth sequence and sign out-->
+                                                <button id="authorize_button"
+                                                   onclick="handleAuthClick()">Authorize</button>
+                                             </li>
+                                             <li><button id="signout_button" onclick="handleSignoutClick()">Sign
+                                                   Out</button>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--attach icon-->
+                                 <!-- <div class="attached-section">
+                                    <div class="file-attch-r">
+                                       <img src="images/icons/attachmentIcon.svg" class="default-search-icons-file">
+                                       <img src="images/icons/attachmentIconhover.svg" class="hover-search-file">
+                                       <input type="file" id="uploadFileOnChat" class="file-hide-chat uploadFileOnChat"
+                                          multiple="" onchange="sendDocument(event)" />
+                                    </div>
+                                 </div> -->
+                                 <!--attach icon-->
+
+
+                                 <div class="attached-section1" onclick="toggleEmojiContainer('textInputField', event)" tooltip="Emoji" flow="up">
+                                    <div class="file-attch-r1">
+                                       <img src="images/icons/emojiIcon.svg" class="default-search-icons-file">
+                                       <img src="images/icons/emojiIconhover.svg" class="hover-search-file">
+                                    </div>
+                                 </div>
+                                 <!-- <div class="emojig">
+                                    <div class="emoji-attch-r">
+                                       <img src="images/icons/emo1ji.svg" class="default-search-icons-file">
+                                       <img src="images/icons/attach_file-hover.svg" class="hover-search-file">
+                                    </div>
+                                 </div> -->
+                                 <div class="gifArea" onclick="checkGIFPermission()" tooltip="Gif" flow="up">
+                                    <div class="gif-box">
+                                       <div class="hideCls" id="loadGifArea">
+                                          <input type="text" placeholder="Search GIF" id="searchGif"
+                                             onkeyup="typeGifSearch()" autocomplete="off" onclick="gifEvent(event)">
+                                          <!-- Loader start here -->
+                                          <div id="gifWaitingState" class="hideCls">
+                                             <div id="loading-bar-spinner" class="spinner">
+                                                <div class="spinner-icon"></div>
+                                             </div>
+                                          </div>
+                                          <!-- Loader end here -->
+                                          <!-- <span class="gifCaret"></span> -->
+                                          <div class="allGif"></div>
+                                          <div class="gifPopup" id="gifPopup" onclick="viewTermsGiphy(event)">
+                                             <h2>Powered By Giphy <span class="view-terms-giphy">
+                                                   View Terms. </span>
+                                             </h2>
+                                          </div>
+
+                                       </div>
+                                       <div class="gifPopupPanel gifpopChat hideCls" id="viewTermsGiphy">
+                                          <!-- <p>When you serach for images, your search terms are sent to GIPHY. To learn more, see GIPHY's <a href="https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy" target="_blank" class="giphyPolicy">Privacy Policy</a> and <a href="https://support.giphy.com/hc/en-us/articles/360020027752-GIPHY-User-Terms-of-Service" class="giphyPolicy" target="_blank">Terms of Service</a>.</p> -->
+                                          <p>When you search for images, your search terms are sent to GIPHY. To learn
+                                             more, see GIPHY’s <a
+                                                href="https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy"
+                                                target="_blank" class="giphyPolicy">Privacy Policy</a> and <a
+                                                href="https://support.giphy.com/hc/en-us/articles/360020027752-GIPHY-User-Terms-of-Service"
+                                                class="giphyPolicy" target="_blank">Terms of Service</a>.</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="language-translate mainTranslationDiv" onclick="openTranslationPopup()"
+                                   tooltip="Enable Translation" flow="up">
+                                    <div class="lang-box langDisable" id="translationBtn"></div>
+                                 </div>
+                              </div>
+                              <div class="send-btn-section">
+                                 <div class="chatSettingContainer" onclick="showHideChatSetting()">
+                                    <div class="ChatSetting">
+                                       <div class="chatsettingBox" tooltip="Settings"></div>
+                                    </div>
+                                    <div class="chatSettingPopup hideCls" id="chatSetting">
+                                       <h2>Pressing Enter Key Will:</h2>
+                                       <ul>
+                                          <li onclick="setChatSetting('true')" class="sendMessageRow"><i
+                                                class="chatSettingCheckbox"></i>Send
+                                             Message
+                                          </li>
+                                          <li onclick="setChatSetting('false')" class="lineBreakRow"><i
+                                                class="chatSettingCheckbox chatsetingActive"></i>Add a line break
+                                          </li>
+                                       </ul>
+                                       <p>You can always use Shift+Enter to type multi-line message.</p>
+                                    </div>
+
+                                 </div>
+                                 <div class="send-btn-s" id="chatSendBtnWrap">
+                                    <button class="submitButtonGlobal inActiveBtn" id="chatSendBtn">{{BT02}}</button>
+                                 </div>
+                              </div>
+                              <!--input Chat Icons-->
+                           </section>
+                        </div>
+                     </section>
+                     <!-- message tab section end here -->
+                     <!-- chat input section start here -->
+                     <div id="goToBottom" style="display: none;" onclick="gotoBottom(false, true)">
+                        <span class="down-arrow-msg-icon"><img src="images/icons/top-to-bottom.svg"></span>
+                     </div>
+                     <!-- chat input section end here -->
+                     <!-- file tab section satrt here -->
+                     <section id="file-tab" class="chat-file-main-section hideCls">
+                        <div class="common-position">
+                           <div class="file-area padding-file">
+                              <div class="file-tab-start">
+                                 <!-- Loader start here -->
+                                 <div id="fileWaitingState" class="hideCls">
+                                    <!-- <div id='loading-bar' class='spinner'>
+                                       <div class='spinner-icon'></div>
+                                    </div> -->
+                                    <div id="loading-bar" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                                       <div class="ldio-dpbvxcmmyw">
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                 </div>
+                                 <!-- Loader end here -->
+                                 <div class="file-main-header-fixed">
+                                    <div class="file-type file-commmon-font type-file-header">{{LB07}}
+                                    </div>
+                                    <div class="file-name file-commmon-font name-file-header">{{LB08}}</div>
+                                    <div class="file-shared-by file-commmon-font shared-file-header">{{LB10}}</div>
+                                    <div class="file-size file-commmon-font size-file-header">{{LB09}}</div>
+                                    <div class="file-shared-on file-commmon-font">{{LB11}}</div>
+                                    <div class="file-downloaded file-commmon-font">{{LB12}}</div>
+                                 </div>
+                                 <div class="inner-file-main-section">
+                                    <div class="chatFileEmptyState hideCls" id="chatFileEmptyState">
+                                       <img src="images/empty-files-images.svg">
+                                       <div class="empty-state-text">
+                                          <p class="start-msg">{{LB16}}</p>
+                                          <p class="textempty-p">{{LB17}}</p>
+                                       </div>
+                                    </div>
+                                    <ul></ul>
+                                    <button class="cancelButtonGlobal load-more hideCls" onclick="loadMoreFile()">Load More</button>
+                                 </div>
+                                 </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                     <!-- link tab section start here -->
+                     <section id="link-tab" class="chat-file-main-section hideCls">
+                        <div class="common-position">
+                           <div class="file-area padding-file">
+                              <div class="file-tab-start">
+                                 <!-- Loader start here -->
+                                 <div id="linkWaitingState" class="hideCls">
+                                    <!-- <div id='loading-bar' class='spinner'>
+                                       <div class='spinner-icon'></div>
+                                    </div> -->
+                                    <div id="loading-bar" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                                       <div class="ldio-dpbvxcmmyw">
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Loader end here -->
+                                 <div class="file-main-header-fixed">
+                                    <div class="file-name file-commmon-font name-file-header">{{LB08}}</div>
+                                    <div class="file-shared-by file-commmon-font shared-file-header">{{LB10}}</div>
+                                    <div class="file-shared-on file-commmon-font">{{LB11}}</div>
+                                    <!-- <div class="file-downloaded file-commmon-font">DOWNLOAD</div> -->
+
+                                 </div>
+                                 <div class="inner-file-main-section">
+                                    <div class="chatFileEmptyState hideCls" id="chatLinkEmptyState">
+                                       <img src="images/empty-files-images.svg">
+                                       <div class="empty-state-text">
+                                          <p class="start-msg">{{LB14}}</p>
+                                          <p class="textempty-p">{{LB15}}</p>
+                                       </div>
+                                    </div>
+                                    <ul></ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                     <!-- link tab section end here -->
+                  </div>
+               </div>
+            </section>
+         </div>
+         <!-- meeting-panel-start-here -->
+         <div class="meetingPanel hideCls">
+            <div id="recentMeetingDetails">
+               <div class="meetingPanelLeft">
+                  <div class="meetingPanelLeftheader">
+                     <div class="meetingPanelHeading">
+                        <h1>{{LB26}}</h1>
+                     </div>
+                     <div class="meetingPanelRightSide" id="editOption">
+                        <ul></ul>
+                     </div>
+                  </div>
+                  <div class="meetingPanelBody">
+                     <div class="meetingPanelBodyInner">
+                        <div class="meetingPanelTitle">
+                           <div class="headCircle"></div>
+                           <h1 id="eventTitle" class="recentEventTitle"></h1>
+                        </div>
+                        <div class="meetingPanelTitle">
+                           <p id="eventDate"></p>
+                        </div>
+                        <div class="meetingBodyIneer">
+                           <div class="bottom-section-chat">
+                              <div class="meetingContent">
+                                 <div class="meetingContentHead" id="meeting-organiser"></div>
+                              </div>
+                           </div>
+                           <div class="descriptionTop">
+                              <div class="description descrip">
+                                 <span>
+                                    <img src="images/icons/align-left.svg" class="float-left" alt="User Image">
+                                 </span>
+                                 <h2> {{LB27}} </h2>
+                                 <div id="recentMeetingDescription" class="descriptionContainer">
+                                    <p id="description"></p>
+                                 </div>
+                              </div>
+                              <div class="notification descrip">
+                                 <div class="descripp notificationDef">
+                                    <span>
+                                       <img src="images/icons/notification-meeting.svg" class="float-left"
+                                          alt="User Image">
+                                    </span>
+                                    <p class="img-minut">
+                                       <span id="reminder"></span>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="attachment descrip">
+                                 <span><img src="images/attachment.svg" class="float-left"
+                                       alt="User Image"></span>
+                                 <h2 class="attach-file"> {{LB126}} </h2>
+                                 <div id="attachment" class="attachmentScroll"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="attendingNotificationTop">
+                        <div class="attendingNotification">
+                           <div class="attendingColum" id="attendingMain">
+                              <ul class="attendLeft">
+                                 <li class="attending-title">{{LB31}}</li>
+                              </ul>
+                              <ul class="acceptNotification" id="attendingOption"></ul>
+                           </div>
+                        </div>
+                        <div class="notifyy" id="notify"></div>
+                     </div>
+                  </div>
+               </div>
+               <!-- meeting-panel-right-section-start-here -->
+               <div class="meetingPanelright">
+                  <div class="meetingPanelLeftheader">
+                     <div class="meetingPanelHeading">
+                        <h1><span id="participantsCount"></span> {{LB32}}</h1>
+                     </div>
+                     <div class="meetingPanelRightSide">
+                        <ul>
+                           <li class="edit-meeting meetingSearch" title="{{SPH}}" onclick="meetingDetailsSearch(true)">
+                              <!-- <img src="images/searchicons.svg" alt="User Image"> -->
+                           </li>
+                           <li title="{{TT13}}" class="edit-meeting recentMeetingDetailsOption"
+                              onclick="recentMeetingDetailsOption()">
+                              <!-- <img src="images/icons/particpent-icon.svg" class="recentMeetingDetailsOption" alt="User Image"> -->
+                           </li>
+                           <div class="common-search-box" id="meetingDetailsSearch">
+                              <input type="text" onkeyup="meetingDetailsUserSearch()" autocomplete="off"
+                                 placeholder="{{SPH}}" class="search-input user-search-input">
+                              <!-- <img src="images/close-1.svg" class="close-size" onclick="meetingDetailsSearch(false)"> -->
+
+                              <div class="fr" onclick="meetingDetailsSearch(false)">
+                                 <!-- <img src="images/close-11.svg" class="close-size1" > -->
+                              </div>
+                           </div>
+                           <div class="common-sort-dropdown meetingRightDropDown hideCls"
+                              id="recentMeetingDetailsOption">
+                              <ul class="filter-list-item ">
+                                 <li onclick="handleInnerSection('recentMeetingAllUser')">{{DD04}}</li>
+                                 <li onclick="handleInnerSection('acceptedUser')">{{DD05}}</li>
+                                 <li onclick="handleInnerSection('declinedUser')">{{DD06}}</li>
+                                 <li onclick="handleInnerSection('tentativeUser')">{{DD07}}</li>
+                           </div>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="meetingPanelBody userList">
+                     <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing"
+                        id="recentMeetingAllUser">
+                     </ul>
+                     <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing hideCls"
+                        id="acceptedUser">
+                     </ul>
+                     <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing hideCls"
+                        id="declinedUser">
+                     </ul>
+                     <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing hideCls"
+                        id="tentativeUser">
+                     </ul>
+                  </div>
+               </div>
+               <!-- meeting-panel-right-section-end-here -->
+            </div>
+            <!--Recurrence Instance Popup Start-->
+            <section class="teamPopup-common removeBg hideCls" id="deleteRecurring">
+               <div class="deleteRecurrenceBody">
+                  <div class="deleteRecurrenceContent">
+                     <div class="deleteRecurrenceTitle">{{LB76}}</div>
+                     <div class="dataSection">
+                        <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(1, 'currentInstance')">
+                           <span class=""><i class="currentInstance unCheckInstance"></i></span>
+                           <div class="instance" id="label1">{{LB77}}</div>
+                        </div>
+                        <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(0, 'allInstance')">
+                           <span class=""><i class="allInstance unCheckInstance"></i></span>
+                           <div class="instance" id="label2">Current and all future instances</div>
+                        </div>
+                     </div>
+                     <div class="saveUpdateCancel notifyBtn">
+                        <button class="cancelButtonGlobal" onclick="hideDeleteRecurrence()"> Cancel</button>
+                        <button class="submitButtonGlobal" id="deleteRecurrenceBtn" onclick="deleteRecurrence()">
+                           ok</button>
+                     </div>
+                  </div>
+            </section>
+            <!--Recurrence Instance Popup End Here-->
+            <!--Loader-->
+            <div id="recentMeetingDetailsLoader" class="spinner hideCls">
+               <div class="spinner-icon"></div>
+            </div>
+         </div>
+         <!-- meeting-panel-end-here -->
+      </div>
+   </div>
+</div>

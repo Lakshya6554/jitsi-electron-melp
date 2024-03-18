@@ -1,0 +1,33 @@
+.languageWrap {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.languageDropDown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  display: none;
+}
+
+/* Add styling for the dropdown options as needed */
+.languageDropDown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.languageDropDown ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.languageDropDown ul li:hover {
+  background-color: #ddd;
+}

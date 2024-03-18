@@ -1,0 +1,2326 @@
+<!--filemanager-start-->
+
+<section id="file-template" class="file-section-body">
+   <div class="fullPageloader loadingio-spinner-spin-ethrqhs3zzm hideCls" id="spinner-files">
+      <div class="ldio-dpbvxcmmyw">
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+      </div>
+   </div>
+   <div class="fileMangerTopStrip hideCls">
+      <div class="fileMangerWrap">
+         <!-- <div class="fileMagerTopLeft">MY Files</div> -->
+         <div class="fileMagerTopLeft fm-navigation-list">
+            <ol class="breadcrumb blue-grey lighten-4">
+               <li class="breadcrumb-item"><span class="black-text" href="#" id="fmTopSelectedMenu">MY Files</span>
+                  <!-- <i class="breadcRumArrowf1" aria-hidden="true"><img src="images/filemanger/breadCrumArrow.svg"></i> -->
+               </li>
+               <!-- <li class="breadcrumb-item active">Office Documents
+               </li> -->
+            </ol>
+
+            <!-- <ol class="breadcrumb blue-grey lighten-4">
+               <li class="breadcrumb-item">
+                 <span class="black-text" href="#" id="fmTopSelectedMenu">MY Files</span>
+                 <i class="breadcRumArrowf1" aria-hidden="true">
+                   <img src="images/filemanger/breadCrumArrow.svg">
+                 </i>
+               </li>
+               <li class="breadcrumb-item active">
+                 <span>Office Documents</span>
+                 <i class="breadcRumArrowf1" aria-hidden="true">
+                   <img src="images/filemanger/breadCrumArrow.svg">
+                 </i>
+               </li>
+               <li class="breadcrumb-item active">
+                 <span>New Folder</span>
+                 <i class="breadcRumArrowf1" aria-hidden="true">
+                   <img src="images/filemanger/breadCrumArrow.svg">
+                 </i>
+               </li>
+               <li class="breadcrumb-item active">Another Folder</li>
+             </ol> -->
+
+         </div>
+
+         <div class="fileMagerRighSideIcon">
+
+            <div class="multipleSelection hideCls">
+               <span class="fileMultiple">
+                  <ul>
+                     <li><span class="selectedF1"><img src="images/filemanger/fileCancle.svg"></span></li>
+                     <li><span class="selectedF2">3 Selected</span></li>
+                     <li><span class="selectedF3"><img src="images/filemanger/fileDownload.svg"></span></li>
+                     <li><span class="selectedF4"><img src="images/filemanger/drivefilemove.svg"></span></li>
+                     <li><span class="selectedF5"><img src="images/filemanger/filedelete.svg"></span></li>
+                     <li><span class="selectedF6"><img src="images/filemanger/fileAttachment.svg"></span></li>
+                     <li><span class="selectedF7"><img src="images/filemanger/fileMore.svg"></span>
+
+                        <div class="fmPreviewF1 multiplePreviewF1">
+                           <ul>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/filePreview.svg">
+                                 </span>
+                                 Preview
+                              </li>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/fileDownload.svg">
+                                 </span>
+                                 Download
+                              </li>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/fileShare.svg">
+                                 </span>
+                                 Forward
+                              </li>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/filedrivefile.svg">
+                                 </span>
+                                 Move to
+                              </li>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/fileGetLink.svg">
+                                 </span>
+                                 Get link
+                              </li>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/fileRename.svg">
+                                 </span>
+                                 Rename
+                              </li>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/fileDetails.svg">
+                                 </span>
+                                 View Details
+                              </li>
+                              <li>
+                                 <span class="fmFIconF2">
+                                    <img src="images/icons/Filedelete.svg">
+                                 </span>
+                                 Remove
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+               </span>
+            </div>
+
+            <div class="fileRightWrap">
+               <ul>
+                  <!-- <li>
+                     <span><img src="images/filemanger/modify.svg"></span>
+                     <span class="filterName">Name</span>
+                     <span class="filterIconCaret"><img src="images/icons/fileIocnCaret.svg"></span>
+                  </li> -->
+                  <li>
+                     <span class="fileSortageName" onclick="toggleSortByDropdown()">Name </span>
+                     <span class="filterIconCaret" id="sortBybutton" onclick="toggleSortByDropdown()"><img
+                           src="images/icons/fileIocnCaret.svg"></span>
+                     <div class="file-manager-dropdown hideCls" id="sortByDropdown">
+                        <ul class="filter-manager-item">
+                           <li class="filter-manager-active" onclick="handleSortByItemClick('Name')"> <span
+                                 class="filterIconCaret filterIconCaretWrap"><img
+                                    src="images/filemanger/modify.svg"></span> Name</li>
+                           <li onclick="handleSortByItemClick('Last modified')"><span
+                                 class="filterIconCaret filterIconCaretWrap"></span> Last modified</li>
+                           <li onclick="handleSortByItemClick('Size')"><span
+                                 class="filterIconCaret filterIconCaretWrap"></span> Size</li>
+                           <li onclick="handleSortByItemClick('Created At')"><span
+                                 class="filterIconCaret filterIconCaretWrap"></span> Created At</li>
+                           <!-- <li><span class="filterIconCaret filterIconCaretWrap"></span> Last opened by me</li> -->
+                        </ul>
+                     </div>
+                  </li>
+                  <li id="fm-toggleView">
+                     <span><img src="images/icons/videoView.svg"></span>
+                  </li>
+
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- File manager left Menu  -->
+   <div class="leftMenu-file-manager">
+      <div class="leftMenuWarp">
+         <div class="filesNewTab"><span class="filesMenuIcons" onclick="fmShowNewMenu('New')"><img
+                  src="images/icons/filesadd.svg"> NEW</span>
+            <!-- Menu when clicked on New  -->
+            <ul class="fileMangerDropDown hideCls">
+               <li onclick="fmHandleNewMenu('New Folder')"><span><img src="images/icons/createFolderIcon.svg"></span>New
+                  Folder</li>
+               <li><span><img src="images/icons/uploadfileIcon.svg"></span>File Upload <input type="file"
+                     id="fmFileUpload" class="file-hide-fm fmFileUploadOnNew" multiple=""
+                     onchange="fmFileUpload(event)"></li>
+               <!-- <li><span><img src="images/icons/uploadfileIcon.svg"></span>Folder Upload</li> -->
+            </ul>
+         </div>
+         <!--  Left Menu options  -->
+         <ul>
+            <li class="fileMangerActive" onclick="fmHandleLeftMenuClick(this,'My Files')"><span
+                  class="filesMenuIcons"><img src="images/icons/filesMenu.svg"></span>My Files</li>
+            <li onclick="fmHandleLeftMenuExpand(this,'Shared With Me')"><span class="filesMenuIcons"><img
+                     src="images/icons/filesShared.svg"></span>Shared Files
+               <ul class="leftMenuDropDown fm-sharedFiles-subMenu hideCls ">
+                  <li onclick="fmHandleLeftMenuClick(this,'Shared With Me')">Shared with me
+                  </li>
+                  <li onclick="fmHandleLeftMenuClick(this,'Shared By Me')">Shared by me </li>
+                  <!-- <li><span><img src="images/icons/uploadfileIcon.svg"></span>Folder Upload</li> -->
+               </ul>
+            </li>
+            <li onclick="fmHandleLeftMenuClick(this,'Recent')"><span class="filesMenuIcons"><img
+                     src="images/icons/filesRecents.svg"></span>Recents</li>
+            <li onclick="fmHandleLeftMenuClick(this,'Favourite')"><span class="filesMenuIcons"><img
+                     src="images/icons/filesFavourite.svg"></span>Favourite</li>
+            <li onclick="fmHandleLeftMenuClick(this,'Trash')"><span class="filesMenuIcons"><img
+                     src="images/icons/filesTrash.svg"></span>Trash</li>
+         </ul>
+      </div>
+      <div class="fileStorage">
+         <div class="fileStorageRow">
+            <div class="fileStorageWrap">
+               <span class="storageIcon"><img src="images/icons/storage.svg"></span>
+               <span class="storageTitle">Storage</span>
+               <span class="storageUsed">2GB of 10GB used</span>
+            </div>
+            <div class="fileStorageBtn">
+               <button class="storageBtn">Buy Storage</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <!-- view details popup start here -->
+   <section class="fileViewPopup hideCls" id="fm-detail-pop">
+      <div class="fileViewContainerP1">
+         <div class="fileViewRowP2">
+            <div class="fileViewPopupS1">
+               <div class="fileViewHeaderS2">
+                  <span class="fileViewPopupTitle fm-detail-pop-name fmdetailWrap"></span>
+                  <span class="fileViewPopuRightS3 fmdetalRightF4">
+                     <ul>
+                        <li><span class="filePopupI1 fm-detail-pop-filelink"><img
+                                 src="images/icons/file-link.svg"></span></li>
+                        <li><span class="filePopupI1 fm-detail-pop-share"><img src="images/icons/file-share.svg"></span>
+                        </li>
+                     </ul>
+                  </span>
+               </div>
+               <div class="fileViewPopupS4">
+                  <span class="fileViewPopupWrapS5">
+                     <spn class="fileViewFolderF2 ">
+                        <img src="images/filefolder.svg" class="fm-detail-pop-filoimg">
+                     </spn>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <!-- view popup second colum -->
+         <div class="fileViewContainerf4">
+            <div class="fileViewPropertiesS5">
+               <div class="fileViewPropertiesRowS5">
+                  <div class="filePropertiesTitle">File Details</div>
+                  <div class="filePropertiesDetailsS6">
+                     <span class="filePropertiesDetailsS7">
+                        <span class="filePropertiesDetailsWrapS1">
+                           <span class="filePropertiesTitleS8 ">Type</span>
+                           <span class="filePropertiesTitleS9 fm-detail-pop-type"></span>
+                        </span>
+                        <span class="filePropertiesDetailsWrapS1">
+                           <span class="filePropertiesTitleS8">Size</span>
+                           <span class="filePropertiesTitleS9 fm-detail-pop-size"></span>
+                        </span>
+                        <span class="filePropertiesDetailsWrapS1">
+                           <span class="filePropertiesTitleS8">Owner</span>
+                           <span class="filePropertiesTitleS9 fm-detail-pop-owner"></span>
+                        </span>
+                        <span class="filePropertiesDetailsWrapS1">
+                           <span class="filePropertiesTitleS8">Uploaded</span>
+                           <span class="filePropertiesTitleS9 fm-detail-pop-upload">
+                           </span>
+                        </span>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <!-- view popup shared in start here -->
+            <div class="fileViewSharedS8">
+               <div class="fileViewSharedRow">
+                  <!-- file access start here -->
+                  <div class="fileAccessWrapS1">
+                     <div class="fileAccessRowS2">
+                        <div class="fileAccessTitleRowS2">
+                           <span class="fileAccessTilteS1">Who has access</span>
+                           <p class="OwnedTittle">Owned by you Shared with Unnamed, Unnamed,
+                              Unnamed, Unnamed and 6 others.</p>
+                        </div>
+                        <div class="fileAccessRowF1 fm-detail-pop-access fileAccessDetailsAcces">
+                        </div>
+                        <div class="filedetailBtnA1">
+                           <button class="btnA2 fm-detail-pop-managerBtn">Manage access</button>
+                        </div>
+                     </div>
+                     <!-- file access end here -->
+                  </div>
+                  <div class="sharedViewWrapBox">
+                     <div class="fileViewSharedTitle">Shared IN</div>
+                     <div class="sharedViewWrapBoxList">
+                        <ul>
+                           <li><img src="images/filemanger/avatard.png"></li>
+                           <li><img src="images/filemanger/avatard.png"></li>
+                           <li><img src="images/filemanger/avatard.png"></li>
+                           <li><img src="images/filemanger/avatard.png"></li>
+                           <li><img src="images/filemanger/avatard.png"></li>
+                           <li><img src="images/filemanger/avatard.png"></li>
+                           <li> <span class="sharedModreOption">+6</span></li>
+
+                           <div class="fileMoreOptionPlus">
+
+                              <div class="myFileMangerInfo">
+                                 <ul>
+                                    <li class="list-section">
+                                       <div class="common-postion">
+                                          <div class="common-d-list">
+                                             <div class="common-user-icon">
+                                                <img
+                                                   src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg_thumb.jpg"
+                                                   class="common-icons-size vertical-m">
+                                             </div>
+                                             <div class="common-user-list">
+                                                <div class="user-label color-black">
+                                                   <span class="user-label color-black ">Aakash Dubey</span>
+                                                   <span class="coworker-label">Co-Worker</span>
+                                                </div>
+                                                <div>
+                                                   <span class="user-team-label color-grey common-name-trancate">Sr
+                                                      Technical Recruiter</span>
+                                                </div>
+                                                <div title="Noida, Uttar Pradesh, India">
+                                                   <span class="user-team-label color-grey common-name-trancate">Noida,
+                                                      Uttar Pradesh, India</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="list-section">
+                                       <div class="common-postion">
+                                          <div class="common-d-list">
+                                             <div class="common-user-icon">
+                                                <img
+                                                   src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg_thumb.jpg"
+                                                   class="common-icons-size vertical-m">
+                                             </div>
+                                             <div class="common-user-list">
+                                                <div class="user-label color-black">
+                                                   <span class="user-label color-black ">Aakash Dubey</span>
+                                                   <span class="coworker-label">Co-Worker</span>
+                                                </div>
+                                                <div>
+                                                   <span class="user-team-label color-grey common-name-trancate">Sr
+                                                      Technical Recruiter</span>
+                                                </div>
+                                                <div title="Noida, Uttar Pradesh, India">
+                                                   <span class="user-team-label color-grey common-name-trancate">Noida,
+                                                      Uttar Pradesh, India</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="list-section">
+                                       <div class="common-postion">
+                                          <div class="common-d-list">
+                                             <div class="common-user-icon">
+                                                <img
+                                                   src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg_thumb.jpg"
+                                                   class="common-icons-size vertical-m">
+                                             </div>
+                                             <div class="common-user-list">
+                                                <div class="user-label color-black">
+                                                   <span class="user-label color-black ">Aakash Dubey</span>
+                                                   <span class="coworker-label">Co-Worker</span>
+                                                </div>
+                                                <div>
+                                                   <span class="user-team-label color-grey common-name-trancate">Sr
+                                                      Technical Recruiter</span>
+                                                </div>
+                                                <div title="Noida, Uttar Pradesh, India">
+                                                   <span class="user-team-label color-grey common-name-trancate">Noida,
+                                                      Uttar Pradesh, India</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </ul>
+
+
+
+
+                     </div>
+                     <div class="fileViewSharedDetailF1 fm-detail-pop-sharedin">
+                        <!-- file list detail -->
+                        <!-- file list drtail -->
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+   </section>
+
+
+   <!-- File Manager Content Body  -->
+   <div class="fileManager">
+
+      <div class="fileMangerTopStrip">
+         <div class="fileMangerWrap">
+            <!-- <div class="fileMagerTopLeft">MY Files</div> -->
+            <div class="fileMagerTopLeft fm-navigation-list">
+               <ol class="breadcrumb blue-grey lighten-4">
+                  <li class="breadcrumb-item"><span class="black-text" href="#" id="fmTopSelectedMenu">MY Files</span>
+                     <!-- <i class="breadcRumArrowf1" aria-hidden="true"><img src="images/filemanger/breadCrumArrow.svg"></i> -->
+                  </li>
+                  <!-- <li class="breadcrumb-item active">Office Documents
+                  </li> -->
+               </ol>
+
+               <!-- <ol class="breadcrumb blue-grey lighten-4">
+                  <li class="breadcrumb-item">
+                    <span class="black-text" href="#" id="fmTopSelectedMenu">MY Files</span>
+                    <i class="breadcRumArrowf1" aria-hidden="true">
+                      <img src="images/filemanger/breadCrumArrow.svg">
+                    </i>
+                  </li>
+                  <li class="breadcrumb-item active">
+                    <span>Office Documents</span>
+                    <i class="breadcRumArrowf1" aria-hidden="true">
+                      <img src="images/filemanger/breadCrumArrow.svg">
+                    </i>
+                  </li>
+                  <li class="breadcrumb-item active">
+                    <span>New Folder</span>
+                    <i class="breadcRumArrowf1" aria-hidden="true">
+                      <img src="images/filemanger/breadCrumArrow.svg">
+                    </i>
+                  </li>
+                  <li class="breadcrumb-item active">Another Folder</li>
+                </ol> -->
+
+            </div>
+
+            <div class="multipleSelection fileMagerTopLeft hideCls">
+               <span class="fileMultiple">
+                  <ul>
+                     <li><span class="selectedF1"><img src="images/filemanger/selectedCancel.svg"></span></li>
+                     <li><span class="selectedF2">3 Selected</span></li>
+                     <li><span class="selectedF3"><img src="images/filemanger/present_to_all.svg"></span></li>
+                     <!-- <li><span class="selectedF3"><img src="images/filemanger/downloadicon.svg"></span></li> -->
+
+                     <!-- <li><span class="selectedF3"><img src="images/filemanger/drive_file_move.svg"></span></li> -->
+
+                     <!-- <li><span class="selectedF3"><img src="images/filemanger/deleteicon.svg"></span></li> -->
+                     <!-- <li><span class="selectedF3"><img src="images/filemanger/attachedicon.svg"></span></li> -->
+                     <!-- 
+                     <li><span class="selectedF3"><img src="images/filemanger/fileDownload.svg"></span></li>
+                     <li><span class="selectedF4"><img src="images/filemanger/drivefilemove.svg"></span></li>
+                     <li><span class="selectedF5"><img src="images/filemanger/filedelete.svg"></span></li>
+                     <li><span class="selectedF6"><img src="images/filemanger/fileAttachment.svg"></span></li> -->
+                     <!-- <li><span class="selectedF7"><img src="images/filemanger/fileMore.svg"></span> -->
+
+                     <div class="fmPreviewF1 multiplePreviewF1">
+                        <ul>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/filePreview.svg">
+                              </span>
+                              Preview
+                           </li>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/fileDownload.svg">
+                              </span>
+                              Download
+                           </li>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/fileShare.svg">
+                              </span>
+                              Forward
+                           </li>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/filedrivefile.svg">
+                              </span>
+                              Move to
+                           </li>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/fileGetLink.svg">
+                              </span>
+                              Get link
+                           </li>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/fileRename.svg">
+                              </span>
+                              Rename
+                           </li>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/fileDetails.svg">
+                              </span>
+                              View Details
+                           </li>
+                           <li>
+                              <span class="fmFIconF2">
+                                 <img src="images/icons/Filedelete.svg">
+                              </span>
+                              Remove
+                           </li>
+                        </ul>
+                     </div>
+                     </li>
+                  </ul>
+               </span>
+            </div>
+
+            <div class="fileMagerRighSideIcon">
+               <div class="fileRightWrap">
+                  <ul>
+                     <!-- <li>
+                        <span><img src="images/filemanger/modify.svg"></span>
+                        <span class="filterName">Name</span>
+                        <span class="filterIconCaret"><img src="images/icons/fileIocnCaret.svg"></span>
+                     </li> -->
+                     <li>
+                        <span class="fileSortageName" onclick="toggleSortByDropdown()">Name </span>
+                        <span class="filterIconCaret" id="sortBybutton" onclick="toggleSortByDropdown()"><img
+                              src="images/icons/fileIocnCaret.svg"></span>
+                        <div class="file-manager-dropdown hideCls" id="sortByDropdown">
+                           <ul class="filter-manager-item">
+                              <li class="filter-manager-active" onclick="handleSortByItemClick('Name')"> <span
+                                    class="filterIconCaret filterIconCaretWrap"><img
+                                       src="images/filemanger/modify.svg"></span> Name</li>
+                              <li onclick="handleSortByItemClick('Last modified')"><span
+                                    class="filterIconCaret filterIconCaretWrap"></span> Last modified</li>
+                              <li onclick="handleSortByItemClick('Size')"><span
+                                    class="filterIconCaret filterIconCaretWrap"></span> Size</li>
+                              <li onclick="handleSortByItemClick('Created At')"><span
+                                    class="filterIconCaret filterIconCaretWrap"></span> Created At</li>
+                              <!-- <li><span class="filterIconCaret filterIconCaretWrap"></span> Last opened by me</li> -->
+                           </ul>
+                        </div>
+                     </li>
+                     <li id="fm-toggleView">
+                        <span><img src="images/icons/videoView.svg"></span>
+                     </li>
+
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+      <!-- Loader start -->
+      <!-- <div id="fileManagerLoader">
+      <div id="loading-bar-spinner" class="spinner">
+          <div class="spinner-icon"></div>
+      </div>
+      </div> -->
+      <!-- Loader end -->
+
+      <!-- My files template  -->
+      <div class="container-card-file-manager" id="container-my-files">
+         <!-- loader for middle panel -->
+         <div class="loadingio-spinner-spin-ethrqhs3zzm NewFileMangerLoader hideCls">
+            <div class="ldio-dpbvxcmmyw">
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- loader for middle panel end -->
+         <div class="cardContainerF1 fileGridColum my-files-root hideCls">
+
+            <div class="list-Common">
+
+               <div class="cardWrap hideCls">
+                  <div class="cardFileHeader">
+                     Recents
+                  </div>
+                  <div id="recents-filemanager" class="row-card-file">
+
+                     <div class="card-file-manager">
+                        <div class="card-header">
+                           <div class="icon-card-header">
+                              <img src="images/icons/favourite.svg">
+                           </div>
+                           <div class="option-card-header">
+                              <img src="images/icons/fileMangerMore.svg">
+                           </div>
+                        </div>
+                        <div class="card-file-manager-content">
+                           <img src="images/filetypeicon/fpdf.svg">
+                        </div>
+                        <div class="card-footer">
+                           <span class="cardFoterTitle">Logo.ai</span>
+                           <span class="filecheckboxf1 fileUnCheckIconf2"></span>
+                        </div>
+                        <!-- preview drow down -->
+                        <div class="fmPreviewF1 hideCls">
+                           <ul>
+                              <li><span class="fmFIconF2"><img src="images/icons/filePreview.svg"></span>Preview</li>
+                              <li><span class="fmFIconF2"><img src="images/icons/fileDownload.svg"></span>Download</li>
+                              <li><span class="fmFIconF2"><img src="images/icons/fileShare.svg"></span>Forward</li>
+                              <li><span class="fmFIconF2"><img src="images/icons/filedrivefile.svg"></span>Move to</li>
+                              <li><span class="fmFIconF2"><img src="images/icons/fileGetLink.svg"></span>Get link</li>
+                              <li><span class="fmFIconF2"><img src="images/icons/fileRename.svg"></span>Rename</li>
+                              <li><span class="fmFIconF2"><img src="images/icons/fileDetails.svg"></span>View Details
+                              </li>
+                              <li><span class="fmFIconF2"><img src="images/icons/Filedelete.svg"></span>Remove</li>
+                           </ul>
+                        </div>
+                        <!-- preview drow down -->
+                     </div>
+                     <div class="card-file-manager">
+                        <div class="card-header">
+                           <div class="icon-card-header">
+                              <img src="images/icons/favourite.svg">
+                           </div>fmTopSelectedMenu
+                           <div class="option-card-header">
+                              <img src="images/icons/fileMangerMore.svg">
+                           </div>
+                        </div>
+                        <div class="card-file-manager-content">
+                           <img src="images/filetypeicon/fpdf.svg">
+                        </div>
+                        <div class="card-footer">
+                           <span class="cardFoterTitle">Logo.ai</span>
+                           <span class="filecheckboxf1 fileUnCheckIconf2"></span>
+                        </div>
+                     </div>
+                     <div class="card-file-manager">
+                        <div class="card-header">
+                           <div class="icon-card-header">
+                              <img src="images/icons/favourite.svg">
+                           </div>
+                           <div class="option-card-header">
+                              <img src="images/icons/fileMangerMore.svg">filemanager-ui-stableThree
+                           </div>
+                        </div>
+                        <div class="card-file-manager-content">
+                           <img src="images/videoFile.png">
+                           <div class="videoPlayIcon"><img src="images/playVideo.svg"></div>
+                        </div>
+                        <div class="card-footer">
+                           <span class="cardFoterTitle">Logo.ai</span>
+                           <span class="filecheckboxf1 fileUnCheckIconf2"></span>
+                        </div>
+                     </div>
+                     <div class="card-file-manager">
+                        <div class="card-header">
+                           <div class="icon-card-header">
+                              <img src="images/icons/favourite.svg">
+                           </div>
+                           <div class="option-card-header">
+                              <img src="images/icons/fileMangerMore.svg">
+                           </div>
+                        </div>
+                        <div class="card-file-manager-content">
+                           <img src="images/filetypeicon/fpdf.svg">
+                        </div>
+                        <div class="card-footer">
+                           <span class="cardFoterTitle">Logo.ai</span>
+                           <span class="filecheckboxf1 fileUnCheckIconf2"></span>
+                        </div>
+                     </div>
+                     <div class="card-file-manager">
+                        <div class="card-header">
+                           <div class="icon-card-header">
+                              <img src="images/icons/favourite.svg">
+                           </div>
+                           <div class="option-card-header">
+                              <img src="images/icons/fileMangerMore.svg">
+                           </div>
+                        </div>
+                        <div class="card-file-manager-content">
+                           <img src="images/filetypeicon/fpdf.svg">
+                        </div>
+                        <div class="card-footer">
+                           <span class="cardFoterTitle">Logo.ai</span>
+                           <span class="filecheckboxf1 fileUnCheckIconf2"></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Folders Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+                     <!-- <div class="card-file-manager folderManger">
+                     <div class="folderCard">
+                        <div class="folderIcon">
+                           <img src="images/icons/folder.svg">
+                        </div>
+                        <div class="folderLabel">Fonts</div>
+                        <span class="filecheckboxf1 fileUnCheckIconf2"></span>
+                     </div>
+                  </div>
+                  <div class="card-file-manager folderManger">
+                     <div class="folderCard">
+                        <div class="folderIcon">
+                           <img src="images/icons/folder.svg">
+                        </div>
+                        <div class="folderLabel">Office Documents</div>
+                     </div>
+                  </div>
+                  <div class="card-file-manager folderManger">
+                     <div class="folderCard">
+                        <div class="folderIcon">
+                           <img src="images/icons/folder.svg">
+                        </div>
+                        <div class="folderLabel">Meeting Presentatio...</div>
+                     </div>
+                  </div>
+                  <div class="card-file-manager folderManger">
+                     <div class="folderCard">
+                        <div class="folderIcon">
+                           <img src="images/icons/folder.svg">
+                        </div>
+                        <div class="folderLabel">Meeting Notes</div>
+                     </div>
+                  </div>
+                  <div class="card-file-manager folderManger">
+                     <div class="folderCard">
+                        <div class="folderIcon">
+                           <img src="images/icons/folder.svg">
+                        </div>
+                        <div class="folderLabel">Salary Slips</div>
+                     </div>
+                  </div> -->
+                  </div>
+               </div>
+               <!-- Files Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+
+                     <!-- <div class="card-file-manager">
+                     <div class="card-header">
+                        <div class="icon-card-header">
+                           <img src="images/icons/favourite.svg">
+                        </div>
+                        <div class="option-card-header">
+                           <img src="images/icons/fileMangerMore.svg">
+                        </div>
+                     </div>
+                     <div class="card-file-manager-content">
+                        <img src="images/filetypeicon/fpdf.svg">
+                     </div>
+                     <div class="card-footer">
+                        <span class="cardFoterTitle">Logo.ai</span>
+                     </div>
+                  </div> -->
+
+
+
+                     <!-- <div class="card-file-manager">
+                     <div class="card-header">
+                        <div class="icon-card-header">
+                           <img src="images/icons/favourite.svg">
+                        </div>
+                        <div class="option-card-header">
+                           <img src="images/icons/fileMangerMore.svg">
+                        </div>
+                     </div>
+                     <div class="card-file-manager-content">
+                        <img src="images/filetypeicon/ZIP.svg">
+                     </div>
+                     <div class="card-footer">
+                        <span class="cardFoterTitle">Logo.ai</span>
+                     </div>
+                  </div>
+
+
+                  <div class="card-file-manager">
+                     <div class="card-header">
+                        <div class="icon-card-header">
+                           <img src="images/icons/favourite.svg">
+                        </div>
+                        <div class="option-card-header">
+                           <img src="images/icons/fileMangerMore.svg">
+                        </div>
+                     </div>
+                     <div class="card-file-manager-content">
+                        <img src="images/filetypeicon/fzip.svg">
+                     </div>
+                     <div class="card-footer">
+                        <span class="cardFoterTitle">Logo.ai</span>
+                     </div>
+                  </div>
+                  <div class="card-file-manager">
+                     <div class="card-header">
+                        <div class="icon-card-header">
+                           <img src="images/icons/favourite.svg">
+                        </div>
+                        <div class="option-card-header">
+                           <img src="images/icons/fileMangerMore.svg">
+                        </div>
+                     </div>
+                     <div class="card-file-manager-content">
+                        <img src="images/filetypeicon/fpdf.svg">
+                     </div>
+                     <div class="card-footer">
+                        <span class="cardFoterTitle">Logo.ai</span>
+                     </div>
+                  </div>
+                  <div class="card-file-manager">
+                     <div class="card-header">
+                        <div class="icon-card-header">
+                           <img src="images/icons/favourite.svg">
+                        </div>
+                        <div class="option-card-header">
+                           <img src="images/icons/fileMangerMore.svg">
+                        </div>
+                     </div>
+                     <div class="card-file-manager-content">
+                        <img src="images/filetypeicon/fpdf.svg">
+                     </div>
+                     <div class="card-footer">
+                        <span class="cardFoterTitle">Logo.ai</span>
+                     </div>
+                  </div> -->
+
+
+                  </div>
+               </div>
+            </div>
+
+         </div>
+         <!-- End -->
+         <!-- Open Folder View  -->
+         <div class="myFiles-openFolder fileGridColum cardContainerF1 hideCls" id="my-files-openFolder">
+            <div class="list-Common">
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="folders-filemanager">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+                     <!--  Folder cards components   -->
+                  </div>
+               </div>
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="files-filemanager">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+                     <!--  file cards components   -->
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      <!-- End -->
+
+      <!-- Shared with Me Template -->
+      <div class="container-card-file-manager hideCls" id="container-shared-with-me">
+
+         <!--  Share View -->
+         <div class="cardContainerF1 fileGridColum shared-with-me-root">
+            <div class="list-Common">
+               <!-- Folders Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+
+
+                  </div>
+               </div>
+
+               <!-- Files Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Open Folder View  -->
+         <div class="shared-with-me-openFolder fileGridColum cardContainerF1 hideCls" id="shared-with-me-openFolder">
+            <div class="list-Common">
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="folders-filemanager">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+                     <!--  Folder cards components   -->
+                  </div>
+               </div>
+
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="files-filemanager">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+                     <!--  file cards components   -->
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      <!-- End -->
+
+      <!-- Shared By Me Template -->
+      <div class="container-card-file-manager hideCls" id="container-shared-by-me">
+
+         <!--  Share View -->
+         <div class="cardContainerF1 fileGridColum shared-by-me-root">
+            <div class="list-Common">
+               <!-- Folders Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+
+
+                  </div>
+               </div>
+
+               <!-- Files Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Open Folder View  -->
+         <div class="shared-by-me-openFolder fileGridColum cardContainerF1 hideCls" id="shared-by-me-openFolder">
+            <div class="list-Common">
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="folders-filemanager">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+                     <!--  Folder cards components   -->
+                  </div>
+               </div>
+
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="files-filemanager">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+                     <!--  file cards components   -->
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      <!-- End -->
+
+      <!-- Recents Template -->
+      <div class="container-card-file-manager hideCls" id="container-recent">
+         <!--  Share View -->
+         <div class="cardContainerF1 fileGridColum recent-root">
+            <div class="list-Common">
+               <!-- Folders Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+
+
+                  </div>
+               </div>
+               <!-- Files Row  -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Open Folder View  -->
+         <div class="recent-openFolder cardContainerF1 hideCls" id="recent-openFolder">
+            <div class="list-Common">
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="folders-filemanager">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+
+
+                  </div>
+               </div>
+
+               <div class="cardWrap">
+                  <div class="cardFileHeader" id="files-filemanager">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+                     <!--  file cards components   -->
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+      <!-- End -->
+
+      <!-- Favorites Template -->
+      <div class="container-card-file-manager hideCls" id="container-favourite">
+         <!-- Favorites View -->
+         <div class="cardContainerF1 fileGridColum favourite-root">
+            <div class="list-Common">
+               <!-- Folders Row -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+
+                  </div>
+               </div>
+
+               <!-- Files Row -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Open Folder View -->
+         <div class="favourite-openFolder cardContainerF1 hideCls" id="favourite-openFolder">
+            <div class="cardWrap">
+               <div class="cardFileHeader" id="folders-filemanager">
+                  Folders
+               </div>
+               <div id="filemanager-folder-row" class="row-card-file">
+                  <!-- Folder cards components -->
+               </div>
+            </div>
+
+            <div class="cardWrap">
+               <div class="cardFileHeader" id="files-filemanager">
+                  Files
+               </div>
+               <div id="filemanager-files-row" class="row-card-file">
+                  <!-- File cards components -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- End -->
+
+      <!-- Trash Template -->
+      <div class="container-card-file-manager hideCls" id="container-trash">
+         <!-- Trash View -->
+         <div class="cardContainerF1 fileGridColum trash-root">
+            <div class="list-Common">
+               <!-- Folders Row -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+
+                  </div>
+               </div>
+
+               <!-- Files Row -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Open Folder View -->
+         <div class="trash-openFolder cardContainerF1 hideCls" id="trash-openFolder">
+            <div class="cardWrap">
+               <div class="cardFileHeader" id="folders-filemanager">
+                  Folders
+               </div>
+               <div id="filemanager-folder-row" class="row-card-file">
+                  <!-- Folder cards components -->
+               </div>
+            </div>
+
+            <div class="cardWrap">
+               <div class="cardFileHeader" id="files-filemanager">
+                  Files
+               </div>
+               <div id="filemanager-files-row" class="row-card-file">
+                  <!-- File cards components -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- End -->
+
+
+      <!-- Search Template -->
+      <div class="container-card-file-manager hideCls" id="container-search">
+         <!-- search View -->
+         <div class="cardContainerF1 fileGridColum search-root">
+            <div class="list-Common">
+
+               <div class="cardFileHeader">
+
+               </div>
+               <div class="row-card-file ">
+                  <div class="fileSearchResultT1 ">
+                     <ul class="searchlistul">
+                        <!-- <li>
+                              <span class="fileResultT2">
+                                 <span class="fileSerachT3">
+                                    <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                    <span class="fileSaerchTestT5">Location</span>
+                                    <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                                 </span>
+                              </span>
+                           </li>  -->
+                        <li>
+                           <span class="fileResultT2">
+                              <span class="fileSerachT3" id="location-dropdown-btn" data-field="location">
+                                 <span class="fileSaerchTestT5">Location</span>
+                                 <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                              </span>
+                              <span class="fileSerachT3 hideCls" id="location-dropdown-selected">
+                                 <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                 <span class="fileSaerchTestT5" id="location-dropdown-selected-val">Location</span>
+                                 <span class="fileSaerchCloseT6 cancel-filter"><img
+                                       src="images/icons/fileclose.svg"></span>
+                              </span>
+                           </span>
+                           <span class="fileResultDropT1 hideCls" id="location-dropdown">
+                              <ul data-dropdown-id="location-dropdown">
+                                 <li class="fileListT2" data-field-value="Anywhere in MelpAPP">
+                                    Anywhere in MelpAPP
+                                 </li>
+                                 <li class="fileListT2" data-field-value="My Files">
+                                    My Files
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Shared by me">
+                                    Shared by me
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Shared with me">
+                                    Shared with me
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Favorites">
+                                    Favorites
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Trashed">
+                                    Trashed
+                                 </li>
+                              </ul>
+                           </span>
+                        </li>
+                        <!-- Owner Dropdown -->
+                        <li>
+                           <span class="fileResultT2">
+                              <span class="fileSerachT3" id="owner-dropdown-btn" data-field="owner">
+                                 <span class="fileSaerchTestT5">Owner</span>
+                                 <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                              </span>
+                              <span class="fileSerachT3 hideCls" id="owner-dropdown-selected">
+                                 <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                 <span class="fileSaerchTestT5" id="owner-dropdown-selected-val"></span>
+                                 <span class="fileSaerchCloseT6 cancel-filter"><img
+                                       src="images/icons/fileclose.svg"></span>
+                              </span>
+                           </span>
+                           <span class="fileResultDropT1 hideCls" id="owner-dropdown">
+                              <ul data-dropdown-id="owner-dropdown">
+                                 <li class="fileListT2" data-field-value="Anyone">
+                                    Anyone
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Owned by me">
+                                    Owned by me
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Not owned by me">
+                                    Not owned by me
+                                 </li>
+                              </ul>
+                           </span>
+                        </li>
+                        <!-- Modified Dropdown -->
+                        <li>
+                           <span class="fileResultT2">
+                              <span class="fileSerachT3" id="modifiedat-dropdown-btn" data-field="modifiedat">
+                                 <span class="fileSaerchTestT5">Modified</span>
+                                 <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                              </span>
+                              <span class="fileSerachT3 hideCls" id="modifiedat-dropdown-selected">
+                                 <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                 <span class="fileSaerchTestT5" id="modifiedat-dropdown-selected-val"></span>
+                                 <span class="fileSaerchCloseT6 cancel-filter"><img
+                                       src="images/icons/fileclose.svg"></span>
+                              </span>
+                           </span>
+                           <span class="fileResultDropT1 hideCls" id="modifiedat-dropdown">
+                              <ul data-dropdown-id="modifiedat-dropdown">
+                                 <li class="fileListT2" data-field-value="Any Time">
+                                    Any Time
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Today">
+                                    Today
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Yesterday">
+                                    Yesterday
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Last 7 days">
+                                    Last 7 days
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Last 30 days">
+                                    Last 30 days
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Last 90 days">
+                                    Last 90 days
+                                 </li>
+                              </ul>
+                           </span>
+                        </li>
+                        <!-- Shared To Dropdown -->
+                        <!-- <li>
+                           <span class="fileResultT2">
+                              <span class="fileSerachT3" id="sharedto-dropdown-btn" data-field="sharedto">
+                                 <span class="fileSaerchTestT5">Shared To</span>
+                                 <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                              </span>
+                              <span class="fileSerachT3 hideCls" id="sharedto-dropdown-selected">
+                                 <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                 <span class="fileSaerchTestT5" id="sharedto-dropdown-selected-val"></span>
+                                 <span class="fileSaerchCloseT6 cancel-filter"><img
+                                       src="images/icons/fileclose.svg"></span>
+                              </span>
+                           </span>
+                           <span class="fileResultDropT1 hideCls" id="sharedto-dropdown">
+                              <ul data-dropdown-id="sharedto-dropdown">
+                                 <li class="fileListT2" data-field-value="Any Time">
+                                    Any Time
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Today">
+                                    Today
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Yesterday">
+                                    Yesterday
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Last 7 days">
+                                    Last 7 days
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Last 30 days">
+                                    Last 30 days
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Last 90 days">
+                                    Last 90 days
+                                 </li>
+                              </ul>
+                           </span>
+                        </li> -->
+                        <!-- File Type Dropdown -->
+                        <li>
+                           <span class="fileResultT2">
+                              <span class="fileSerachT3" id="type-dropdown-btn" data-field="type">
+                                 <span class="fileSaerchTestT5">File type</span>
+                                 <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                              </span>
+                              <span class="fileSerachT3 hideCls" id="type-dropdown-selected">
+                                 <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                 <span class="fileSaerchTestT5" id="type-dropdown-selected-val"></span>
+                                 <span class="fileSaerchCloseT6 cancel-filter"><img
+                                       src="images/icons/fileclose.svg"></span>
+                              </span>
+                           </span>
+                           <span class="fileResultDropT1 hideCls" id="type-dropdown">
+                              <ul data-dropdown-id="type-dropdown">
+                                 <li class="fileListT2" data-field-value="Photos & Images">
+                                    Photos & Images
+                                 </li>
+                                 <li class="fileListT2" data-field-value="PDF’s">
+                                    PDF’s
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Documents">
+                                    Documents
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Spreadsheet">
+                                    Spreadsheet
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Presentation">
+                                    Presentation
+                                 </li>
+                                 <li class="fileListT2" data-field-value="Audio">
+                                    Audio
+                                 </li>
+                              </ul>
+                           </span>
+                        </li>
+                        <!-- <li>
+                              <span class="fileResultT2">
+                                 <span class="fileSerachT3">
+                                    <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                    <span class="fileSaerchTestT5">Last modified</span>
+                                    <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span>
+                                 </span>
+                              </span>
+                           </li> -->
+                        <!-- <li>
+                              <span class="fileResultT2">
+                                 <span class="fileSerachT3">
+                                    <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                                    <span class="fileSaerchTestT5">Pending my approval, +1</span>
+                                    <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span>
+                                 </span>
+                              </span>
+                           </li> -->
+                        <li>
+                           <span class="fileResultT2">
+                              <span class="fileSerachT3 fileSearchBgT1" id="clearAllfilter">
+                                 <!-- <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span> -->
+                                 <span class="fileSaerchTestT5">Clear all</span>
+                                 <!-- <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span> -->
+                              </span>
+                           </span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+
+
+               <!-- Folders Row -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Folders
+                  </div>
+                  <div id="filemanager-folder-row" class="row-card-file">
+
+                  </div>
+               </div>
+
+               <!-- Files Row -->
+               <div class="cardWrap">
+                  <div class="cardFileHeader">
+                     Files
+                  </div>
+                  <div id="filemanager-files-row" class="row-card-file">
+
+                  </div>
+               </div>
+
+               <div class="empty-folder hideCls" id="search-empty-folder">
+                  <img src="images/filemanger/empty_icon.svg" alt="">
+                  <p class="title-empty1">No Matching Results</p>
+                  <p class="title-empty2">Try another search, or use search options to find by type owner or more</p>
+               </div>
+
+            </div>
+
+
+         </div>
+
+         <!-- Open Folder View -->
+         <div class="search-openFolder cardContainerF1 hideCls" id="search-openFolder">
+            <div class="cardWrap">
+               <div class="cardFileHeader" id="folders-filemanager">
+                  Folders
+               </div>
+               <div id="filemanager-folder-row" class="row-card-file">
+                  <!-- Folder cards components -->
+               </div>
+            </div>
+
+            <div class="cardWrap">
+               <div class="cardFileHeader" id="files-filemanager">
+                  Files
+               </div>
+               <div id="filemanager-files-row" class="row-card-file">
+                  <!-- File cards components -->
+               </div>
+            </div>
+         </div>
+
+      </div>
+      <!-- End -->
+
+      <!-- Search Template -->
+      <div class="cardWrap hideCls">
+         <div class="cardFileHeader">
+            Search Results
+         </div>
+         <div class="row-card-file">
+            <div class="fileSearchResultT1">
+               <ul>
+                  <li>
+                     <span class="fileResultT2">
+                        <span class="fileSerachT3">
+                           <!-- <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span> -->
+                           <span class="fileSaerchTestT5">Location</span>
+                           <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                        </span>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="fileResultT2">
+                        <span class="fileSerachT3">
+                           <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                           <span class="fileSaerchTestT5">Shared with me</span>
+                           <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span>
+                        </span>
+                     </span>
+                     <span class="fileResultDropT1">
+                        <ul>
+                           <li><span class="fileListT2">Anywhere in MelpAPP</span></li>
+                           <li><span class="fileListT2">Shared by me</span></li>
+                           <li><span class="fileListT2">Shared with me</span></li>
+                           <li><span class="fileListT2">Shared in topics</span></li>
+                           <li><span class="fileListT2">Shared in groups</span></li>
+                           <li><span class="fileListT2">Favorites</span></li>
+                           <li><span class="fileListT2">Trashed</span></li>
+                        </ul>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="fileResultT2">
+                        <span class="fileSerachT3">
+                           <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                           <span class="fileSaerchTestT5">Archives (zip)</span>
+                           <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span>
+                        </span>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="fileResultT2">
+                        <span class="fileSerachT3">
+                           <!-- <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span> -->
+                           <span class="fileSaerchTestT5">File type</span>
+                           <span class="fileSaerchCloseT6"><img src="images/icons/fileCaretT2.svg"></span>
+                        </span>
+                     </span>
+                     <span class="fileResultDropT1">
+                        <ul>
+                           <li><span class="fileListT2"> <span class="fileIconT3"><img
+                                       src="images/icons/photo.svg"></span>Photos & Images</span></li>
+                           <li><span class="fileListT2"> <span class="fileIconT3"><img
+                                       src="images/icons/filePdfF1.svg"></span> PDF’s</span></li>
+                           <li><span class="fileListT2"> <span class="fileIconT3"><img
+                                       src="images/icons/fileDoc.svg"></span>Documents</span></li>
+                           <li><span class="fileListT2"> <span class="fileIconT3"><img
+                                       src="images/icons/presentation.svg"></span>Presentation</span></li>
+                           <li><span class="fileListT2"><span class="fileIconT3"><img
+                                       src="images/icons/fileAudio.svg"></span>Audio</span></li>
+                           <!-- <li><span class="fileListT2">Favorites</span></li>
+                        <li><span class="fileListT2">Trashed</span></li> -->
+                        </ul>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="fileResultT2">
+                        <span class="fileSerachT3">
+                           <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                           <span class="fileSaerchTestT5">Last modified</span>
+                           <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span>
+                        </span>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="fileResultT2">
+                        <span class="fileSerachT3">
+                           <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span>
+                           <span class="fileSaerchTestT5">Pending my approval, +1</span>
+                           <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span>
+                        </span>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="fileResultT2">
+                        <span class="fileSerachT3 fileSearchBgT1">
+                           <!-- <span class="fileSaerchCorrectT4"><img src="images/icons/fileCheck.svg"></span> -->
+                           <span class="fileSaerchTestT5">Clear all</span>
+                           <!-- <span class="fileSaerchCloseT6"><img src="images/icons/fileclose.svg"></span> -->
+                        </span>
+                     </span>
+                  </li>
+               </ul>
+            </div>
+
+         </div>
+         <div class="row-card-file">
+
+
+         </div>
+      </div>
+
+      <!-- List container for all  -->
+      <div class="container-card-file-manager hideCls" id="container-list-all">
+         <!-- Listing View template  -->
+         <div class="cardWrap cardContainerF1">
+            <div class="fileListingT1">
+               <div class="fileHeaderT2">
+                  <div class="filelistT3 h-name">Name</div>
+                  <div class="filelistT4 h-owner">Owner</div>
+                  <div class="filelistT5 h-lastOpened">Last Opened</div>
+                  <div class="filelistT6 h-fileSize">File size</div>
+               </div>
+
+               <div class="list-all-contentbody">
+                  <div class="fileContainerF1">
+                     <div class="fileItemF1"></div>
+                     <div class="fileItemF2"></div>
+                     <div class="fileItemF3"></div>
+                     <div class="fileItemF4"></div>
+                     <div class="fileItemF5"></div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <!-- listing items -->
+
+      </div>
+
+
+
+
+
+
+      <!-- Rename Popup for  File and folder  -->
+      <section class="teamPopup-common fmRenamePopup-common hideCls">
+         <div class="fileManagerCommonPopup">
+            <div class="fileFt1">
+               <div class="fileHeadf1">Rename</div>
+               <div class="fileRenameF2">
+                  <input type="text" name="name" id="fm-frename" class="renameInputSahre" placeholder="Untitled folder">
+               </div>
+               <div class="fileCommonFooterBtn">
+                  <button class="cancelButtonGlobal">cancel</button>
+                  <button type="button" class="submitButtonGlobal">OK</button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- Folder Creation Name popup  -->
+      <section class="teamPopup-common fmNewFolderPopup-common hideCls">
+         <div class="fileManagerCommonPopup">
+            <div class="fileFt1">
+               <div class="fileHeadf1">New Folder</div>
+               <div class="fileRenameF2">
+                  <input type="text" name="name" id="folderNameInput" class="folderNameInput renameInput unitedFolder"
+                     placeholder="Untitled folder">
+               </div>
+               <div class="fileCommonFooterBtn">
+                  <button class="cancelButtonGlobal">cancel</button>
+                  <button type="button" id="okButton" class="submitButtonGlobal">OK</button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- move-fonts-pop up-->
+      <section class="teamPopup-common hideCls" id="fm-movepopup">
+         <div class="fileManagerCommonPopup fileMoveFolder">
+            <div class="fileFt1">
+               <div class="fileHeadf1">Move “Fonts”</div>
+               <div class="fileCloseBtn fileCloseBtnF2"><img src="images/icons/cancel.svg"></div>
+               <div class="filef3">
+                  <div class="filef4">Current Location</div>
+                  <div class="fileFolderF4">
+                     <span class="fileFolderIconWrap"> <img src="images/icons/filesMenu.svg"> <span
+                           class="fileTitleTest">File Manager</span></span>
+                  </div>
+               </div>
+               <div class="fileWrapF5">
+                  <div class="fileTabF5">
+                     <!-- Tabs for menu -->
+                     <ul>
+                        <li class="fm-move-suggested"><span class="selected">Suggested</span></li>
+                        <li class="fm-move-starred"><span>Favorited</span></li>
+                        <!-- <li class="fm-move-allloc"><span>All locations</span></li> -->
+                     </ul>
+                  </div>
+                  <div class="fileTabsF6 hideCls">
+                     <ul>
+                        <li>
+                           <div class="fileCheckWrapF3">
+                              <i class="fileIconF1"><img src="images/icons/fileOfficeF1.svg"></i>
+                              <i class="fileIconHoverState"><img src="images/filetypeicon/uncheckbox.svg"></i>
+                              <!-- <i class="fileIconHoverActiveState"><img src="images/filetypeicon/checkbox.svg"></i> -->
+                           </div>
+                           <span>Office Documents</span>
+                           <div class="moveHoverStateF1">
+                              <span class="moveState">Move</span>
+                              <i class=""><img src="images/icons/moveicon.svg"></i>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="fileCheckWrapF3">
+                              <i class="fileIconF1"><img src="images/icons/fileOfficeF1.svg"></i>
+                              <i class="fileIconHoverState"><img src="images/filetypeicon/uncheckbox.svg"></i>
+                              <!-- <i class="fileIconHoverActiveState"><img src="images/filetypeicon/checkbox.svg"></i> -->
+                           </div>
+                           <span>Meeting Presentations</span>
+                           <div class="moveHoverStateF1">
+                              <span class="moveState">Move</span>
+                              <i class=""><img src="images/icons/moveicon.svg"></i>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="fileCheckWrapF3">
+                              <i class="fileIconF1"><img src="images/icons/fileOfficeF1.svg"></i>
+                              <i class="fileIconHoverState"><img src="images/filetypeicon/uncheckbox.svg"></i>
+                              <!-- <i class="fileIconHoverActiveState"><img src="images/filetypeicon/checkbox.svg"></i> -->
+                           </div>
+                           <span>Meeting Notes</span>
+                           <div class="moveHoverStateF1">
+                              <span class="moveState">Move</span>
+                              <i class=""><img src="images/icons/moveicon.svg"></i>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="fileCheckWrapF3">
+                              <i class="fileIconF1"><img src="images/icons/fileOfficeF1.svg"></i>
+                              <i class="fileIconHoverState"><img src="images/filetypeicon/uncheckbox.svg"></i>
+                              <!-- <i class="fileIconHoverActiveState"><img src="images/filetypeicon/checkbox.svg"></i> -->
+                           </div>
+                           <span>Salary slips</span>
+                           <div class="moveHoverStateF1">
+                              <span class="moveState">Move</span>
+                              <i class=""><img src="images/icons/moveicon.svg"></i>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="moveFolderEmtyState">
+                     <div class="moveFolderEmtyWrap">
+                        <img src="images/filemanger/folderEmpty.png">
+                        <p>This folder is empty</p>
+                     </div>
+                     <div>
+                     </div>
+
+                     <!-- Bread Crumb for current location for navigation -->
+                     <div class="fileWrapBtn">
+                        <div class="fileManagerW1">
+                           <div class="fileMagerTopLeft breadcrumbs-container hideCl1s">
+                              <ol class="breadcrumb  blue-grey lighten-4">
+                                 <li class="breadcrumb-item active">
+                                    File Manager<i class="breadcRumArrowf1" aria-hidden="true">
+                                       <img src="images/filemanger/breadCrumArrow.svg">
+                                    </i>
+                                 </li>
+                                 <li class="breadcrumb-item active">
+                                    Salary Slips
+                                 </li>
+                              </ol>
+                           </div>
+                           <div class="selectLocation hideCls">
+                              <p> <span class="selectInfoIcon"><img src="images/filemanger/selectInfo.svg"></span>
+                                 Select a
+                                 location to show the folder path</p>
+                           </div>
+                        </div>
+
+                        <!--  footer for buttons  -->
+                        <div class="fileCommonFooterBtn mvfooter-fmbtn">
+                           <div class="createNewF1">
+                              <span><img src="images/icons/createFolderIcon.svg"></span>
+                           </div>
+                           <button class="cancelButtonGlobal">cancel</button>
+                           <button type="button" class="submitButtonGlobal bgColorMove">Move</button>
+                        </div>
+
+                        <!--  new folder addtion here  -->
+                        <div class="createAccountFileF3 hideCls">
+                           <div class="newFoldert2">
+                              <div class="fileHeadf1">Rename</div>
+                              <div class="fileCloseBtn"><img src="images/icons/cancel.svg"></div>
+                              <div class="fileRenameF2">
+                                 <input type="text" name="name" id=""
+                                    class="renameInput folderNameInput renameInput unitedFolder"
+                                    placeholder="Untitled folder">
+                              </div>
+                              <div class="fileCommonFooterBtn createNewBtnF2">
+                                 <button class="cancelButtonGlobal">cancel</button>
+                                 <button type="button" class="submitButtonGlobal">Create</button>
+                              </div>
+                           </div>
+                        </div>
+
+
+                     </div>
+                     <!-- <div class="fileBtnF2">
+               <button class="cancelButtonGlobal">cancel</button>
+               <button type="button" class="submitButtonGlobal bgColorMove">Move</button>
+               </div> -->
+                  </div>
+               </div>
+      </section>
+
+
+      <!-- move-fonts-pop up-->
+      <!-- forward-files-pop up-->
+      <section class="teamPopup-common fm-forwardFile-popup  hideCls">
+         <div class="fileManagerCommonPopup fileMoveFolder">
+            <div class="fileFt1">
+               <div class="fileHeadf1 fm-forwardfile-name">Forward “Logo.ai”</div>
+               <div class="forwardFilesT1 fm-forwardTabs-wrap">
+                  <ul class="fm-fowardTabs-list">
+                     <li class="fm-forwardtab-contact"><span class="selected">Contacts</span></li>
+                     <li class="fm-forwardtab-group"><span>Group</span></li>
+                     <li class="fm-forwartab-Topics"><span>Topics</span></li>
+                  </ul>
+               </div>
+               <div class="filesForwardInput fm-forwardSearch-wrap">
+                  <input type="text" class="add-newteam-input form_custom_width fm-fowardSearch-input"
+                     placeholder="Search contacts, topics and groups">
+               </div>
+               <div class="filelistingWrap">
+                  <div class="add-invitees-popup-main fileManagerT3 fm-forwardrender-body" style="display: block;">
+                     <li class="list-section contact">
+                        <div class="common-postion">
+                           <div class="common-d-list networkMiddle" title="">
+                              <div class="common-user-icon cursorPoint">
+                                 <img
+                                    src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m">
+                              </div>
+                              <div class="common-user-list">
+                                 <div class="UserTitle">
+                                    <span class="user-label color-black allListCommonWrapUserContact">Aakash
+                                       Dubey</span>
+                                    <span class="coworker-label">Co-Worker</span>
+                                 </div>
+                                 <div class="userProfile">
+                                    <span class="user-team-label color-grey common-name-trancate allListCommonWrap">Sr
+                                       Technical Recruiter</span>
+                                 </div>
+                                 <div class="useraddress" title="Noida, Uttar Pradesh, India">
+                                    <span
+                                       class="user-team-label color-grey common-name-trancate allListCommonWrap">Noida,
+                                       Uttar Pradesh, India</span>
+                                 </div>
+                                 <div class="file-box-icon">
+                                    <div class="file-check-default1 file-check-active"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="list-section contact">
+                        <div class="common-postion">
+                           <div class="common-d-list networkMiddle" title="">
+                              <div class="common-user-icon cursorPoint">
+                                 <img
+                                    src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m">
+                              </div>
+                              <div class="common-user-list">
+                                 <div class="UserTitle">
+                                    <span class="user-label color-black allListCommonWrapUserContact">Aakash
+                                       Dubey</span>
+                                    <span class="network-label">Network</span>
+                                 </div>
+                                 <div class="userProfile">
+                                    <span class="user-team-label color-grey common-name-trancate allListCommonWrap">Sr
+                                       Technical Recruiter</span>
+                                 </div>
+                                 <div class="useraddress" title="Noida, Uttar Pradesh, India">
+                                    <span
+                                       class="user-team-label color-grey common-name-trancate allListCommonWrap">Noida,
+                                       Uttar Pradesh, India</span>
+                                 </div>
+                                 <div class="file-box-icon">
+                                    <div class="file-check-default"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="list-section contact">
+                        <div class="common-postion">
+                           <div class="common-d-list networkMiddle" title="">
+                              <div class="common-user-icon cursorPoint">
+                                 <img
+                                    src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m">
+                              </div>
+                              <div class="common-user-list">
+                                 <div class="UserTitle">
+                                    <span class="user-label color-black allListCommonWrapUserContact">Aakash
+                                       Dubey</span>
+                                    <span class="coworker-label">Co-Worker</span>
+                                 </div>
+                                 <div class="userProfile">
+                                    <span class="user-team-label color-grey common-name-trancate allListCommonWrap">Sr
+                                       Technical Recruiter</span>
+                                 </div>
+                                 <div class="useraddress" title="Noida, Uttar Pradesh, India">
+                                    <span
+                                       class="user-team-label color-grey common-name-trancate allListCommonWrap">Noida,
+                                       Uttar Pradesh, India</span>
+                                 </div>
+                                 <div class="file-box-icon">
+                                    <div class="file-check-default"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="list-section contact">
+                        <div class="common-postion">
+                           <div class="common-d-list networkMiddle" title="">
+                              <div class="common-user-icon cursorPoint">
+                                 <img
+                                    src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m">
+                              </div>
+                              <div class="common-user-list">
+                                 <div class="UserTitle">
+                                    <span class="user-label color-black allListCommonWrapUserContact">Aakash
+                                       Dubey</span>
+                                    <span class="coworker-label">Co-Worker</span>
+                                 </div>
+                                 <div class="userProfile">
+                                    <span class="user-team-label color-grey common-name-trancate allListCommonWrap">Sr
+                                       Technical Recruiter</span>
+                                 </div>
+                                 <div class="useraddress" title="Noida, Uttar Pradesh, India">
+                                    <span
+                                       class="user-team-label color-grey common-name-trancate allListCommonWrap">Noida,
+                                       Uttar Pradesh, India</span>
+                                 </div>
+                                 <div class="file-box-icon">
+                                    <div class="file-check-default"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="list-section contact">
+                        <div class="common-postion">
+                           <div class="common-d-list networkMiddle" title="">
+                              <div class="common-user-icon cursorPoint">
+                                 <img
+                                    src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m">
+                              </div>
+                              <div class="common-user-list">
+                                 <div class="UserTitle">
+                                    <span class="user-label color-black allListCommonWrapUserContact">Aakash
+                                       Dubey</span>
+                                    <span class="network-label">Network</span>
+                                 </div>
+                                 <div class="userProfile">
+                                    <span class="user-team-label color-grey common-name-trancate allListCommonWrap">Sr
+                                       Technical Recruiter</span>
+                                 </div>
+                                 <div class="useraddress" title="Noida, Uttar Pradesh, India">
+                                    <span
+                                       class="user-team-label color-grey common-name-trancate allListCommonWrap">Noida,
+                                       Uttar Pradesh, India</span>
+                                 </div>
+                                 <div class="file-box-icon">
+                                    <div class="file-check-default"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="list-section contact">
+                        <div class="common-postion">
+                           <div class="common-d-list networkMiddle" title="">
+                              <div class="common-user-icon cursorPoint">
+                                 <img
+                                    src="https://cdnmedia-fm.melpapp.com/a1c6f8bf-b84b-4a98-9cf2-b44e6d266890/1a53@1628704503938.jpg"
+                                    class="common-icons-size vertical-m">
+                              </div>
+                              <div class="common-user-list">
+                                 <div class="UserTitle">
+                                    <span class="user-label color-black allListCommonWrapUserContact">Aakash
+                                       Dubey</span>
+                                    <span class="coworker-label">Co-Worker</span>
+                                 </div>
+                                 <div class="userProfile">
+                                    <span class="user-team-label color-grey common-name-trancate allListCommonWrap">Sr
+                                       Technical Recruiter</span>
+                                 </div>
+                                 <div class="useraddress" title="Noida, Uttar Pradesh, India">
+                                    <span
+                                       class="user-team-label color-grey common-name-trancate allListCommonWrap">Noida,
+                                       Uttar Pradesh, India</span>
+                                 </div>
+                                 <div class="file-box-icon">
+                                    <div class="file-check-default"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </div>
+               </div>
+            </div>
+            <div class="fileCommonFooterBtn fileManagerBtnT3 fm-forwardbtn-wrap">
+               <!-- <button class="cancelButtonGlobal">cancel</button> -->
+               <button type="button" class="submitButtonGlobal bgColorMove fm-fowardSubmit-button">Send </button>
+               <button type="button" class="cancelButtonGlobal fm-forwardSubmit-cancel">cancel</button>
+            </div>
+         </div>
+      </section>
+
+
+
+      <section class="teamPopup-common fm-share-popup hideCls manageDetails">
+         <div class="fileManagerCommonPopup">
+            <div>
+               <div class="shareFileHeader fm-share-fileName"></div>
+               <div class="fileCloseBtn fileCloseBtnF2 fm-share-close"><img src="images/icons/cancel.svg"></div>
+               <div class=" fm-share-searchWrap">
+                  <span class="fileSearchF3 fm-share-searchInputWrap">
+                     <div class="filesMoveInput">
+                        <input type="text" name="name" id="" class="renameInput fm-share-searchInput"
+                           placeholder="Add people, groups, teams and email" autocomplete="off">
+                        <span class="fileSearchF5 fm-share-shareModeWrap">
+                           <span class="fileT2 fm-share-shareModeDisplay">
+                              <span class="FileCanViewt2 fm-share-currentShareMode">Can View</span>
+                              <img src="images/icons/file_expand_more.svg" class="fm-share-dropdownIcon">
+                              <span class="canViewDropDown fm-share-shareModeOptions hideCls">
+                                 <ul>
+                                    <li>Can View</li>
+                                    <li>Can Edit</li>
+                                 </ul>
+                              </span>
+                           </span>
+                        </span>
+                     </div>
+                     <!-- <span class="fm-share-selectedListWrap"> -->
+                     <ul class="fileAddedMemberT2 fm-share-selectedList hideCls">
+                        <!-- ... (repeated list items for selected users) -->
+                     </ul>
+                     <!-- </span> -->
+                     <span class="fm-share-selectedListWrap hideCls">
+                        <div class="fileListingScrollWrap">
+                           <ul class="fileUserListT2 fm-share-searchResults searchListingScroll hideCls">
+                              <!-- ... (repeated list items for search results) -->
+                           </ul>
+                        </div>
+                     </span>
+                  </span>
+
+               </div>
+               <div class="shareFileSearchF2 fm-share-shareByWrap shareFilesAccesPopup">
+                  <div class="pepoleWithAcces">
+                     <div class="shareFilesAcces fm-share-accessList">
+                        <span class="fileAccessHaedingT1 fm-share-accessHeading">People with access</span>
+                        <div class="shareFileT2 fm-share-peopleList">
+                           <!-- ... (repeated user display) -->
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="fileSearchF6 fm-share-shareByDisplay anyoneShareLink">
+                     <div class="linksSharingTitle">Link sharing range</div>
+                     <span class="fileLanguage fm-share-languageDisplay">
+                        <img src="images/filemanger/linkView.svg" class="anyoneLinkIcon">
+                        <span class="fileLink fm-share-currentShareByOption">Anyone with the link <span
+                              class="canViewWeight">can view</span> </span>
+                        <span class="canViewDropDown fm-share-shareByOptions hideCls">
+                           <ul>
+                              <li><span class="checkEmail"><img src="images/filemanger/check_small.svg"></span> Anyone
+                                 with the link can view</li>
+                              <li><span class="checkEmail"></span>Anyone with the link can edit</li>
+                              <li><span class="checkEmail"></span>Only people invited to this file</li>
+                           </ul>
+                        </span>
+                        <img src="images/icons/file_expand_more.svg" class="fm-share-dropdownIcon">
+                     </span>
+                  </div>
+                  <div class="fileCommonFooterBtn shareFileBtn fm-share-footerButtons">
+                     <button class="cancelButtonGlobal fm-share-copyLinkButton"><img src="images/icons/fileCopy.svg"
+                           class="fileCopyLink">Copy
+                        Link</button>
+                     <button type="button" class="submitButtonGlobal bgColorMove fm-share-sendInviteButton">Share Access
+                     </button>
+                  </div>
+                  <!-- ... (additional share by options if any) -->
+               </div>
+
+            </div>
+
+         </div>
+      </section>
+
+      <!--Access Denied popup-->
+      <section class="teamPopup-common hideCls" id="fm-access-denied-details">
+         <div class="fileManagerCommonPopup">
+            <h2>Access Denied</h2>
+            <p>You do not have access to this resource.</p>
+            <div class="fileCommonFooterBtn fileManagerBtnT3 fm-forwardbtn-wrap">
+               <button type="button" class="submitButtonGlobal fm-denied-access-button">Request Access </button>
+               <button type="button" class="cancelButtonGlobal fm-denied-access-cancel">cancel</button>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- forward-files-pop up-->
+      <section class="teamPopup-common hideCls ">
+         <div class="fileManagerCommonPopup fileMoveFolder">
+            <div class="shareFileHeader">Share “Logo.ai”</div>
+            <div class="shareFileSearchF1">
+               <span class="fileSearchF3">
+                  <input type="text" name="name" id="" class="renameInput"
+                     placeholder="Add people, groups, teams and email">
+                  <span class="fileaddMemberT1 hideCls">
+                     <ul class="fileAddedMemberT2">
+                        <li>
+                           <span class="addedT2">
+                              <img src="images/avatard.png">
+                              <img src="images/callCloce.svg" class="addClose">
+                           </span>
+                        </li>
+                        <li>
+                           <span class="addedT2">
+                              <img src="images/avatard.png">
+                              <img src="images/callCloce.svg" class="addClose">
+                           </span>
+                        </li>
+                        <li>
+                           <span class="addedT2">
+                              <img src="images/avatard.png">
+                              <img src="images/callCloce.svg" class="addClose">
+                           </span>
+                        </li>
+                        <li>
+                           <span class="addedT2">
+                              <img src="images/avatard.png">
+                              <img src="images/callCloce.svg" class="addClose">
+                           </span>
+                        </li>
+                        <li>
+                           <span class="addedT2">
+                              <img src="images/avatard.png">
+                              <img src="images/callCloce.svg" class="addClose">
+                           </span>
+                        </li>
+                        <li>
+                           <span class="addedT2">
+                              <img src="images/avatard.png">
+                              <img src="images/callCloce.svg" class="addClose">
+                           </span>
+                        </li>
+                     </ul>
+                     <ul class="fileUserListT2">
+                        <li>
+                           <span class="userListT3">
+                              <span class="usreWrapt1">
+                                 <span class="userProfileT2"><img src="images/avatard.png"></span>
+                                 <span class="userProfileTestT3"> Marketing Team</span>
+                                 <span class="useraddT4">Add</span>
+                              </span>
+                           </span>
+                        </li>
+                        <li>
+                           <span class="userListT3">
+                              <span class="usreWrapt1">
+                                 <span class="userProfileT2"><img src="images/avatard.png"></span>
+                                 <span class="userProfileTestT3"> Marketing Team</span>
+                                 <span class="useraddT4">Add</span>
+                              </span>
+                           </span>
+                        </li>
+                        <li>
+                           <span class="userListT3">
+                              <span class="usreWrapt1">
+                                 <span class="userProfileT2"><img src="images/avatard.png"></span>
+                                 <span class="userProfileTestT3"> Marketing Team</span>
+                                 <span class="useraddT4">Add</span>
+                              </span>
+                           </span>
+                        </li>
+                        <li>
+                           <span class="userListT3">
+                              <span class="usreWrapt1">
+                                 <span class="userProfileT2"><img src="images/avatard.png"></span>
+                                 <span class="userProfileTestT3"> Marketing Team</span>
+                                 <span class="useraddT4">Add</span>
+                              </span>
+                           </span>
+                        </li>
+                        <li>
+                           <span class="userListT3">
+                              <span class="usreWrapt1">
+                                 <span class="userProfileT2"><img src="images/avatard.png"></span>
+                                 <span class="userProfileTestT3"> Marketing Team</span>
+                                 <span class="useraddT4">Add</span>
+                              </span>
+                           </span>
+                        </li>
+                        <li>
+                           <span class="userListT3">
+                              <span class="usreWrapt1">
+                                 <span class="userProfileT2"><img src="images/avatard.png"></span>
+                                 <span class="userProfileTestT3"> Marketing Team</span>
+                                 <span class="useraddT4">Add</span>
+                              </span>
+                           </span>
+                        </li>
+                     </ul>
+                  </span>
+               </span>
+               <span class="fileSearchF5">
+                  <span class="fileT2">
+                     <span class="FileCanViewt2">Can View</span>
+                     <!-- drop down -->
+                     <img src="images/icons/file_expand_more.svg">
+                     <span class="canViewDropDown hideCls">
+                        <ul>
+                           <li>Can View</li>
+                           <li>Can Edit</li>
+                        </ul>
+                     </span>
+                     <!-- drop down -->
+                  </span>
+               </span>
+            </div>
+            <div class="shareFileSearchF2">
+               <div class="fileSearchF6">
+                  <span class="fileLanguage">
+                     <img src="images/icons/filelanguage.svg">
+                     <span class="fileLink">Anyone with the link </span>
+                     <!-- drop down -->
+                     <span class="canViewDropDown hideCls">
+                        <ul>
+                           <li>Anyone with the link</li>
+                           <li>Only people invited to this file</li>
+                        </ul>
+                     </span>
+                     <!-- drop down -->
+                     <img src="images/icons/file_expand_more.svg">
+                  </span>
+               </div>
+               <div class="fileSearchF4">
+                  <span class="fileT1">
+                     <span class="FileCanViewt1">Can View</span>
+                     <img src="images/icons/file_expand_more.svg">
+                  </span>
+               </div>
+            </div>
+            <div class="shareFilesAcces">
+               <span class="fileAccessHaedingT1">People with access</span>
+               <div class="shareFileT2">
+                  <div class="shareFileWrapF6">
+                     <div class="fileEmailT3">
+                        <span class="fileEamilWrap">
+                           <span class="fileEamilT1">JM</span>
+                           <span class="eamilFullNameT2">
+                              <span class="emailUserNameT2">James Miller(you)</span>
+                              <span class="emailUserEamilT2">James.miller@gmail.com</span>
+                           </span>
+                        </span>
+                     </div>
+                     <div class="fileEmailOwnerf1">
+                        <span class="fileOwnerTf2">Owner</span>
+                     </div>
+                  </div>
+                  <div class="shareFileWrapF6">
+                     <div class="fileEmailT3">
+                        <span class="fileEamilWrap">
+                           <span class="fileEamilT1">JM</span>
+                           <span class="eamilFullNameT2">
+                              <span class="emailUserNameT2">James Miller(you)</span>
+                              <span class="emailUserEamilT2">James.miller@gmail.com</span>
+                           </span>
+                        </span>
+                     </div>
+                     <div class="fileEmailOwnerf1">
+                        <span class="fileOwnerTf2 ">Can View </span>
+                        <!-- drop down -->
+                        <span class="canViewDropDown hideCls">
+                           <ul>
+                              <li>Can View</li>
+                              <li>Can Edit</li>
+                              <li>Remove </li>
+                           </ul>
+                        </span>
+                        <!-- drop down -->
+                     </div>
+                  </div>
+                  <div class="shareFileWrapF6">
+                     <div class="fileEmailT3">
+                        <span class="fileEamilWrap">
+                           <span class="fileEamilT1">JM</span>
+                           <span class="eamilFullNameT2">
+                              <span class="emailUserNameT2">James Miller(you)</span>
+                              <span class="emailUserEamilT2">James.miller@gmail.com</span>
+                           </span>
+                        </span>
+                     </div>
+                     <div class="fileEmailOwnerf1">
+                        <span class="fileOwnerTf2">Owner</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="fileCommonFooterBtn shareFileBtn">
+               <button class="cancelButtonGlobal"><img src="images/icons/fileCopy.svg" class="fileCopyLink">Copy
+                  Link</button>
+               <button type="button" class="submitButtonGlobal bgColorMove">Send Invite </button>
+            </div>
+         </div>
+      </section>
+      <!-- <section class="teamPopup-common"> -->
+      <div class="uplaodStatusPopup" id="uploadStatus" style="display: none;">
+         <div class="uploadFilesHead">
+            <div class="uploadFilesHeading">
+               <h2 id="upload-count">Uploading 1 item</h2>
+            </div>
+            <div class="uploadFilesBtn">
+               <span class="uploadCaretBGTn"><img src="images/icons/adminCaretTop.svg"></span>
+               <span class="uploadcloseBtn"><img src="images/icons/uploadclose.svg"></span>
+            </div>
+         </div>
+         <div class="uploadFilesListContainer">
+            <div class="uploadFilesWrapList">
+               <div class="uploadFileRowList" id="uploadrowlist">
+                  <!-- upload list -->
+                  <!-- <div class="uploadFileColum" id="uploadfileclm">
+                        <div class="UploadFolderName">
+                        <span class="uploadFileIcon"><img src="images/icons/filesMenu.svg"></span>
+                        <span class="uploadFileIcon"></span>
+                        <span class="uploadFileNumber"></span>
+                       </div>
+                        <div class="uploadProgressBar">
+                          <div class="progress">
+                              <span class="title timer" data-from="0" data-to="" data-speed="1800"></span>
+                              <div class="overlay"></div>
+                              <div class="left"></div>
+                              <div class="right"></div>
+                          </div>
+                        </div>
+                     </div> -->
+                  <!-- upload list -->
+
+               </div>
+            </div>
+         </div>
+         <!-- <h3>Uploading Files...</h3>
+            <button id="closeUploadStatus">X</button> 
+            <div id="fileUploadProgressContainer"></div> -->
+      </div>
+
+      <section class="teamPopup-common hideCls" id="confirmPopup">
+         <div class="successfullySection">
+            <div class="succesfullyContent">
+               <div class="succesfullyHeading" id="confirmContent"></div>
+               <div class="succesfullyFooter">
+                  <button class="cancelButtonGlobal" id="confirmCancel" onclick="hideAlert('confirmPopup')">
+                     Cancel</button>
+                  <button class="submitButtonGlobal" id="confirmDone">OK</button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- </section> -->
+   </div>
+</section>
+<!--filemanager-end-->
+<!-- share files flow -->
+<!-- share files flow -->

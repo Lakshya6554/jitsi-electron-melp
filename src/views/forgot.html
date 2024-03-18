@@ -1,0 +1,56 @@
+<!-- Forgot password Section Starts -->
+<section id="forgot-template" class="forgot-form-new box-forgot login-common-box-style forgetWidth">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="login-logo-commmon forgetLogo">
+                <img src="images/melpapp-logo.svg" class='login-logo' importance="low" loading="lazy">
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="forgot-text-title">{{LB01}}
+            </span>
+            <div class="forgot-label">
+                {{LB02}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-12 text-input-div">
+                <div class="email-id-signUp position-signup-new new-sign-in-section">
+                    <label class="forgetLabel">
+                        <input type="email" onkeyup="btnValidate('forgot')" onkeydown="resetEmail(event)" id="fgtemail"
+                            name="email" placeholder="{{PH01}}" class="forgetInput" autocomplete="off">
+                        <span>{{LB03}}</span>
+                    </label>
+                    <!-- error msg full name start Darshan & Ram -->
+                    <div class="tooltips-fullname tooltips-common-error toolTipsCommonErrors" id="error-forgot-pass"
+                        style="display:none">
+                        <div class="tooltipTextFullName">
+                            <div class="subtitle-error-fullName forgetresetPassword" id="forgot-password-error-message">
+                                Invalid Password, checkout PASSWORD CONDITIONS.
+                            </div>
+                            <div class="tringle-NameEmail">
+                                <img src="images/triangle.svg" class="tringle-arrow" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- error msg full name end -->
+                </div>
+                <div class="saveButton">
+                    <button type="button" class="resetPasswordId inActiveBtn" disabled id="resetPasswordId"
+                        onclick="checkfgtEmail();">
+                        {{BT01}}
+                    </button>
+                </div>
+                <div>
+                    <button class="cancelButtonGlobal" type="button" id="backBtn"
+                        onclick="redirectTologin()">{{BT02}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Forgot password section Ends -->

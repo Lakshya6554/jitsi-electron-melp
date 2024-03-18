@@ -1,0 +1,62 @@
+<div class="adminUserListing" id="userStatusContainer">
+    <div class="adminUserListingContainer">
+        <div class="adminUserListRow">
+            <div class="adminUserListHeader">
+                <div class="adminListingTop">
+                    <!-- adminuserlist start -->
+                    <div class="adminListUser">
+                        <div class="adminListingFilter">
+                            <div class="adminShortFiltter adminListCommonA2"> 
+                                <span class="shortIcon adminListigBg" data-order="1" onclick="sortUsersList('adUserStatusArea', 'adminUserName', this)">Full Name</span> 
+                            </div>
+                        </div>
+                        <div class="adminAddress">
+                            <div class="adminInnerAddress adminListCommonA2"><span class="adminListigBg">Email Address</span> </div>
+                        </div>
+                        <div class="adminStatus adminListCommonA2" onclick="statusDropdown(true)">
+                            <div class="adminInnerStatus"><span class="adminListigBg">Status</span></div>
+                        </div>
+                        <div class="adminJoining adminListCommonA2">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg">Registered on</span> </div>
+                        </div>
+                        
+                    </div>
+                    <!-- adminuserlist end -->
+                    <!-- DEACTIVATE and Export selected btn  -->
+                    <div class="deactiveExportBtn hideCls">
+                        <button class="activDeactiveBtn">DEACTIVATE </button>
+                        <button class="activDeactiveBtn">Export selected </button>
+                    </div>
+                    <!-- DEACTIVATE and Export selected btn  -->
+                </div>
+            </div>
+        </div>
+        <div class="adminListingRow screenHeight">
+            <div class="adminListingScroll adminScrollAddInvite" id="adUserStatusArea"></div>
+            <div class="paginationWrap">
+                <div class="paginationResult">
+                    <!-- <div class="resultBox">
+                        <span>Results</span>
+                    </div> -->
+                    <div class="paginationResultBox" onclick="openPageSizeSelection()">
+                        <span id="pagesize">20 <img src="images/icons/paginationCret.svg"></span> 
+                        
+                        <div class="paginationDropDown" id="paginationDropDown">
+                            <ul>
+                                <li class="selected" onclick="userStatusApplyFilter('pagesize', 20, this)">20</li>
+                                <li onclick="userStatusApplyFilter('pagesize', 50, this)">50</li>
+                                <li onclick="userStatusApplyFilter('pagesize', 75, this)">75</li>
+                                <li onclick="userStatusApplyFilter('pagesize', 100, this)">100</li>
+                                <li onclick="userStatusApplyFilter('pagesize', 150, this)">150</li>
+                                <li onclick="userStatusApplyFilter('pagesize', 200, this)">200</li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

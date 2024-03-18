@@ -1,0 +1,207 @@
+<section id="dashboard-template">
+    <div class="dasboardTitle">
+        <h1 class="welcome-name">
+            Welcome, <span id="fullname"><span>
+        </h1>
+        <!-- <h4 class="welcome-subtitle">Here are some things to get going…</h4> -->
+    </div>
+    <div class="box-container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 section">
+                <div class="grey-border" id="dashboard-calendar-box">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/calendar.svg" alt=""></span>
+                            <span class="header-content">Calendar</span>
+                        </div>
+                    </div>
+                    <div class="image-section">
+                        <img src="images/dashboard/1.svg" alt="" class="dashboard1">
+                        <img src="images/dashboard/1dark.png" alt="" class="dashboard1-dark">
+                    </div>
+                    <div class="button-section">
+                        <button class="submitButtonGlobal" title="Create Meeting"
+                            onclick="switchPage('calendar', '', event, false, true)">Create
+                            Meeting</button>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h1>CONNECT OTHER CALENDAR</h1>
+                        <h2>Sync Melp events across Google and Microsoft Calendars.</h2>
+                        <span class="connect-button">
+                            <button class="invite-social" onclick="connectCalendar()">
+                                <img src="images/google-invite-cont.svg" alt="" title="Connect google calendar">
+                                <span class="google-invite-text google-invite-texts">
+                                    Google
+                                </span>
+                            </button>
+                            <button class="invite-social" onclick="connectCalendar()">
+                                <img src="images/icons/office.png" class="micosoftIcon" alt=""
+                                    title="Connect Microsoft calendar">
+                                <span class="google-invite-text google-invite-texts">
+                                    Microsoft
+                                </span>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <!-- <h1>MY CALENDAR LINK</h1> -->
+                        <h2>Copy and share your calendar link for easy appointment booking.</h2>
+                        <div class="calendar-link-section">
+                            <span class="calendar-link-outer" onclick="copyLink(1)" title="Copy Link">
+                                <span class="calendar-link" id="calendarLink"> </span>
+                                <span class="clipboard"><img src="images/dashboard/copy-to-clipboard.svg" alt=""></span>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 section">
+                <div class="grey-border" id="dashboard-meeting-box">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/video-cam.svg" alt=""></span>
+                            <span class="header-content">Personal Room</span>
+                        </div>
+                    </div>
+                    <div class="image-section">
+                        <img src="images/dashboard/2.svg" alt="" class="dashboard2">
+                        <img src="images/dashboard/2dark.png" alt="" class="dashboard2-dark">
+                    </div>
+                    <div class="button-section">
+                        <button class="submitButtonGlobal" title="GO TO ROOM" onclick="openpersonalroom()">GO TO ROOM
+                            <!-- <img
+                                src="images/video_call.svg" alt="Video" loading="lazy"> -->
+                        </button>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <!-- <h1 class="header-calendar-title">Personal Room</h1> -->
+                        <h2>Copy and share the link below to start an instant meeting with people.</h2>
+                        <div class="calendar-link-section">
+                            <span class="calendar-link-outer" onclick="copyLink(2)" title="Copy Link">
+                                <span class="calendar-link" id="roomLink"></span>
+                                <span class="clipboard"><img src="images/dashboard/copy-to-clipboard.svg" alt=""></span>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="empty-section"></div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 section ">
+                <div class="grey-border flexHeight" id="dashboard-createTeam-box">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/teams.svg" alt=""></span>
+                            <span class="header-content">Create Team</span>
+                        </div>
+
+                    </div>
+
+                    <div class="image-section">
+                        <img src="images/dashboard/3.svg" alt="" class="dashboard3">
+                        <img src="images/dashboard/3dark.png" alt="" class="dashboard3-dark">
+                    </div>
+                    <div class="button-section">
+                        <button id="dashboardTeamBtn" class="submitButtonGlobal inActiveBtn" disabled
+                            title="Create Team" onclick="teamCreate(false)">Create
+                            Team</button>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h2 class="">Organize, discuss, and execute projects efficiently by creating teams.</h2>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 section">
+                <div class="grey-border flexHeight last_Colum" id="dashboard-invite-box">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/invite-contact.svg" alt=""></span>
+                            <span class="header-content">Invite Contacts</span>
+                        </div>
+                    </div>
+                    <div class="image-section">
+                        <img src="images/dashboard/Invite.svg" alt="" class="dashboard4">
+                        <img src="images/dashboard/4dark.png" alt="" class="dashboard4-dark">
+                    </div>
+                    <div class="button-section">
+                        <button class="submitButtonGlobal" title="Invite" onclick="multipleInvitePopup()" id="invite-now-button">
+                            Invite
+                        </button>
+
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h2 class="">Expand your network, invite colleagues, and build valuable relationships.</h2>
+                    </div>
+                    <!-- <div class="connect-calendar-section">
+                        <h1>Enter email address to send invitations</h1>
+                        <div class="email-invite-main">
+                            <div id="field_wrapper_dashboard">
+                                <div class="email-invite-section">
+                                    <input class="forError" type="email" name="inviteemail[]"
+                                        placeholder="Enter email address" id="inviteEmailDashboard">
+                                </div>
+                                <div class="common-error-field" id="userEmailError" style="display:none">
+                                    <span class="common-info-icons-section"><img
+                                            src="images/icons/new-info-group-icon-red.svg" class="common-info-icons">
+                                    </span>
+                                    <span class="common-error-field-label">This field is required.</span>
+                                </div>
+                            </div>
+                            <div class="common-error-field" id="emailInvalidError" style="display:none">
+                                <span class="common-info-icons-section"><img
+                                        src="images/icons/new-info-group-icon-red.svg" class="common-info-icons">
+                                </span>
+                                <span id="maxError" class="common-error-field-label">Invalid email address, please try
+                                    again.</span>
+                            </div>
+                            <div class="more-input-section clearfixHeader">
+                                <div class="addleft-section">
+                                    <div class="addmore-email add-more-field"
+                                        onclick="addMoreField('field_wrapper_dashboard')">
+                                        <span class="pluicons">
+                                            <img src="images/icons/addMore.svg" alt="" title="User">
+                                        </span>
+                                        <span class="label-add">
+                                            ADD MORE
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div class="addleft-section">
+                                    <div class="text-right m-b-24">
+                                        <button class="submitButtonGlobal" title="Invite" onclick="inviteUserEmail()">
+                                            Invite
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+</section>
+
+<section id="activeConference-template">
+    <div id="activeconferencepopup" class="modal fade custompopup2  modal-overflow " tabindex="-1" data-width="550"
+        data-height="" data-focus-on="input:first" style="display: block;min-height:20rem;">
+        <div class="modal-header" style='padding-top:0.5rem;border-bottom:0px !important;'>
+            <button type="button" class="closepop" title="close" data-dismiss="modal" aria-hidden="true"
+                style='margin-top: 1.5rem !important;margin-right: 0.5rem;'><img style="background: none;"
+                    src="./images/cancel-modal.svg"></button>
+            <h4 class="text-center teamprofilepopupheading" id="active-conference-heading">{{LB06}}</h4>
+        </div>
+        <div class="modal-body" style='padding-bottom:0px;'>
+            <div id="activeconf_scrl" style="margin-bottom: 1rem; display: block;" class="">
+                <ul id='activeconfactvities' class='activities activeConferenceHeight' style='list-style-type: none;'>
+                    <div class="noActive-con-Icon">
+                        <img src="images/noactiveConference.svg">
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

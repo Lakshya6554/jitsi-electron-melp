@@ -1,0 +1,160 @@
+<!-- SignUp Profile for Business user Starts -->
+<section id="company_user_info" class="company-signUp-form profile-common-box-style">
+    <div class="common-padding-login">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="login-logo-commmon">
+                    <img src="images/melpapp-logo.svg" class='login-logo'>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 company-user-name welocm-page-m">
+                <span class="user_welcomename" id="welcomeName">{{LB01}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 company-text">
+                <div class="signup-subtitle-wc">{{LB02}}</div>
+                <!-- You need to fill out the details below in order to fully take advantage of MelpApp’s communication and collaboration possibilities. -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="compName input-label-top-common text-input-div common-position-error">
+                    <label>
+                        <input type="text" name="companyName" autocomplete="off" autocomplete="off"
+                            placeholder="{{PH01}} *" id="companyNameID" onblur="handleInputBlur('business', 1)" onkeyup="isValidateButton('business')">
+                        <span>{{PH01}}<div class="star-red-color">*</div></span>
+                    </label>
+                    <!-- <div class="companyNameErrorMessage"></div> -->
+                    <!-- error msg full name start Darshan & Ram -->
+                    <div class="tooltips-Email tooltips-common-error toolTipsCommonErrors" id="companyNameIDError" style="display:none">
+                        <div class="tooltipTextFullName">
+                            <div class="subtitle-error-fullName" id="companyNameIDErrorMsg">
+                                {{ER01}}
+                            </div>
+                            <div class="tringle-NameEmail">
+                                <img src="images/triangle.svg" class="tringle-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- error msg full name end -->
+                </div>
+                <div class="departName input-label-top-common text-input-div common-position-error">
+                    <label>
+                        <!-- onkeyup="callDepartment(this.value)" -->
+                        <input type="text" class="searchKey" name="departmentName" autocomplete="off" autocomplete="off"
+                            placeholder="{{PH02}} *" id="departmentNameID" onkeyup="isValidateButton('business', 'departmentNameID')" onblur="handleInputBlur('business', 2)" onfocus="handleInputBlur('business', 2)">
+                        <span>{{PH02}} <div class="star-red-color">*</div></span>
+                    </label>
+
+                    <div class="tooltips-Email tooltips-common-error toolTipsCommonErrors" id="departmentNameIDError" style="display:none">
+                        <div class="tooltipTextFullName">
+                            <div class="subtitle-error-fullName" id="departmentNameIDErrorMsg">
+                                {{ER02}}
+                            </div>
+                            <div class="tringle-NameEmail">
+                                <img src="images/triangle.svg" class="tringle-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- error msg full name end -->
+                    <div class="search-result-parent" id="department-search-result" style="display:none;">
+                    </div>
+                </div>
+                <div class="tilName input-label-top-common text-input-div common-position-error">
+                    <label>
+                        <!--  onkeyup="callUserProfessions(this.value)" -->
+                        <input type="text" class="searchKey" name="titleName" autocomplete="off" autocomplete="off"
+                            placeholder="{{PH03}} *" id="titleNameID" onkeyup="isValidateButton('business', 'titleNameID')" onblur="handleInputBlur('business', 3)" onfocus="handleInputBlur('business', 3)">
+                        <span>{{PH03}} <div class="star-red-color">*</div></span>
+                    </label>
+
+                    <!-- <div class="titleNameErrorMessage"></div> -->
+                    <!-- error msg full name start Darshan & Ram -->
+                    <div class="tooltips-Email tooltips-common-error toolTipsCommonErrors" id="titleNameIDError" style="display:none">
+                        <div class="tooltipTextFullName">
+
+                            <div class="subtitle-error-fullName" id="titleNameIDErrorMsg">
+                                {{ER03}}
+                            </div>
+                            <div class="tringle-NameEmail">
+                                <img src="images/triangle.svg" class="tringle-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- error msg full name end -->
+                    <div class="search-result-parent" id="title-search-result" style="display:none;"></div>
+                </div>
+                <div class="locName input-label-top-common text-input-div common-position-error">
+                    <label>
+                        <!-- onkeyup="callInMapAPIServer();" -->
+                        <input type="text" class="searchKey" id="inputLocation" name="" placeholder="{{PH04}} *"
+                            autocomplete="off" onkeyup="isValidateButton('business', 'inputLocation')" onblur="handleInputBlur('business', 4)">
+                        <!-- search listing invite  section-->
+                        <span id="signupLocation">{{PH05}} <div class="star-red-color">*</div></span>
+                    </label>
+
+                    <!-- error msg full name start Darshan & Ram -->
+                    <div class="tooltips-Email tooltips-common-error toolTipsCommonErrors" id="locationError" style="display:none">
+                        <div class="tooltipTextFullName">
+
+                            <!-- <div class="title-pass">
+                                Important Information:
+                            </div> -->
+                            <div class="subtitle-error-fullName" id="locationErrorMsg">{{ER04}}</div>
+                            <div class="tringle-NameEmail">
+                                <img src="images/triangle.svg" class="tringle-arrow">
+                            </div>
+                        </div>
+                        <input type="hidden" value="" id="cityId" name="cityId" />
+                    </div>
+                    <!-- error msg full name end -->
+
+
+                    <div id="locationList" class="locationList" style="display: none;">
+                        <div class="spinner-body mainPage" id="locationLoader" style="visibility: hidden;">
+                            <div id="location-spinner-bar" class="ldio-dpbvxcmmyw spinner">
+                                <div>
+                                   <div></div>
+                                </div>
+                                <div>
+                                   <div></div>
+                                </div>
+                                <div>
+                                   <div></div>
+                                </div>
+                                <div>
+                                   <div></div>
+                                </div>
+                                <div>
+                                   <div></div>
+                                </div>
+                                <div>
+                                   <div></div>
+                                </div>
+                                <div>
+                                   <div></div>
+                                </div>
+                                <div>
+                                   <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="locationEmptyState" class="hideCls">
+                            <span>No record found</span>
+                        </div>
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 saveButton">
+                <button class="submitButtonGlobal inActiveBtn" disabled id="getStartedBtn" type="button" onclick="companyDetailsStepOne()">{{BT01}}</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SignUp Profile for Business user Ends -->

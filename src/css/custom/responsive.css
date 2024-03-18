@@ -1,0 +1,970 @@
+
+/* your css rules for ipad portrait */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  
+    .submitButtonGlobal {
+        /* padding: initial !important;
+        line-height: initial !important;
+        height: 2.8rem;
+        padding: 0 1rem !important; */
+    }
+    .middle-section{
+        min-width: 50% !important;
+    }
+    
+    .selected-member-list {
+        min-width: 35rem;
+    }
+    .temaSearchOption {
+        margin-top: 0px !important;
+        padding-top:0px !important;
+    }
+    .TeamSerchOption {
+        margin-top: 0px !important;
+    }
+    .coworker-label{
+        /* line-height: 1.3rem !important; */
+        /* padding-top: 0.5rem !important;  */
+        /* padding: 0.5rem 0.6rem 0.2rem 0.6rem !important; */
+    }
+    .scrol-listing .allListCommonWrapUserContact {
+        max-width: 50%;
+    }
+
+    /* .middle-section {
+        min-width: 30rem;
+    }
+    .selected-member-list {
+        min-width: 30rem;
+    } */
+    /* global search */
+    .globalBody ul{
+       /* display: flex !important;
+       flex-wrap: wrap; */
+       /* padding: 0px 41px !important; */
+       /* padding: 0rem 4.1rem !important; */
+    }
+    .global-msg-contact-name{
+        /* max-width: 88% !important; */
+    }
+    .global-file-section-data{
+        max-width: 95.5% !important;
+    }
+    .fileTypeHeading{
+        width: 7% !important;
+    }
+    .globalData {
+        /* height: calc(83vh - 20rem) !important; */
+    }
+    .PeploeDataScroll {
+        /* height: calc(84vh - 21rem) !important; */
+    }
+    #messageData .message-scroll{
+        /* height: calc(83vh - 20rem) !important; */
+    }
+    #topicData .global-ul-list-msg {
+        /* height: calc(83vh - 20rem) !important; */
+    }
+    .inner-file-main-section ul{
+        /* height: calc(84vh - 30rem) !important; */
+    }
+    /* tray panel */
+    .sidebar-scroll-common{
+        height: calc(81vh - 13.6rem) !important;
+    }
+    .right-sidebar{
+        width: 36rem !important;
+    }
+    .common-trancate-sidebar{
+        width: 24.5rem !important;
+    }
+    .trancate-text-pinned{
+        width: 75% !important;
+    }
+    /* global search input */
+    #headersearchbar{
+        max-width: 23rem;
+    }
+    .listshow-search{
+        width: 28.7rem;
+    }
+    .global-search-trancate{
+        width: 12.5rem;
+    }
+    .common-activebtn{
+        padding: 0.7rem;
+    }
+    #globalSearchList .date-common{
+        top: 27% !important;
+    }
+    /* file manager */
+    .fileMangerMain{
+        /* height: calc(100vh - 176px) !important; */
+    }
+    .FileTabpageScroll{
+        height: calc(71vh - 13.6rem) !important;
+    }
+    .document-name span, .document-name a{
+        width: 73%;
+    }
+    .calendar-size span{
+        width: 5rem !important;
+    }
+    .middleInner{
+        /* top: 50% !important; */
+    }
+    .fleMediaPreview{
+        width: 52rem !important;
+        top:40%;
+    }
+    .fleMediaPreview .msg-read-show-data ul{
+        height: 23.6rem;
+    }
+    .fileMangerRight .form-group{
+        /* right: 9rem; */
+        width: 25rem;
+    }
+    #filesearchbox{
+        width: 100%;
+    }
+    /* calendar */
+    .viewAll{
+        width: 15% !important;
+    }
+    .calendarTopStrip {
+        padding: 1rem !important;
+        /* max-width: 97% !important; */
+        /* margin: 1rem 1rem 1rem 1rem !important; */
+    }
+    .calendarLeftBar {
+        display: inline-flex !important;
+        padding: 0rem 0.5rem 0rem 0 !important;
+        /* margin-left: 1rem !important; */
+    }
+    .nextPrev {
+        width: 1.5rem !important;
+        display: inherit !important;
+    }
+    .month-name{
+        text-align: center;
+    }
+    .calendarRightBar {
+        /* width: 100% !important;
+        float: left !important; */
+    }
+    .Box {
+        padding: 0.5rem 0.5rem !important;
+    }
+    .Box .New-Event, .Check-Availability, .dropdown-btn span{
+        font-size: 1.2rem !important;
+    }
+    .Box2 {
+        margin-left: 0.5rem !important;
+        padding: 0.5rem 0.5rem !important;
+    }
+    .calendarRightBar .dropdown-btn {
+        min-width: 9rem !important;
+        padding: 0.5rem 1rem !important;
+        font-size: 1.2rem !important;
+        margin-left: 0.5rem !important;
+        margin-right: 0.5rem !important;
+    }
+    .changeMyViewMain{
+        max-width: 13.77rem !important;
+    }
+    #yearviewAllMeetings .tp{
+        /* max-height: calc(100vh - 22rem) !important; */
+    }
+    .bodyPadddingTop{
+        padding: 0 1rem 1.5rem 1rem !important;
+    }
+    .month-list-parent{
+       /* max-height: calc(100vh - 30rem); */
+       /* overflow-y: scroll; */
+    }
+    #monthviewAllMeetings{
+        padding: 0rem 0 1.5rem 1.5rem !important;
+    }
+    #dayviewAllMeetings .tp .row-body .day-time-main,#scheduleviewAllMeetings .body-bg{
+        max-height: calc(100vh - 22rem) !important;
+    }
+     #weekviewAllMeetings .body-bg{
+        max-height: calc(100vh - 22rem) !important;
+        height: auto !important;
+     }
+    .event-listing-span{
+        margin-bottom: 0.5rem !important;
+    }
+    #monthviewAllMeetings .days-bg .base, #monthviewAllMeetings .days-bg .base2{
+        min-height: 13.5rem !important;
+    }
+    #monthviewAllMeetings .bg .base, #monthviewAllMeetings .days-bg .base{
+        padding: 0.5rem 0.7rem 0.5rem 0.7rem !important;
+    }
+    .threedots{
+        left: 3.2rem !important;
+    }
+    #monthviewAllMeetings .days-bg .base .days.oval, #monthviewAllMeetings .days-bg .base2 .days.oval{
+        top: -0.3rem !important;
+    }
+    #monthviewAllMeetings .bg .weekdays{
+        line-height: 4.6rem !important;
+    }
+    #monthviewAllMeetings .days-bg .days{
+        margin-right: 0.5rem;
+    }
+    #yearviewAllMeetings .tp .base .week-row .week-date, #yearviewAllMeetings .tp .base2 .week-row .week-date,
+    #yearviewAllMeetings .tp .base .week-row .week-day, #yearviewAllMeetings .tp .base2 .week-row .week-day,
+    #yearviewAllMeetings .month-name{
+        font-size: 1.1rem !important;
+    }
+    #yearviewAllMeetings .tp .base .week-row, #yearviewAllMeetings .tp .base2 .week-row,
+    #yearviewAllMeetings .tp .base .week-row .week-day, #yearviewAllMeetings .tp .base2 .week-row .week-day{
+        padding-top: 1rem !important;
+    }
+    .calendarbody{
+        max-width: 98.5% !important;
+    }
+    #dayviewAllMeetings .tp .row-body .day-time-main .meeting-day-box-main-red .meeting-day-box,
+    #dayviewAllMeetings .tp .row-body .day-time-main .meeting-day-box-main-gray .meeting-day-box,
+    #dayviewAllMeetings .tp .row-body .day-time-main .meeting-day-box-main-blue .meeting-day-box,
+    #dayviewAllMeetings .tp .row-body .day-time-main .selfmeeting-day-box-main-red .selfmeeting-day-box{
+        margin-left: 1rem !important;
+    }
+    #dayviewAllMeetings .tp .row-body .day-time-main{
+        padding-right: 1rem !important;
+    }
+    .day-time-left{
+        max-width: 15% !important;
+    }
+    .day-time-right{
+        max-width: 85% !important;
+    }
+    .week-meeting-time{
+        max-width: 5rem;
+    }
+    .reddot-meeting-name{
+        max-width: 5rem;
+    }
+    #weekviewAllMeetings .bg .base{
+        /* padding: 2rem 7.2rem 2rem 2rem !important; */
+    }
+    .week-time-left{
+        max-width: 14% !important;
+    }
+    .week-time-right{
+        max-width: 86% !important;
+    }
+    #scheduleviewAllMeetings .col-sm-1.base.float-left{
+        padding: 2rem 8.9rem 2rem 2rem;
+    }
+    #scheduleviewAllMeetings .week-time-right{
+        max-width: 83% !important;
+    }
+    .yearpopup-modal{
+        top: 20% !important;
+        left: 20% !important;
+    }
+    .meetingpopup-modal{
+        top: 42% !important;
+        left: 53% !important;
+    }
+    .notifyModalBody{
+        top: 44% !important;
+        left: 53% !important;
+    }
+    #meeting-details-popup{
+        top: 46% !important;
+        left: 54% !important;
+    }
+    .main-meetin-inner-section{
+        padding: 0rem 0rem 0rem 0.5rem !important;
+    }
+    .meeting-common-margin{
+        margin-right: 0.5rem !important;
+    }
+    .availble-section{
+        margin-left: 0.5rem !important;
+    }
+    /* .meeting-left-header{
+        padding: 2.6rem 0rem 2.6rem 0.45rem !important;
+    } */
+    .availble-inner-part{
+        /* height: calc(84vh - 23.8rem) !important; */
+    }
+    .meeting-left-part{
+        /* height: calc(84vh - 19.4rem) !important; */
+    }
+    .date-left{
+        padding-right: inherit !important;
+    }
+    .conflictingpopup-modal{
+        top: 37% !important;
+        left: 43% !important;
+        max-width: 57% !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall .conflictingpopup-single-user .conflictingpopup-user-image{
+        width: 15% !important;
+    }
+    .conflictingpopup-booking-modal{
+        left: 7% !important;
+        top: 18% !important;
+        max-width: 70% !important;
+    }
+    .conflictingpopup-booking-modal-content .conflictingpopup-booking-main .conflictingpopup-booking-single-user{
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+    .meeting-popup-header{
+        border-top: inherit !important;
+        border-left: inherit !important;
+    }
+    .scrol-listing{
+        /* height: calc(70vh - 3.5rem) !important; */
+    }
+    .pleaseWait{
+        top: 40% !important;
+    }
+    .scheduleEmptyMain{
+        left: 17% !important;
+        top: 23% !important;
+    }
+    /* dashboard */
+    /* section#dashboard-template{
+        margin-left: inherit !important;
+    } */
+    /* menu */
+    .count-new-notification{
+        right: 0.8rem !important;
+    }
+    /* body empty state */
+    .globalSearchTabSize{
+        /* top: 40% !important; */
+    }
+    .tabSize{
+        transform: translate(-50%, -14%) !important;
+    }
+    .fileManagerTabSize{
+        /* transform: translate(-50%, -80%) !important; */
+    }
+}
+
+
+/* your css rules for ipad landscape */
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+
+    /* global search*/
+
+    .globalBody ul{
+       display: flex !important;
+       flex-wrap: wrap;
+    }
+    .global-msg-list-section{
+        max-width: 89.5% !important;
+    }
+    .global-msg-contact-name{
+        max-width: 91% !important;
+    }
+    .global-file-section-data{
+        max-width: 96.5% !important;
+    }
+    .fileTypeHeading{
+        width: 7% !important;
+    }
+    .message-scroll {
+        height: calc(102vh - 20rem) !important;
+    }
+    .inner-file-main-section ul{
+        height: calc(102vh - 30rem) !important;
+    }
+    /* file manager */
+    .FileTabpageScroll{
+        height: calc(108vh - 30rem) !important;
+    }
+    #linkTab .document-name a{
+        width: 80%;
+    }
+    /* calendar */
+    .calendarTopStrip{
+        max-width: 97% !important;
+    }
+    #monthviewAllMeetings{
+        height: calc(99vh - 16.3rem) !important;
+    }
+    #yearviewAllMeetings .tp{
+        /* max-height: inherit !important;
+        height: calc(97vh - 163px) !important; */
+    }
+    #dayviewAllMeetings .tp .row-body .day-time-main, #weekviewAllMeetings .body-bg, #scheduleviewAllMeetings .body-bg{
+        max-height: inherit !important;
+        height: calc(88vh - 15.9rem) !important;
+    }
+    #dayviewAllMeetings .tp .row-body .day-time-main .meeting-day-box-main-red .meeting-day-box,
+    #dayviewAllMeetings .tp .row-body .day-time-main .meeting-day-box-main-gray .meeting-day-box, 
+    #dayviewAllMeetings .tp .row-body .day-time-main .meeting-day-box-main-blue .meeting-day-box, 
+    #dayviewAllMeetings .tp .row-body .day-time-main .selfmeeting-day-box-main-red .selfmeeting-day-box{
+        max-width: 89% !important;
+    }
+    .threedots{
+        left: 5rem !important;
+    }
+    #monthviewAllMeetings .bg .base, #monthviewAllMeetings .days-bg .base{
+        padding: 1rem !important;
+    }
+    .event-listing-span{
+        margin-bottom: 0.5rem !important;
+    }
+    .weekdays{
+        line-height: 3.5rem !important;
+    }
+    #monthviewAllMeetings .days-bg .base, #monthviewAllMeetings .days-bg .base2{
+        /* min-height: 15.577rem !important; */
+    }
+    #yearviewAllMeetings .tp .base .week-row .week-date, #yearviewAllMeetings .tp .base2 .week-row .week-date,
+    #yearviewAllMeetings .tp .base .week-row .week-day, #yearviewAllMeetings .tp .base2 .week-row .week-day,
+    #yearviewAllMeetings .month-name{
+        font-size: 1.1rem !important;
+    }
+    #yearviewAllMeetings .tp .base .week-row, #yearviewAllMeetings .tp .base2 .week-row,
+    #yearviewAllMeetings .tp .base .week-row .week-day, #yearviewAllMeetings .tp .base2 .week-row .week-day{
+        padding-top: 1rem !important;
+    }
+    .calendarbody{
+        max-width: 98.5% !important;
+    }
+    .reddot-meeting-name{
+        max-width: 8rem;
+    }
+    .week-meeting-time{
+        max-width: 8rem;
+    }
+    #weekviewAllMeetings .bg .base{
+        /* padding: 2rem 8rem 2rem 2rem !important; */
+    }
+    .week-time-right{
+        max-width: 88.67% !important;
+    }
+    /* .week-time-left{
+        max-width: 11.1% !important;
+    } */
+    #scheduleviewAllMeetings .left-duration{
+        padding: 0rem 2.2rem 0rem 0.5rem !important;
+        font-size: 1.1rem !important;
+    }
+    #scheduleviewAllMeetings .left-time{
+        font-size: 1.1rem !important;
+    }
+    .yearpopup-modal{
+        top: 17% !important;
+        left: 26% !important;
+    }
+    .meetingpopup-modal{
+        top: 50% !important;
+        left: 53% !important;
+    }
+    .notifyModalBody{
+        left: 53% !important;
+    }
+    .main-meetin-inner-section{
+        padding: 0rem 0rem 0rem 5rem !important;
+    }
+    .meeting-common-margin{
+        margin-right: 0.5rem !important;
+    }
+    .availble-section{
+        margin-left: 0.5rem !important;
+    }
+    .meeting-left-header{
+        /* padding: 2.6rem 0rem 2.6rem 0.45rem !important; */
+    }
+    .availble-inner-part{
+        height: calc(100vh - 21.6rem) !important;
+    }
+    .meeting-left-part{
+        height: calc(100vh - 17.3rem) !important;
+    }
+    .meeting-right-part{
+        max-width: 42% !important;
+    }
+    .date-left{
+        padding-right: inherit !important;
+    }
+    .conflictingpopup-modal{
+        top: 37% !important;
+        left: 43% !important;
+        max-width: 45% !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall{
+        padding-left: 1rem !important;
+        padding-right: 0rem !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall .conflictingpopup-single-user .conflictingpopup-user-image{
+        width: 19% !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall .conflictingpopup-single-user .conflictingpopup-user-detail{
+        width: 78% !important;
+        margin-left: inherit !important;
+    }
+    .conflictingpopup-booking-modal{
+        left: 21% !important;
+        top: 18% !important;
+        max-width: 48% !important;
+    }
+    .conflictingpopup-booking-modal-content .conflictingpopup-booking-main .conflictingpopup-booking-single-user{
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+    .meeting-popup-header{
+        border-top: inherit !important;
+        border-left: inherit !important;
+    }
+    .scrol-listing{
+        /* height: calc(85vh - 3.5rem) !important; */
+    }
+    .scheduleEmptyMain{
+        left: 27% !important;
+        top: 29% !important;
+    }
+    /* dashboard */
+    section#dashboard-template{
+        margin-left: inherit !important;
+    }
+    /* menu */
+    .count-new-notification{
+        right: 0.8rem !important;
+    }
+    /* body empty state */
+    .tabSize{
+        transform: translate(-50%, -16%) !important;
+    }
+}
+
+@media only screen 
+  and (device-width: 1024px) 
+  and (device-height: 1366px) 
+  and (orientation: portrait) {
+    #monthviewAllMeetings .days-bg .base, #monthviewAllMeetings .days-bg .base2{
+        /* min-height: 15.577rem !important; */
+        max-height: 100% !important;
+        height: calc(100% - 81%) !important;
+    }
+  }
+/* your css rules for ipad pro portrait */
+@media only screen 
+  and (device-width: 1024px) 
+  and (device-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    /* global search*/
+    .globalBody ul{
+       /* display: flex !important;
+       flex-wrap: wrap; */
+    }
+    .global-msg-list-section{
+        /* max-width: 96.5% !important; */
+        min-width: 96.5% !important;
+    }
+    .global-msg-contact-name{
+        max-width: 91% !important;
+    }
+    .global-file-section-data{
+        max-width: 96.5% !important;
+    }
+    .globalData, #topicData .global-ul-list-msg {
+        /* height: calc(62vh - 20rem) !important; */
+    }
+    .PeploeDataScroll {
+        /* height: calc(63vh - 21rem) !important; */
+    }
+    .inner-file-main-section ul{
+        /* height: calc(62vh - 30rem) !important; */
+    }
+    /* header icon */
+    .sidebar-scroll-common{
+        /* height: calc(61vh - 13.6rem) !important; */
+    }
+    /* globalseacrh empty state */
+    /* .empty-state-text{
+        top: 35% !important;
+    } */
+    /* file manager */
+    /* .fileMangerMain{
+        height: calc(58vh - 13.6rem) !important;
+    } */
+    .FileTabpageScroll {
+        height: calc(62vh - 25.6rem) !important;   
+    }
+    .document-name span, .document-name a{
+        width: 80%;
+    }
+    /* calendar */
+    .calendarTopStrip{
+        max-width: 97% !important;
+    }
+    .month-list-parent{
+        /* height: calc(61vh - 24.6rem) !important; */
+    }
+    #yearviewAllMeetings .tp{
+        /* height: calc(59vh - 16.3rem) !important; */
+    }
+    #yearviewAllMeetings .tp .base .week-row .week-date,
+    #yearviewAllMeetings .tp .base2 .week-row .week-date,
+    #yearviewAllMeetings .tp .base .week-row .week-day,
+    #yearviewAllMeetings .tp .base2 .week-row .week-day{
+        font-size: 1.1rem !important;
+    }
+    #dayviewAllMeetings .tp .row-body .day-time-main, #scheduleviewAllMeetings .body-bg{
+        /* max-height: inherit !important; */
+        /* height: calc(54vh - 16.1rem) !important; */
+    }
+    #weekviewAllMeetings .body-bg{
+        /* max-height: inherit !important;
+        height: calc(54vh - 15.6rem) !important; */
+    }
+    .threedots{
+        left: 5rem !important;
+    }
+    #monthviewAllMeetings .bg .base, #monthviewAllMeetings .days-bg .base{
+        padding: 1rem !important;
+    }
+    .event-listing-span{
+        margin-bottom: 0.5rem !important;
+    }
+    #monthviewAllMeetings .days-bg .base, #monthviewAllMeetings .days-bg .base2{
+        /* min-height: 15.577rem !important; */
+        max-height: 100%;
+        height: calc(100% - 81%);
+    }
+    .weekdays{
+        line-height: 3.5rem !important;
+    }
+    .calendarbody{
+        max-width: 98.5% !important;
+    }
+     .reddot-meeting-name{
+        max-width: 8rem;
+    }
+    .week-meeting-time{
+        max-width: 8rem;
+    }
+    .week-time-right{
+        max-width: 88.67% !important;
+    }
+    .week-time-left{
+        max-width: 11.1% !important;
+    }
+    #weekviewAllMeetings .bg .base{
+        padding: 2rem 8rem 2rem 2rem !important;
+    }
+     #scheduleviewAllMeetings .col-sm-1.base.float-left{
+        padding: 2rem 4rem 2rem 2rem;
+    }
+    #scheduleviewAllMeetings .week-time-right{
+        max-width: 83% !important;
+    }
+    #scheduleviewAllMeetings .left-duration{
+        padding: 0rem 2.2rem 0rem 0.5rem !important;
+        font-size: 1.1rem !important;
+    }
+    #scheduleviewAllMeetings .left-time{
+        font-size: 1.1rem !important;
+    }
+    .meetingpopup-modal{
+        top: 32% !important;
+        left: 53% !important;
+    }
+    .notifyModalBody{
+        top:35% !important;
+        left: 53% !important;
+    }
+    .successfullySection{
+        top: 34% !important;
+    }
+    .yearpopup-modal{
+        top: 14% !important;
+        left: 26% !important;
+    }
+    #meeting-details-popup{
+        top: 33% !important;
+        left: 53% !important;
+    }
+    .main-meetin-inner-section{
+        padding: 0rem 0rem 0rem 0.5rem !important;
+    }
+    .meeting-common-margin{
+        margin-right: 0.5rem !important;
+    }
+    .availble-section{
+        margin-left: 0.5rem !important;
+    }
+    /* .meeting-left-header{
+        padding: 2.6rem 0rem 26rem 0.45rem !important;
+    } */
+    .availble-inner-part{
+        /* height: calc(60vh - 20rem) !important; */
+    }
+    .meeting-left-part{
+        /* height: calc(60vh - 15.6rem) !important; */
+    }
+    .meeting-right-part{
+        max-width: 42% !important;
+    }
+    .date-left{
+        padding-right: inherit !important;
+    }
+    .conflictingpopup-modal{
+        top: 27% !important;
+        left: 44% !important;
+        max-width: 45% !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall{
+        padding-left: 1rem !important;
+        padding-right: 0rem !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall .conflictingpopup-single-user .conflictingpopup-user-image{
+        width: 19% !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall .conflictingpopup-single-user .conflictingpopup-user-detail{
+        width: 78% !important;
+        margin-left: inherit !important;
+    }
+    .conflictingpopup-booking-modal{
+        left: 21% !important;
+        top: 14% !important;
+        max-width: 50% !important;
+    }
+    .conflictingpopup-booking-modal-content .conflictingpopup-booking-main .conflictingpopup-booking-single-user{
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+    .meeting-popup-header{
+        border-top: inherit !important;
+        border-left: inherit !important;
+    }
+    .scrol-listing{
+        /* height: calc(70vh - 3.5rem) !important; */
+    }
+    .pleaseWait{
+        top: 30% !important;
+    }
+    .scheduleEmptyMain{
+        left: 26% !important;
+        /* top: 19% !important; */
+    }
+    .meeting-popup-section{
+        /* left: 105px !important; */
+    }
+    /* dashboard */
+    section#dashboard-template{
+        margin-left: 0.8rem !important;
+    }
+    /* menu */
+    .count-new-notification{
+        right: 0.8rem !important;
+    }
+    /* body empty state */
+    .tabSize{
+        transform: translate(-50%, -14%) !important;
+    }
+    .fileManagerTabSize{
+        /* transform: translate(-50%, -65%) !important; */
+    }
+}
+
+/* your css rules for ipad pro landscape */
+@media only screen 
+  and (device-width: 1366px) 
+  and (device-height: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    /* global search*/
+    .globalBody ul{
+       /* display: flex !important;
+       flex-wrap: wrap;
+       padding: 0rem 2.8rem !important; */
+    }
+    .global-msg-list-section{
+        max-width: 96.5% !important;
+    }
+    .global-msg-contact-name{
+        max-width: 91% !important;
+    }
+    .global-file-section-data{
+        max-width: 97.5% !important;
+    }
+    .globalData, #topicData .global-ul-list-msg, .PeploeDataScroll, #messageData .global-ul-list-msg{
+        /* height: calc(83vh - 20rem) !important; */
+    }
+    .inner-file-main-section ul {
+        /* height: calc(74vh - 20rem) !important; */
+    }
+    /* header icon */
+    .sidebar-scroll-common{
+        /* height: calc(81vh - 13.6rem) !important; */
+    }
+    /* file manager */
+    .calendarTopStrip{
+        /* max-width: 97.5% !important; */
+    }
+    .FileTabpageScroll {
+        height: calc(83vh - 25.6rem) !important;   
+    }
+    /* .fileMangerMain{
+        height: calc(88vh - 25.6rem) !important;   
+    } */
+     /* calendar */
+    .month-list-parent{
+        /* height: calc(82vh - 25.2rem) !important; */
+    }
+    #yearviewAllMeetings .tp{
+        /* height: calc(79vh - 16.3rem) !important; */
+    }
+    #dayviewAllMeetings .tp .row-body .day-time-main, #scheduleviewAllMeetings .body-bg{
+        /* max-height: inherit !important; */
+        /* height: calc(72vh - 15.8rem) !important; */
+    }
+    #weekviewAllMeetings .body-bg{
+        /* max-height: inherit !important;
+        height: calc(72vh - 15.3rem) !important; */
+    }
+    #monthviewAllMeetings .bg .base, #monthviewAllMeetings .days-bg .base{
+        /* padding: 1rem !important; */
+    }
+    .event-listing-span{
+        margin-bottom: 0.5rem !important;
+    }
+    .threedots{
+        left: 7.5rem !important;
+    }
+    #monthviewAllMeetings .days-bg .base, #monthviewAllMeetings .days-bg .base2{
+        /* min-height: 15.577rem !important; */
+    }
+    .weekdays{
+        line-height: 3.5rem !important;
+    }
+    .calendarbody{
+        /* max-width: 98.5% !important; */
+    }
+    .meetingpopup-modal{
+        top: 41% !important;
+        left: 51% !important;
+    }
+    .notifyModalBody{
+        top: 43% !important;
+        left: 51% !important;
+    }
+    .successfullySection{
+        top: 43% !important;
+        left: 51% !important;
+    }
+    .yearpopup-modal{
+        top: 18% !important;
+        left: 31% !important;
+    }
+    .main-meetin-inner-section{
+        /* padding: 0rem 0rem 0rem 5rem !important; */
+    }
+    .meeting-common-margin{
+        margin-right: 0.5rem !important;
+    }
+    .availble-section{
+        margin-left: 0.5rem !important;
+    }
+    .meeting-left-header{
+        /* padding: 2.6rem 0rem 2.6rem 0.45rem !important; */
+    }
+    .availble-inner-part{
+        /* height: calc(80vh - 20rem) !important; */
+    }
+    .meeting-left-part{
+        /* height: calc(80vh - 15.6rem) !important; */
+    }
+    .meeting-right-part{
+        /* max-width: 44.5% !important; */
+    }
+    .conflictingpopup-modal{
+        top: 33% !important;
+        left: 44% !important;
+        max-width: 35% !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall{
+        padding-left: 1rem !important;
+        padding-right: 0rem !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall .conflictingpopup-single-user .conflictingpopup-user-image{
+        width: 19% !important;
+    }
+    .conflictingpopup-modal-content .conflictingpopup-listall .conflictingpopup-single-user .conflictingpopup-user-detail{
+        width: 78% !important;
+        margin-left: inherit !important;
+    }
+    .conflictingpopup-booking-modal{
+        left: 25% !important;
+        top: 14% !important;
+        max-width: 40% !important;
+    }
+    .conflictingpopup-booking-modal-content .conflictingpopup-booking-main .conflictingpopup-booking-single-user{
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+    .meeting-popup-header{
+        border-top: inherit !important;
+        border-left: inherit !important;
+    }
+    .scrol-listing{
+        /* height: calc(70vh - 3.5rem) !important; */
+    }
+    
+    .pleaseWait{
+        top: 40% !important;
+    }
+    .scheduleEmptyMain{
+        left: 32% !important;
+        top: 26% !important;
+    }
+    .meeting-popup-section{
+        /* left: 105px !important; */
+    }
+    /* dashboard */
+    section#dashboard-template{
+        margin-left: 0.5rem !important;
+    }
+    /* menu */
+    .count-new-notification{
+        right: 0.8rem !important;
+    }
+    /* body empty state */
+    .tabSize{
+        /* transform: translate(-50%, -14%) !important; */
+    }
+    .fileManagerTabSize{
+        /* transform: translate(-50%, -100%) !important; */
+    }
+    /* .globalSearchTabSize{
+        top: 40% !important;
+    } */
+}
+
+
+
+/* @media (min-width: 992px) and (max-width: 1500px) {
+    ul.globalHeaderSearcTabbing li{
+        margin: 0 0 0 0.2rem;
+        padding:0.8rem 1rem;
+    }
+} */
+
+@media only screen and (max-width: 768px)  {
+
+.headerSearchBarMiddle {
+    /* min-width: 34vw; */
+}
+}
+
+@media only screen and (min-width:768px) and (max-width:1600px) {
+.headerSearchBarMiddle {
+    /* width: 31.88vw; */
+	/* width:27vw;} */
+
+} 
+}

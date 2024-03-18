@@ -1,0 +1,69 @@
+
+<section class="protfolioPop" id="userProfileCard-template">
+    <div class="protfolioPopBody">
+       <div class="protfolioPopHeader">
+          <div class="protfolioPopHeaderLeft">
+             <div class="protfolioPopHeaderLeftUser">
+                <img src="images/default_avatar_male.svg" id="cardProfileThumb" alt="">
+             </div>
+          </div>
+          <div class="protfolioPopHeaderRight">
+             <div class="protfolioPopHeaderDetail">
+                <h1 id="card-profile-name"></h1>
+                <div class="protfolioPopHeaderTop">
+                   <ul>
+                      <li id="card-profile-designation"></li>
+                      <li class="dividerCard">|</li>
+                      <li id="card-profile-address"></li>
+                   </ul>
+                </div>
+                <div id="callSection"></div>
+                <div class="invite protfolioPopInviteBtn hideCls">{{BT02}}</div>
+             </div>
+             <div class="protfolioPopHeaderCloseIcon" onclick="closePopup('userProfileCard-template')"></div>
+          </div>
+       </div>
+       <div class="protfolioPopSingle">
+          <div class="tabcontentTop">
+             <div class="protfolioContainer">
+                <div class="emailStrip">
+                   <span class="protfolioTestTop"><img src="images/icons/emailIcon.svg" alt="">Email</span>
+                   <span class="protfolioTestTopBottom textNormal" id="userEmailId"></span>
+                </div>
+             </div>
+             <div class="protfolioContainer">
+                <div class="emailStrip">
+                <span class="protfolioTestTop"><img src="images/icons/description.svg" alt="">{{LB21}}</span>
+                </div>
+                <div class="protfolioBottomStrip" id="profileResume">
+                   <span class="resumePdf"><img src="" id="resumeFileType" alt=""></span>
+                      <span class="resume-title">No resume uploaded</span>
+                   <span class="resumedownload download-resume-other"></span>
+                </div>
+             </div>
+             <div class="protfolioContainer">
+                <div class="emailStrip">
+                   <span class="protfolioTestTop"><img src="images/icons/workIcon3.svg" alt="">{{LB27}}</span>
+                   <span class="protfolioTestTopBottom textNormal" id="jobTitle"></span>
+                </div>
+             </div>
+             <div class="protfolioContainer">
+                <div class="emailStrip">
+                   <span class="protfolioTestTop"><img src="images/icons/department-icon.svg" alt=""><span id="skils-department">{{LB12}}</span></span>
+                   <span class="protfolioTestTopBottom textNormal" id="department-area"></span>
+                </div>
+             </div>
+             <div class="protfolioContainer">
+                <div class="emailStrip">
+                   <span class="protfolioTestTop"><img src="images/icons/company-icon.svg" alt=""><span id="skils-title">{{LB11}}</span></span>
+                   <span class="protfolioTestTopBottom textNormal" id="usrcompany"></span>
+                </div>
+             </div>
+             <div class="protfolioIntro">
+                <h2 id="bioTitle">{{HD03}}</h2>
+                <p id="aboutUs"></p>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>

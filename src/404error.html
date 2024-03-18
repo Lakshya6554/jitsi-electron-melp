@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>404 Error</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <style type="text/css">
+			:root {
+				--font-regular: helveticaneue;
+				--font-md: HelveticaNeueMed;
+				--font-bold: HelveticaNeuBold;
+				--font-super: AkzidenzGroteskPro-Super;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			.sign-up-flow .sign-up-flow-cont{
+			  	background-color: #f8f8f8;
+				  position: relative;
+				  height: 100vh;
+			}	
+			/************ Email Sign Up Form******************/
+			.sign-up-flow .email-signUp-form{
+				width: 78rem;
+				height: auto;
+				border-radius: 0.5rem;
+				box-shadow: 0 0.5rem 1.6rem 0 rgb(0 0 0 / 18%);
+				background-color: #ffffff;
+				margin: 0 auto;
+				text-align: center;
+				padding: 4rem;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.sign-up-flow .sign-up-flow-cont .email-signUp-form .company-user-name{text-align: left;}
+			.sign-up-flow .sign-up-flow-cont .email-signUp-form .company-user-nameImg .email-info{width: 100%;}
+			.sign-up-flow .sign-up-flow-cont .email-signUp-form .company-user-name .user_welcomename{
+				color: #222020;
+				font-family: var(--font-md);
+				font-size: 6rem;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 0.5rem!important;
+			}
+			.sign-up-flow .sign-up-flow-cont .email-signUp-form .company-user-name .user_welcomename_text{
+				color: #222020;
+				font-family: var(--font-bold);
+				font-size: 1.4rem;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 0.06rem!important;
+				margin-top: 2rem;
+			}
+			.sign-up-flow .sign-up-flow-cont .email-signUp-form .company-user-name .user_welcomename_texts{
+				color: #737070;
+				font-family: var(--font-regular);
+				font-size: 1.4rem;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 0.06rem!important;
+				margin-top: 0.8rem;
+			}
+			.sign-up-flow .sign-up-flow-cont .email-signUp-form .company-user-name .saveButton-emailText{margin-top: 4rem;}
+			.sign-up-flow .sign-up-flow-cont .email-signUp-form .company-user-name .saveButton-emailText a{
+				border-radius: 0.4rem;
+				background-color: #ee4136;
+				padding: 1rem 2rem;
+				font-size: 1.2rem;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 0.15rem;
+				color: #ffffff;
+				text-transform: uppercase;
+				border: none;
+				box-shadow: none;
+				cursor: pointer;
+			}
+			@media only screen and (min-width : 768px) and (max-width : 992px){ 
+			    .sign-up-flow .email-signUp-form{
+			    	width: 96%;
+			    }
+			}
+			/************ Email Sign Up Form******************/
+
+		</style>
+    </head>
+    <body>
+		<!--please move on main-wrapper-under-->
+        <div class="sign-up-flow">
+            <div class="sign-up-flow-cont">
+               <div class="container">
+                  <div class="email-signUp-form">
+                     <div class="row">
+                        <div class="company-user-name">
+                           <div class="user_welcomename">404</div>
+                           <div class="user_welcomename_text">The page you’re looking for doesn’t exist.</div>
+                           <div class="user_welcomename_texts">Don’t panic just click the home button to return.</div>
+                           <div class="saveButton-emailText">
+                              <a onclick="switchPage('dashboard', '', event)">Home</a>
+                           </div>
+                        </div>
+                        <div class="company-user-nameImg">
+                           <img class="email-info" src="images/404illustration.svg">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+    </body>
+</html>
+

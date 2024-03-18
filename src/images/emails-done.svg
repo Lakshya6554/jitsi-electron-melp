@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Done</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Signup-Flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="MelpApp/-Styleguide/-Signup-Form/-Verification-Screen" transform="translate(-710.000000, -287.000000)" stroke="#9C9696" stroke-width="4">
+            <g id="Done" transform="translate(712.000000, 289.000000)">
+                <path d="M-1.42108547e-14,29.5319747 C-1.42108547e-14,45.8429432 13.2235579,59.0639495 29.5332505,59.0639495 L29.5332505,59.0639495 C45.8429432,59.0639495 59.0652253,45.8429432 59.0652253,29.5319747 L59.0652253,29.5319747 C59.0652253,13.2222821 45.8429432,-1.42108547e-13 29.5332505,-1.42108547e-13 L29.5332505,-1.42108547e-13 C13.2235579,-1.42108547e-13 -1.42108547e-14,13.2222821 -1.42108547e-14,29.5319747 L-1.42108547e-14,29.5319747 Z" id="Clip-7"></path>
+                <polyline id="Stroke-9" points="15.3574434 28.5900594 22.4444539 36.6198783 43.7080371 22.4445815"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

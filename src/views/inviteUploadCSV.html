@@ -1,0 +1,42 @@
+<!--Upload-Csv-start-here-->
+<section class="teamPopup-common" id="uploadCsvPopup">
+    <div class="uploadCsv">
+        <div class="csvHeader">
+            <button type="button" class="closepop" data-dismiss="modal" aria-hidden="true" style="margin-right: 0.7rem;"
+                onclick="hideCsvPopup()"></button>
+            <h4 class="teamprofilepopupheading">{{LB18}}</h4>
+        </div>
+        <div class="csvBody">
+            <div class="upload-section">
+                <div class="upload-csv-ui">
+                    <span class="dragDrop">{{LB34}}</span>
+                    <span class="UploadOr">{{LB36}}</span>
+                    <span class="btn btn-file btn-light-grey"><img class="cloud-img"
+                            src="images/icons/cloud-upload.svg" alt=""><span class="fileupload-new">
+                            <span class="fileupload-new-parent">
+                                <span id="browseId" class="fileupload-new-text">{{BT09}}</span>
+                                <span class="fileToUploadText">{{BT10}}</span></span>
+                            <input type="file"
+                                accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                                name="fileToUpload" class="csvFile" id="csvPicker" onchange="csvUploadAction(event)">
+                        </span>
+                    </span>
+                </div>
+                <div class="upload-hint-msg"><span class="upload-hint-msg-style">{{LB35}}</span>
+                </div>
+                <div class="download-csv-example">
+                    <div id="uploadCSVFileName"></div>
+                    <a id="downloadSampleCsv" href="csvSample/bulk-without-user.xlsx" target="_blank" download="">{{BT11}}</a>
+                </div>
+                <div class="uploading-csv" style="display:none;">
+                    <span>{{LB19}}</span>
+                </div>
+                <div class="upload-csv-button">
+                    <button id="uploadCSVButton" class="btncreate submitButtonGlobal inActiveBtn"
+                        onclick="uploadCSV()">{{BT12}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Upload-Csv-start-here-->

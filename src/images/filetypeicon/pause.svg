@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Pause Button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="1920X1024-Artboard-(-Latest-Update-)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05_MelpApp_Contacts_Department_25th-April" transform="translate(-1354.000000, -640.000000)">
+            <g id="Pause-Button" transform="translate(1354.000000, 640.000000)">
+                <g id="Play" fill="#EE4136">
+                    <rect id="Rectangle" x="0" y="0" width="35" height="35" rx="4"></rect>
+                </g>
+                <path d="M12,25 L16,25 L16,11 L12,11 L12,25 Z M20,11 L20,25 L24,25 L24,11 L20,11 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

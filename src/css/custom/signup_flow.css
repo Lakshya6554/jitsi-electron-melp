@@ -1,0 +1,3275 @@
+
+/*scroll-bar*/
+::-webkit-scrollbar {
+	/* width: 4px; */
+		width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 0.4rem transparent;
+	border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--red);
+	border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--red);
+}
+
+::-moz-scrollbar {
+	/* width: 4px; */
+	width: 0.4rem;
+
+}
+
+::-moz-scrollbar-track {
+	box-shadow: inset 0 0 0.4rem transparent;
+	border-radius: 0.3rem;
+}
+
+::-moz-scrollbar-thumb {
+	background: var(--red);
+	border-radius: 0.3rem;
+}
+
+::-moz-scrollbar-thumb:hover {
+	background: var(--red);
+}
+input:focus {
+    outline: none;
+}
+.sign-up-flow .sign-up-flow-cont {
+	/*background-image: url("../../../images/back-signin.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100vh;*/
+	/* background-color: #c78888; */
+	/* margin-top: 14rem; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	/* overflow: scroll; */
+}
+.tooltipTextFullName {
+	text-align: left;
+}
+#expertError {
+	padding: 0.7rem 0rem 0.7rem 0rem;
+}
+#freeLocationError {
+	padding: 0.7rem 0rem 0.7rem 0rem;
+}
+.error-border {
+	border: solid 0.1rem var(--red) !important;
+}
+.sign-up-flow .navbar-brand img {
+	width: auto;
+	height: 5rem;
+}
+.login-logo-commmon img {
+	/* width: 20rem; */
+	margin-bottom: 2rem;
+}
+.login-logo-commmon-invite img {
+	/* margin-bottom: 30px; */
+	margin-bottom: 3rem;
+	width: 20rem;
+}
+.login-logo-commmon-suggation img {
+	margin-bottom: 3rem;
+	width: 20rem;
+}
+.bg-img-invite {
+	background-image: url("../../images/invite-banner.svg");
+	height: 26.6rem;
+	width: 10rem;
+}
+/* .logo-m-b{
+        margin-bottom: 1.5rem;
+    } */
+.sign-up-flow .navbar-brand {
+	padding: 0;
+}
+.sign-up-flow .navbar.navbar-inverse #myNavbar .nav.navbar-nav li > a {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 0.8em;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--black);
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0 1.5rem 0 1.5rem;
+	cursor: pointer;
+}
+.sign-up-flow .navbar.navbar-inverse #myNavbar .nav.navbar-nav.navbar-nav-form li > a {
+	margin: 0;
+}
+.sign-up-flow .navbar.navbar-inverse #myNavbar .nav.navbar-nav.navbar-nav-form li #sign-up-button {
+	margin-left: 1rem;
+}
+.sign-up-flow .navbar.navbar-inverse #myNavbar .nav.navbar-nav li.active > a {
+	background: transparent !important;
+}
+.sign-up-flow .navbar.navbar-inverse {
+	border: none;
+	margin-bottom: 6rem;
+	padding-top: 2rem;
+	padding-left: 2rem;
+	background-color: var(--white);
+	border: none;
+	margin-bottom: 6rem;
+	padding-top: 1.7rem;
+	padding-left: 5rem;
+	padding-bottom: 1.7rem;
+	border-bottom: 0.2rem solid var(--red);
+}
+.sign-up-flow .nav.navbar-nav.navbar-nav-menu {
+	width: auto;
+	display: flex;
+	position: absolute;
+	padding-top: 1.5rem;
+	left: 50%;
+	right: 50%;
+	display: -webkit-flex;
+	justify-content: center;
+}
+/* .sign-up-flow .nav.navbar-nav.navbar-nav-form {
+	border: 1px solid var(--red);
+} */
+.common-padding-login {
+	width: 100%;
+	margin: 0 auto;
+}
+/* .logout-text {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-style: normal;
+	padding: 0.9rem 1.5rem !important;
+	font-stretch: normal;
+	line-height: 2;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--black);
+	text-transform: uppercase;
+	display: inline-block;
+	border: 0.1rem solid var(--red);
+} */
+.logout-text:hover {
+	color: var(--white);
+	background-color: var(--red) !important;
+	border          : solid 0.1rem var(--red);
+}
+.main-logo {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 10%;
+}
+.sign-up-flow .nav.navbar-nav.navbar-nav-form #sign-up-button {
+	height: auto;
+	border-radius: 1rem;
+	padding: 0.6rem 1.5rem !important;
+	background-color: var(--red) !important;
+	color: var(--white) !important;
+	position: relative;
+	top: -0.6rem;
+	height: 4.8rem;
+	border-radius: 0.3rem;
+	padding: 1.2rem 3.5rem !important;
+}
+
+/************ Company Sign Up Form******************/
+.profile-common-box-style {
+	background-color: var(--white);
+	text-align: center;
+	/* position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+	background-color: var(--white);
+	padding: 3rem 7rem 3rem 7rem;
+	border-radius: 0.3rem;
+	border: 0.1rem solid var(--gray);
+	box-shadow: 0 0.5rem 1.6rem 0.4rem rgb(0 0 0 / 10%);
+	width: 50%;
+	margin: 0 auto;
+}
+.signup-subtitle-wc {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1rem 0rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem !important;
+	font-weight: 500 !important;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.2rem !important;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: var(--brown);
+	text-transform: capitalize;
+}
+.sign-up-flow .company-signUp-form .compName input,
+.sign-up-flow .company-signUp-form .departName input,
+.sign-up-flow .company-signUp-form .tilName input,
+.sign-up-flow .company-signUp-form input:focus {
+	width: 100%;
+	height: 5.5rem;
+	background-color: var(--dark-white);
+	border: none;
+	margin-bottom: 1.2rem;
+	padding-left: 1.9rem;
+	outline: none;
+	padding-right: 1rem;
+	line-height: normal;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.9rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	border-radius: 0.1rem !important;
+	border: 0.1rem solid var(--gray);
+}
+.sign-up-flow .company-signUp-form .saveButton button {
+	width: 100%;
+	height: 5rem;
+	/* height: 5.5rem;
+	background-color: var(--dark-white);
+	border: none;
+	outline: none;
+	line-height: normal;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.9rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	border-radius: 0.1rem !important;
+	border: 0.1rem solid var(--gray); */
+}
+/*  input field style  start here */
+.text-input-div {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 0.5rem;
+}
+.input-label-top-common label {
+	position: relative;
+	display: block;
+}
+
+.input-label-top-common label input {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	box-sizing: border-box;
+	display: block;
+	padding: 1.8rem 1.9rem;
+	width: 100%;
+	margin-bottom: 1.2rem;
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	border: 0.1rem solid var(--gray);
+	color: var(--black);
+	font-weight: 500;
+	height: 5.5rem;
+	background-color: var(--dark-white) !important;
+	border-radius: 0.1rem !important;
+}
+
+.input-label-top-common label input::placeholder {
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: 1.7rem;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray) !important;
+	text-transform: uppercase;
+}
+
+.input-label-top-common label input:focus,
+.input-label-top-common label input.populated {
+	padding-top: 2.8rem;
+	padding-bottom: 1.2rem;
+	background-color: var(--dark-white) !important;
+	border: 0.1rem solid var(--gray) !important;
+	border-radius: 0rem !important;
+}
+.input-label-top-common label #skillsNameID:focus,
+.input-label-top-common label #skillsNameID.populated {
+	padding-top: 2.8rem;
+	padding-bottom: 1.2rem;
+	background-color: var(--dark-white) !important;
+	border: 0rem solid !important;
+	border-radius: 0rem !important;
+}
+
+.input-label-top-common label input:focus::placeholder,
+.input-label-top-common label input.populated::placeholder {
+	color: var(--dark-white) !important;
+}
+
+.input-label-top-common label input:focus + span,
+.input-label-top-common label input.populated + span {
+	opacity: 10;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	top: 0.4rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.11;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	text-transform: uppercase;
+}
+.input-label-top-common label input:focus + #serviceOfferLabel,
+.input-label-top-common label input.populated + #serviceOfferLabel {
+	opacity: 10;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	top: 0rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.11;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	text-transform: uppercase;
+}
+
+.input-label-top-common label span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.1rem;
+	position: absolute;
+	color: var(--black);
+	top: 0rem;
+	left: 2rem;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.input-label-top-common input[type="submit"] {
+	transition: all 0.2s ease-in-out;
+	border: none;
+	background: #1aaf75;
+	color: var(--white);
+	padding: 1.6rem 4rem
+}
+
+.add-service-main-span {
+	display: inline-block;
+	background-color: var(--white);
+	margin: 0.8rem -0.9rem 0.2rem 1.8rem;
+	padding: 0.5rem;
+}
+.add-service-offer-input:focus {
+	border: unset !important;
+	height: 4.5rem !important;
+}
+.add-service-remove {
+	cursor: pointer;
+}
+.add-service-full-name {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	width: auto;
+	max-width: 18.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	vertical-align: middle;
+}
+.add-service-offer-input {
+	background-color: var(--dark-white);
+	width: 100%;
+	height: 5.5rem;
+	border: unset;
+	padding-left: 1.7rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+}
+.add-service-offer-input::placeholder {
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: 1.7rem;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray) !important;
+	text-transform: uppercase;
+}
+.add-service-offer-input::-webkit-placeholder {
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: 1.7rem;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray) !important;
+	text-transform: uppercase;
+}
+.add-service-offer-input::-webkit-placeholder {
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: 1.7rem;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray) !important;
+	text-transform: uppercase;
+}
+
+.expert-label-section {
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	z-index: 9999999999999;
+	width: 100%;
+	border: 0.1rem solid var(--gray);
+	border-radius: 0.3rem;
+	box-shadow: 0 0.2rem 0.4rem 0.1rem rgba(83, 83, 83, 0.35);
+	background-color: var(--white);
+}
+.expert-label-section ul {
+	padding: 0rem;
+	margin: 0rem;
+	list-style-type: none;
+	overflow-y: scroll;
+	height: 7rem;
+	min-height: 7rem;
+	overflow-x: hidden;
+}
+.expert-label-section ul li {
+	border-bottom: 0.1rem solid var(--gray);
+	padding: 1rem 1.3rem;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	cursor: pointer;
+}
+.expert-label-section {
+	position: absolute;
+	top: 6.1rem;
+	left: 0rem;
+}
+.caret-Icons {
+	position: absolute;
+	right: 1rem;
+	top: 1.7rem;
+	cursor: pointer;
+}
+/* add member section css */
+
+.add-service-offer-section {
+	text-align: left;
+	padding-left: 1.2rem;
+	margin-top: 2rem;
+}
+.service-offer-span {
+	background-color: var(--white);
+	margin: 0.7rem 0rem 0rem 0.4rem;
+	display: inline-block;
+	padding: 0.6rem 0.6rem;
+}
+.serviceOffered label {
+	position: relative;
+	display: block;
+}
+.more-skil-labels {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	text-align: right;
+	color: var(--slate-gray);
+	width: 100%;
+	margin: 1.2rem auto;
+}
+.invite-full-name {
+	display: inline-block;
+	border-radius: 0.1rem;
+	background-color: var(--white);
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.05rem;
+	color: var(--brown);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	padding-right: 0.5rem;
+}
+.remove-invite {
+	cursor: pointer;
+}
+#skillsNameID {
+	border: unset;
+	background-color: unset;
+	border-bottom: 0.1rem solid var(--gray);
+	border-right: 0.1rem solid var(--gray);
+}
+#skillsNameID:focus {
+	border-bottom: 0.1rem solid var(--gray);
+	border-right: 0.1rem solid var(--gray);
+}
+.add-invite-main {
+	margin: 0.5rem 0.5rem;
+	background-color: var(--white);
+	display: inline-block;
+	padding: 0.6rem 0.6rem;
+}
+/* add member section end */
+.sign-up-flow .individual-signUp-form .saveButton button:focus {
+	outline: none;
+}
+.sign-up-flow .individual-signUp-form .company-text {
+	margin-bottom: 2.5rem;
+	margin-top: 1rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-name {
+	margin-bottom: 0.8rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-name span {
+	font-family: var(--font-md);
+	font-size: 1.8rem;
+	letter-spacing: 0.15rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.sign-up-flow .individual-signUp-form .company-text span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.6;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: var(--brown);
+	display: inline-block;
+	width: 37.9rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-icon {
+	border: 0.1rem solid var(--gray);
+	position: absolute;
+	top: 3.8rem;
+	height: 0.1rem;
+	width: 50%;
+	left: 25%;
+}
+.sign-up-flow .individual-signUp-form .company-user-icon .leftimg,
+.sign-up-flow .individual-signUp-form .company-user-icon .rightimg {
+	position: absolute;
+	top: -1.2rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-icon .leftimg {
+	left: -0.1rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-icon .rightimg {
+	right: -0.1rem;
+}
+
+.sign-up-flow .individual-signUp-form .skills_service_parent {
+	position: absolute;
+	top: 2.1rem;
+	right: -25.3rem;
+	width: 47%;
+	text-align: left;
+	height: 25.7rem;
+	overflow: auto;
+	padding-right: 1rem;
+	background-color: var(--dark-slate-gray);
+}
+.sign-up-flow .individual-signUp-form #service_all_side {
+	top: 9.6rem;
+}
+.sign-up-flow .individual-signUp-form .skills_service_parent .skill-header {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	letter-spacing: 0.04rem;
+	text-align: center;
+	color: var(--black);
+	margin-bottom: 1.1rem;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--black);
+}
+.sign-up-flow .individual-signUp-form #skills_all_side {
+	margin-bottom: 0.8rem;
+}
+.sign-up-flow .individual-signUp-form #skills_all_side ul li,
+.sign-up-flow .individual-signUp-form #service_all_side ul li {
+	border-radius: 0.3rem;
+	/* border: solid 1px var(--dark-gray); */
+	padding-left: 0.8rem;
+	margin-bottom: 0.4rem;
+	padding-top: 0.8rem;
+	height: auto;
+	padding-right: 1rem;
+	padding-bottom: 0.6rem;
+	min-height: 3.4rem;
+	overflow-wrap: break-word;
+	border: solid 0.1rem var(--dark-gray);
+	font-size: 1.1rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+}
+.sign-up-flow .individual-signUp-form #skills_all_side ul,
+.sign-up-flow .individual-signUp-form #service_all_side ul {
+	padding: 0;
+	list-style: none;
+}
+.sign-up-flow .individual-signUp-form .skills_service_parent::-webkit-scrollbar {
+	border: none;
+	width: 1.2rem;
+	border-radius: 1rem;
+	background-color: #f5f5f5;
+}
+.sign-up-flow .individual-signUp-form .skills_service_parent::-webkit-scrollbar-thumb {
+	background: var(--dark-gray);
+	border-radius: 1rem;
+}
+.sign-up-flow .individual-signUp-form .departName,
+.sign-up-flow .individual-signUp-form .tilName {
+	position: relative;
+}
+
+.sign-up-flow .individual-signUp-form .departName .search-result-parent,
+.sign-up-flow .individual-signUp-form .tilName .search-result-parent,
+.sign-up-flow .individual-signUp-form .compName .search-result-parent {
+	position: absolute;
+	left: 0rem;
+	top: 4.6rem;
+	box-shadow: 0 0.2rem 0.4rem 0.1rem rgba(83, 83, 83, 0.35);
+	border: solid 0.1rem var(--dark-white);
+	background-color: var(--white);
+	z-index: 99999999999999;
+	height: 10rem;
+	min-height: 15rem;
+	overflow-y: scroll;
+}
+
+.sign-up-flow .individual-signUp-form .compName .search-result-parent {
+	left: 21.6rem;
+	width: 30.2rem;
+}
+
+.sign-up-flow .individual-signUp-form .departName .search-result-parent li.dept-list-cont,
+.sign-up-flow .individual-signUp-form .tilName .search-result-parent li.dept-list-cont {
+	padding-left: 2.4rem;
+	top: 0;
+	list-style: none;
+	text-align: left;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.77;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	height: 4.8rem;
+	border: solid 0.1rem var(--gray);
+	background-color: var(--white);
+	width: 31.5rem;
+	margin: 0 auto;
+}
+.sign-up-flow .company-signUp-form .companyNameErrorMessage,
+.sign-up-flow .company-signUp-form .departmentNameErrorMessage,
+.sign-up-flow .company-signUp-form .titleNameErrorMessage,
+.sign-up-flow .individual-signUp-form .workNameErrorMessage,
+.sign-up-flow .individual-signUp-form .skillsNameErrorMessage,
+.sign-up-flow .individual-signUp-form .serviceNameErrorMessage {
+	margin-bottom: 0.2rem;
+	position: relative;
+	top: -0.7rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	color: var(--red);
+	width: auto;
+	font-size: 0.9rem;
+	letter-spacing: 0.15rem;
+	text-align: left;
+	width: 31.5rem;
+	margin: 0 auto;
+}
+.error-margin {
+	margin-right: 1rem;
+	display: inline-block;
+	width: 1.2rem;
+	margin-top: -1.6rem;
+}
+.error-msg-m {
+	display: inline-block;
+	width: 28.6rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+}
+.error-margin-skil {
+	margin-right: 1rem;
+	display: inline-block;
+	width: 1.2rem;
+	margin-top: -0.1rem;
+}
+.error-margin-location {
+	margin-right: 1rem;
+	display: inline-block;
+	width: 1.2rem;
+	margin-top: -0.1rem;
+}
+.error-location-m {
+	display: inline-block;
+	width: 28.6rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	color: var(--red);
+	text-align: left;
+}
+.locationErrorMessage {
+	width: 31.7rem;
+	margin: 0 auto;
+	padding-bottom: 1rem;
+}
+/************ Individual Sign Up Form******************/
+
+/************ Location Sign Up Form******************/
+
+.sign-up-flow .location-signUp-form .compName input,
+.sign-up-flow .location-signUp-form .departName input,
+.sign-up-flow .location-signUp-form .tilName input,
+.sign-up-flow .location-signUp-form .saveButton button,
+.sign-up-flow .location-signUp-form input:focus,
+.sign-up-flow .location-signUp-form select,
+.sign-up-flow .location-signUp-form input {
+	width: 34rem;
+	height: 4.5rem;
+	border-radius: 1rem;
+	border: none;
+	margin-bottom: 1.2rem;
+	padding-left: 2.4rem;
+	outline: none;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	border-radius: 0.1rem !important;
+	border: 0.1rem solid var(--gray);
+	background-color: var(--dark-white);
+}
+.sign-up-flow .location-signUp-form .saveButton button:focus {
+	outline: none;
+}
+.sign-up-flow .location-signUp-form .company-text {
+	margin-bottom: 2.5rem;
+}
+.sign-up-flow .location-signUp-form .company-user-name {
+	margin-bottom: 0.8rem;
+	margin-top: 6rem;
+}
+.sign-up-flow .location-signUp-form .company-user-name span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.15rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.sign-up-flow .location-signUp-form .company-text span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.47;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--slate-gray);
+	display: inline-block;
+	width: 37.4rem;
+}
+.sign-up-flow .location-signUp-form .saveButton button {
+	background-color: var(--red);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.4rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--white);
+	padding-left: 0;
+	text-transform: uppercase;
+}
+.sign-up-flow .location-signUp-form .company-user-icon {
+	border: 0.1rem solid var(--gray);
+	position: absolute;
+	top: 3.8rem;
+	height: 0.1rem;
+	width: 50%;
+	left: 25%;
+}
+.sign-up-flow .location-signUp-form .company-user-icon .leftimg,
+.sign-up-flow .location-signUp-form .company-user-icon .rightimg {
+	position: absolute;
+	top: -1.2rem;
+}
+.sign-up-flow .location-signUp-form .company-user-icon .leftimg {
+	left: -0.1rem;
+}
+.sign-up-flow .location-signUp-form .company-user-icon .rightimg {
+	right: -0.1rem;
+}
+.sign-up-flow .location-signUp-form input::-webkit-input-placeholder {
+	font-size: 1.1rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	color: var(--slate-gray);
+	text-transform: capitalize;
+}
+/* .sign-up-flow .location-signUp-form input::-moz-placeholder {
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.1rem;
+            font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;
+        color: var(--slate-gray);
+        text-transform: capitalize;
+    }
+    .sign-up-flow .location-signUp-form input::-ms-input-placeholder {
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.1rem;
+            font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;
+        color: var(--slate-gray);
+        text-transform: capitalize;
+    }
+    .sign-up-flow .location-signUp-form input::placeholder {
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.1rem;
+            font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;
+        color: var(--slate-gray);
+        text-transform: capitalize;
+    } */
+.sign-up-flow .location-signUp-form #map {
+	border-radius: 1rem;
+	width: 30rem;
+	height: 15.8rem;
+	margin: 0 auto;
+}
+.sign-up-flow .location-signUp-form .saveButton {
+	margin-top: 1rem;
+}
+.sign-up-flow .location-signUp-form #pac-input {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.2rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	color: var(--brown);
+	padding-right: 2rem;
+}
+.side-stack .cross-button {
+	cursor: pointer;
+	position: absolute;
+	right: 1.8rem;
+}
+.side-stack .cross-button img {
+	width: 1.5rem;
+}
+#mapSearchResult ul li.mapListing,
+#mapdivForIndividual ul li.mapListing {
+	color: var(--black);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	cursor: pointer;
+	border-bottom: 0.1rem solid var(--gray);
+	font-weight: 500;
+	width: 41rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 1.8rem;
+}
+.locationList ul li.mapListing:hover{
+	background: var(--dark-white);
+}
+.locationList {
+	position: absolute;
+	z-index: 99;
+	background: var(--white);
+	top: 6.1rem;
+	left: 0rem;
+	height: 18rem;
+	max-height: 18rem;
+	overflow: auto;
+	width: 100%;
+	/* max-width: 38rem; */
+	overflow-x: hidden;
+}
+/* #mapSearchResultForIndividual{
+        left: 219 !important;
+    } */
+
+.sign-up-flow .location-signUp-form #inputLocation{
+	padding-right: 1rem;
+}
+.sign-up-flow .location-signUp-form #mapdiv,
+.sign-up-flow .location-signUp-form #mapdivForIndividual {
+	height: 15rem;
+	width: 30rem;
+	margin: 0 auto;
+	box-shadow: 0.02rem 0.2rem 0.3rem 0 rgba(214, 219, 225, 0.79);
+}
+#OpenLayers_Control_Zoom_5,
+.olAlphaImg,
+#OpenLayers_Control_Attribution_7 {
+	display: none;
+}
+
+.user_welcomename {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem !important;
+	font-weight: 600 !important;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.4rem !important;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--black) !important;
+}
+.company-text {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem !important;
+	font-weight: 500 !important;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.1rem !important;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: var(--slate-gray);
+}
+.welocm-page-m {
+	margin-bottom: 3rem;
+}
+.caret-welcom-page {
+	position: absolute;
+	top: 1.2rem;
+	right: 1.6rem;
+}
+/************ Location Sign Up Form******************/
+
+/* invite page popup start here */
+.main-invitation-part {
+	/* margin: 1rem 50px 50px 50px; */
+	margin: 1rem 5rem 5rem 5rem;
+}
+.suggestion-skip {
+	position: absolute;
+	right: 7.8rem;
+	top: 4.3rem;
+	z-index: 9;
+}
+.skip-align {
+	position: absolute;
+	right: 5rem;
+	top: 4.3rem;
+	z-index: 9;
+}
+.pending-background {
+	border: solid 0.1rem var(--dark-gray) !important;
+	color: var(--slate-gray) !important;
+	background-color: var(--dark-slate-gray) !important;
+}
+.suggestion-skip a,
+.skip-align a {
+	color: var(--black);
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1.9rem;
+	letter-spacing: 0.15rem;
+	text-decoration: underline;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+}
+.common-inputField-section {
+	overflow-y: auto;
+}
+.invite-co-worker-section {
+	/* height: 22.5rem; */
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--gray);
+	background-color: #f4f5f5;
+	width: 100%;
+}
+.invite-banner-img {
+	width: 100%;
+}
+.invite-banner-text {
+	position: absolute;
+	top: 2rem;
+	left: 5rem;
+}
+.clearfixInvite::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.co-worker-left {
+	float: left;
+	width: 65%;
+}
+.co-worker-right {
+	float: left;
+	width: 33%;
+}
+.invite-banner-text .inviteTitle {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.41;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.inviteTitle {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.3rem;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+#mynavbar {
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+}
+.invite-banner-text .invitesubTile {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.73;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	margin-top: 1rem;
+	display: block;
+}
+.invitesubTile {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.73;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	margin-top: 1rem;
+	display: block;
+}
+.common-invite-padding {
+	padding: 5rem 0rem 5rem 2.4rem;
+}
+.co-worker-right .invite-image-part {
+	text-align: center;
+}
+.invite-image-part img {
+	padding-top: 2.3rem;
+}
+
+.margin-l-r-common {
+	margin: 0rem 5rem;
+}
+.common-subtitle-invite {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.47;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	text-align: left;
+}
+.invite-banner-main {
+	position: relative;
+	width: 100%;
+}
+.margin-common-row {
+	margin-top: 0.8rem;
+}
+.invite-input-common {
+	padding: 1.3rem !important;
+	border-radius: 0.1rem !important;
+	border: solid 0.1rem var(--gray) !important;
+	background-color: var(--dark-white) !important;
+	width: 100% !important;
+	color: var(--black);
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+}
+.common-color-btn {
+	padding: 0.8rem 1.7rem;
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--red);
+	background-color: var(--red);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--white);
+	text-transform: uppercase;
+}
+.margin-more-field {
+	margin-top: 1.6rem;
+}
+.add-more-field {
+	cursor: pointer;
+}
+.add-more-style {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+	margin-left: 0.8rem;
+}
+.invite-btn-right {
+	text-align: right;
+	/* padding-right: 1rem; */
+}
+button:focus {
+	outline: unset !important;
+}
+.remove_button-visivility {
+	visibility: hidden;
+}
+.truncate-width {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	width: 11.2rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+}
+#invitation-popup .row {
+	margin-right: 0rem !important;
+}
+.signup-invite-field {
+	width: 100%;
+}
+.signup-invite-field::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.input-invite-field {
+	float: left;
+	width: 46.3%;
+	/* margin-right: 1.7rem; */
+	margin-bottom: 0.8rem;
+}
+.input-remove-field {
+	float: left;
+	width: 3%;
+	margin-top: 1.5rem;
+}
+.saveButton {
+	margin-top: 1.6rem;
+}
+#coworker-skip {
+	padding: 0.8rem 1.7rem;
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--gray);
+	/* background-color: var(--red); */
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--black);
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 0.2rem;
+	box-shadow: 0 0.5rem 0.8rem 0 var(--gray);
+}
+#suggestionpage-skip {
+	padding: 0.8rem 1.7rem;
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--gray);
+	/* background-color: var(--red); */
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--black);
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 0.2rem;
+	box-shadow: 0 0.5rem 0.8rem 0 var(--gray);
+}
+.common-position-error {
+	position: relative;
+}
+.tooltips-common-error {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	z-index: 1;
+}
+#locationError {
+	/* padding: 0.7rem 0rem 0.7rem 0rem; */
+}
+#companyNameIDError {
+	padding: 0rem 0rem 0rem 0rem;
+	/* width: 50.1rem; */
+	/* right: -52.2rem; */
+	/* margin-bottom: 2rem; */
+}
+#companyNameIDErrorMsg {
+	padding: 0.7rem 1rem;
+}
+#departmentNameIDErrorMsg {
+	padding: 0.7rem 1rem;
+}
+#titleNameIDErrorMsg {
+	padding: 0.7rem 1rem;
+}
+#workNameIDError {
+	padding: 0.7rem 0rem 0.7rem 0rem;
+}
+#skillError {
+	padding: 0.7rem 0rem 0.7rem 0rem;
+}
+.subtitle-error-fullName {
+}
+.tringle-NameEmail {
+	position: absolute;
+	top: 36%;
+	left: -0.8rem;
+}
+#inputLocation {
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+}
+.search-result-parent {
+	position: relative;
+}
+#skills-search-result ul {
+	list-style-type: none;
+	padding: 0rem;
+	margin: 0rem;
+	background-color: var(--white);
+	overflow-y: scroll;
+	height: 10rem;
+	min-height: 15rem;
+	position: absolute;
+	z-index: 999999999999999;
+	width: 100%;
+	border: 0.1rem solid var(--gray);
+}
+.expert-label-section ul li:hover {
+	background: var(--dark-white);
+}
+#skills-search-result ul li {
+	border-bottom: 0.1rem solid var(--gray);
+	padding: 1rem 1.3rem !important;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem !important;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	color: var(--black) !important;
+	cursor: pointer !important;
+	text-transform: capitalize !important;
+}
+#mapdivForIndividual {
+	border: 0.1rem solid var(--gray);
+	border-radius: 0.3rem;
+	box-shadow: 0 0.2rem 0.4rem 0.1rem rgb(83 83 83 / 35%);
+	background-color: var(--white);
+}
+
+#mapdivForIndividual ul {
+	list-style-type: none;
+	padding: 0rem;
+	margin: 0rem;
+	overflow-y: scroll;
+	height: 10rem;
+	min-height: 9.4rem;
+	overflow-x: hidden;
+}
+#mapdivForIndividual ul li {
+	border-bottom: 0.1rem solid var(--gray);
+	padding: 0.7rem 1.3rem;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	cursor: pointer;
+}
+.star-red-color {
+	color: var(--red);
+	display: inline-block;
+}
+@media (max-width: 1700px) {
+	.input-invite-field {
+		width: 45.1%;
+		/* margin-right: 1.6rem; */
+	}
+	.invite-btn-right {
+		padding-right: 4.9rem;
+	}
+}
+
+@media (max-width: 1680px) {
+	.invite-image-part img {
+		padding-top: 4.8rem;
+	}
+}
+
+@media (max-width: 1600px) {
+	.inviteTitle {
+		font-size: 1.5rem;
+	}
+	.invitesubTile {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 1500px) {
+	.add-service-offer-input {
+		height: 5.5rem !important;
+	}
+	.invite-btn-right {
+		padding-right: 3.5rem;
+	}
+	.signup-subtitle-wc {
+		font-size: 1.4rem !important;
+	}
+	.user_welcomename {
+		font-size: 1.6rem !important;
+	}
+	/* .login-common-box-style{
+            width: 44%;
+        } */
+	.skip-align {
+		right: 5rem;
+		top: 3.2rem;
+	}
+}
+@media (max-width: 1440px) {
+	.inviteTitle {
+		font-size: 1.4rem;
+		line-height: 2.3rem;
+	}
+	.invitesubTile {
+		font-size: 1.3rem;
+	}
+	.invite-image-part img {
+		/* width: 90%; */
+		/* height: 187px; */
+		padding-top: px;
+	}
+}
+
+@media (max-width: 1400px) {
+	.margin-l-r-common {
+		margin: 0rem 3rem;
+	}
+
+	.suggestion-skip {
+		top: 3.3rem;
+	}
+	.common-invite-padding {
+		padding: 3.6rem 0rem 3.6rem 2.4rem;
+	}
+	.inviteTitle {
+		line-height: 2.3rem;
+	}
+	.invite-image-part img {
+		padding-top: 3.2rem;
+	}
+	.main-invitation-part {
+		margin: 1rem 5rem 2rem 5rem;
+	}
+	.subtitle-error-fullName {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+	#locationError {
+		right: -42.2rem;
+	}
+	.add-service-offer-input {
+		height: 4.5rem !important;
+	}
+	.sign-up-flow .individual-signUp-form .saveButton button {
+		height: 4.5rem !important;
+	}
+	/* .login-common-box-style {
+          padding: 2rem 7rem 2rem 7rem;
+        } */
+	.sign-up-flow .company-signUp-form .saveButton button {
+		height: 4.5rem !important;
+	}
+	#individual_user_info {
+		margin-top: -3rem;
+	}
+	.sign-up-flow .individual-signUp-form .company-user-name {
+		margin-bottom: 0rem;
+	}
+	.sign-up-flow .individual-signUp-form .company-text {
+		margin-bottom: 1.5rem;
+		margin-top: 1rem;
+	}
+	#expertError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+	#freeLocationError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+	#workNameIDError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+	#skillError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+}
+@media (max-width: 1330px) {
+	.invite-image-part img {
+		padding-top: 5.6rem;
+	}
+}
+
+.sign-up-flow .company-signUp-form .saveButton button:focus {
+	outline: none;
+}
+.sign-up-flow .company-signUp-form .company-text {
+	margin-bottom: 2rem;
+}
+.sign-up-flow .company-signUp-form .company-user-name {
+	margin-bottom: 0rem;
+	/*margin-top: 6rem;*/
+}
+.sign-up-flow .company-signUp-form .company-user-name span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.15rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.sign-up-flow .company-signUp-form .company-text span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.9rem;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: var(--black);
+	display: inline-block;
+	width: 43rem;
+	text-transform: capitalize;
+}
+.sign-up-flow .company-footer .company-footer-add {
+	margin: 0;
+}
+.sign-up-flow .company-footer .company-footer-add .comp-header-text {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-weight: 500;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	margin-bottom: 1rem;
+	color: var(--black);
+}
+.sign-up-flow .company-footer .company-footer-add .comp-header-ul ul {
+	padding: 0;
+	list-style: none;
+}
+.sign-up-flow .company-footer .company-footer-add .comp-header-ul ul > li > a,
+.sign-up-flow .company-footer .company-footer-add .comp-header-ul span a {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-weight: 500;
+	font-size: 1.3rem;
+
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.05rem;
+	color: var(--dark-gray);
+	text-decoration: none;
+}
+.sign-up-flow .company-footer .company-footer-add .comp-header-ul .comp-social-icons {
+	display: inline-block;
+	margin-right: 0.8rem;
+}
+.sign-up-flow .company-footer {
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.sign-up-flow .company-footer .company-footer-add .footer-content {
+	text-align: justify;
+}
+.sign-up-flow .company-footer .company-footer-add .footer-content .footer-address p {
+	font-family: var(--font-regular);
+	font-size: 1.3rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.46;
+	letter-spacing: 0.05rem;
+	color: var(--dark-gray);
+}
+/* .sign-up-flow .company-signUp-form .saveButton button {
+	background-color: var(--red);
+	font-family: var(--font-regular);
+	font-size: 1.4rem;
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--white);
+}  */
+.sign-up-flow .company-signUp-form .company-user-icon {
+	border: 0.1rem solid var(--gray);
+	position: absolute;
+	top: 3.8rem;
+	height: 0.1rem;
+	width: 50%;
+	left: 25%;
+}
+.sign-up-flow .company-signUp-form .company-user-icon .leftimg,
+.sign-up-flow .company-signUp-form .company-user-icon .rightimg {
+	position: absolute;
+	top: -1.2rem;
+}
+.sign-up-flow .company-signUp-form .company-user-icon .leftimg {
+	left: -0.1rem;
+}
+.sign-up-flow .company-signUp-form .company-user-icon .rightimg {
+	right: -0.1rem;
+}
+.sign-up-flow .company-signUp-form .departName,
+.sign-up-flow .company-signUp-form .tilName {
+	position: relative;
+}
+
+.sign-up-flow .company-signUp-form .departName .search-result-parent li.dept-list-cont,
+.sign-up-flow .company-signUp-form .tilName .search-result-parent li.dept-list-cont,
+.sign-up-flow .individual-signUp-form .departName .search-result-parent li.dept-list-cont,
+.sign-up-flow .individual-signUp-form .tilName .search-result-parent li.dept-list-cont {
+	padding-left: 2.4rem;
+	top: 0;
+	list-style: none;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.2rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+    text-transform: capitalize;
+	cursor: pointer;
+}
+.sign-up-flow .company-signUp-form .departName .search-result-parent ul,
+.sign-up-flow .company-signUp-form .tilName .search-result-parent ul,
+.sign-up-flow .individual-signUp-form .departName .search-result-parent ul,
+.sign-up-flow .individual-signUp-form .tilName .search-result-parent ul,
+.sign-up-flow .individual-signUp-form .compName .search-result-parent ul {
+	padding-left: 0;
+	/* padding-top: 1rem; */
+}
+/************ Company Sign Up Form******************/
+
+/************ Individual Sign Up Form******************/
+.sign-up-flow .individual-signUp-form .compName input,
+.sign-up-flow .individual-signUp-form .departName input,
+.sign-up-flow .individual-signUp-form .tilName input,
+.sign-up-flow .individual-signUp-form input:focus,
+.sign-up-flow .individual-signUp-form select {
+	width: 100%;
+	height: 5.5rem;
+	/* box-shadow: 0.2px 2px 3px 0 rgba(214, 219, 225, 0.79); */
+	background-color: var(--dark-white);
+	border: none;
+	/* margin-bottom: 1.2rem; */
+	outline: none;
+	padding-right: 1rem;
+	line-height: normal;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	border-radius: 0.1rem !important;
+	border: 0.1rem solid var(--gray);
+}
+#main-servixediv {
+	background-color: var(--dark-white);
+	border-radius: 0.1rem !important;
+	border: 0.1rem solid var(--gray);
+	margin-bottom: 1rem;
+	text-align: left;
+	height: unset;
+}
+.Servicesoffered {
+	background-color: var(--dark-white);
+	border-radius: 0.1rem !important;
+	border: 0.1rem solid var(--gray);
+	margin-bottom: 1rem;
+	text-align: left;
+	height: unset;
+	position: relative;
+}
+.expertiseLevel {
+	cursor: pointer;
+}
+.add-service-main-span {
+	display: inline-block;
+	background-color: var(--white);
+	margin: 0.8rem -0.9rem 0.2rem 1.8rem;
+	padding: 0.5rem;
+}
+.add-service-offer-input:focus {
+	border: unset !important;
+	height: 5.5rem !important;
+}
+.add-service-remove {
+	cursor: pointer;
+}
+.add-service-full-name {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	width: auto;
+	max-width: 18.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	vertical-align: middle;
+}
+.add-service-offer-input {
+	background-color: var(--dark-white);
+	width: 100%;
+	height: 5.5rem;
+	border: unset;
+	padding-left: 1.7rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+}
+.add-service-offer-input::placeholder {
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: 1.7rem;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray) !important;
+	text-transform: uppercase;
+}
+.add-service-offer-input::-webkit-placeholder {
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: 1.7rem;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray) !important;
+	text-transform: uppercase;
+}
+.add-service-offer-input::-webkit-placeholder {
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: 1.7rem;
+	font-stretch: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray) !important;
+	text-transform: uppercase;
+}
+
+.expert-label-section {
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	z-index: 9999999999999;
+	width: 100%;
+	border: 0.1rem solid var(--gray);
+	border-radius: 0.3rem;
+	box-shadow: 0 0.2rem 0.4rem 0.1rem rgba(83, 83, 83, 0.35);
+	background-color: var(--white);
+}
+.expert-label-section ul {
+	padding: 0rem;
+	margin: 0rem;
+	list-style-type: none;
+	overflow-y: scroll;
+	height: unset;
+	min-height: unset;
+	overflow-x: hidden;
+}
+.expert-label-section ul li {
+	border-bottom: 0.1rem solid var(--gray);
+	padding: 1rem 1.3rem;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	cursor: pointer;
+}
+.expert-label-section {
+	position: absolute;
+	top: 6.1rem;
+	left: 0rem;
+}
+.caret-Icons {
+	position: absolute;
+	right: 1rem;
+	top: 1.7rem;
+	cursor: pointer;
+}
+/* add member section css */
+.add-service-offer-section {
+	text-align: left;
+	padding-left: 1.2rem;
+	margin-top: 2rem;
+}
+.service-offer-span {
+	background-color: var(--white);
+	margin: 0.7rem 0rem 0rem 0.4rem;
+	display: inline-block;
+	padding: 0.6rem 0.6rem;
+}
+.serviceOffered label {
+	position: relative;
+	display: block;
+}
+.more-skil-labels {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	text-align: right;
+	color: var(--slate-gray);
+	width: 100%;
+	margin: 1.2rem auto;
+}
+.invite-full-name {
+	display: inline-block;
+	border-radius: 0.1rem;
+	background-color: var(--white);
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.05rem;
+	color: var(--brown);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	padding-right: 0.5rem;
+}
+.remove-invite {
+	cursor: pointer;
+}
+#skillsNameID {
+	border: unset;
+	background-color: unset;
+	/* border-bottom: 0.1rem solid var(--gray);
+	border-right: 0.1rem solid var(--gray); */
+}
+#skillsNameID:focus {
+	border-bottom: 0.1rem solid var(--gray);
+	border-right: 0.1rem solid var(--gray);
+}
+.add-invite-main {
+	margin: 0.5rem 0.5rem;
+	background-color: var(--white);
+	display: inline-block;
+	padding: 0.6rem 0.6rem;
+}
+/* add member section end */
+.sign-up-flow .individual-signUp-form .saveButton button:focus {
+	outline: none;
+}
+.sign-up-flow .individual-signUp-form .company-text {
+	margin-bottom: 2.5rem;
+	margin-top: 1rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-name {
+	margin-bottom: 0.8rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-name span {
+	font-family: var(--font-md);
+	font-size: 1.8rem;
+	letter-spacing: 0.15rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.sign-up-flow .individual-signUp-form .company-text span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.6;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: var(--brown);
+	display: inline-block;
+	width: 37.9rem;
+}
+/* .sign-up-flow .individual-signUp-form .saveButton button {
+	background-color: var(--red);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.4rem;
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--white);
+	text-transform: uppercase;
+} */
+.sign-up-flow .individual-signUp-form .company-user-icon {
+	border: 0.1rem solid var(--gray);
+	position: absolute;
+	top: 3.8rem;
+	height: 0.1rem;
+	width: 50%;
+	left: 25%;
+}
+.sign-up-flow .individual-signUp-form .company-user-icon .leftimg,
+.sign-up-flow .individual-signUp-form .company-user-icon .rightimg {
+	position: absolute;
+	top: -1.2rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-icon .leftimg {
+	left: -0.1rem;
+}
+.sign-up-flow .individual-signUp-form .company-user-icon .rightimg {
+	right: -0.1rem;
+}
+
+.sign-up-flow .individual-signUp-form .skills_service_parent {
+	position: absolute;
+	top: 2.1rem;
+	right: -25.3rem;
+	width: 47%;
+	text-align: left;
+	height: 25.7rem;
+	overflow: auto;
+	padding-right: 1rem;
+	background-color: var(--dark-slate-gray);
+}
+.sign-up-flow .individual-signUp-form #service_all_side {
+	top: 9.6rem;
+}
+.sign-up-flow .individual-signUp-form .skills_service_parent .skill-header {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	letter-spacing: 0.04rem;
+	text-align: center;
+	color: var(--black);
+	margin-bottom: 1.1rem;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--black);
+}
+.sign-up-flow .individual-signUp-form #skills_all_side {
+	margin-bottom: 0.8rem;
+}
+.sign-up-flow .individual-signUp-form #skills_all_side ul li,
+.sign-up-flow .individual-signUp-form #service_all_side ul li {
+	border-radius: 0.3rem;
+	/* border: solid 1px var(--dark-gray); */
+	padding-left: 0.8rem;
+	margin-bottom: 0.4rem;
+	padding-top: 0.8rem;
+	height: auto;
+	padding-right: 1rem;
+	padding-bottom: 0.6rem;
+	min-height: 3.4rem;
+	overflow-wrap: break-word;
+	border: solid 0.1rem var(--dark-gray);
+	font-size: 1.1rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+}
+.sign-up-flow .individual-signUp-form #skills_all_side ul,
+.sign-up-flow .individual-signUp-form #service_all_side ul {
+	padding: 0;
+	list-style: none;
+}
+.sign-up-flow .individual-signUp-form .skills_service_parent::-webkit-scrollbar {
+	border: none;
+	width: 1.2rem;
+	border-radius: 1rem;
+	background-color: #f5f5f5;
+}
+.sign-up-flow .individual-signUp-form .skills_service_parent::-webkit-scrollbar-thumb {
+	background: var(--dark-gray);
+	border-radius: 1rem;
+}
+.sign-up-flow .individual-signUp-form .departName,
+.sign-up-flow .individual-signUp-form .tilName {
+	position: relative;
+	
+}
+
+.sign-up-flow .individual-signUp-form .departName .search-result-parent,
+.sign-up-flow .individual-signUp-form .tilName .search-result-parent,
+.sign-up-flow .individual-signUp-form .compName .search-result-parent {
+	position: absolute;
+	left: 0rem;
+	top: 4.6rem;
+	box-shadow: 0 0.2rem 0.4rem 0.1rem rgba(83, 83, 83, 0.35);
+	border: solid 0.1rem var(--dark-white);
+	background-color: var(--white);
+	z-index: 99999999999999;
+	height: 10rem;
+	min-height: 15rem;
+	overflow-y: scroll;
+}
+
+.sign-up-flow .individual-signUp-form .compName .search-result-parent {
+	left: 0;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.sign-up-flow .individual-signUp-form .departName .search-result-parent li.dept-list-cont,
+.sign-up-flow .individual-signUp-form .tilName .search-result-parent li.dept-list-cont {
+	padding-left: 2.4rem;
+	top: 0;
+	list-style: none;
+	text-align: left;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.77;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	height: 4.8rem;
+	border: solid 0.1rem var(--gray);
+	background-color: var(--white);
+	width: 31.5rem;
+	margin: 0 auto;
+}
+.sign-up-flow .company-signUp-form .companyNameErrorMessage,
+.sign-up-flow .company-signUp-form .departmentNameErrorMessage,
+.sign-up-flow .company-signUp-form .titleNameErrorMessage,
+.sign-up-flow .individual-signUp-form .workNameErrorMessage,
+.sign-up-flow .individual-signUp-form .skillsNameErrorMessage,
+.sign-up-flow .individual-signUp-form .serviceNameErrorMessage {
+	margin-bottom: 0.2rem;
+	position: relative;
+	top: -0.7rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	color: var(--red);
+	width: auto;
+	font-size: 0.9rem;
+	letter-spacing: 0.15rem;
+	text-align: left;
+	width: 31.5rem;
+	margin: 0 auto;
+}
+.error-margin {
+	margin-right: 1rem;
+	display: inline-block;
+	width: 1.2rem;
+	margin-top: -1.6rem;
+}
+.error-msg-m {
+	display: inline-block;
+	width: 28.6rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+}
+.error-margin-skil {
+	margin-right: 1rem;
+	display: inline-block;
+	width: 1.2rem;
+	margin-top: -0.1rem;
+}
+.error-margin-location {
+	margin-right: 1rem;
+	display: inline-block;
+	width: 1.2rem;
+	margin-top: -0.1rem;
+}
+.error-location-m {
+	display: inline-block;
+	width: 28.6rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	color: var(--red);
+	text-align: left;
+}
+.locationErrorMessage {
+	width: 31.7rem;
+	margin: 0 auto;
+	padding-bottom: 1rem;
+}
+/************ Individual Sign Up Form******************/
+
+/************ Location Sign Up Form******************/
+.sign-up-flow .location-signUp-form .compName input,
+.sign-up-flow .location-signUp-form .departName input,
+.sign-up-flow .location-signUp-form .tilName input,
+.sign-up-flow .location-signUp-form .saveButton button,
+.sign-up-flow .location-signUp-form input:focus,
+.sign-up-flow .location-signUp-form select,
+.sign-up-flow .location-signUp-form input {
+	width: 34rem;
+	height: 4.5rem;
+	border-radius: 1rem;
+	border: none;
+	margin-bottom: 1.2rem;
+	padding-left: 2.4rem;
+	outline: none;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	border-radius: 0.1rem !important;
+	border: 0.1rem solid var(--gray);
+	background-color: var(--dark-white);
+}
+.sign-up-flow .location-signUp-form .saveButton button:focus {
+	outline: none;
+}
+.sign-up-flow .location-signUp-form .company-text {
+	margin-bottom: 2.5rem;
+}
+.sign-up-flow .location-signUp-form .company-user-name {
+	margin-bottom: 0.8rem;
+	margin-top: 6rem;
+}
+.sign-up-flow .location-signUp-form .company-user-name span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.15rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.sign-up-flow .location-signUp-form .company-text span {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.47;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--slate-gray);
+	display: inline-block;
+	width: 37.4rem;
+}
+.sign-up-flow .location-signUp-form .saveButton button {
+	background-color: var(--red);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.4rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--white);
+	padding-left: 0;
+	text-transform: uppercase;
+}
+.sign-up-flow .location-signUp-form .company-user-icon {
+	border: 0.1rem solid var(--gray);
+	position: absolute;
+	top: 3.8rem;
+	height: 0.1rem;
+	width: 50%;
+	left: 25%;
+}
+.sign-up-flow .location-signUp-form .company-user-icon .leftimg,
+.sign-up-flow .location-signUp-form .company-user-icon .rightimg {
+	position: absolute;
+	top: -1.2rem;
+}
+.sign-up-flow .location-signUp-form .company-user-icon .leftimg {
+	left: -0.1rem;
+}
+.sign-up-flow .location-signUp-form .company-user-icon .rightimg {
+	right: -0.1rem;
+}
+.sign-up-flow .location-signUp-form input::-webkit-input-placeholder {
+	font-size: 1.1rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	color: var(--slate-gray);
+	text-transform: capitalize;
+}
+.sign-up-flow .location-signUp-form #map {
+	border-radius: 1rem;
+	width: 30rem;
+	height: 15.8rem;
+	margin: 0 auto;
+}
+.sign-up-flow .location-signUp-form .saveButton {
+	margin-top: 1rem;
+}
+.sign-up-flow .location-signUp-form #pac-input {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.2rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	color: var(--brown);
+	padding-right: 2rem;
+}
+.side-stack .cross-button {
+	cursor: pointer;
+	position: absolute;
+	right: 1.8rem;
+}
+.side-stack .cross-button img {
+	width: 1.5rem;
+}
+#mapSearchResult ul,
+#mapSearchResultForIndividual ul {
+	padding: 0;
+	list-style: none;
+	text-align: left;
+	box-shadow: 0 0.4rem 0.9rem 0.1rem rgba(168, 168, 168, 0.34);
+	border-bottom: solid 0.1rem var(--gray) !important;
+	border-radius: 0.3rem !important;
+	margin: 0 auto;
+}
+#mapSearchResult ul li.mapListing,
+#mapdivForIndividual ul li.mapListing {
+	color: var(--black);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	cursor: pointer;
+	border-bottom: 0.1rem solid var(--gray);
+	font-weight: 500;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#mapSearchResult ul li.mapListing:hover,
+#mapdivForIndividual ul li.mapListing:hover {
+	background: var(--dark-white);
+}
+
+.sign-up-flow .location-signUp-form #inputLocation {
+	padding-right: 1rem;
+}
+.sign-up-flow .location-signUp-form #mapdiv,
+.sign-up-flow .location-signUp-form #mapdivForIndividual {
+	height: 15rem;
+	width: 30rem;
+	margin: 0 auto;
+	box-shadow: 0.02rem 0.2rem 0.3rem 0 rgba(214, 219, 225, 0.79);
+}
+#OpenLayers_Control_Zoom_5,
+.olAlphaImg,
+#OpenLayers_Control_Attribution_7 {
+	display: none;
+}
+
+.user_welcomename {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem !important;
+	font-weight: 600 !important;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.4rem !important;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--black) !important;
+}
+.company-text {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem !important;
+	font-weight: 500 !important;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.1rem !important;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: var(--slate-gray);
+}
+.sign-up-flow .individual-signUp-form .saveButton button {
+	/* background-color: var(--red);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem !important;
+	font-weight: 600 !important;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.1rem;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--white) !important;
+	text-transform: uppercase; */
+	height: 5rem !important;
+	width: 100%;
+	/* border-radius: 0.3rem !important;
+	position: relative;
+	z-index: 9;
+	box-shadow: 0.02rem 1rem 3rem 0 rgba(241, 68, 68, 0.15) !important;
+	cursor: pointer; */
+}
+.welocm-page-m {
+	margin-bottom: 3rem;
+}
+.caret-welcom-page {
+	position: absolute;
+	top: 1.2rem;
+	right: 1.6rem;
+}
+/************ Location Sign Up Form******************/
+
+/* invite page popup start here */
+.invitation-popup-body {
+	border-radius: 0.3rem;
+	border: solid 0.1rem var(--gray);
+	background-color: var(--white);
+	padding: 0rem 0rem;
+	position: relative;
+	/* top: 0%;
+	left: 50%;
+	transform: translate(-50%, 20%); */
+	width: 80%;
+	margin: 0rem auto;
+}
+.main-invitation-part {
+	margin: 1rem 5rem 5rem 5rem;
+}
+.suggestion-skip {
+	position: absolute;
+	right: 7.8rem;
+	top: 4.3rem;
+	z-index: 9;
+}
+.skip-align {
+	position: absolute;
+	right: 5rem;
+	top: 4.3rem;
+	z-index: 9;
+}
+.pending-background {
+	border: solid 0.1rem var(--dark-gray) !important;
+	color: var(--slate-gray) !important;
+	background-color: var(--dark-slate-gray) !important;
+}
+.suggestion-skip a,
+.skip-align a {
+	color: var(--black);
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1.9rem;
+	letter-spacing: 0.15rem;
+	text-decoration: underline;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+}
+.common-inputField-section {
+	overflow: scroll;
+    max-height: 17.7rem;
+    height: inherit !important;
+}
+.invite-co-worker-section {
+	/* height: 22.5rem; */
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--gray);
+	background-color: #f4f5f5;
+	width: 100%;
+}
+.invite-banner-img {
+	width: 100%;
+}
+.invite-banner-text {
+	position: absolute;
+	top: 2rem;
+	left: 5rem;
+}
+.clearfixInvite::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.co-worker-left {
+	float: left;
+	width: 65%;
+}
+.co-worker-right {
+	float: left;
+	width: 33%;
+}
+.invite-banner-text .inviteTitle {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.41;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.inviteTitle {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.3rem;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+#mynavbar {
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+}
+.invite-banner-text .invitesubTile {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.73;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	margin-top: 1rem;
+	display: block;
+}
+.invitesubTile {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.73;
+	letter-spacing: 0.06rem;
+	color: var(--brown);
+	margin-top: 1rem;
+	display: block;
+}
+.common-invite-padding {
+	padding: 5rem 0rem 5rem 2.4rem;
+}
+.co-worker-right .invite-image-part {
+	text-align: center;
+}
+.invite-image-part img {
+	padding-top: 2.3rem;
+}
+
+.margin-l-r-common {
+	margin: 0rem 5rem;
+}
+.common-subtitle-invite {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.47;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	text-align: left;
+}
+.invite-banner-main {
+	position: relative;
+	width: 100%;
+}
+.margin-common-row {
+	margin-top: 0.8rem;
+}
+.invite-input-common {
+	padding: 1.3rem !important;
+	border-radius: 0.1rem !important;
+	border: solid 0.1rem var(--gray) !important;
+	background-color: var(--dark-white) !important;
+	width: 100% !important;
+	color: var(--black);
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+}
+.common-color-btn {
+	padding: 0.8rem 1.7rem;
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--red);
+	background-color: var(--red);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--white);
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.margin-more-field {
+	margin-top: 1rem;
+}
+.add-more-field {
+	cursor: pointer;
+	margin-top: 1rem;
+}
+.add-more-style {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+	margin-left: 0.8rem;
+}
+.invite-btn-right {
+	text-align: right;
+	/* padding-right: 3.9rem; */
+}
+button:focus {
+	outline: unset !important;
+}
+.remove_button-visivility {
+	visibility: hidden;
+}
+.truncate-width {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	width: 11.2rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+}
+#invitation-popup .row {
+	margin-right: 0rem !important;
+}
+.signup-invite-field {
+	width: 100%;
+	/* display: flex; */
+	/* justify-content: space-between; */
+}
+.signup-invite-field::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.input-invite-field {
+	float: left;
+	/* width: 46.1%; */
+	/* margin-right: 2.3rem; */
+	margin-bottom: 0.8rem;
+}
+.input-remove-field {
+	float: left;
+    width: 2%;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+}
+.saveButton {
+	margin-top: 0.4rem;
+}
+
+#coworker-skip {
+	padding: 0.8rem 1.5rem;
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--gray);
+	/* background-color: var(--red); */
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--black);
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 0.2rem;
+	box-shadow: 0 0.5rem 0.8rem 0 var(--gray);
+}
+#suggestionpage-skip {
+	padding: 0.8rem 1.7rem;
+	border-radius: 0.1rem;
+	border: solid 0.1rem var(--gray);
+	/* background-color: var(--red); */
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--black);
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 0.2rem;
+	box-shadow: 0 0.5rem 0.8rem 0 var(--gray);
+}
+.common-position-error {
+	position: relative;
+	margin-bottom: 1rem;
+}
+.tooltips-common-error {
+}
+#locationError {
+	padding: 0
+	/* width: 100%; */
+	/* position: absolute; */
+}
+#companyNameIDError {
+	/* padding: 0rem 0rem 0rem 0rem; */
+	/* width: 50.1rem; */
+	/* right: -52.2rem; */
+	/* margin-bottom: 5rem !important; */
+	/* height: 400px !important; */
+	width: 100%;
+	/* clear: both; */
+	/* float: left; */
+}
+#companyNameIDErrorMsg {
+	padding: 0rem 0rem;
+	/* margin-bottom: -10rem; */
+}
+#departmentNameIDErrorMsg {
+	padding:0;
+	/* width: 100% !important; */
+}
+#titleNameIDErrorMsg {
+	padding: 0;
+	/* margin-bottom: 110px; */
+	/* width: 100% !important; */
+}
+#titleNameIDError {
+	/* padding: 0rem 0rem 0rem 0rem; */
+	/* width: 50.1rem; */
+	/* right: -52.2rem; */
+	width: 100%;
+}
+#departmentNameIDError {
+	/* padding: 0rem 0rem 0rem 0rem; */
+	/* width: 50.1rem; */
+	/* right: -52.2rem; */
+	width: 100%;
+}
+#workNameIDError {
+	padding: 0.7rem 0rem 0.7rem 0rem;
+}
+#skillError {
+	/* position: absolute;
+    left: 0;
+    top: 10.8rem;
+    box-shadow: unset; */
+}
+.subtitle-error-fullName {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.2rem !important;
+	font-weight: 500 !important;
+	color: var(--red);
+	display: inline-block;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-style: normal;
+	line-height: normal;
+}
+.tringle-NameEmail {
+    position: absolute;
+    top: 0 !important;
+    left: -0.8rem;
+	display: none;
+}
+#inputLocation {
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.46;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+}
+.search-result-parent {
+	position: relative;
+}
+#skills-search-result ul {
+	list-style-type: none;
+	padding: 0rem;
+	margin: 0rem;
+	background-color: var(--white);
+	overflow-y: scroll;
+	height: 10rem;
+	min-height: 15rem;
+	position: absolute;
+	z-index: 999999999999999;
+	width: 100%;
+	border: 0.1rem solid var(--gray);
+}
+.expert-label-section ul li:hover {
+	background: var(--dark-white);
+}
+#skills-search-result ul li {
+	border-bottom: 0.1rem solid var(--gray);
+	padding: 1rem 1.3rem !important;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem !important;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	color: var(--black) !important;
+	cursor: pointer !important;
+	text-transform: capitalize !important;
+}
+.locationList {
+	border: 0.1rem solid var(--gray);
+	border-radius: 0.3rem;
+	box-shadow: 0 0.2rem 0.4rem 0.1rem rgb(83 83 83 / 35%);
+	background-color: var(--white);
+}
+
+.locationList ul {
+	list-style-type: none;
+	padding: 0rem;
+	margin: 0rem;
+	/* overflow-y: scroll; */
+	height: auto;
+	max-height: 16rem;
+}
+.locationList ul li {
+	border-bottom: 0.1rem solid var(--gray);
+	padding: 0.7rem 1.3rem;
+	text-align: left;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.8rem;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	cursor: pointer;
+}
+.star-red-color {
+	color: var(--red);
+	display: inline-block;
+}
+@media (max-width: 1700px) {
+	.input-invite-field {
+		width: 45.1%;
+		/* margin-right: 1.6rem; */
+	}
+	.invite-btn-right {
+		padding-right: 4.9rem;
+	}
+}
+
+@media (max-width: 1680px) {
+	.invite-image-part img {
+		padding-top: 4.8rem;
+	}
+}
+
+@media (max-width: 1600px) {
+	.inviteTitle {
+		font-size: 1.5rem;
+	}
+	.invitesubTile {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 1500px) {
+	.add-service-offer-input {
+		height: 5.5rem !important;
+	}
+	.invite-btn-right {
+		padding-right: 3.5rem;
+	}
+	.signup-subtitle-wc {
+		font-size: 1.4rem !important;
+	}
+	.user_welcomename {
+		font-size: 1.6rem !important;
+	}
+	.skip-align {
+		right: 5rem;
+		top: 3.2rem;
+	}
+}
+@media (max-width: 1440px) {
+	.inviteTitle {
+		font-size: 1.4rem;
+		line-height: 2.3rem;
+	}
+	.invitesubTile {
+		font-size: 1.3rem;
+	}
+	.invite-image-part img {
+		/* width: 90%; */
+		/* height: 187px; */
+		padding-top: rem;
+	}
+}
+
+@media (max-width: 1400px) {
+	.margin-l-r-common {
+		margin: 0rem 3rem;
+	}
+
+	.suggestion-skip {
+		top: 3.3rem;
+	}
+	.common-invite-padding {
+		padding: 3.6rem 0rem 3.6rem 2.4rem;
+	}
+	.inviteTitle {
+		line-height: 2.3rem;
+	}
+	.invite-image-part img {
+		padding-top: 3.2rem;
+	}
+	.main-invitation-part {
+		margin: 1rem 5rem 2rem 5rem;
+	}
+	.subtitle-error-fullName {
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.add-service-offer-input {
+		height: 4.5rem !important;
+	}
+	.sign-up-flow .individual-signUp-form .saveButton button {
+		height: 4.5rem !important;
+	}
+	.profile-common-box-style {
+		padding: 2rem 7rem 2rem 7rem;
+	}
+	.sign-up-flow .company-signUp-form .saveButton button {
+		height: 4.5rem !important;
+	}
+	#individual_user_info {
+		margin-top: -3rem;
+	}
+	.sign-up-flow .individual-signUp-form .company-user-name {
+		margin-bottom: 0rem;
+	}
+	.sign-up-flow .individual-signUp-form .company-text {
+		margin-bottom: 1.5rem;
+		margin-top: 1rem;
+	}
+	#expertError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+	#freeLocationError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+	#workNameIDError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+	#skillError {
+		padding: 0.2rem 0rem 0.2rem 0rem;
+	}
+}
+@media (max-width: 1330px) {
+	.invite-image-part img {
+		padding-top: 5.6rem;
+	}
+}
+
+@media (max-width: 1300px) {
+	.input-invite-field {
+		/* margin-right: 1.4rem; */
+		width: 45.1%;
+	}
+	.invite-btn-right {
+		padding-right: 3.1rem;
+	}
+	#companyNameIDError {
+		/* width: 34.1rem; */
+		right: -36.2rem;
+		/* margin-bottom: 1rem; */
+		top: -1rem;
+	}
+	#departmentNameIDError {
+		/* width: 34.1rem; */
+		right: -36.2rem;
+		margin-bottom: 1rem;
+		top: 0.2rem;
+	}
+	#titleNameIDError {
+		/* width: 34.1rem; */
+		/* right: -36.2rem; */
+		/* margin-bottom: 1rem; */
+		top: 0.2rem;
+	}
+
+	#locationError {
+		/* right: -36.2rem; */
+		/* width: 34.2rem; */
+		top: 0.2rem;
+	}
+	.tringle-NameEmail {
+		position: absolute;
+		top: 41%;
+		left: -0.8rem;
+	}
+	#individual_user_info {
+		margin-top: -5rem;
+	}
+	.sign-up-flow .individual-signUp-form .saveButton button {
+		font-size: 1.5rem !important;
+		font-weight: 600 !important;
+	}
+}
+@media (max-width: 1200px) {
+	.input-invite-field {
+		width: 91%;
+		/* margin-right: 1.4rem; */
+	}
+}
+@media (max-width: 1100px) {
+	.co-worker-left {
+		width: 100%;
+		float: none;
+	}
+	.co-worker-right {
+		width: 100%;
+		float: none;
+		display: none;
+	}
+	.invite-co-worker-section {
+		height: 100%;
+		width: 100%;
+	}
+	.margin-l-r-common {
+		margin: 0rem 0rem;
+		width: 100%;
+	}
+	.margin-common-row .col-md-6 {
+		margin-bottom: 0.6rem;
+	}
+	.invite-btn-right {
+		text-align: right;
+	}
+	.common-invite-padding {
+		padding: 3rem 0rem 3rem 2.4rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.tooltips-common-error {
+		/* width: 24.1rem; */
+		right: -25.1rem;
+	}
+	.password-signUp .tooltips-cont {
+		right: 40rem;
+		left: unset;
+		top: 5rem;
+	}
+
+	.invite-btn-right {
+		padding-right: 3rem;
+	}
+	.add-more-field {
+		cursor: pointer;
+		margin-top: 0.9rem;
+	}
+	.suggestion-skip {
+		right: 2.6rem;
+		top: 3.2rem;
+	}
+	.profession-heading {
+		max-width: 21rem;
+	}
+	.login-logo-commmon-invite img {
+		margin-bottom: 1.5rem;
+	}
+	.common-invite-padding {
+		padding: 3rem 3rem 3rem 2.4rem;
+	}
+	.profile-common-box-style {
+		width: 53%;
+	}
+	#companyNameIDError {
+		/* width: 26.1rem; */
+		right: -27.2rem;
+		/* margin-bottom: 1rem; */
+		top: 0.2rem;
+	}
+
+	#departmentNameIDError {
+		/* width: 26.1rem; */
+		right: -27.2rem;
+		margin-bottom: 1rem;
+		/* top: 2rem; */
+	}
+}
+
+@media (max-width: 768px) {
+	.sign-up-flow .individual-signUp-form {
+		width: 55rem;
+	}
+	#location_user_info {
+		width: 61rem;
+	}
+	.invite-btn-right {
+		padding-right: 2.5rem;
+	}
+	.tooltips-common-error {
+		width: 29.1rem;
+		right: -12.6rem;
+		top: -0.5rem;
+	}
+	.invitation-popup-body {
+		width: 70%;
+	}
+	.skip-align {
+		right: 5.5rem;
+		top: 3rem;
+	}
+	.suggestion-skip {
+		right: 20.6rem;
+		top: 10rem;
+	}
+	.freelnace-common-card {
+		width: 48%;
+		float: left;
+	}
+	.profile-common-box-style {
+		width: 68%;
+	}
+	.suggestion-skip {
+		right: 20.6rem;
+		top: 10rem;
+	}
+	.invite-main-title {
+		font-size: 1.4rem;
+		padding-top: 5rem;
+	}
+	#suggestionpage-skip {
+		font-size: 1.2rem;
+	}
+	.login-logo-commmon-suggation img {
+		margin-bottom: 3rem;
+	}
+	#companyNameIDError {
+		width: 26.1rem;
+		right: -20.2rem;
+		margin-bottom: 1rem;
+		top: -1rem;
+	}
+	#departmentNameIDError {
+		width: 26.1rem;
+		right: -20.2rem;
+		margin-bottom: 1rem;
+		/* top: 2rem; */
+	}
+	#titleNameIDError {
+		width: 26.1rem;
+		/* right: -20.2rem; */
+		/* margin-bottom: 1rem; */
+		/* top: 7rem; */
+	}
+	#locationError {
+		right: -20.2rem;
+		width: 26.2rem;
+		/* top: 10rem; */
+	}
+}
+
+.search-result-parent ul li {
+	color: var(--black);
+}
+.common-dropdown-menu {
+	padding: 0rem;
+	margin: 0rem;
+	border-radius: 0.3rem;
+	box-shadow: 0 0.2rem 0.4rem 0.1rem rgba(83, 83, 83, 0.35);
+	border: solid 0.1rem var(--gray);
+	background-color: var(--white);
+	width: 100%;
+	height: auto;
+	overflow-y: scroll;
+	max-height: 20rem;
+	position: absolute;
+	z-index: 9;
+	left: 0;
+	top: 0.5rem;
+}
+.common-dropdown-menu li {
+	width: 100%;
+	border-bottom: 0.1rem solid var(--gray);
+	list-style-type: none !important;
+	background-color: var(--white);
+	padding: 1.5rem 1rem !important;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.4rem !important;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	/* line-height: 2.77; */
+	letter-spacing: 0.06rem;
+	color: var(--black);
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	/* display: inline-block; */
+	text-overflow: ellipsis;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-transform: lowercase;
+}
+.common-dropdown-menu li:hover {
+	background-color: var(--dark-white);
+}
+
+.common-dropdown-menu .li-highlight-hover {
+	background-color: var(--dark-white);
+}
+
+.common-dropdown-menu .li-highlight-hover:focus
+{
+	outline: none;
+}
+
+.locationList .li-highlight-hover
+{
+	background-color: var(--dark-white);
+}
+.locationList .li-highlight-hover:focus
+{
+	outline: none;
+}
+
+.common-dropdown-menu li:last-child {
+	border-bottom: 0rem solid var(--gray);
+}
+.common-dropdown-menu li .dropdown-list-items {
+	padding: 0.8rem 1.6rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.4rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.77;
+	letter-spacing: 0.06rem;
+	color: var(--black);
+}
+
+.input-invite-field-right {
+    margin-left: 2.3rem;
+    margin-right: 0;
+}
+
+.padding0 {
+    padding: 0px !important;
+}
+
+.tooltips-common-error {
+}
+
+.alertCommonMsg {
+    padding: 0px !important;
+    box-shadow: inherit !important;
+    margin: 0px !important;
+}
+#skillErrorMsg {
+    line-height: 2.3rem;
+}

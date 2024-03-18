@@ -1,0 +1,171 @@
+<!-- SignUp Profile for Individual/freelance user Starts -->
+<section id="individual_user_info" class="individual-signUp-form profile-common-box-style">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="login-logo-commmon">
+                <img src="images/melpapp-logo.svg" class='login-logo'>
+            </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 company-user-name welocm-page-m">
+            <span class="user_welcomename" id="welcomeName">{{LB01}}</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 company-text">
+            <span>{{LB02}}</span>
+            <!-- You need to fill out the details below in order to fully take advantage of MelpApp’s communication and collaboration possibilities. -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="compName input-label-top-common text-input-div common-position-error">
+                <label>
+                    <!-- onkeyup="callFreelanceTitle(this.value)" -->
+                    <input placeholder="{{PH06}} {{PH07}}" autocomplete="off" type="text" id="workNameID"
+                        class="searchKey" onkeyup="isValidateButton('individual', 'workNameID')" onblur="handleInputBlur('individual', 1)">
+                    <span> {{PH06}} <div class="star-red-color">*</div></span>
+                </label>
+                <!-- error msg full name start Darshan & Ram -->
+                <div class="tooltips-Email tooltips-common-error alertCommonMsg" id="workNameIDError" style="display:none">
+                    <div class="tooltipTextFullName">
+                        <div class="subtitle-error-fullName" id="workNameIDErrorText">
+                            {{ER09}}
+                        </div>
+                        <div class="tringle-NameEmail">
+                            <img src="images/triangle.svg" class="tringle-arrow">
+                        </div>
+                    </div>
+                </div>
+                <!-- error msg full name end -->
+                <div class="search-result-parent" id="work-search-result" style="display:none;">
+                </div>
+            </div>
+
+            <div class="Servicesoffered">
+                <div class="add-service-offer" id="expertise-list" style="display:none"></div>
+                <!-- onkeyup="callSearchExpertise(this.value)" -->
+                <input type="text" class="add-service-offer-input searchKey" id="skillsNameID" autocomplete="off"
+                    placeholder="{{PH08}} *" onkeyup="isValidateButton('individual', 'skillsNameID')" onblur="handleInputBlur('individual', 2)" onfocus="handleInputBlur('individual', 2)"/>
+
+                <!-- error msg full name start Darshan & Ram -->
+                <div class="tooltips-Email tooltips-common-error alertCommonMsg" id="skillError" style="display:none;width: 50%">
+                    <div class="tooltipTextFullName">
+                        <div class="subtitle-error-fullName" id="skillErrorMsg">
+                            {{ER05}}
+                        </div>
+                        <div class="tringle-NameEmail">
+                            <img src="images/triangle.svg" class="tringle-arrow">
+                        </div>
+                    </div>
+                </div>
+                <!-- error msg full name end -->
+                <div class="search-result-parent" id="skills-search-result" style="display:none;">
+                </div>
+            </div>
+
+            <div class="more-skil-labels" id="more-skil-labels" style="display:block">
+                {{LB03}}
+            </div>
+
+            <div class="tilName input-label-top-common text-input-div common-position-error" id="expert-label-dropdown">
+                <label>
+                    <!-- <input type="text" name="titleName" placeholder="Expertise Level  *" autocomplete="off"  onkeyup="searchservices(this.value)" id="serviceNameID">  -->
+                    <input type="text" name="titleName" placeholder="{{PH09}}  *" autocomplete="off" id="serviceNameID"
+                        readonly="" class="expertiseLevel" onclick="toggleExpertList()" onfocusout="hideExpertList()">
+                    <span>{{PH09}} <div class="star-red-color">*</div></span>
+                </label>
+                <section class="expert-label-section" id="expert-label-section" style="display:none">
+                    <ul>
+                        <li onclick="selectExpertise(this)">{{DD01}} </li>
+                        <li onclick="selectExpertise(this)">{{DD02}} </li>
+                        <li onclick="selectExpertise(this)">{{DD03}} </li>
+                    </ul>
+                </section>
+                <div class="caret-Icons">
+                    <img src="images/dropdown-black.svg" class="remove-service" onclick="toggleExpertList()"></span>
+                </div>
+                <!-- error msg full name start Darshan & Ram -->
+                <div class="tooltips-Email tooltips-common-error alertCommonMsg" id="expertError" style="display:none">
+                    <div class="tooltipTextFullName">
+                        <div class="subtitle-error-fullName" id="expertErrorMsg">{{ER06}}
+                        </div>
+                        <div class="tringle-NameEmail">
+                            <img src="images/triangle.svg" class="tringle-arrow">
+                        </div>
+                    </div>
+                </div>
+                <!-- error msg full name end -->
+            </div>
+
+            <div class="input-label-top-common text-input-div common-position-error">
+                <label>
+                    <!-- onkeyup="callAPIForIndividual();" -->
+                    <input type="text" id="inputLocation" name="" placeholder="{{PH04}} *" autocomplete="off"
+                        class="searchKey" onblur="handleInputBlur('individual', 4)" onkeyup="isValidateButton('individual', 'inputLocation')">
+                    <!-- search listing invite  section-->
+                    <span id="signupLocation">{{PH05}} <div class="star-red-color">*</div></span>
+                </label>
+
+                <!-- error msg full name start Darshan & Ram -->
+                <div class="tooltips-Email tooltips-common-error toolTipsCommonErrors" id="locationError" style="display:none">
+                    <div class="tooltipTextFullName">
+                        <div class="subtitle-error-fullName" id="locationErrorMsg">
+                            {{ER04}}
+                        </div>
+                        <div class="tringle-NameEmail">
+                            <img src="images/triangle.svg" class="tringle-arrow">
+                        </div>
+                    </div>
+                    <input type="hidden" value="" id="cityId" name="cityId" />
+                </div>
+                <div id="locationList" class="locationList" style="display: none;">
+                    <div class="spinner-body mainPage" id="locationLoader" style="visibility: hidden;">
+                        <div id="location-spinner-bar" class="ldio-dpbvxcmmyw spinner">
+                            <div>
+                            <div></div>
+                            </div>
+                            <div>
+                            <div></div>
+                            </div>
+                            <div>
+                            <div></div>
+                            </div>
+                            <div>
+                            <div></div>
+                            </div>
+                            <div>
+                            <div></div>
+                            </div>
+                            <div>
+                            <div></div>
+                            </div>
+                            <div>
+                            <div></div>
+                            </div>
+                            <div>
+                            <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="locationEmptyState" class="hideCls">
+                        <span>No record found</span>
+                    </div>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12 saveButton">
+            <button class="submitButtonGlobal inActiveBtn" disabled id="getStartedBtn" type="button" onclick="setIndividualDetails();">{{BT01}}</button>
+        </div>
+    </div>
+</section>
+<!-- SignUp Profile for Individual/freelance user Ends -->

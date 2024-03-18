@@ -1,0 +1,14 @@
+.welcome-name{
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.46;
+    letter-spacing: 0.06rem;
+    color: #222020;
+}
+.welcome-subtitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2;
+    letter-spacing: 0.06rem;
+    color: #554d4d;
+}

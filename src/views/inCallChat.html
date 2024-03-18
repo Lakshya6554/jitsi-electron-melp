@@ -1,0 +1,174 @@
+<link defer async rel="stylesheet" href="./css/custom/chat.css">
+<!--side-Nav-Add-To-Call-Start-->
+<section class="mySideNav right-sidebar screenHeight">
+    <!--chatFormBody-Start-->
+    <div class="chatFormBody">
+        <!--NetworkInternetStrip-Start-->
+        <div class="networkInternetStrip hideCls" id="networkInternetStrip">
+            <div class="networkInternetStripBody">
+                <div class="networkInternetStripContent">
+                    <p id="networkIssue">Chat disconnected.Please check your internet connection or refresh the page.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--NetworkInternetStrip-End-->
+        <!-- language Detection start here (commented for now)-->
+        <!-- <div class="languageDetection langDetectOnCall" id="languageDetectionOnCall" style="display: none;">
+            <div class="languageDetectionStrip">
+                <div class="languageDetectionStripLeft">We have detected a different language. If you want, please
+                    enable the translator from the below input area. </div>
+                <div class="close-invite-Incall" id="detectCloseOnCall"><img src="images/icons/callCancle.svg" class="">
+                </div>
+            </div>
+        </div> -->
+        <!-- language Detection end here -->
+        <div class="ChatFormPanel">
+            <input type="hidden" id="converId" value="" />
+            <input type="hidden" id="toId" value="" />
+            <div class="ChatFormHeader msgChatHeader">
+                <div class="chatHeaderHeading">
+                    <div class="common-modal-header" id="incallMessageHead">In-Call Message</div>
+                    <!-- <span></span> -->
+                    <div class="close-invite-Incall" onclick="closeInCallChat()"><img src="images/icons/close.svg"
+                            class="">
+                    </div>
+                </div>
+            </div>
+            <div class="internet-connection-error hideCls" id="inCallChatError" style="z-index: 10 !important">
+                <div>Please wait while we are trying to connect.</div>
+            </div>
+            <div class="chatFormUser message-container " id="incall-chatCellPanel">
+                <div class="reciever-ul">
+                    <ul class=""></ul>
+                </div>
+            </div>
+            <div class="chat-form chat-form-cont chat-input-section" id="oncall-chat-input">
+                <div class="input-chat-border">
+                <div class="input-chat-main-section">
+                    <!-- <span class="input-field-chat input-group-btn input-group-btn-cont">
+                         <label class="fileContainer">
+                            
+                            <img src="images/icons/attachment.svg" class="attachicon1_conts">
+                            <input type="file" id="uploadFileOnChat" class="uploadFileOnChat" multiple=""
+                                onchange="sendDocument(event, true)" autocomplete="off">
+                        </label>
+                    </span> -->
+                      <!-- characterlimit start-->
+                      <div class="characterlimitInCall">
+                        <div class="characterlimitInput" id="chatMessageCount">0</div>
+                        <div class="characterlimittest">&nbsp;/ 2000</div>
+                     </div>
+                      <!-- characterlimit end-->
+                    <div id="textInputField" placeholder="Write a message..." class="chat-input-area chat-input-label">
+                    </div>
+                  
+                </div>
+            </div>
+                    <!--input Chat Icons-->
+                    <div class="chatIconsBar">
+                        <div class="attached-section chatA1">
+                            <div class="fileA3" onclick="showUploadOption()" tooltip="Attachment" flow="up">
+                                <img src="images/icons/attachmentIcon.svg" class="default-search-icons-file">
+                                <img src="images/icons/attachmentIconhover.svg" class="hover-search-file">
+                                <!-- <input type="file" id="uploadFileOnChat" class="uploadFileOnChat file-hide-chat" multiple=""
+                                    onchange="sendDocument(event, true)" autocomplete="off"> -->
+                                    <div class="fileUploadOption hideCls" id="uploadOption">
+                                          <ul>
+                                             <!-- <li onclick="googleDriveAuthenticate()"> <span class="uploadDriveIcons"><img src="images/icons/googleDrive.svg" class="driveIcons"></span>Google Drive</li> -->
+                                             <li onclick="getOneDriveFiles()">  <span class="uploadDriveIcons"><img src="images/icons/oneDrive.svg" class="driveIcons"></span>OneDrive</li>
+                                             <li>
+                                                <span class="uploadDriveIcons"><img src="images/icons/myComputer.svg" class="driveIcons"></span>
+                                                <input type="file" id="uploadFileOnChat" class="file-hide-chat uploadFileOnChat" multiple="" onchange="sendDocument(event, true)">
+                                                My Computer
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="fileUploadOption hideCls" id="driveAuthenticOption">
+                                          <ul>
+                                             <li>
+                                                <!--Add buttons to initiate auth sequence and sign out-->
+                                                <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+                                             </li>
+                                             <li><button id="signout_button" onclick="handleSignoutClick()">Sign
+                                                   Out</button>
+                                             </li>
+                                          </ul>
+                                       </div>
+                        </div>
+                         </div>
+                         <div class="attached-section1 chatA2" onclick="toggleEmojiContainer('textInputField', event)">
+                   
+                            <div class="fileF2" tooltip="Emoji" flow="up">
+                               <!-- <img src="images/icons/emojiIcon.svg" class="default-search-icons-file">
+                               <img src="images/icons/emojiIconhover.svg" class="hover-search-file"> -->
+                            </div>
+                         </div>
+                         <div class="gifArea chatA3" onclick="checkGIFPermission()" title="Gif">
+                            <div class="fileA4" tooltip="Gif" flow="up">
+                               <div class="hideCls" id="loadGifArea">
+                                  <input type="text" placeholder="Search GIF" id="searchGif"
+                                     onkeyup="typeGifSearch()" autocomplete="off" onclick="gifEvent(event)">
+                                  <!-- Loader start here -->
+                                  <div id="gifWaitingState" class="hideCls">
+                                     <div id="loading-bar-spinner" class="spinner">
+                                        <div class="spinner-icon"></div>
+                                     </div>
+                                  </div>
+                                  <!-- Loader end here -->
+                                  <!-- <span class="gifCaret"></span> -->
+                                  <div class="allGif"></div>
+                                  <div class="gifPopup" id="gifPopup" onclick="viewTermsGiphy(event)">
+                                     <h2>Powered By Giphy <span class="view-terms-giphy">
+                                           View Terms. </span>
+                                     </h2>
+                                  </div>
+
+                               </div>
+                               <div class="gifPopupPanel inCallGifPanel hideCls" id="viewTermsGiphy">
+                                  <!-- <p>When you serach for images, your search terms are sent to GIPHY. To learn more, see GIPHY's <a href="https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy" target="_blank" class="giphyPolicy">Privacy Policy</a> and <a href="https://support.giphy.com/hc/en-us/articles/360020027752-GIPHY-User-Terms-of-Service" class="giphyPolicy" target="_blank">Terms of Service</a>.</p> -->
+                                  <p>When you search for images, your search terms are sent to GIPHY. To learn
+                                     more, see GIPHY’s <a
+                                        href="https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy"
+                                        target="_blank" class="giphyPolicy">Privacy Policy</a> and <a
+                                        href="https://support.giphy.com/hc/en-us/articles/360020027752-GIPHY-User-Terms-of-Service"
+                                        class="giphyPolicy" target="_blank">Terms of Service</a>.</p>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="language-translate mainTranslationDiv chatA4">
+                            <div class="mainTranslationDiv fileA5" onclick="openTranslationPopup()"
+                                title="" tooltip="Enable Translation" flow="up">
+                                <!-- <img src="images/icons/translatorBlackBg.svg" class="attachicon1_conts"> -->
+                             </div> 
+                       </div>
+                    </div>
+                    <div class="send-btn-section">
+                        <span class="sendBtnAddCall" id="chatSendBtn" title="Send">
+                            <img src="images/icons/send.svg" class="send-icon">
+                        </span>
+                    </div>
+                <!--chat-replysection-start- #1903-->
+                <div id="chatReply-section" class="incall-chatreply-section hideCls" data-reply="">
+                    <div id="cancelEvent" class="reply-close-icon" onclick="cancelReply()">
+                        <img src="images/icons/cancel-requests.svg">
+                    </div>
+                    <div class="replybox replyboxnew">
+                        <div class="reply-image-section">
+                            <div class="reply-image-new">
+                                <div id="replyThumbImg" class="reply-image-new-inner"><img src=""></div>
+                            </div>
+                        </div>
+                        <div id="replycontent" class="relpyContentBox">
+                            <h5 class="modal-title replyusername" id="replyusername"></h5>
+                            <p class="replymsgnew" id="replymsg"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--chat-replysection-end- #1903-->
+            </div>
+        </div>
+    </div>
+    <!--chatFormBody-End-->
+</section>
+<!--side-Nav-Add-To-Call-Start-->

@@ -1,0 +1,211 @@
+<!-- <div class="adminDashBoard hideCls">
+    <div class="adminTopStrip">
+        <div class="adminTopHeader">
+            <span>Add New User</span>
+        </div>
+        <div>You can add up-to 10 users. All users are given a temporary passwords.</div>
+    </div>
+    <div class="adminContainer">
+        <div class="adminRow">
+            <div class="manualInvite">
+                <div class="inviteContainer">
+                    <div class="adminTotalUser">
+                        <span>Add Users</span>
+                    </div>
+                    <div id="inputContainer">
+                        <div class="form-row manualInviteContainer" id="manualInvite1">
+                            <div class="form-group col-md-3">
+                              <label for="firstName">First Name</label>
+                              <input type="email" class="form-control formInput userFname" id="userFirstName1" placeholder="Enter Your First Name" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="lastName">Last Name</label>
+                                <input type="email" class="form-control formInput userLname" id="userLastName1" placeholder="Enter Your Last Name" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control formInput userEmail" id="userEmail1" placeholder="Enter Your Email Address" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                              <label for="domain">Domain</label>
+                              <select id="userDomain1" class="form-control userDomain" required>
+                                <option value="@grr.la" selected>@grr.la</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="form-row manualInviteContainer" id="manualInvite2">
+                            <div class="form-group col-md-3">
+                              <label for="firstName">First Name</label>
+                              <input type="email" class="form-control formInput userFname" id="userFirstName2" placeholder="Enter Your First Name" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="lastName">Last Name</label>
+                                <input type="email" class="form-control formInput userLname" id="userLastName2" placeholder="Enter Your Last Name" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control formInput userEmail" id="userEmail2" placeholder="Enter Your Email Address" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                              <label for="domain">Domain</label>
+                              <select id="userDomain2" class="form-control userDomain" required>
+                                <option value="@grr.la" selected>@grr.la</option>
+                              </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <button class="cancelButtonGlobal" onclick="moreButton(1)">Add Row</button>
+                        <button class="cancelButtonGlobal" onclick="moreButton(0)">Delete Row</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="confirmationContainer">
+        <button class="cancelButtonGlobal" onclick="cancelManualRegistration()">Cancel</button>
+        <button id="registerUserManual" class="submitButtonGlobal" onclick="registerUserManually()">Add User</button>
+    </div>
+
+    <div class="adminNotifcationContainer">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">I’d like to upload a CSV with User information</label>
+        </div>
+
+        <div class="adminNotifcation">
+            <div class="adminNotifcationtopSttrip">
+                <span>Notifications</span>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="addNewUser" id="adminInvite">
+    <div class="addNewUserContainer">
+        <iframe id="downloadFileFrame" style="display:none;"></iframe>
+       <div class="addNewUserRow">
+          <div class="adNewUserHeader">
+             <span id="heading">Add New User</span>
+             <p id="subHeading">You can add up-to 10 users. All users are given a temporary passwords.</p>
+          </div>
+          <div class="userInformation" id="manualRegistration">
+             <div class="userInformationRow">
+                <form class="UserForm">
+                   <h2>User Information</h2>
+                   <div class="userAdminWrap" id="inputContainer">
+                        <div class="userFormGroupRow manualInviteContainer" id="manualInvite1">
+                            <!-- <div class="userFormGroup">
+                                <label>First Name<span>*</span></label>
+                                <input type="text" id="userFirstName1" name="" class="userControl" placeholder="First Name">
+                            </div> -->
+                            <div class="userFormGroup">
+                                <label>Full Name<span>*</span></label>
+                                <input type="text" id="userName1" name="" class="userControl" placeholder="Full Name">
+                            </div>
+                            <div class="userFormGroup">
+                                <label>Email Address <span>*</span></label>
+                                <input type="text" id="userEmail1" name="" class="userControl" placeholder="Email Address">
+                            </div>
+                            <div class="userFormGroup">
+                                <label>Phone Number</label>
+                                <input type="text" id="userPhone1" name="" class="userControl" placeholder="Phone Number">
+                            </div>
+                        </div>
+                    </div>
+                   <div class="addReomveBtnRow">
+                      <button type="button" class="adminAddBtn" onclick="moreButton(1)"><i class="logOut"><img src="images/admin/icons/add.svg"></i>Add Row</button>
+                      <button  type="button" class="adminAddBtn" onclick="moreButton(0)"><i class="logOut"><img src="images/admin/icons/remove.svg"></i>Delete Row</button>
+                   </div>
+                </form>
+             </div>
+             
+          </div>
+       </div>
+       <div class="addUserRowBtn">
+        <div class="adminCheckBox">
+            <div class="adminSwith" onclick="enableDisableBulkReg()">
+               <input type="checkbox" value="yes" id="enableDisableBulkReg">
+               <label for="wp-comment-cookies-consent">I’d like to upload a CSV with User information
+               </label>
+            </div>
+         </div>
+         <div class="adButtonA4" id="registrationButton">
+            <button class="addUserBtn" onclick="cancelManualRegistration()">Cancel</button>
+            <button id="registerUserManual" class="addUserBtnDelete" onclick="registerUserManually()">Add User</button>
+        </div>
+    </div>
+       <div class="csvDownloadPopup hideCls" id="bulkRegistration">
+          <div class="csvDownloadPopupBody">
+             <div class="csvDownloadPopupContainer">
+                <div class="downloadCvFileColum">
+                   <ul>
+                      <li>
+                         <span>1</span>
+                         <div class="dowloadCsvHead">
+                            Download CSV File 
+                         </div>
+                         <div class="dowloadCsvBtn">
+                            <button class="downloadBlank" onclick="downloadSample(true)">Download Sample CSV File</button>
+                            <button class="downloadBlank" onclick="downloadSample()">Download Blank CSV Template</button>
+                         </div>
+                      </li>
+                      <li>
+                        <span>2</span>
+                         <div class="dowloadCsvHead">
+                            Add or edit user info in CSV template. 
+                         </div>
+                         <div class="dowloadCsvBtn">
+                            <table class="content-table">
+                               <thead>
+                                 <tr>
+                                    <td>Full Name</td>
+                                    <td>Email</td>
+                                    <td>Phone number</td>
+                                 </tr>
+                               </thead>
+                               <tbody>
+                                  <tr class="active-row">
+                                     <td>Joseph Black</td>
+                                     <td>joseph.black@melpapp.com</td>
+                                     <td>61234567890</td>
+                                  </tr>
+                               </tbody>
+                            </table>
+                         </div>
+                      </li>
+                      <li>
+                        <span>3</span>
+                         <div class="dowloadCsvHead">
+                            Upload CSV File 
+                         </div>
+                         <div class="dowloadCsvBtn">
+                            <!-- <input type="file" class="downloadBlank" value="Attach CSV FILE"/> -->
+                            <input class="" type="file" id="bulkRegistrationPicker" onchange="uploadBulkRegistration(event)"/>
+                            <label class="choseFile" for="bulkRegistrationPicker">choose a file</label>
+                            
+                           </div>
+                         </div>
+                         <div class="maxLenth">Max Upload Size: <span>5MB</span></div>
+                      </li>
+                   </ul>
+                </div>
+             </div>
+             <div class="csvErrorMsg">
+                 <h2>Avoid common errors</h2>
+                 <ul>
+                     <li>You can add up-to 1500 users per CSV file.</li>
+                     <li>Each user must have a unique username email address.</li>
+                     <li>Email addresses can’t use accent marks, like à or ñ.</li>
+                     <li>Email addresses can’t begin with a period (.).</li>
+                     <li>The part of the email address before @symbol can have 64 characters or less. </li>
+                     <li>Username email addresses may only use letters, numbers, and the following special characters ‘.-_!#^~</li>
+                     <li>Alternate email addresses may only use letters, numbers, and the following special characters: !#$%&*+-/=?^_|~</li>
+                     <li>Save as a CSV (comma delimited) file with 16 columns.</li>
+                 </ul>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

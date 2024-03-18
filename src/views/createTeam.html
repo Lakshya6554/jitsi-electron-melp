@@ -1,0 +1,111 @@
+<section id='createTeam'>
+    <div class="teamPopup-common">
+        <!-- Modal content -->
+        <div class="create-team-main-section">
+            <!--  body section start -->
+            <div class="new-teamSection">
+                <div class="create-team-title" id="createTeamHeading">{{LB03}}</div>
+                <!--create-group-pop-section-start-here-->
+                <div class="topic-inner-section group-padding-popup">
+                    <div class="upload-main-section clearfix">
+                        <div class="icon-upload-section">
+                            <div class="create-team-icon-details">
+                                <div class="group-icons-show">
+                                    <!-- Loader start -->
+                                    <div id="teamProfilePicLoader" class="hideCls">
+                                        <div class="uploading-label-file">{{LB09}}
+                                            <span id="uploadTeamProfileCount"> 0%</span>
+                                        </div>
+                                    </div>
+                                    <!-- Loader end -->
+                                    <img id="group-profilepic" src="images/creatTeamDefalut.svg"
+                                        class="group-icon-uploaded">
+                                </div>
+                            </div>
+                            <!-- upload-section-box-start-->
+                            <div class="upload-section">
+                                <div class="upload-name">
+                                    <span class="upload-icon-name word-break-upload-label">{{BT01}}</span>
+                                    <span class="uploaded-icon"> <img src="images/cameraicon.svg"></span>
+                                    <input type="file" name="image" value="" class="upload-file-area iconUpload"
+                                        title="{{PH09}}">
+                                </div>
+
+                            </div>
+                            <!-- upload-section-box-end-->
+                        </div>
+                        <!-- input-details-box-start-->
+                        <div class="input-create-section">
+                            <div class="topic-name-section">
+                                <span class="topic-title" id="teamNameTitle">{{LB07}} </span><span
+                                    class="topic-start">*</span>
+                            </div>
+                            <div class="topic-input-section">
+                                <input type="text" id="teamName" name="" class="group-input"
+                                    placeholder="Enter your group name" maxlength="50">
+                                <div class="teamOrGroupDescCount">
+                                    <input type="hidden" name="teamNameCarLimit" id="groupNameCarLimit" value="50">
+                                    <span class="teamOrGroupDescIncCount" id="userTeamNameCounter">0</span>
+                                    <span class="limitcharacter">/ 50</span>
+                                </div>
+                            </div>
+                            <!-- input-details-box-end-->
+                            <!-- description-details-box-start-->
+                            <div class="description-details">
+                                <span class="topic-title">{{LB05}}</span>
+                            </div>
+                            <div class="description-area">
+                                <textarea id="teamDesc" class="group-area"
+                                    placeholder="Write something about this group …" maxlength="300"></textarea>
+                                <div class="teamOrGroupDescCount">
+                                    <input type="hidden" name="descCarLimit" value="300">
+                                    <span class="teamOrGroupDescIncCount" id="userDescriptionCounter">0</span>
+                                    <span class="limitcharacter">/ 300</span>
+                                </div>
+                            </div>
+                            <!-- description-details-box-end-->
+                        </div>
+                    </div>
+                    <div class="clearboth">
+                    </div>
+                    <!-- border section-start-->
+                    <div class="border-details">
+                    </div>
+                    <!-- border section-end-->
+                    <!-- add member-start-->
+                    <div class="add-Members-section">
+                        <span class="topic-title">{{LB06}} </span><span class="topic-start">*</span>
+                    </div>
+                    <div class="addmember-section clearfixe">
+                        <div class="addmember-area" id="addmember-Width">
+                            <div>
+                                <input type="text" id="searchUser" class="add-newteam-input form_custom_width"
+                                    placeholder="{{PH06}}" onkeyup="searchContact('team')" autocomplete="off">
+                                <span class="add-team-popup" onclick="rightContactPanel('team', false, true)" id="add-members-icon"><img
+                                        src="images/add-team.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- add member-end-->
+                    <!--add-member-drop-down-start-->
+                    <div class="add-invitees-popup-main" id="add-invitees-popup-main" style="display: none;"></div>
+                    <!--add-member-drop-down-end-->
+                    <!-- team list start here -->
+                    <div class="team-list-section forView creatGroupPoP" id="teamParticipants">
+                        <ul class="teamlist-item-section create-team-scroll"></ul>
+                        <!-- <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing"></ul> -->
+                    </div>
+                    <!-- team list end here -->
+                    <!--cacel-save button-start-->
+                    <div class="cancle-save-btn add_group">
+                        <button class="cancelButtonGlobal" onclick="hidePopup('team');">{{BT03}}</button>
+                        <button id="teamSaveBtn" class="submitButtonGlobal inActiveBtn" disabled
+                            onclick="saveTeam()">{{BT04}}</button>
+                    </div>
+                    <!--cacel-save button-end-->
+                </div>
+                <!--create-group-pop-section-end-here-->
+            </div>
+        </div>
+    </div>
+</section>

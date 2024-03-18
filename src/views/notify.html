@@ -1,0 +1,41 @@
+<!--NOTIFY Pop Start Here-->
+<section class="teamPopup-common" id="notifyPopup">
+    <div class="notifyModalBody">
+        <div class="notifyModalContent">
+            <span class="notifyClose" title="{{TT01}}" onclick="hideNotify()"><img src="images/icons/cancel.svg"></span>
+            <div class="notifyTitle">{{LB62}}</div>
+            <div class="notifyTextarea">
+                <textarea class="notifyInput" placeholder="{{LB63}}"></textarea>
+            </div>
+            <div class="dataDurationSection">
+                <div class="notifyOrganizer" onclick="selectNotifyUser(0, 'organizer')">
+                    <div class="commonNotifyDropdown"><b>{{LB64}}:&nbsp;</b>{{LB41}} <span class="slotSelect">
+                            <i class="organizer sloticon active-sloticon"></i></span>
+                    </div>
+                </div>
+                <div class="notifyOrganizer" onclick="selectNotifyUser(1, 'everyone')">
+                    <div class="commonNotifyDropdown"><b>{{LB64}}:&nbsp;</b>{{LB65}} <span class="slotSelect">
+                            <i class="everyone sloticon"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="notify-bottom">
+                <div class="notify-rsvp-dropdown">
+                    <div id="notifyRsvp" class="notify-rsvp-dropdown-btn" onclick="showHideRSVP(event)">
+                        <span class="rsvp-status">RSVP: {{LB25}}</span>
+                        <i class="material-icons"><img class="chevronicon" src="images/icons/chevron-icon.svg"></i>
+                    </div>
+                    <ul class="rsvp dropdown hideCls">
+                        <li onclick="selectRSVP(1, event)" title="{{LB25}}">RSVP:&nbsp;{{LB25}}</li>
+                        <li onclick="selectRSVP(2, event)" title="{{LB27}}">RSVP:&nbsp;{{LB27}}</li>
+                        <li onclick="selectRSVP(3, event)" title="{{LB29}}">RSVP:&nbsp;{{LB29}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="saveUpdateCancel notifyBtn">
+                <button class="cancelButtonGlobal" onclick="hideNotify()"> {{BT14}}</button>
+                <button class="submitButtonGlobal" id="sendNotify"> {{BT13}}</button>
+            </div>
+        </div>
+</section>
+<!--NOTIFY Pop End Here-->

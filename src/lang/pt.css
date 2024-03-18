@@ -1,0 +1,205 @@
+/*Language-start-here*/
+@media (min-width: 768px) {
+    .middleIcons {
+        max-width: max-content;
+    }
+    .navSideBar {
+        /* width: 9.5rem; */
+    }
+    .search-section {
+        width    : max-content;
+        min-width: max-content;
+    }
+
+    .filtert-common-icon {
+        padding: 4.7rem 2.5rem 2.7rem !important;
+    }
+
+    .main-section-body {
+        /* padding-left: 10rem !important; */
+    }
+
+    .navbar-content {
+        padding-left: 1.55%;
+    }
+
+    ul.globalHeaderSearcTabbing li {
+        margin: 0px 0 0 5px !important;
+    }
+
+    .uloadedFilesView {
+        float     : none !important;
+        display   : flex;
+        min-width : max-content;
+        background: #fff !important;
+        padding   : 0px !important;
+    }
+
+    .uloadedFilesView span.fileExection {
+        padding-left: 1rem;
+    }
+
+    .accountSettingNewTabs ul li {
+        font-size: 1.2rem !important;
+    }
+
+    .filemangerTab {
+        /* padding-left: 1rem !important; */
+    }
+
+    .invitePopupBottomPlusIcon {
+        /* height: 3.8rem !important; */
+    }
+
+    .sidebar-expanded {
+        /* min-width: 9.5rem !important; */
+    }
+
+    .accountSettingNewTabs ul li {
+        text-transform: uppercase;
+    }
+
+    .common-sort-dropdown .filter-list-item li {
+        padding: 1.6rem 0rem 1.6rem 1.2rem;
+    }
+
+    .new-sign-in-section label {
+        position: absolute;
+    }
+    #forgot-template .new-sign-in-section label{
+        position: unset !important;
+    }
+    #confirmPassword {
+        overflow-wrap: break-word;
+        max-width    : 85%;
+        white-space  : nowrap;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+        width        : 100%;
+    }
+    .upload-div {
+        width: max-content;
+    }
+    .upload-div img {
+        right: -0.7rem;
+    }
+    .link {
+        text-transform: lowercase;
+    }
+    .link:first-letter,
+    .link:first-line {
+        text-transform: capitalize;
+    }
+    .contactDirectoryLi .common-sort-dropdown {
+        width: 23.2rem !important;
+    }
+    .myNetworkRow{
+        /* padding: 0.7rem 1.5rem 0.7rem 2rem;   */
+    }
+    .myImortContact {
+        /* padding-left: 4rem; */
+    }
+    .myNetworkTabs .tab-content {
+        width: 100%;
+        /* padding-left: 2rem; */
+    }
+    .recentMeetingJoin{
+        top: 50% !important;  
+    }
+    .invites-label {
+        line-height: 2.86rem !important;
+    }
+    .add-invite-title {
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+    .add-invite-icon {
+        position: absolute;
+        top: 30%;
+        right: 1%;
+    }
+    .invitie-padding {
+        position: relative;
+    }
+    .upload-name {
+        width: auto;
+    }
+    .upload-icon-name{
+        position: relative;
+        top: 0.3rem;
+    }
+}
+
+.page-content {
+    margin-left: 8.8rem;
+}
+.navbarHeader{
+    padding-left: 8.8rem;
+}
+.navSideBar{
+    width: 8.8rem;
+}
+.calendarTopStrip{
+    margin-right: 10rem !important;
+}
+.calenderContainer{
+    flex-basis: calc(71.8% - 3.3rem) !important;
+}
+#invite-contact .myNetworkRow.myImortContact,
+#invite-contact .myNetworkRow.myNetworkTabs{
+    padding: 0.7rem 3rem 0.7rem 1rem;
+}
+.fileMangerRight{
+    width: 12.5rem;
+}
+.meeting-popup-body-section{
+    padding-right: 7.7rem !important;
+}
+.phoneCode {
+    flex-basis: unset !important;
+}
+#deleteVerifyPopup .external-main-section
+/* , #verificationCodePopup .external-main-section  */{
+    width: max-content !important;
+    max-width: 50rem;
+}
+.sign-up-flow .nav.navbar-nav.navbar-nav-form {
+    width: auto !important;
+}
+.invitePopupBottominput {
+    /* height: auto  !important; */
+}
+.invitePopupBottomPlusIcon {
+    margin-left: 1rem  !important;
+}
+.invitePopupBottom .add-invite-main {   
+    width: 30.7% !important;  
+}
+#inviteCoworkerEmail .invite-full-name {
+    max-width: 75% !important;
+}
+.sign-up-flow .nav.navbar-nav.navbar-nav-form {
+    padding-top: 0px !important;
+}
+.countryNumber input.accountSettingInformInput {
+    border: none !important;
+    max-width: 12rem;
+    padding-left: 3% !important;
+    padding-right: 2% !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: inline-block !important;
+}
+.profileSubMenu {
+    width: 23.7rem !important;
+}
+.upload-div{
+    width: 13rem !important;
+}
+.headerSearchBarMiddle{
+    min-width: 48rem !important;
+}
+.accountSettingNewPass ul:before{
+    right: 29.2rem !important;
+}

@@ -1,0 +1,195 @@
+<!--filemanager-start-->
+<section id="file-template">
+    <div class="fileManager">
+        <!-- Loader start -->
+        <!-- <div id="fileManagerLoader">
+            <div id="loading-bar-spinner" class="spinner">
+                <div class="spinner-icon"></div>
+            </div>
+        </div> -->
+        <div id="fileManagerLoader">
+            <div id="loading-bar-spinner" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                <div class="ldio-dpbvxcmmyw">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader end -->
+        <div class="fileManagerTopStrip">
+            <div class="tabbable-panel">
+                <div class="tabbable-line">
+                    <ul class="nav filemangerTab" id="file-manager-tour">
+                        <li id="image">
+                            <span onclick="getFiles('image')" data-toggle="tab">
+                                {{LB02}} </span>
+                        </li>
+                        <li id="video">
+                            <span onclick="getFiles('video')" data-toggle="tab">
+                                {{LB03}}
+                            </span>
+                        </li>
+                        <li id="application">
+                            <span onclick="getFiles('application')" data-toggle="tab">
+                                {{LB04}}
+                            </span>
+                        </li>
+                        <li id="audio">
+                            <span onclick="getFiles('audio')" data-toggle="tab">
+                                {{LB05}}
+                            </span>
+                        </li>
+                        <li id="hyperlink">
+                            <span onclick="getFiles('hyperlink')" data-toggle="tab">
+                                {{LB06}}
+                            </span>
+                        </li>
+                        <!-- <li id="googledrive">
+                            <span onclick="getFiles('googledrive')" data-toggle="tab">
+                                GOOGLE DRIVE
+                            </span>
+                        </li> -->
+                        <li id="onedrive">
+                            <span onclick="getFiles('onedrive')" data-toggle="tab">
+                                ONEDRIVE
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fileMangerRight">
+
+                <ul>
+                    <li class="fileSearchIcon" onclick="openSearch(false)" id="fileSearchIcon" tooltip="{{PH01}}" flow="down"></li>
+                    <div class="form-group hideCls" id="inputForm">
+                        <input id="filesearchbox" name="keywords" placeholder="{{PH01}}" class="headersearchbar"
+                            type="text" autocomplete="off">
+                    </div>
+                    <li class="fileForward" onclick="forwardFile()" tooltip="{{TT01}}" id="file-forward-button" flow="left"> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="myNetworkRow myNetworkTabs">
+            <div class="tab-content">
+                <div class="tab-pane active" id="imageTab">
+                    <div id="fileManagerdata" class="screenHeight">
+                        <ul class="fileMangerMain" onscroll="scrollData(this)"></ul>
+                    </div>
+                </div>
+                <div class="tab-pane" id="videoTab">
+                    <div id="fileManagerdata" class="videoDirectory screenHeight">
+                        <ul class="fileMangerMain" onscroll="scrollData(this)"></ul>
+                    </div>
+                </div>
+                <div class="tab-pane" id="documentTab">
+                    <div class="documentHeader">
+                        <div class="fileHeaderName">{{LB07}}</div>
+                        <div class="fileHeaderShare">{{LB08}}</div>
+                        <div class="fileHeaderShare"> {{LB24}} </div>
+                        <div class="fileHeaderSize">{{LB09}}</div>
+                        <div class="fileHeaderDate"> {{LB10}} </div>
+                    </div>
+                    <div class="documentRow screenHeight">
+                        <div class="documentRowScroll" onscroll="scrollData(this)"></div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="audioTab">
+                    <div class="documentHeader">
+                        <div class="fileHeaderName">{{LB07}}</div>
+                        <div class="fileHeaderShare"> {{LB08}} </div>
+                        <div class="fileHeaderShare"> {{LB24}} </div>
+                        <div class="fileHeaderSize">{{LB09}}</div>
+                        <div class="fileHeaderDate"> {{LB10}} </div>
+                    </div>
+                    <div class="documentRow screenHeight">
+                        <div class="documentRowScroll" onscroll="scrollData(this)"></div>
+                    </div>
+                    <audio id="audioPlayer" controls style="display: none;">
+                        <source id="audioSource" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>                    
+                </div>
+                <div class="tab-pane" id="linkTab">
+                    <div class="documentHeader">
+                        <div class="fileHeaderName">{{LB11}}</div>
+                        <div class="fileHeaderShare"> {{LB08}} </div>
+                        <div class="fileHeaderShare"> {{LB24}} </div>
+                        <div class="fileHeaderDate">{{LB12}}</div>
+                        <div class="fileHeaderSize"> {{LB10}} </div>
+                    </div>
+                    <div class="documentRow screenHeight">
+                        <div class="documentRowScroll" onscroll="scrollData(this)"></div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="googleDriveTab">
+                    <!--Add buttons to initiate auth sequence and sign out-->
+                    <!-- <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+                    <button id="signout_button" onclick="handleSignoutClick()">Sign
+                        Out</button> -->
+                    <div class="documentHeader hideCls">
+                        <div class="fileHeaderName googleDriveColum1">{{LB07}}</div>
+                        <div class="fileHeaderShare googleDriveColum2"> Type </div>
+                        <div class="fileHeaderShare googleDriveColum3"> Owner </div>
+                        <div class="fileHeaderShare googleDriveColum4"> Created At </div>
+                        <div class="fileHeaderShare googleDriveColum5"> Last Modified </div>
+                        <div class="fileHeaderShare googleDriveColum6"> {{LB26}} </div>
+                        <div class="fileHeaderSize googleDriveColum7">{{LB09}}</div>
+                        <!-- <div class="fileHeaderDate"> {{LB10}} </div> -->
+                    </div>
+                    <div class="documentRow screenHeight">
+                        <div class="documentRowScroll" onscroll="scrollData(this)"></div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="oneDriveTab">
+                    <div class="documentHeader hideCls">
+                        <div class="fileHeaderName googleDriveColum1">{{LB07}}</div>
+                        <div class="fileHeaderShare googleDriveColum2"> Type </div>
+                        <div class="fileHeaderShare googleDriveColum3"> Owner </div>
+                        <div class="fileHeaderShare googleDriveColum4"> Created At </div>
+                        <div class="fileHeaderShare googleDriveColum5"> Last Modified </div>
+                        <div class="fileHeaderShare googleDriveColum6"> {{LB26}} </div>
+                        <div class="fileHeaderSize googleDriveColum7 googleDriveColum7CustomWidth">{{LB09}}</div>
+                        <!-- <div class="fileHeaderDate"> {{LB10}} </div> -->
+                    </div>
+                    <div class="documentRow screenHeight">
+                        <div class="documentRowScroll" onscroll="scrollData(this)"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- body empty state start here -->
+            <section class="empty-state-body middleEmty hideCls fileEmptyState" id="fileEmptyState">
+                <div class="middleInner fileManagerTabSize">
+                    <img src="images/emptystate/image.svg" class="common-empty-img" />
+                    <div class="empty-text-area">
+                        <p class="textempty-h">{{EM01}}</p>
+                        <p class="textempty-p">{{EM02}}</p>
+                    </div>
+                </div>
+            </section>
+            <!-- body empty state end here -->
+        </div>
+    </div>
+</section>
+<!--filemanager-end-->

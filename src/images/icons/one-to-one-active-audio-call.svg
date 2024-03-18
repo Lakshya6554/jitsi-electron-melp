@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Call_16X16 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Recent-Message" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Call_Active_16X16" transform="translate(1.000000, 1.000000)" fill="#EE4136" stroke="#EE4136">
+            <g id="Call_16X16">
+                <path d="M3.625,6.92888889 C5.065,9.44444444 7.38,11.5022222 10.215,12.7822222 L12.415,10.8222222 C12.69,10.5777778 13.085,10.5066667 13.43,10.6048889 C14.55,10.9333333 15.755,11.1111111 17,11.1111111 C17.555,11.1111111 18,11.5066667 18,12 L18,15.1111111 C18,15.6048889 17.555,16 17,16 C7.61,16 0,9.23555556 0,0.888888889 C0,0.395555556 0.45,0 1,0 L4.5,0 C5.055,0 5.5,0.395555556 5.5,0.888888889 C5.5,1.99555556 5.7,3.06666667 6.07,4.06222222 C6.18,4.36888889 6.1,4.72 5.825,4.96444444 L3.625,6.92888889 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

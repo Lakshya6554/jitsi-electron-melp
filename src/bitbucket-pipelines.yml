@@ -1,0 +1,22 @@
+# image: atlassian/default-image:2
+
+# pipelines:
+#   branches:
+#     stableFour:
+#       - step:
+#           name: Deploy to newspa server
+#           script:
+#             #- ssh -i $SSHKEY $USERNAME@$HOST:/var/www/html/webmay/newspa
+#             - echo "$SSHKEY" > ssh_key.pem  # Save the SSH key to a file
+#             - chmod 600 ssh_key.pem  # Set proper permissions for the key file
+#             - ssh -p 22 -v -i ssh_key.pem "$USERNAME@$HOST"  # Connect using SSH with verbose mode
+#             - cd /var/www/html/webmay/newspa 
+#             - git pull origin stableFour
+#     developer:
+#       - step:
+#           name: Deploy to devspa server
+#           script:
+#             #- scp -r -i $SSHKEY ./ $USERNAME@$HOST:/var/www/html/webmay/newspa
+#             - ssh -i "$SSHKEY" "$USERNAME@$HOST" 
+#             - cd /var/www/html/webmay/newspa 
+#             - git pull origin stableFour

@@ -1,0 +1,154 @@
+<!-- SignUp Section Starts -->
+<section id="signup-template" class="signIn-form-new box-login  signIn-form-new box-login login-common-box-style">
+    <div class="common-padding-login  ">
+        <div class="display-flex-login">
+            <div class="flex-left form-cont">
+                <div class="loginSignupRighContainer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="login-logo-commmon log-m-top">
+                                <img src="images/melpapp-logo.svg" class='login-logo' importance="low" loading="lazy">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="signup-text">{{LB01}}
+                                <span class="border-bottom-sign"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="common-login-w">
+                                <section class="display-left-1440px">
+                                    <div class="fullname-signUp position-signup-new">
+                                        <div class="new-sign-in-section">
+                                            <div class="floating-label-group">
+                                                <input type="text" autocomplete="off" id="name" name="fullname"
+                                                    placeholder="" class="loginInput populated" autofocus="" onkeypress="removeNumberFromInput(this)" onkeyup="removeNumberFromInput(this)">
+                                                <label class="floating-labelInput">{{LB02}} *</label>
+                                            </div>
+                                        </div>
+                                        <!-- error msg full name start Darshan & Ram -->
+                                        <div class="tooltips-fullname tooltips-common-error toolTipsCommonErrors"
+                                            id="error-fullname-signup" style="display:none">
+                                            <div class="tooltipTextFullName">
+                                                <div class="subtitle-error-fullName subTitleErrorBox"
+                                                    id="errormsgnamereg">
+                                                    <span class="error-signin-msg"> {{ER01}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- error msg full name end -->
+                                    </div>
+                                    <div class="email-id-signUp position-signup-new">
+                                        <div class="new-sign-in-section">
+
+                                            <div class="floating-label-group">
+                                                <input type="text" id="email_id" name="fullname" class="loginInput populated"
+                                                    autocomplete="off" autofocus />
+                                                <label class="floating-labelInput" id="emailPlaceholder">{{LB03}} *</label>
+                                            </div>
+                                        </div>
+                                        <!-- error msg full name start Darshan & Ram -->
+                                        <div class="tooltips-Email tooltips-common-error toolTipsCommonErrors"
+                                            id="error-email-signup" style="display:none">
+                                            <div class="tooltipTextFullName">
+                                                <div class="subtitle-error-fullName subTitleErrorBox"
+                                                    id="errormsgemailreg">
+                                                    <span class="error-signin-msg"> {{ER04}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- error msg full name end -->
+                                    </div>
+                                    <div class="password-signUp position-signup-new">
+                                        <div class="new-sign-in-section">
+                                            <div class="floating-label-group">
+                                                <input type="password" id="spassword" name="password" placeholder=""
+                                                    class="loginInput populated" autofocus=""
+                                                    onkeyup="isValidPasswordOnKeyUp(event)">
+                                                <label class="floating-labelInput">{{LB04}} *</label>
+                                                <div class="newEyeIcon" onclick="showPassword('spassword')"
+                                                    loading="lazy" id="spasswordEye"></div>
+                                                <div class="tooltips-cont tootips_position" style="display:none;">
+                                                    <div class="accountSettingNewPass commonPass">
+                                                        <ul id="passwordHint">
+                                                            <span class="passwordHead">{{PDH}}</span>
+                                                            <li class="lengthChar">{{PDH01}}</li>
+                                                            <li class="upperChar">{{PDH03}}</li>
+                                                            <li class="lowerChar">{{PDH04}}</li>
+                                                            <li class="numberChar">{{PDH02}}</li>
+                                                            <li class="specialChar">{{PDH05}}</li>
+                                                            <!-- <li class="repeatChar">{{PDH06}}</li> -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- error msg full name start Darshan & Ram -->
+                                        <div class="tooltips-Email tooltips-Pass tooltips-common-error toolTipsCommonErrors"
+                                            id="error-pass-signup" style="display:none">
+                                            <div class="tooltipTextFullName">
+                                                <div class="subtitle-error-fullName subTitleErrorBox"
+                                                    id="errormsgpwdreg">
+                                                    <span class="error-signin-msg">{{ER05}}
+                                                        <u onclick="showPasswordHint(event)">{{ER10}}</u> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- error msg full name end -->
+                                    </div>
+                                    <div class="saveButton">
+                                        <button id="signUpBtn" type="button" onclick="return checkEmail();"
+                                            class="signUpBtnCustom disableCursor" disabled>{{BT01}}
+                                        </button>
+                                    </div>
+                                    <div class="label1440px">
+                                        <span class="signup-privacy display-none-1440 text-left">
+                                            {{LB05}}
+                                            <a class="signup-privacy-a" href="https://melp.us/privacy-policy">{{LB06}}
+                                            </a> {{LB07}}
+                                        </span>
+                                    </div>
+                                </section>
+                                <section class="display-right-1440px">
+                                    <div class="or-spacing signUpOr">
+                                        <span class="or-text">{{LB08}}</span>
+                                    </div>
+                                    <div class="text-social-div">
+                                        <div class="signUp-social-icons float-left-google commonUserloginBtn">
+                                            <a onclick="getGoogleLoginUrl()" href="javascript:void(0)">
+                                                <img class="email-info" src="images/google-sign.svg" loading="lazy">
+                                                <span id="signup-google"> Google</span>
+                                            </a>
+                                        </div>
+                                        <div class="signUp-social-icons float-left-office commonUserloginBtn">
+                                            <a onclick="getOfficeLoginUrl()" href="javascript:void()">
+                                                <img class="email-info" src="images/icons/office.png" loading="lazy">
+                                                <span id="signup-office"> Microsoft</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="label1440px">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span class="signup-privacy privacy-common">
+                                    {{LB09}}
+                                    <a class="signup-privacy-a" href="#login">{{BT02}}</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- SignUp Section Ends -->

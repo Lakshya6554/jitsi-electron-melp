@@ -1,0 +1,40 @@
+<!--languageTranslator-start-here-task-id-->
+<section class="teamPopup-common" id="translation-template">
+    <div class="common-popup-model languageTranslator">
+        <div class="translator-body-section">
+            <div class="translator-title">{{LB43}}</div>
+            <div class="tranlatorClose" onclick="closeTranslation(true)">
+                <img src="images/icons/accountSettingCancle.svg">
+            </div>
+            <div class="tanslator-on-of">
+                <div class="translators-subtitle">{{LB44}}</div>
+                <div class="translators-toggle">
+                    <div class="tanslate-onOf-section">
+                        <label class="on-of-toggle">
+                            <span class="translation-title">{{BT10}}</span>
+                            <input type="checkbox" id="togBtn" value="false" class="check-switch"
+                                onchange="enableTranslation(this)">
+                            <span class="toggle-slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="support-language-section">
+                <div class="language-title">
+                    <p class="support-label common-color-black">{{LB46}}</p>
+                    <p class="subtitle-label">{{LB47}}</p>
+                    <input type="hidden" id="acceptDeclineTranslation" value="0">
+                </div>
+                <div class="language-main-section">
+                    <ul id="languages" class="transdisabled"></ul>
+                </div>
+            </div>
+
+            <div class="translate-btn-div">
+                <span class="invite-select" id="closeTranslationBtn" data-value="0"
+                    onclick="closeTranslation()">{{BT12}}</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!--languageTranslator-end-here-task-id-->

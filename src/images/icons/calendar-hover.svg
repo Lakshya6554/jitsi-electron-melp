@@ -1,0 +1,30 @@
+<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="2.1001" width="13.4" height="13.4" rx="0.5" fill="#EE4136" stroke="#EE4136"/>
+<line y1="4.2998" x2="14.4" y2="4.2998" stroke="#E5E5E5"/>
+<line x1="11.4995" y1="1.8999" x2="11.4995" y2="0.499909" stroke="#EE4136" stroke-linecap="round"/>
+<line x1="2.7002" y1="1.8999" x2="2.7002" y2="0.499909" stroke="#EE4136" stroke-linecap="round"/>
+<mask id="path-5-inside-1_1502_3120" fill="white">
+<rect x="2" y="7.2002" width="2.39999" height="2.39999" rx="0.25"/>
+</mask>
+<rect x="2" y="7.2002" width="2.39999" height="2.39999" rx="0.25" fill="#E5E5E5" stroke="#E5E5E5" stroke-width="2" mask="url(#path-5-inside-1_1502_3120)"/>
+<mask id="path-6-inside-2_1502_3120" fill="white">
+<rect x="10" y="7.2002" width="2.39999" height="2.39999" rx="0.25"/>
+</mask>
+<rect x="10" y="7.2002" width="2.39999" height="2.39999" rx="0.25" fill="#E5E5E5" stroke="#E5E5E5" stroke-width="2" mask="url(#path-6-inside-2_1502_3120)"/>
+<mask id="path-7-inside-3_1502_3120" fill="white">
+<rect x="6" y="7.2002" width="2.39999" height="2.39999" rx="0.25"/>
+</mask>
+<rect x="6" y="7.2002" width="2.39999" height="2.39999" rx="0.25" fill="#E5E5E5" stroke="#E5E5E5" stroke-width="2" mask="url(#path-7-inside-3_1502_3120)"/>
+<mask id="path-8-inside-4_1502_3120" fill="white">
+<rect x="2" y="10.7998" width="2.39999" height="2.39999" rx="0.25"/>
+</mask>
+<rect x="2" y="10.7998" width="2.39999" height="2.39999" rx="0.25" fill="#E5E5E5" stroke="#E5E5E5" stroke-width="2" mask="url(#path-8-inside-4_1502_3120)"/>
+<mask id="path-9-inside-5_1502_3120" fill="white">
+<rect x="10" y="10.7998" width="2.39999" height="2.39999" rx="0.25"/>
+</mask>
+<rect x="10" y="10.7998" width="2.39999" height="2.39999" rx="0.25" fill="#E5E5E5" stroke="#E5E5E5" stroke-width="2" mask="url(#path-9-inside-5_1502_3120)"/>
+<mask id="path-10-inside-6_1502_3120" fill="white">
+<rect x="6" y="10.7998" width="2.39999" height="2.39999" rx="0.25"/>
+</mask>
+<rect x="6" y="10.7998" width="2.39999" height="2.39999" rx="0.25" fill="#E5E5E5" stroke="#E5E5E5" stroke-width="2" mask="url(#path-10-inside-6_1502_3120)"/>
+</svg>

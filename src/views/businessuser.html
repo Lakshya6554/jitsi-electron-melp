@@ -1,0 +1,29 @@
+<div class="main-box" id="businessuser">
+  
+   <div class="form-cont">
+     <div class="businessuserRightSide">
+       <div class="businessuserRightSideHeading">
+         <h2 id="getStartedTitle">{{LB10}}</h2>
+       </div>
+       <input type="hidden" id="userType" value="0">
+       <div class="businessuserRightSideItems">
+         <div class="businessuserItems businesActive" tabindex="1" id="businessUser" onclick="signupUserSelect('business', 0)">
+           <h3 id="businessUserTitle">{{LB11}}</h3>
+           <p id="businessUserDescription">{{LB12}}</p>
+         </div>
+         <div class="orItems">{{LB13}}</div>
+         <div class="businessuserItems" tabindex="0" id="individualUser" onclick="signupUserSelect('individual', 1)">
+           <h3 id="individualUserTitle">{{LB14}}</h3>
+           <p id="individualUserDescription">{{LB15}}</p>
+         </div>
+       </div>
+       <div class="bootomRow">
+         <div class="businessuserBottom">
+           <button class="proceedBtn" tabindex="2" onclick="redirectToSignUp()" id="nextButton">{{LB16}}</button>
+           <p id="alreadyHaveAccount">{{LB09}} <span><a class="signup-privacy-a" href="#login" id="loginbtn">{{BT02}}</a></span> </p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="clear-fix"></div>
+ </div> 

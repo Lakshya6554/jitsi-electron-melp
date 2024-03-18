@@ -1,0 +1,37 @@
+<!--Share post Pop up Strat here-->
+<section class="teamPopup-common" id="sharePostPopup">
+    <div class="postContainer">
+        <div class="postChatHeader">
+            <h2>{{LB21}}</h2>
+        </div>
+        <div class="topic-name-section bottomInherit">
+            <span class="topic-title">{{LB117}}</span><span class="topic-start">*</span>
+        </div>
+        <div class="topic-input-section">
+            <input type="text" id="postFileName" name="" value="" onkeyup="checkFileNameCount(this)" class="group-input" placeholder="{{LB120}}" maxlength="50" onkeyup="validateFileName()">
+            <div class="teamOrGroupDescCount">
+                <span class="teamOrGroupDescIncCount" id="postFileNameCounter">0</span>
+                <span class="limitcharacter">/ 50</span>
+            </div>
+        </div>
+        <div class="hideCls postError" id="postError"><span class="errorTxt">{{LB118}}</span></div>
+        <div class="topic-name-section pdTop bottomInherit">
+            <span class="topic-title">{{LB119}}</span><span class="topic-start">*</span>
+        </div>
+        <div class="postTextArea"></div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="saveUpdateCancel uploadBtn fileSecBtn">
+                    <div class="note-subtitle">{{LB121}}</div>
+                    <div class="rightUploadBtn">
+                        <button class="cancelButtonGlobal" onclick="openSharePost(false)"> {{BT03}}</button>
+                        <button class="submitButtonGlobal inActiveBtn" disabled
+                            onclick="$(document).googoose({area: '.note-editable'});" id="sharePostBtn">
+                            {{BT02}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Share post Pop up End here-->

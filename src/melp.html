@@ -1,0 +1,1184 @@
+<?php
+   require_once 'version.php';
+   $adminstatus = $_COOKIE["adminstatus"];
+?>
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-version="162.0.0">
+
+<head>
+   <script src="./lang/en.js"></script>
+   <link defer rel="stylesheet" href="./lang/pt.css?v=162.0.0">
+   <script defer src="./js/library/mustache.min.js"></script>
+   <script src="helpers/heightAdjust_melper.js?v=162.0.0"></script>
+   <meta charset="utf-8">
+   <title id="mainWinTitle">MelpApp | Team Conferencing, Chat, Calendar and More</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+   <meta name="HandheldFriendly" content="true" />
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <meta content="" name="description" />
+   <meta content="" name="author" />
+   <!-- CSS Library Include Area Starts -->
+   <link async rel="icon" href="images/favicon.png" type="image/png" sizes="16x16" importance="low">
+   <link defer async rel="stylesheet" href="./css/plugins/bootstrap/css/bootstrap.min.css">
+
+   <link defer rel="stylesheet" href="./css/plugins/fontStyle/font-awesome.min.css">
+   <link defer href="./css/plugins/fontStyle/font-montserrat.css" rel="stylesheet">
+   <link defer href="./css/plugins/fontStyle/font-lato.css" rel="stylesheet" importance="low">
+
+   <link defer rel="stylesheet" href="./css/custom/nav.css?v=162.0.0">
+   <link defer rel="stylesheet" href="./css/custom/main.css?v=162.0.0">
+   <link defer rel="stylesheet" href="./css/custom/darkMode.css?v=162.0.0">
+
+   <!-- Ahmar Css Start-->
+   <link defer rel="stylesheet" href="./css/custom/responsive.css?v=162.0.0">
+   <!-- Ahmar Css End-->
+   <link defer rel="stylesheet" href="./css/custom/sidebarPopup.css?v=162.0.0">
+   <link defer rel="stylesheet" href="./css/custom/common.css?v=162.0.0">
+   <link defer rel="stylesheet" href="./css/custom/melpDrive.css?v=162.0.0">
+
+   <!-- CSS Library Include Area Ends -->
+
+   <link defer rel="stylesheet" href="./css/plugins/emojionearea/emojionearea.min.css">
+   <script defer src="./js/library/elastic-apm-rum.umd.min.js"></script>
+</head>
+<div class="spinner-body fullPageloader" id="bodyloader" style="visibility: hidden;">
+   <div id="body-spinner-bar" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+      <div class="ldio-dpbvxcmmyw">
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+      </div>
+   </div>
+   <span id="pageLoadMsg">Just a moment, we're getting things ready for you..</span>
+</div>
+
+<body ondragstart="return false;" ondrop="return false;">
+   <input type="hidden" autocomplete="off" id="browserName" value="" />
+   <input type="hidden" autocomplete="off" id="browserversion" value="" />
+   <input type="hidden" autocomplete="off" id="openChatId" value="" />
+   <input type="hidden" autocomplete="off" id="convIdOneToOne" value="" />
+   <input type="hidden" autocomplete="off" id="className" value="" />
+   <input type="hidden" autocomplete="off" id="moduleName" value="" />
+   <input type="hidden" autocomplete="off" id="inCallChat" value="" />
+   <input type="hidden" autocomplete="off" id="oneDriveToken" value="" />
+   <input type="hidden" autocomplete="off" id="receivedExtFromNoti" value="" />
+   <iframe title="" id="downloadFileFrame" style="display:none;"></iframe>
+   <div id="notification-sound-control">
+      <div id='notification-sound'></div>
+      <div id='call-sound'></div>
+   </div>
+   <div id="msgNotification" class="msg-notification-parent msgNotiHideCls"></div>
+   <div id="call-request-notification" class="call-request-notification hideCls"></div>
+   <div class="videoconferenccall hideCls" id="videoconferenccall"></div>
+   <div id="copyLinkMsg" class="copy-link-msg hideCls"></div>
+
+   <div class="main-wrapper">
+      <div class="page-wrapper" id="body-row">
+         <div class="serachOpacity hideCls" id="serachOpacity"></div>
+         <div class="navSideBar" id="side-nav-bar">
+            <div class="sideBarHeadrer" onclick="switchPage('dashboard', '', event)" id="sidebar-header">
+               <img src="images/transparent-logo.svg" alt="">
+            </div>
+            <div id="sidebar-container" class="sidebar-expanded">
+               <!-- Menu List Starts -->
+               <ul id="sidebarList" class="list-group sticky-top sticky-offset main-navigation-menu">
+                  <!-- Main Logo -->
+                  <li class="list-group-item logo-separator pf-p-none d-flex justify-content-center
+                  menu-collapsed padding-unset profile-menu" data-menu="dashboard" onclick="subMenu('dashboard')"
+                     id="menu-dashboard">
+                     <img src="images/default_avatar_male.svg" id="pfuser" class='red-border pfuser  userProfileNav'
+                        style="cursor:pointer;" alt="" onclick="switchPage('dashboard', '', event)" width="110"
+                        height="100">
+                     <img src="images/icons/menuArrow.svg" class="menuArrowProfile" alt="">
+                     <ul class="sub-menu recent-sub-menu profileSubMenu" id="menu-subMenu">
+                        <li onclick="copyLink(1)" title="Copy Link">
+                           <span id="SH01">Calendar Link</span>
+                           <span class="copyLinkParent">
+                              <img src="images/profileClipboard.svg" alt="Copy" class="copyIcon myclink">
+                           </span>
+                        </li>
+                        <li onclick="copyLink(2)" title="Copy Link"><span id="SH02">Personal Room</span><span
+                              class="copyLinkParent"></span><img src="images/profileClipboard.svg" alt="Copy"
+                              class="copyIcon"></span></li>
+                        <!-- if($adminstatus){ ?><li onclick="openAdminPanel()" id="SH07">Admin Panel</li> }  -->
+                        <li onclick="accountSetting()"><span id="SH03">Account Settings</span></li>
+                     </ul>
+                  </li>
+                  <!-- Separator Recent title -->
+                  <li class="list-group-item sidebar-separator-title text-muted align-items-center menu-collapsed
+                  recent-menu navIcon" data-menu="recent" onclick="subMenu('recent')" id="menu-recent">
+                     <img src="images/recent.svg" alt=""><img src="images/icons/menuArrow.svg" class="menuArrow" alt="">
+                     <br>
+                     <span class="count-new-notification" id="activeRecentDot">
+                        <span class="recent-count" id="totalRecentCount"></span>
+                     </span>
+                     <span class="menu-style" id="MT01">recent</span>
+                     <ul class="sub-menu recent-sub-menu recentSubMenu">
+                        <li onclick="switchPage('recent', 'call', event)">
+                           <span id="SMT01">calls</span> <span class="commonBg commonSub" id="callCount">0</span>
+                        </li>
+                        <li onclick="switchPage('recent', 'message', event)">
+                           <span id="SMT02">messages</span><span class="commonBg commonSub" id="messageCount">0</span>
+                        </li>
+                        <li onclick="switchPage('recent', 'topic', event)">
+                           <span id="SMT03">topics</span> <span class="commonBg commonSub" id="topicCount">0</span>
+                        </li>
+                        <li onclick="switchPage('recent', 'group', event)">
+                           <span id="SMT04">groups</span> <span class="commonBg commonSub" id="groupCount">0</span>
+                        </li>
+                        <li onclick="switchPage('recent', 'meeting', event)">
+                           <span id="SMT05">meetings</span> <span class="commonBg commonSub" id="meetingCount">0</span>
+                        </li>
+                     </ul>
+                  </li>
+                  <!-- /END Separator -->
+                  <!-- Separator Contacts title -->
+                  <li id="menu-contact" class="list-group-item sidebar-separator-title text-muted align-items-center
+                  menu-collapsed contact-menu" data-menu="contact">
+                     <img src="images/menucontact.svg" alt=""><br>
+                     <span class="menu-style" id="MT02">contacts</span>
+                     <ul class="sub-menu contact-sub-menu">
+                        <li onclick="switchPage('contact', 'all', event)" id="SMT06">all contacts</li>
+                        <li onclick="switchPage('contact', 'location', event)" id="SMT07">location</li>
+                        <li onclick="switchPage('contact', 'department', event)" id="SMT08">department</li>
+                        <li onclick="switchPage('contact', 'title', event)" id="SMT09">title</li>
+                     </ul>
+                  </li>
+                  <!-- /END Separator -->
+                  <!-- Separator Team title -->
+                  <li onclick="switchPage('team', '', event)" class="list-group-item sidebar-separator-title text-muted
+                     align-items-center menu-collapsed team-menu
+                     navIcon" data-menu="team" id="menu-teams">
+                     <img src="images/team.svg" alt=""><br>
+                     <span class="menu-style" id="team">teams</span>
+                  </li>
+                  <!-- /END Separator -->
+                  <li onclick="switchPage('group', '', event)" class="list-group-item sidebar-separator-title text-muted  align-items-center
+                     menu-collapsed group-menu navIcon" data-menu="group" id="menu-groups">
+                     <img src="images/group.svg" alt="">
+                     <span class="dot-new-notification" id="activegroupdot"></span>
+                     <br>
+                     <span class="menu-style" id="group">groups</span>
+                  </li>
+                  <!-- /END Separator -->
+                  <!-- Separator Calendar title -->
+                  <li class="list-group-item sidebar-separator-title text-muted  align-items-center
+                  menu-collapsed calendar-menu calendarsetting-menu navIcon" data-menu="calendar" id="menu-calendar"
+                     onclick="switchPage('calendar', '', event)">
+                     <img src="images/calendar.svg" alt="">
+                     <img src="images/icons/menuArrow.svg" class="menuArrow" alt="">
+                     <span class="menu-style" id="MT04">calendar</span>
+                     <ul class="sub-menu calendarSubMenu">
+                        <li onclick="switchPage('calendar', '', event)" id="SMT013">Calendar</li>
+                        <li onclick="switchPage('calendarsetting', '', event)" id="SMT015">Calendar Settings</li>
+                     </ul>
+                  </li>
+                  <!-- /END Separator -->
+                  <!-- Separator Network title -->
+                  <li class="list-group-item sidebar-separator-title text-muted  align-items-center
+                  menu-collapsed network-menu navIcon" data-menu="network" onclick="subMenu('network')"
+                     id="menu-network">
+                     <img src="images/network.svg" alt="">
+                     <img src="images/icons/menuArrow.svg" class="menuArrow" alt="">
+                     <span class="count-new-notification recent-count recentCount" id="activeNetworkdot">0</span>
+                     <br>
+                     <span class="menu-style" id="MT03">network</span>
+                     <ul class="sub-menu networkSubMenu">
+                        <li onclick="switchPage('network', 'invite', event)" id="SMT010">invite people</li>
+                        <li class="myNetwork" onclick="switchPage('network', 'all', event)" id="SMT011">
+                           my network
+                        </li>
+                        <li onclick="switchPage('network', 'received', event)" id="SMT012">my invitations
+                           <span class="commonBg commonSub" id="receivedCount">0</span>
+                        </li>
+                     </ul>
+                  </li>
+                  <!-- /END Separator -->
+                  <!-- Separator File title -->
+                  <!-- <li class="list-group-item sidebar-separator-title text-muted  align-items-center menu-collapsed filemanager-menu navIcon"
+                     data-menu="file" onclick="switchPage('filemanager', '', event)" id="menu-files">
+                     <img src="images/file.svg" alt=""><br>
+                     <span class="menu-style" id="file">files</span>
+                  </li>
+-->
+                  <!-- /END Separator -->
+
+
+
+                  <li class="list-group-item sidebar-separator-title text-muted  align-items-center menu-collapsed filemanager-menu navIcon"
+                     data-menu="melpDrive" onclick="switchPage('melpDrive', '', event)" id="menu-files-ManagerDrive">
+                     <img src="images/file.svg" alt=""><br>
+                     <span class="menu-style">files</span>
+                  </li>
+
+
+                  <!-- /END Separator -->
+                  <!-- More option -->
+                  <li class="list-group-item sidebar-separator-title text-muted align-items-center menu-collapsed
+                  more-menu navIcon" data-menu="more option">
+                     <img src="images/icons/sub_menu_more_option.svg" alt=""><img src="images/icons/menuArrow.svg"
+                        class="menuArrow" alt="">
+                     <br>
+                     <span class="menu-style" id="moreMenu">More</span>
+                     <ul class="sub-menu recent-sub-menu recentSubMenu">
+                        <li>
+                           <span><a class="melpGuide" href="https://www.melp.us/guide/" target="_blank"
+                                 id="melpGuideMenu">Melp Guide</a></span>
+                        </li>
+                        <li onclick="openFeedBack()">
+                           <span id="feedbackMenu">Feedback</span>
+                        </li>
+                        <li onclick="toggleDarkMode(true)">
+                           <span id="DarkModebtn">Dark Mode</span>
+                        </li>
+                     </ul>
+                  </li>
+                  <!-- /Mor Option END -->
+                  <!-- /END Separator -->
+               </ul>
+               <!-- Menu List Ends -->
+            </div>
+         </div>
+         <nav class="navbarHeader" id="navbar-header">
+            <div class="navbar-content">
+               <div class="navBarLeftTitle">
+                  <div class="navbar-title">
+                     <span class=".navbar-title" id="header-module">dashboard </span>
+                     <span class="navbar-sub-title" id="header-module-type"></span>
+                  </div>
+               </div>
+               <div class="headerSearchBarMiddle" id="gloablSearchKeywordTour">
+                  <input id="gloablSearchKeyword" name="keywords" placeholder="Search" data-default="130"
+                     class="headerSearchBarMiddleInput" type="text" autocomplete="off" onkeyup="typeGlobalSearch()"
+                     onclick="changeGlobalSearch()">
+                  <span class="serchHeaderIcon"></span>
+                  <span class="serchHeaderClose hideCls" id="serchHeaderClose" onclick="clearGlbSearch()"></span>
+                  <input type="hidden" id="globalSearchReset" value="0">
+                  <input type="hidden" id="globalSearchKey" value="">
+                  <!-- file manger global search start -->
+                  <div class="fileSearchResultContainer hideCls">
+                     <div class="fileHeaderSearch">
+                        <div class="fileSearchData">
+                           <ul class="fileheaderSearchTab">
+                              <li class="active"><span><img src="images/icons/fileDocument.svg"></span>Documents</li>
+                              <li><span><img src="images/icons/filePdf.svg"></span>PDF’s</li>
+                              <li><span><img src="images/icons/filesVideo.svg"></span>Videos</li>
+                              <li><span><img src="images/icons/fileDocument.svg"></span>Images </li>
+                              <li><span><img src="images/icons/filesFolder.svg"></span>Folders</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- file manger global data start-->
+                  <div class="fileSearchGlobalData  fm-globalSearchContainer hideCls">
+                     <div class="fileDataF1">
+                        <div class="fileSearchOption fm-searchFilters">
+                           <!-- file saerch option -->
+                           <div class="fileSearchF1 fm-searchBy-type-container">
+                              <span class="fileWrapT2">
+                                 <div class="fileLabelT1 ">
+                                    <span class="fileLabelT2 fm-searchByType-label">Type</span>
+                                 </div>
+                                 <div class="fileLabelT3 fm-searchByType-selectedContainer">
+                                    <span class="filetypeT2 fm-searchByType-selectedVal">Any</span>
+                                    <span class="fileSearchDropT1 fm-searchByTypeDropDown  hideCls">
+                                       <ul class="">
+                                          <li data-value=""><span
+                                                class="fileDropT2 fileAnySaerch fm-searchByType-any">Any</span></li>
+                                          <li data-value="Photos & Images">
+                                             <span class="fileDropT2 fileAnySaerch fm-searchByType-photoAndImage">
+                                                <span class="fileIconT3"><img src="images/icons/photo.svg"></span>
+                                                Photos & Images
+                                             </span>
+                                          </li>
+                                          <li data-value="PDF’s">
+                                             <span class="fileDropT2 fileAnySaerch fm-searchByType-pdf">
+                                                <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span>
+                                                PDF’s
+                                             </span>
+                                          </li>
+                                          <li data-value="Documents">
+                                             <span class="fileDropT2 fileAnySaerch fm-searchByType-doc">
+                                                <span class="fileIconT3"><img src="images/icons/fileDoc.svg"></span>
+                                                Documents
+                                             </span>
+                                          </li>
+                                          <li data-value="Spreadsheet">
+                                             <span class="fileDropT2 fileAnySaerch fm-searchByType-spreadsheet">
+                                                <span class="fileIconT3"><img src="images/icons/fileExl.svg"></span>
+                                                Spreadsheet
+                                             </span>
+                                          </li>
+                                          <li data-value="Presentation">
+                                             <span class="fileDropT2 fileAnySaerch fm-searchByType-presentation">
+                                                <span class="fileIconT3"><img
+                                                      src="images/icons/presentation.svg"></span>
+                                                Presentation
+                                             </span>
+                                          </li>
+                                          <li data-value="Audio">
+                                             <span class="fileDropT2 fileAnySaerch fm-searchByType-audio">
+                                                <span class="fileIconT3"><img src="images/icons/fileAudio.svg"></span>
+                                                Audio
+                                             </span>
+                                          </li>
+                                       </ul>
+
+                                    </span>
+                                 </div>
+                              </span>
+                           </div>
+                           <!-- file saerch option -->
+                           <!-- file saerch option -->
+                           <div class="fileSearchF1 fm-searchBy-fileOwner-container">
+                              <span class="fileWrapT2">
+                                 <div class="fileLabelT1">
+                                    <span class="fileLabelT2 fm-searchBy-fileOwner-label">Owner</span>
+                                 </div>
+                                 <div class="fileLabelT3 fm-searchBy-fileOwner-selectedContainer">
+                                    <span class="filetypeT2 fm-searchBy-fileOwner-selectedVal">Anyone</span>
+                                    <span class="fileSearchDropT1 fileLabelAnyT2 fm-searchByFileOwnerDropDown hideCls">
+                                       <ul>
+                                          <li data-value=""><span
+                                                class="fileDropT2 fileAnySaerch fm-searchBy-fileOwner-Any">Anyone</span>
+                                          </li>
+                                          <li data-value="Owned by me">
+                                             <span class="fileDropT2 fm-searchBy-fileOwner-me">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/photo.svg"></span> -->
+                                                Owned by me
+                                             </span>
+                                          </li>
+                                          <li data-value="Not owned by me">
+                                             <span class="fileDropT2 fm-searchBy-fileOwner-notMe">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> -->
+                                                Not owned by me
+                                             </span>
+                                          </li>
+                                          <!-- <li data-value="specificPerson">
+                                 <span class="fileDropT2 fm-searchBy-fileOwner-specificPerson">
+                                    <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> 
+                                    Specific person
+                                 </span>
+                              </li> -->
+                                       </ul>
+
+                                    </span>
+                                 </div>
+                              </span>
+                           </div>
+                           <!-- file saerch option -->
+                           <!-- file saerch option -->
+                           <div class="fileSearchF1 fm-searchBy-fileContent-container hideCls">
+                              <span class="fileWrapT2">
+                                 <div class="fileLabelT1 fm-searchBy-fileContent-label">
+                                    <span class="fileLabelT2">Has the words</span>
+                                 </div>
+                                 <div class="fileLabelT3">
+                                    <span class="filetypeT2 fm-searchBy-fileContent-searchText">Enter words found in the
+                                       file</span>
+                                 </div>
+                              </span>
+                           </div>
+                           <!-- file saerch option -->
+                           <!-- file saerch option -->
+                           <div class="fileSearchF1 fm-searchBy-location-container">
+                              <span class="fileWrapT2">
+                                 <div class="fileLabelT1 fm-location-lableDiv">
+                                    <span class="fileLabelT2 fm-location-label">Location</span>
+                                 </div>
+                                 <div class="fileLabelT3 fm-location-selectedContainer">
+                                    <span class="filetypeT2 fm-location-selectedVal">Anywhere</span>
+                                    <span class="fileSearchDropT1 fileLabelAnyT2 fm-searchBy-location-dropdown hideCls">
+                                       <ul class="">
+                                          <li data-value=""><span class="fileDropT2 fileAnySaerch">Any</span></li>
+                                          <li data-value="My Files">
+                                             <span class="fileDropT2 fm-searchBy-location-sharedByMe">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/photo.svg"></span> -->
+                                                My Files
+                                             </span>
+                                          </li>
+                                          <li data-value="Shared by me">
+                                             <span class="fileDropT2 fm-searchBy-location-sharedByMe">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/photo.svg"></span> -->
+                                                Shared by me
+                                             </span>
+                                          </li>
+                                          <li data-value="Shared with me">
+                                             <span class="fileDropT2 fm-searchBy-location-sharedWithMe">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> -->
+                                                Shared with me
+                                             </span>
+                                          </li>
+                                          <li data-value="Favorites">
+                                             <span class="fileDropT2 fm-searchBy-location-favourite">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> -->
+                                                Favourite
+                                             </span>
+                                          </li>
+                                          <li data-value="Trashed">
+                                             <span class="fileDropT2 fm-searchBy-location-trash">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> -->
+                                                Trash
+                                             </span>
+                                          </li>
+                                       </ul>
+
+                                    </span>
+                                 </div>
+                              </span>
+                           </div>
+                           <div class="fileSearchF1 fm-searchBy-modified-container">
+                              <span class="fileWrapT2">
+                                 <div class="fileLabelT1 fm-modified-lableDiv">
+                                    <span class="fileLabelT2 fm-modified-label">Modified At</span>
+                                 </div>
+                                 <div class="fileLabelT3 fm-modified-selectedContainer">
+                                    <span class="filetypeT2 fm-modified-selectedVal">Anytime</span>
+                                    <span class="fileSearchDropT1 fileLabelAnyT2 fm-searchBy-modified-dropdown hideCls">
+                                       <ul class="">
+                                          <li data-value=""><span class="fileDropT2 fileAnySaerch">Any Time</span></li>
+                                          <li data-value="Today">
+                                             <span class="fileDropT2 fm-searchBy-modified-sharedByMe">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/photo.svg"></span> -->
+                                                Today
+                                             </span>
+                                          </li>
+                                          <li data-value="Yesterday">
+                                             <span class="fileDropT2 fm-searchBy-modified-sharedByMe">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/photo.svg"></span> -->
+                                                Yesterday
+                                             </span>
+                                          </li>
+                                          <li data-value="Last 7 days">
+                                             <span class="fileDropT2 fm-searchBy-modified-sharedWithMe">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> -->
+                                                Last 7 days
+                                             </span>
+                                          </li>
+                                          <li data-value="Last 30 days">
+                                             <span class="fileDropT2 fm-searchBy-modified-favourite">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> -->
+                                                Last 30 days
+                                             </span>
+                                          </li>
+                                          <li data-value="Last 90 days">
+                                             <span class="fileDropT2 fm-searchBy-modified-trash">
+                                                <!-- <span class="fileIconT3"><img src="images/icons/filePdfF1.svg"></span> -->
+                                                Last 90 days
+                                             </span>
+                                          </li>
+                                       </ul>
+
+                                    </span>
+                                 </div>
+                              </span>
+                           </div>
+                           <!-- file saerch option -->
+                           <!-- file saerch option  below one ignore-->
+                           <div class="fileSearchF1 fm-searchBy-words-container hideCls">
+                              <span class="fileWrapT2">
+                                 <div class="fileLabelT1 fm-searchBy-words-labelDiv">
+                                    <span class="fileLabelT2 fm-searchBy-words-label ">Has the words</span>
+                                 </div>
+                                 <div class="fileLabelT3">
+                                    <span class="filetypeT2 fileLabelT2 fm-searchBy-words-textToSearch">Enter words
+                                       found in the file</span>
+                                 </div>
+                              </span>
+                           </div>
+                           <!-- file saerch option -->
+                           <!-- file saerch option below option ignore -->
+                           <div class="fileSearchF1 fileApprovalsT3 hideCls">
+                              <span class="fileWrapT2">
+                                 <div class="fileLabelT1">
+                                    <span class="fileLabelT2">Approvals</span>
+                                 </div>
+                                 <div class="fileLabelT3">
+                                    <span class="filelabelT4">
+                                       <span class="filelabelT5">
+                                          <span class="filetrashT1">
+                                             <span class="fileCheckBoxt1"></span>
+                                             <span class="fileCheckBoxt2">Awaiting my approval </span>
+                                          </span>
+                                          <span class="filetrashT1">
+                                             <span class="fileCheckBoxt1"></span>
+                                             <span class="fileCheckBoxt2">Requested by me </span>
+                                          </span>
+                                       </span>
+                                    </span>
+                                 </div>
+                              </span>
+                           </div>
+                           <!-- file saerch option -->
+                           <!-- file saerch option -->
+                           <!-- <div class="fileSearchF1 fileLabelT2 fm-searchBy-sharedTo-container ">
+                  <span class="fileWrapT2">
+                     <div class="fileLabelT1">
+                        <span class="fileLabelT2 fm-searchBy-sharedTo-label">Shared to</span>
+                     </div>
+                     <div class="fileLabelT3 fileLabelF1">
+                        <span class="filetypeT2"><input type="text" class="filetypeInputT3 fm-searchBy-sharedTo-input" placeholder="Enter a name or email address..."></span>
+                     </div>
+                  </span>
+               </div> -->
+                           <!-- file saerch option -->
+                           <div class="fileSearchBtnT1">
+                              <button class="cancelButtonGlobal fm-search-resetBtn">Reset</button>
+                              <button class="submitButtonGlobal fm-search-submitBtn">Search</button>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <!-- file manger global data end-->
+                  <!-- file manger global search end -->
+                  <div class="globalSearchResultContainer">
+                     <div class="globalHeaderSearch">
+                        <div class="hideCls" id="globalSearchData">
+                           <ul class="globalHeaderSearcTabbing">
+                              <li class="globalActive" id="glbAll" onclick="selectGlobalTabEvt(1)">All</li>
+                              <li id="glbPeople" onclick="selectGlobalTabEvt(2)" data-page="">People</li>
+                              <li id="glbMessage" onclick="selectGlobalTabEvt(3)" data-page="">Message</li>
+                              <li id="glbTopic" onclick="selectGlobalTabEvt(4)" data-page="">Topic</li>
+                              <li id="glbFile" onclick="selectGlobalTabEvt(5)" data-page="">Files</li>
+                           </ul>
+                           <div class="globaltabbingContent">
+                              <!-- All Section Starts Here -->
+                              <div id="glbAllSection" class="glbAllSection globalTabDiv">
+                                 <!-- all people section -->
+                                 <div id="peopleSection" class="globaCommon">
+                                    <div class="globalMessageHeader" onclick="selectGlobalTabEvt(2)">
+                                       <div class="search-text-here" id="peopleHeadLine">People</div>
+                                    </div>
+                                    <div class="global-msg-list-section" id="allUser">
+                                       <ul class="globaListMsg"></ul>
+                                       <div class="seeAllPepoleBtn" onclick="selectGlobalTabEvt(2)" id="seeAllPeople">
+                                          See all people results
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- all message section -->
+                                 <div id="messageSection" class="globaCommon">
+                                    <div class="globalMessageHeader" onclick="selectGlobalTabEvt(3)">
+                                       <div class="search-text-here" id="messageHeadLine">Messages</div>
+                                    </div>
+                                    <div class="global-msg-list-section" id="allMessage">
+                                       <ul class="globaListMsg"></ul>
+                                       <div class="seeAllPepoleBtn" onclick="selectGlobalTabEvt(3)" id="seeAllMessage">
+                                          See all message results
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- all topic section -->
+                                 <div id="topicSection" class="globaCommon">
+                                    <div class="globalMessageHeader" onclick="selectGlobalTabEvt(4)">
+                                       <div class="search-text-here" id="topicHeadLine">Topics</div>
+                                    </div>
+                                    <div class="global-msg-list-section" id="allTopic">
+                                       <ul class="globaListMsg"></ul>
+                                       <div class="seeAllPepoleBtn" onclick="selectGlobalTabEvt(4)" id="seeAllTopic">
+                                          See all topics results
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- all file section -->
+                                 <div id="fileSection" class="globaCommon">
+                                    <div class="globalMessageHeader" onclick="selectGlobalTabEvt(5)">
+                                       <div class="search-text-here" id="fileHeadLine">Files</div>
+                                    </div>
+                                    <div class="global-msg-list-section" id="allFile">
+                                       <ul class="globaListMsg"></ul>
+                                       <div class="seeAllPepoleBtn" onclick="selectGlobalTabEvt(5)" id="seeAllFile">
+                                          See all files results
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="connection-empty-state recentloadersection hideCls"
+                                    id="innerGlobalSearchLoader">
+                                    <div id="loading-bar-spinner" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                                       <div class="ldio-dpbvxcmmyw">
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- All Section Ends Here -->
+                              <div class="singleSection hideCls">
+                                 <!-- People Section Starts Here -->
+                                 <div id="glbPeopleSection" class="globalTabDiv">
+                                    <div class="global-msg-list-section">
+                                       <ul class="globaListMsg"></ul>
+                                    </div>
+                                 </div>
+                                 <!-- People Section Ends Here -->
+
+                                 <!-- Message Section Starts Here -->
+                                 <div id="glbMsgSection" class="globalTabDiv">
+                                    <div class="global-msg-list-section">
+                                       <ul class="globaListMsg"></ul>
+                                    </div>
+                                 </div>
+                                 <!-- Message Section Ends Here -->
+
+                                 <!-- Topic Section Starts Here -->
+                                 <div id="glbTopicSection" class="globalTabDiv">
+                                    <div class="global-msg-list-section">
+                                       <ul class="globaListMsg"></ul>
+                                    </div>
+                                 </div>
+                                 <!-- Topic Section Ends Here -->
+
+                                 <!-- File Section Starts here -->
+                                 <div id="glbFileSection" class="globalTabDiv">
+                                    <div class="global-msg-list-section">
+                                       <ul class="globaListMsg"></ul>
+                                    </div>
+                                 </div>
+                                 <!-- File Section Ends Here -->
+                                 <div class="connection-empty-state recentloadersection hideCls"
+                                    id="singleGlobalSearchLoader">
+                                    <div id="loading-bar-spinner" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                                       <div class="ldio-dpbvxcmmyw">
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                          <div>
+                                             <div></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="globalSearchEmptyMessage hideCls" id="globalSearchEmptyMessage">
+                           <div class="globalResultNoFound">
+                              <img src="images/icons/searchnodatafound.svg" alt="">
+                              <h3 id="globalEmptyTxt">No result found!</h3>
+                              <p id="globalEmptyTxt2">Sorry, we couldn't find any matches</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <span id="darkModeIcon" class="darkModeImages" onclick="toggleDarkMode(true)" tooltip="Dark Mode"
+                     flow="down">
+                     <img src="images/darkModeIcon.svg" alt=""></span>
+               </div>
+               <div class="navbar-icon">
+                  <ul class="navbar-nav">
+                     <!-- <li class=" nav-item trayIcon headerConferenceIcons" title="Active Conference"
+                        onclick="openActiveConferenceTray('5', event)">
+                     </li> -->
+                     <!-- <button onclick="toggleDarkMode(true)">Dark</button> -->
+                     <div class="liveCallBtn"><button class="invite activeConference activeCallsBtn"
+                           id="activeConferenceBtn" onclick="openActiveConferenceTray('5', event)"><img
+                              src="images/icons/liveCallIcon.svg" class="liveCallIcon">Live
+                           Calls<span id="threeDotLoader" class="threeDotLoader"><span class="loader__dot">.</span><span
+                                 class="loader__dot">.</span><span class="loader__dot">.</span></span></button></div>
+                     <li class="nav-item trayIcon triggerEvent notificationTray headerNotificationIcons"
+                        onclick="openNotificationTray('3', event)" title="" id="notification-icon" flow="down">
+                        <span class=" notificationDot hideCls">.</span>
+                     </li>
+                     <li class="nav-item trayIcon triggerEvent pinnedTray headerPinnedIcons"
+                        onclick="openPinnedTray('4', event)" title="" id="pinned-item-icon" flow="down">
+                        <span class=" pinnedDot hideCls">.</span>
+                     </li>
+                     <li class="nav-item trayIcon triggerEvent headerChatIcons" onclick="openMessageTray('2', event)"
+                        title="" id="message-icon" flow="left">
+                        <span class=" messageDot hideCls">.</span>
+                     </li>
+                     <!-- Smaller devices menu END -->
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <div class="page-content">
+            <div class="col padding-left-0 padding-right-0 dashboard_wrap">
+               <div id="loadable_content"></div>
+               <div class="modal-scrollable" id="model_content"></div>
+            </div>
+         </div>
+         </nav>
+         <div class="page-content" id="userPageContent">
+            <div class="col padding-left-0 padding-right-0 dashboard_wrap">
+               <div id="loadable_content"></div>
+               <div class="modal-scrollable" id="model_content"></div>
+            </div>
+         </div>
+      </div>
+      <section id="userListRightSection" style="display:none;">
+         <div class="" id="rightPanelOpacity"></div>
+         <!--selected-member-section-start-->
+         <div class="selected-member-list" id="select-member-list">
+            <div class="selected-head-title">
+               <div class="selected-member-title">
+                  <span id="rightPanelHeading">Selected Members</span> (<span id="userCount">0</span>)
+               </div>
+               <div class="add_group" id="showDone" onclick="hideRightPanel()" style="display: none">
+                  <div class="iconsGroups">
+                     <img src="images/cancel-modal.svg" class="display-default-cancle" alt="">
+                  </div>
+               </div>
+            </div>
+            <!--search-section-start -->
+            <div class="search-invite-section" id="showSearch" style="display: none;">
+               <!--SELECTED MEMBERS Search Bar start-->
+               <span class="input-search-invite">
+                  <input type="text" id="rightPanelSearch" class="user-search-input"
+                     placeholder="Search by name, location, department, title" onkeyup="rightPanelSearch()"
+                     autocomplete="off">
+               </span>
+               <span class="btn-search-invite" onclick="rightPanelSearchClear()">
+                  <img src="images/search-invite.svg" title="Search invite" id="rightSearchImg" class="searcInviteBtn"
+                     alt="">
+               </span>
+               <!--SELECTED MEMBERS Search Bar-->
+            </div>
+            <!--search-section-end-->
+            <div class="selectedCalls" id="showSelectedCalls" style="display: none;">
+               <div id="singleUserOption" class="hideCls width100">
+                  <div class="selectedCommonIcons commonClickTop audioCall" tooltip="Audio Call" flow="down"
+                     onclick="initiateInstantCall('a')">
+                     <div class="iconsGroups">
+                        <img src="images/icons/singlecall.svg" id="right-singleaudio" class="display-default-icon"
+                           alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickTop videoCall" tooltip="Video Call" flow="down"
+                     onclick="initiateInstantCall('v')">
+                     <div class="iconsGroups">
+                        <img src="images/icons/singlevideocall.svg" id="right-singlevideo" class="display-default-icon"
+                           alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickTop scheduleMeeting" tooltip="Schedule Meeting" flow="down"
+                     onclick="meetingCreateFromContact()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/calendarsideBar.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div id="createTeamOption" class="selectedCommonIcons createTeam" tooltip="Create Team" flow="down"
+                     onclick="teamCreate(true)">
+                     <div class="iconsGroups">
+                        <img src="images/icons/create-team.svg" class="display-default-icon createTemDefalut" alt="">
+                     </div>
+                  </div>
+                  <!-- Second part -->
+                  <div class="selectedCommonIcons commonClickBottom hideCls createTeam" tooltip="Create Team"
+                     flow="down" onclick="teamCreate(true)">
+                     <div class="iconsGroups">
+                        <img src="images/icons/create-team.svg" class="display-default-icon createTeamIconSize" alt="">
+                     </div>
+                  </div>
+                  <div id="createMeetingOption" class="selectedCommonIcons scheduleMeeting hideCls"
+                     tooltip="Schedule Meeting" flow="down" onclick="meetingCreateFromContact()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/calendarsideBar.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickBottom quickMessage hideCls" tooltip="Quick Message"
+                     flow="down" onclick="openQuickMessagePanel()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/quickmessage.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickBottom addToTeam hideCls" tooltip="Add To Team" flow="down"
+                     onclick="addToTeam()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/add-to-team.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons hideCls" id="removeConnection" onclick="removeConnection()" title=""
+                     tooltip="Remove Connection" flow="down">
+                     <div class="iconsGroups">
+                        <img src="images/icons/remove-connections.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons selectedMemberCommonBg moreOption"
+                     onclick="moreAction('1', 'singleUserOption')" tooltip="More Options" flow="down">
+                     <div class="iconsGroups">
+                        <img src="images/icons/chevron.svg" class="display-default-icon rotate" id="leftIcon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons selectedMemberCommonBg cancel"
+                     onclick="moreAction('2', 'singleUserOption')" tooltip="Cancel" flow="down">
+                     <div class="iconsGroups">
+                        <img src="images/cancel-modal.svg" class="display-default-cancle" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div id="multipleUserOption" class="hideCls width100">
+                  <div class="selectedCommonIcons commonClickTop createTeam" flow="down" onclick="teamCreate(true)">
+                     <div class="iconsGroups">
+                        <img src="images/icons/create-team.svg" class="display-default-icon createTeamIconSize" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickTop scheduleMeeting" flow="down"
+                     onclick="meetingCreateFromContact()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/calendar.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickTop addToTeam" tooltip="Add To Team" flow="down"
+                     onclick="addToTeam()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/add-to-team.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickTop quickMessage" tooltip="Quick Message" flow="down"
+                     onclick="openQuickMessagePanel()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/quickmessage.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickBottom quickMessage hideCls" tooltip="Quick Message"
+                     flow="down" onclick="openQuickMessagePanel()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/quickmessage.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickBottom audioCall hideCls" tooltip="Audio Call" flow="down"
+                     onclick="initiateInstantCall('a')">
+                     <div class="iconsGroups">
+                        <img src="images/icons/singlecall.svg" id="right-groupaudio" class="display-default-icon"
+                           alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickBottom videoCall hideCls" tooltip="Video Call" flow="down"
+                     onclick="initiateInstantCall('v')">
+                     <div class="iconsGroups">
+                        <img src="images/icons/singlevideocall.svg" id="right-groupvideo" class="display-default-icon"
+                           alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons commonClickBottom hideCls" id="group-discussion" title=""
+                     tooltip="Group Discussion" flow="down" onclick="createInstantGroup()">
+                     <div class="iconsGroups">
+                        <img src="images/icons/group-discussion.svg" class="display-default-icon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons selectedMemberCommonBg moreOption"
+                     onclick="moreAction('1', 'multipleUserOption')" tooltip="More Options" flow="down">
+                     <div class="iconsGroups">
+                        <img src="images/icons/chevron.svg" class="display-default-icon rotate" id="leftIcon" alt="">
+                     </div>
+                  </div>
+                  <div class="selectedCommonIcons selectedMemberCommonBg cancel"
+                     onclick="moreAction('2', 'multipleUserOption')" tooltip="Cancel" flow="down">
+                     <div class="iconsGroups">
+                        <img src="images/cancel-modal.svg" class="display-default-cancle" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--  member list show start here -->
+            <div>
+               <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing"></ul>
+            </div>
+            <!-- member list end -->
+         </div>
+         <!--selected-member-section-end-->
+      </section>
+      <!-- header top right sidebar chat, pinned notification start here -->
+      <section id="tray_panel" class="right-sidebar hideCls" style="right:-500px">
+         <div class="main-sidebar-section">
+            <!-- common sidebar-header start here-->
+            <div class="notification-label-icon">
+               <span class="notifications-chat" id="trayHeadingIcon">
+               </span>
+
+               <input type="hidden" id="trayId" value="" />
+               <span class="notifications-chat-label" id="tray-heading"></span>
+            </div>
+            <!-- common sidebar-header start here-->
+            <!-- listing section chat module start here  -->
+            <!--topic section notification -->
+            <ul id="trayList" class="common-ul-section ul-padd-m-none sidebar-scroll-common hideCls">
+
+            </ul>
+            <!-- listing section chat module end here -->
+            <!-- listing section notification module start here -->
+            <!-- msg notification start here -->
+            <ul id="notificationTray" class="common-ul-section ul-padd-m-none sidebar-scroll-common hideCls">
+
+            </ul>
+            <!-- listing section notification module end here -->
+            <!-- pinned  section module  start here          -->
+            <ul id="pinTray" class="common-ul-section ul-padd-m-none sidebar-scroll-common hideCls"></ul>
+            <div class="activeConferencepopupBody">
+               <div class="activeConferenceInner">
+                  <ul id="activeConferenceTray"
+                     class="activities common-ul-section ul-padd-m-none sidebar-scroll-common hideCls"></ul>
+               </div>
+            </div>
+            <!-- pinned section module end here -->
+            <div class="connection-empty-state recentloadersection" id="trayLoader">
+               <div id="loading-bar-spinner" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                  <div class="ldio-dpbvxcmmyw">
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                     <div>
+                        <div></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- empty state sidebar popup start here -->
+            <div class="empty-state-sidebar" id="trayPanel-emptyState" style="display: none;">
+               <img src="images/emptystate/messageTray.svg" class="trayPanel-image" alt="">
+               <div class="common-label-emptystate"></div>
+            </div>
+         </div>
+         <!-- empty state sidebar popup end here -->
+      </section>
+      <!-- image preview start -->
+      <div class="modal hide fade fileImagePreview" id="image-gallery" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+         <div class="modal-dialog modal-lg fileImageBody">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h2 id="imageName"></h2>
+                  <div class="previewDowlaodColum">
+                     <span id="previewDownloadFile" class="previewDownloadFile" tooltip="Download" flow="left"><img
+                           src="images/icons/download_Icon.svg" alt="Download"></span>
+                     <button type="button" class="close" data-dismiss="modal" onclick="stopVideo()" tooltip="Close"
+                        flow="up"><span aria-hidden="true"><img src="images/close-img.svg" loading="lazy"
+                              class="close-img-w" alt=""></span><span class="sr-only">Close</span>
+                     </button>
+                  </div>
+               </div>
+               <div class="modal-body">
+                  <div class="easyzoom easyzoom--overlay">
+                     <a id="image-gallery-image-link" href="">
+                        <img id="image-gallery-image" class="img-responsive col-md-12 hideCls" src="" alt="">
+                     </a>
+                  </div>
+                  <video id="videoPlayer" src="" width="1250" autoplay="" controls></video>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary float-left previousBtn" id="previousImage">
+                     <img src="images/prevI.svg" loading="lazy" title="prev" class="default-search-icons fileMangerIcon"
+                        alt="">
+                     <img src="images/prevI-hover.svg" loading="lazy" title="prev" class="hover-search fileMangerIcon"
+                        alt="">
+                  </button>
+
+                  <button type="button" id="nextImage" class="btn btn-secondary float-right nextBtn">
+                     <img src="images/nextI.svg" loading="lazy" title="next" class="default-search-icons fileMangerIcon"
+                        alt="">
+                     <img src="images/nextI-hover.svg" loading="lazy" title="prev" class="hover-search fileMangerIcon"
+                        alt="">
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- image preview end -->
+      <!--successfully msg Strat here-->
+      <section class="teamPopup-common hideCls" id="alertPopup">
+         <div class="successfullySection">
+            <div class="succesfullyContent">
+               <div class="succesfullyHeading" id="alertContent"></div>
+               <div class="succesfullyFooter">
+                  <button type="button" class="submitButtonGlobal" onclick="hideAlert('alertPopup')">OK</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--successfully msg Strat here-->
+
+      <!--Confirm pop-up msg Strat here-->
+      <section class="teamPopup-common hideCls" id="confirmPopup">
+         <div class="successfullySection">
+            <div class="succesfullyContent">
+               <div class="succesfullyHeading testCase" id="confirmContent"></div>
+               <div class="succesfullyFooter">
+                  <button class="cancelButtonGlobal" id="confirmCancel" onclick="hideAlert('confirmPopup')">
+                     Cancel</button>
+                  <button class="submitButtonGlobal" id="confirmDone">OK</button>
+               </div>
+            </div>
+         </div>
+   </div>
+   </section>
+   <!--Confirm pop-up msg Strat here-->
+   <!-- no network connectivity start -->
+   <section class="notifyPermission hideCls" id="noNetworkConnection">
+      <div class="noInternetBody">
+         <div class="notificationContent">
+            <img class="notifyBellPermission" src="images/noNetwork.svg" alt="">
+            <h2>No internet,
+               Please check your connection and try again..</h2>
+         </div>
+      </div>
+   </section>
+   <!-- no network connectivity end -->
+   <!-- network connectivity start -->
+   <section class="notifyPermission hideCls" id="connectionEstablished">
+      <div class="noInternetBody">
+         <div class="notificationContent">
+            <img class="notifyBellPermission" src="images/connectionEstablished.svg" alt="">
+            <h2>Your connection is established</h2>
+         </div>
+      </div>
+   </section>
+   <!-- network connectivity end -->
+</body>
+<!-- JS Library Include Area Starts -->
+<script defer src="./js/library/jquery-3.4.1.min.js"></script>
+
+<script defer src="./constant.min.js?v=162.0.0"></script>
+<!-- Firebase Files starts -->
+<script defer src="./js/library/firebase8.1.1/firebase.js"></script>
+<!-- Firebase Files ends -->
+<!-- Tool bar in summernote Start -->
+<script defer src="./js/library/popper.min.js"></script>
+<!-- Tool bar in summernote End -->
+<script defer src="./js/library/bootstrap.min.js" crossorigin="anonymous"></script>
+<!-- JS Library Include Area Stops -->
+
+<!-- Route Libraries Starts -->
+<script defer src="./bower_components/js-signals/dist/signals.min.js"></script>
+<script defer src="./bower_components/crossroads/dist/crossroads.min.js"></script>
+<script defer src="./bower_components/Hasher-master/dist/js/hasher.min.js"></script>
+<script defer src="./route.js?v=162.0.0"></script>
+<!-- Route Libraries Ends -->
+
+<script defer src="./js/library/securityjsNew/base64js.min.js"></script>
+<script defer src="./js/library/securityjsNew/index.js"></script>
+
+<!-- Security Library starts here -->
+<script defer src="./js/library/securityjsNew/jsbn.js"></script>
+<script defer src="./js/library/securityjsNew/prng4.js"></script>
+<script defer src="./js/library/securityjsNew/rng.js"></script>
+<script defer src="./js/library/securityjsNew/ec.js"></script>
+<script defer src="./js/library/securityjsNew/sec.js"></script>
+<script defer src="./js/library/securityjsNew/sha256.min.js"></script>
+<!-- Security Library Ends here -->
+
+<!-- Candy Files starts -->
+<script defer src="./js/library/chatjs/libs.min.js"></script>
+<script defer src="./js/library/chatjs/candy.bundle.js"></script>
+<!-- Candy Files ends -->
+<script defer type="module" src="./helpers/ga_helper.js?v=162.0.0"></script>
+<!-- Custom JS library Starts -->
+<script defer src="./helpers/chatConnection_helper.js?v=162.0.0"></script>
+<script defer type="module" src="./helpers/globalEvent_helper.js?v=162.0.0"></script>
+<script defer type="module" src="./js/custom/chat.js?v=162.0.0"></script>
+<script defer type="module" src="./js/custom/call.js?v=162.0.0"></script>
+<script defer type="module" src="./js/custom/globalsearch.js?v=162.0.0"></script>
+<!-- Custom JS library Ends -->
+<!-- datepicker end Here -->
+
+<!-- Bootstrap-tour Library Starts here -->
+<link defer rel="stylesheet" href="./css/plugins/bootstrap-tour/bootstrap-tour.css" />
+<script defer src="./js/library/bootstrap-tour/bootstrap-tour.js"></script>
+<!-- Bootstrap-tour Library Ends here -->
+<script defer type="module" src="./js/custom/tour.js?v=162.0.0"></script>
+
+<script defer src="./js/library/emojionearea/emojionearea.min.js"></script>
+
+<!-- Google Analytics Libraries Starts -->
+<script defer src="./js/library/analytics/analytics.js"></script>
+<script defer async src="./js/library/analytics/gtag.js?id=UA-71451202-1"></script>
+<!-- Google Analytics Libraries Ends -->
+
+<link defer rel="stylesheet" href="./css/plugins/datepicker.css" importance="low">
+<script defer src="./js/library/bootstrap-datepicker.js" importance="low"></script>
+
+<!-- Emoji library Starts Here -->
+<script defer src="./js/library/zoom/easyzoom.js" importance="low"></script>
+<link defer rel="stylesheet" href="./css/plugins/zoom/easyzoom.css" importance="low" />
+
+<!-- <script async defer src="https://meetdev.melp.us/libs/app.bundle.min.js?v=137" importance="low"></script>
+<script async defer src="https://meetdev.melp.us/libs/external_api.min.js?v=140" importance="low"></script> -->
+
+<!-- Google drive Integration Start -->
+<script async defer src="https://apis.google.com/js/api.js"></script>
+<script defer src="https://accounts.google.com/gsi/client" onload="googleDriveAuthenticate()"></script>
+<!-- Google drive Integration End -->
+
+</html>

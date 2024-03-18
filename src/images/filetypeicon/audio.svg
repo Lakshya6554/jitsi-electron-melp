@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Audio Button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="1920X1024-Artboard-(-Latest-Update-)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05_MelpApp_Contacts_Department_25th-April" transform="translate(-1354.000000, -703.000000)">
+            <g id="Audio-Button" transform="translate(1354.000000, 703.000000)">
+                <g id="Play" fill="#EE4136">
+                    <rect id="Rectangle" x="0" y="0" width="35" height="35" rx="4"></rect>
+                </g>
+                <path d="M17,11 L17,19.18 C16.69,19.07 16.35,19 16,19 C14.34,19 13,20.34 13,22 C13,23.66 14.34,25 16,25 C17.66,25 19,23.66 19,22 L19,13 L22,13 L22,11 L17,11 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

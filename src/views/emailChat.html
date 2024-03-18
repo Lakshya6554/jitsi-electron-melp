@@ -1,0 +1,61 @@
+<!--email-chat-start-here-->
+<section class="teamPopup-common" id="emailChatPopup">
+    <div class="emailChat">
+        <div class="emailChatHeader">
+            <h2>{{DD02}}</h2>
+        </div>
+        <div class="emailChatBody">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <span class="topic-title">{{LB22}}</span>
+                    <span class="topic-start">*</span>
+                    <span class="input-icon">
+                        <input type="email" class="form-control" placeholder="{{PH01}}" autocomplete="off"
+                            id="emailChat" onkeyup="searchEmailChat(event)">
+                        <div class="add-icon-email-chat" onclick="rightContactPanel('emailChat', false, true)">
+                            <img src="images/add-user.svg" class="add-icon">
+                        </div>
+                        <div class="emailChatBodyListing hideCls" id="emailChatEmailSearch">
+                            <ul class="emailChatBodyListingSerach"></ul>
+                        </div>
+                        <div class="emailChatBodyListingMember" id="emailChatEmail"></div>
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <span class="topic-title">{{LB23}}</span><span class="topic-start">*</span>
+                    <span class="input-icon">
+                        <input type="text" class="form-control EmailIcon" autocomplete="off" placeholder="MM/DD/YYYY"
+                            id="fromDate">
+                    </span>
+                    <span class="invalidDate"></span>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <span class="topic-title">{{LB24}}</span><span class="topic-start">*</span>
+                    <span class="input-icon">
+                        <input type="text" class="form-control EmailIcon" autocomplete="off" placeholder="MM/DD/YYYY"
+                            id="toDate">
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                   <span class="topic-title">{{LB122}}</span>
+                   <textarea id="description" class="email-description" placeholder="{{LB123}}" maxlength="300"></textarea>
+                </div>
+             </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="saveUpdateCancel">
+                        <div class="note-subtitle w-77">{{LB51}}</div>
+                        <button class="cancelButtonGlobal" onclick="openEmailChat(false)"> {{BT03}}</button>
+                        <button id="emailChatBtn" disabled class="submitButtonGlobal inActiveBtn" onclick="sendEmailChat()">
+                            {{BT02}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--email-chat-end-here-->

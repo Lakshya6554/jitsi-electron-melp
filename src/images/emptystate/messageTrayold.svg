@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="162" height="120" viewBox="0 0 162 120">
+    <defs>
+        <linearGradient id="gj8zei2fba" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+        </linearGradient>
+        <linearGradient id="4oig0bqocb" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="gray" stop-opacity=".25"/>
+            <stop offset="54%" stop-color="gray" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="gray" stop-opacity=".1"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <g>
+                <g transform="translate(-1640 -416) translate(1584 416) translate(56)">
+                    <path fill="url(#gj8zei2fba)" d="M0 0L109.406 0 109.406 79.28 39.845 79.28 32.329 92.785 24.433 79.28 0 79.28z"/>
+                    <path fill="#F8F8F8" d="M1.383 1.521L107.668 1.521 107.668 78.164 38.683 78.164 32.294 91.927 25.118 78.164 1.383 78.164z"/>
+                    <path fill="#EE4136" d="M14.827 24.493H94.011V27.881H14.827z" opacity=".3" transform="rotate(-180 54.42 26.187)"/>
+                    <path fill="#EE4136" d="M14.827 31.903H94.011V35.291H14.827z" opacity=".3" transform="rotate(-180 54.42 33.597)"/>
+                    <path fill="#EE4136" d="M14.827 39.313H94.011V42.701H14.827z" opacity=".3" transform="rotate(-180 54.42 41.007)"/>
+                    <path fill="#EE4136" d="M14.827 46.723H94.011V50.111H14.827z" opacity=".3" transform="rotate(-180 54.42 48.417)"/>
+                    <path fill="url(#4oig0bqocb)" d="M161.644 27.397L53.516 27.397 53.516 106.522 123.288 106.484 129.863 120 137.496 106.522 161.644 106.522z"/>
+                    <path fill="#FFF" d="M160.809 28.621L54.524 28.621 54.524 105.264 123.509 105.264 129.898 119.026 137.074 105.264 160.809 105.264z"/>
+                    <circle cx="88.4" cy="66.942" r="6.986" fill="#EE4136"/>
+                    <circle cx="107.668" cy="66.942" r="6.986" fill="#EE4136" opacity=".589"/>
+                    <circle cx="126.933" cy="66.942" r="6.986" fill="#EE4136" opacity=".3"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

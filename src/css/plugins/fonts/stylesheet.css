@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('AkzidenzGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('AkzidenzGrotesk-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('AkzidenzGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('AkzidenzGrotesk-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro Med';
+    src: url('AkzidenzGroteskPro-Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('AkzidenzGroteskPro-It.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('AkzidenzGroteskPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('AkzidenzGroteskPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro Super';
+    src: url('AkzidenzGroteskPro-Super.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('AkzidenzGroteskPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneue';
+    src: url('helveticaneue.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueMed';
+    src: url('HelveticaNeueMed.woff') format('woff');
+    font-weight: bold!important;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeuBold';
+    src: url('HelveticaNeuBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

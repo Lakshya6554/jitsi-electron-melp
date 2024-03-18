@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Candy Files starts -->
+    <script src="js/library/jquery-3.4.1.min.js"></script>
+    <script defer src="constant.min.js"></script>
+    <script defer src="js/library/chatjs/libs.min.js"></script>
+    <script defer src="js/library/chatjs/candy.bundle.js"></script>
+    <!-- Candy Files ends -->
+
+    <script defer src="helpers/chatConnection_helper.js?v=102"></script>
+</head>
+
+<body>
+    <script>
+
+        function sendMessage(params) {
+            let topicId = $("#userExtenstion").val();
+            let senderid = `${topicId}@${CHATURL}`;
+
+            let msgStr = $("#msgInput").val();
+            let msgid = getmsgUniqueId();
+            $("#msgId").val(msgid);
+            candySendMsg(senderid, msgStr, 'chat', topicId, null, msgid, null, "text");
+
+            addreciept(msgid, localStorage.getItem("userJIDfrom"), "sent", topicId);
+        }
+        function sendDeliverPacket() {
+            let topicId = $("#userExtenstion").val();
+            let senderid = `${topicId}@${CHATURL}`;
+            let msgId = $("#msgId").val();
+
+            setChatReadState(senderid, "received", msgId, topicId, 'chat');
+        }
+        function sendReadPacket() {
+            let topicId = $("#userExtenstion").val();
+            let senderid = `${topicId}@${CHATURL}`;
+            let msgId = $("#msgId").val();
+
+            setChatReadState(senderid, "displayed", msgId, topicId, 'chat');
+        }
+    </script>
+    <h2>Hello</h2>
+    <input type="hidden" id="msgId" value="">
+    <table>
+        <tr>
+            <td>User Extenstion:</td>
+            <td><input type="text" id="userExtenstion" placeholder="Receiver Extension"></td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td><textarea name="" id="msgInput" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Send" onclick="sendMessage()"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Deliver" onclick="sendDeliverPacket()"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Read" onclick="sendReadPacket()"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

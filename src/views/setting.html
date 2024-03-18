@@ -1,0 +1,673 @@
+<!--verification code start-->
+<section class="teamPopup-common verification_code hideCls" id="verificationCodePopup">
+   <div class="external-main-section">
+      <!--  body section satrt -->
+      <div class="temp-inner-sections">
+         <div class="headings">{{LB27}}</div>
+         <div class="temp-input-section">
+            <div class="verif-label" id="verifyError">
+               {{AL03}}
+            </div>
+            <!-- <div class="verif-sublabel">
+               {{PH04}}
+            </div> -->
+            <div class="otpContainer">
+               <input type="text" class="otp-password" onpaste="onPasteOtp('otp-password', event)" id="1_chpnumber" name="chpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" autofocus onkeyup="moveFocus(event)">
+               <input type="text" class="otp-password" onpaste="onPasteOtp('otp-password', event)" id="2_chpnumber" name="chpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-password" onpaste="onPasteOtp('otp-password', event)" id="3_chpnumber" name="chpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-password" onpaste="onPasteOtp('otp-password', event)" id="4_chpnumber" name="chpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-password" onpaste="onPasteOtp('otp-password', event)" id="5_chpnumber" name="chpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-password" onpaste="onPasteOtp('otp-password', event)" id="6_chpnumber" name="chpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+
+            </div>
+            <div class="resend">
+               <span class="verif-sublabel">
+                  {{LB35}}
+               </span>
+               <span class="resend-color hideCls" id="resendCodeId" onclick="savePassword(false)">{{LB39}}</span>
+               <span id="timer" class="verifyCodeTimer">59 Sec</span>
+            </div>
+            <div class="logOutCheck">
+               <span class="logoutnotchecked logoutClick" id="logoutClick"
+                  onclick="checkedlogoutFromAllDevice('logoutClick')"><span class="logOut">{{LB33}}</span></span>
+            </div>
+         </div>
+         <!--cacel-save button-->
+         <div class="submit-cancel-btns clearfixed">
+            <button class="cancelButtonGlobal" id="cancelPassOtp" onclick="hidePasswordVerification()">{{BT09}}</button>
+            <button class="submitButtonGlobal" id="submitPassOtp"
+               data-loading-text="<i class='fa fa-spinner fa-spin'></i> Submit"
+               onclick="verifyPassword()">{{BT11}}</button>
+         </div>
+         <!--cacel-save button-->
+      </div>
+      <!--  body section  end  -->
+   </div>
+</section>
+<!--verification code end-->
+
+<!--Phone number verification code start-->
+<section class="teamPopup-common phoneNumerVerification hideCls" id="verifyPhonePopup">
+   <div class="editProfile">
+      <div class="editProfileHeader">
+         <div class="editProfileTittle">
+            <h2>{{LB23}}</h2>
+         </div>
+      </div>
+      <div class="phoneVerify-main-section">
+         <!--  body section satrt -->
+         <div class="inner-profile">
+
+            <div class="myInfo countryInfo">
+               <label class="userName">{{LB31}}
+                  <!-- <span class="mandetoryField">*</span> -->
+               </label>
+               <!--country-start-->
+               <div class="countryContainer">
+                  <div class="countryDropdown" onclick="outerCountryList(false, event)">
+                     <ul>
+                        <li>
+                           <div class="country-code-main-list">
+                              <div class="flag-contry-code">
+                                 <img src="images/IN.png" class="" id="verifyCountryFlag">
+                              </div>
+                              <div class="contry-code-num"><span id="verifyCountryCode"></span></div>
+                              <input type="hidden" id="verifyCountryId" value="">
+                           </div>
+                        </li>
+                     </ul>
+                     <div class="contry-code-dropdown" id="editcontry-code-dropdown">
+                        <img src="images/dateChev.svg" class="">
+                     </div>
+                  </div>
+                  <div class="countryListArea countryDropDownSetting accountSettingDropDownNew hideCls"
+                     id="verifyCountryList">
+                     <input type="text" placeholder="Search Country" class="countryInput" id="countryInnerInput"
+                        onkeyup="filterCountry('countryInnerInput', 'countryInnerList')" class="timezoneDropdown"
+                        autocomplete="off" onclick="preventInput(event)">
+                     <ul id="countryInnerList" class="countryList"></ul>
+                  </div>
+                  <!-- <div class="countryDropdown selectDropDown hideCls" id="verifyCountryList">
+                     <input type="text" placeholder="Search Country" id="countryInnerInput"
+                        onkeyup="filterCountry('countryInnerInput', 'countryInnerList')" class="timezoneDropdown"
+                        autocomplete="off" onclick="preventInput(event)">
+                     <ul id="countryInnerList"></ul>
+                  </div> -->
+                  <div class="conuntryContact">
+                     <input type="number" class="myInfoInput" minlength="3" maxlength="15" autocomplete="off" value=""
+                        id="verifyPhoneNumber" readonly="" onkeyup="changePhoneKeyUp(this, true)">
+                  </div>
+                  <div class="CountryBtn editVerified">
+                     <button class="veryFiedBtn" id="editPhoneIcon" onclick="editPhoneIcon()"><img
+                           src="images/icons/edit.svg"></button>
+                     <span id="sendCode" class="verifypopupinputresend resendCode" onclick="sendPhoneOtp()">
+                        {{LB24}}
+                     </span>
+                  </div>
+               </div>
+               <!--country-end-->
+            </div>
+            <span class="verification-text" id="phoneVerifyError">{{LB22}}</span>
+            <!-- <div class="myInfo countryInfo verificationtest">
+               <label class="userName">{{LB27}}
+                  <span class="mandetoryField">*</span>
+
+               </label>
+               <div class="enter-verify-code-section verificationPhone">
+                  <input type="text" id="phoneOtp" class="enter-code-number" placeholder="{{PH03}}">
+                  <div class="time-verify" id="verifyPhoneTimer">59 Sec</div>
+               </div>
+            </div> -->
+            <!-- <div class="resend-code-main-section clearfixse">
+               <div class="resend-code-part resend-new-code phoneCode">
+                  <span class="resendCode" id="verifyPhoneResend" style="pointer-events:none;color:#E8E8E8"
+                     onclick="sendPhoneOtp()">{{LB25}}</span>
+               </div>
+            </div> -->
+            <!-- </div>
+            <div class="saveUpdateCancel">
+               <button class="cancelButtonGlobal" onclick="hideVerifyPhone()"> {{BT02}}</button>
+               <button id="verifyPhoneOtp" class="submitButtonGlobal" onclick="verifyPhoneOtp()"> {{BT11}}</button>
+            </div>
+         </div> -->
+            <div class="verificationBoxWrap">
+               <div class="temp-inner-sections">
+                  <div class="headings">{{LB27}}</div>
+                  <div class="temp-input-section">
+                     <!-- <input type="text" class="otp-input" name="" id="otpnumber" placeholder="Enter Verification Code"> -->
+                     <div class="otpContainer">
+                        <input type="text" class="otp-phone" onpaste="onPasteOtp('otp-phone', event)" id="11" name="phoneOtp[]" autocomplete="off" maxlength="1"
+                           placeholder="" autofocus="" onkeyup="moveFocus(event)">
+                        <input type="text" class="otp-phone" onpaste="onPasteOtp('otp-phone', event)" id="22" name="phoneOtp[]" autocomplete="off" maxlength="1"
+                           placeholder="" onkeyup="moveFocus(event)">
+                        <input type="text" class="otp-phone" onpaste="onPasteOtp('otp-phone', event)" id="33" name="phoneOtp[]" autocomplete="off" maxlength="1"
+                           placeholder="" onkeyup="moveFocus(event)">
+                        <input type="text" class="otp-phone" onpaste="onPasteOtp('otp-phone', event)" id="44" name="phoneOtp[]" autocomplete="off" maxlength="1"
+                           placeholder="" onkeyup="moveFocus(event)">
+                        <input type="text" class="otp-phone" onpaste="onPasteOtp('otp-phone', event)" id="55" name="phoneOtp[]" autocomplete="off" maxlength="1"
+                           placeholder="" onkeyup="moveFocus(event)">
+                        <input type="text" class="otp-phone" onpaste="onPasteOtp('otp-phone', event)" id="66" name="phoneOtp[]" autocomplete="off" maxlength="1"
+                           placeholder="" onkeyup="moveFocus(event)">
+
+                     </div>
+                     <div class="resend">
+                        <span class="verif-sublabel" id="codeExpireText">{{LB36}}</span>
+                        <span id="verifyPhoneTimer" class="verifyCodeTimer">17 Sec</span>
+                        <span class="resend-color" id="verifyPhoneResend" style="display: none;"
+                           onclick="sendPhoneOtp()">{{LB25}}</span>
+
+                     </div>
+                  </div>
+                  <!--cacel-save button-->
+                  <div class="submit-cancel-btns clearfixed">
+                     <button class="cancelButtonGlobal" onclick="hideVerifyPhone()">{{BT09}}</button>
+                     <button class="submitButtonGlobal" id="verifyPhoneOtp"
+                        data-loading-text="<i class='fa fa-spinner fa-spin'></i> Submit"
+                        onclick="verifyPhoneOtp()">{{BT13}}</button>
+                  </div>
+                  <!--cacel-save button-->
+               </div>
+            </div>
+         </div>
+      </div>
+</section>
+
+<!--accountSettingNew_pop_start_here-->
+<section class="accountSettingNew" id="profilePopup">
+   <input type="hidden" name="" id='editclientId'>
+   <input type="hidden" name="" id='editresumePath'>
+   <input type="hidden" name="" id='editcountryCode'>
+   <input type="hidden" name="" id='editcountryId'>
+   <input type="hidden" name="" id='editcityId'>
+   <input type="hidden" name="" id='phoneNumber'>
+   <div class="accountSettingNewBody">
+      <div class="accountSettingNewLeft">
+         <div class="accountSettingNewLeftPart">
+            <div class="accountSettingNewLeftTop">
+               <div class="profile profileDragArea" data-resume="false">
+                  <img class="selfprofilepic Rectangle" src="images/default_avatar_male.svg" id="profileImage">
+                  <!--drop-down-start-here-->
+                  <div class="uploadProfile">
+                     <label for="upload-photo">
+                        <ul class="upload-options-cont">
+                           <li> {{BT06}} </li>
+                           <li onclick="removeProfilePic()"> {{BT07}}</li>
+                           <li onclick="viewProfilePicture('profileImage')"> {{BT08}}
+                           </li>
+                        </ul>
+                     </label>
+                     <span class="file-wrapper">
+                        <input type="file" name="photo" id="uploadProfilePic" onchange="changeProfilePic(event)">
+                        <span class="button">{{BT06}}</span>
+                     </span>
+                     <!-- <input type="file" class="upload-photo" id="uploadProfilePic"> -->
+                  </div>
+                  <!--drop-down-end-here-->
+               </div>
+               <div class="accountSettingTopTittle">
+                  <h2 id='name'>&nbsp;</h2>
+                  <p id='title'>&nbsp;</p>
+               </div>
+            </div>
+            <div class="accountSettingNewTabs">
+               <ul>
+                  <li class="accountSettinActive" id="accheader1" onclick="openAccounttab(1)">{{HD03}}</li>
+                  <li id="accheader2" onclick="openAccounttab(2)">{{HD04}}</li>
+                  <li id="accheader3" onclick="openAccounttab(3)">{{HD05}}</li>
+                  <li id="accheader4" onclick="openAccounttab(4)">{{HD06}}</li>
+               </ul>
+            </div>
+            <div class="logOutBtn" onclick="logout()" id="logout-button">
+               <span><img src="images/icons/logout_icon.svg">{{BT03}}</span>
+            </div>
+         </div>
+      </div>
+      <div class="accountSettingNewRight">
+         <div class="accountSettingTopStrip">
+            <div class="accountSettingNewRightTop">
+               <div class="accountSettingUserTop" onclick="showOnlineStatus(event)" id="online-status">
+                  <ul>
+                     <li id="currentStatus"><i id="mystatusIcon" class="" aria-hidden="true"><img
+                              src="images/icons/onlieIcon.svg"></i></i>
+                        <span id="mystatusTxt"> {{DD01}} </span></span>
+                        <ul class="userTopDropDown hideCls" id="statusDropdown">
+                           <li onclick="changeOnlineStatus(this, 'active', 'DD01', 'onlieIcon')"><i class=""
+                                 aria-hidden="true"><img src="images/icons/onlieIcon.svg"></i></i><span
+                                 class="dropdowntxt">{{DD01}}</span></li>
+                           <li onclick="changeOnlineStatus(this, 'in_meeting', 'DD02', 'In-meeting')"><i class=""
+                                 aria-hidden="true"><img src="images/icons/In-meeting.svg"></i><span
+                                 class="dropdowntxt">{{DD02}}</span></li>
+                           <li onclick="changeOnlineStatus(this, 'busy', 'DD03', 'busyIcon')"><i class=""
+                                 aria-hidden="true"><img src="images/icons/busyIcon.svg"></i><span
+                                 class="dropdowntxt">{{DD03}}</span></li>
+
+                           <!-- <li onclick="changeOnlineStatus(this, 'inactive', 'DD04', 'offline')"><i class=""
+                                 aria-hidden="true"><img src="images/icons/offline.svg"></i><span
+                                 class="dropdowntxt">{{DD04}}</span></li> -->
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="accountSettingUserNotification">
+               <div class="accountSettingNotify">
+                  <div class="desktop-notification-options" style="display:none;">
+                     <select class="form-control desktopNotificationValue bg-setting desktopNotificationValueNewDrop"
+                        id="desktopNotificationValue">
+                        <option value="1">{{DD05}}</option>
+                        <option value="2">{{DD06}}</option>
+                        <option value="3">{{DD07}}</option>
+                        <option value="4">{{DD08}}</option>
+                     </select>
+                  </div>
+                  <label class="accountswitch">
+                     <div id="notificationOffTill" class="notificationOffTill"></div>
+                     <div id="desknotificationdiv" class="accountRightPanel" onclick="enableMuteNotification()">
+                        <!-- <input type="checkbox" id="notification">
+                        <span class="accountslider"></span> -->
+
+                        <input type="checkbox" id="notification" class="accountCheck" /><span class="switchBtn"
+                           for="switch">Toggle</span>
+                     </div>
+                  </label>
+                  <div class="accountsettingslabels" id="mute-notifications-switch">{{HD01}}</div>
+               </div>
+               <div class="accountSettingNotify">
+                  <label class="accountswitch">
+                     <div id="publicInvitationDiv" class="accountRightPanel" onclick="enableAllowInvitation()">
+                        <!-- <input type="checkbox" id="publicInvitation">
+                        <span class="accountslider"></span> -->
+                        <input type="checkbox" id="publicInvitation" class="accountCheck" /><span class="switchBtn"
+                           for="switch">Toggle</span>
+                     </div>
+                  </label>
+                  <div class="accountsettingslabels" id="allow-public-nots-switch">{{HD02}}</div>
+               </div>
+               <div class="accountSettingCancleIcon" onclick="accountSettingHide()"><img
+                     src="images/icons/accountSettingCancle.svg" class="cancelIconImage"></div>
+            </div>
+         </div>
+         <div class="divider"></div>
+         <div class="accountSettingFormContainer">
+            <!--tab1-->
+            <div class="accountSettingForm" id="accountTab1">
+               <div class="accountSettingFormInner">
+                  <div class="accountInformationInputFields">
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo cursor">
+                           <label><span><img src="images/icons/name-info.svg">{{LB01}}</span></label>
+                           <input type="text" class="accountSettingInformInput cursoerInheri accountSettingBorder"
+                              name="userfullname" autocomplete="off" value="" onkeypress="removeNumberFromInput(this)" onkeyup="removeNumberFromInput(this)" id='editfullName' placeholder="{{PH09}}">
+                        </div>
+                     </div>
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label><span><img src="images/icons/emailInfo.svg"><span id="emailLabel">{{LB02}}</span></span></label>
+                           <input type="text" class="accountSettingInformInput readOnly accountSettingBorder"
+                              name="userfullname" autocomplete="off" value="" id="editemail" placeholder="{{LB02}}"
+                              readonly>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accountInformationInputFields">
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label><span><img src="images/icons/phoneInfo.svg">{{LB03}}</span></label>
+                           <div class="countryContainerMain" id="phone-country">
+                              <div class="countryDropdownList" onclick="outerCountryList(true, event)">
+                                 <ul>
+                                    <li>
+                                       <div class="countryCodeMainList">
+                                          <div class="flagContryCode">
+                                             <img src="https://cdnmedia-fm.melpapp.com/MelpApp/uploads/flags/IN.png"
+                                                class="" id="userCountryFlag">
+                                          </div>
+                                    </li>
+                                 </ul>
+                                 <div class="contryCodeDropdown">
+                                    <img src="images/dateChev.svg" class="country-selection-dropdown-icon">
+                                 </div>
+                                 <div class="countryListArea countryDropDownSetting accountSettingDropDownNew hideCls"
+                                    id="profileCountryList">
+                                    <input type="text" placeholder="Search Country" class="countryInput"
+                                       id="countryInput" onkeyup="filterCountry('countryInput', 'countryList')"
+                                       class="timezoneDropdown" autocomplete="off" onclick="preventInput(event)">
+                                    <ul id="countryList" class="countryList"></ul>
+                                 </div>
+                              </div>
+                              <div class="countryNumber cursoerInheri phoneCode">
+                                 <div class="countryCodeSetting">
+                                    <span class="countryNumerFlag" id="userCountryCode"></span>
+                                    <input type="hidden" name="countryId" id="userCountryId" value="">
+                                 </div>
+                                 <input type="number" class="accountSettingInformInput cursoerInheri"
+                                    name="userfullname" autocomplete="off" minlength="4" maxlength="15" value=""
+                                    id='userPhoneNumber' placeholder="{{PH10}}" onkeyup="changePhoneKeyUp(this)">
+
+                                 <button class="submitButtonGlobal hideCls" id='verifyBtn'
+                                    onclick="showVerifyPhone()">{{BT04}}</button>
+                                 <span class="verifyFiedBtn" id='verifiedBtn'><img
+                                       src="images/icons/Accountsent.svg">{{LB04}}</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo cursor">
+                           <label><span><img src="images/icons/locationInfo.svg">{{LB05}}</span></label>
+                           <input type="text" class="accountSettingInformInput accountSettingBorder" name="userfullname"
+                              autocomplete="off" value="" id='editaddress' placeholder="{{PH11}}"
+                              onkeyup="editAddress()">
+                           <div class="countryDropDownSetting accountSettingDropDownNew commonDropNewDown hideCls"
+                              id="profileLocationList">
+                              <ul></ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="largeInputField">
+                  <div class="col-md-12 float-left">
+                     <div class="accountSettingInfo accountMsgBar">
+                        <label><span>{{LB06}}</span></label>
+                        <textarea id="editaboutUs" class="accountSettitMsg" placeholder="{{PH01}}"
+                           maxlength="250"></textarea>
+                        <div class="accountDescCount">
+                           <input type="hidden" name="descCarLimit" value="250">
+                           <div class="accountDescIncCount" id="editaboutUsCounter">0 </div>
+                           <div class="limitcharacter">&nbsp;/ 250</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--tab2-->
+            <div class="accountSettingForm hideCls" id="accountTab2">
+               <div class="accountSettingFormInner">
+                  <div class="accountInformationInputFields">
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label><span><img src="images/icons/name-info.svg">
+                                 <div id='editdesignationHeading' class="strictMain">{{LB07}}
+                                    <div class="mandetoryField">*</div>
+                                 </div>
+                              </span></label>
+                           <input type="text" class="accountSettingInformInput cursoerInheri accountSettingBorder"
+                              name="userfullname" autocomplete="off" value="" id="editdesignation"
+                              placeholder="{{PH08}}">
+                           <input type="text" autocomplete="off" id="edittitle" readonly=""
+                              onclick="openExpertLevel(event)" class="accountSettingInformInput accountSettingBorder">
+                           <div class="businessUserDropDown hideCls" id="expertLevel">
+                              <div class="businessUserDropDownItem" onclick="selectExpertLevel('Beginner')">{{DD09}}
+                              </div>
+                              <div class="businessUserDropDownItem" onclick="selectExpertLevel('Intermediate')">
+                                 {{DD10}}</div>
+                              <div class="businessUserDropDownItem" onclick="selectExpertLevel('Expert')">{{DD11}}</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label>
+                              <span>
+                                 <img src="images/icons/department.svg">
+                                 <div id='editdepartmentHeading' class="strictMain">{{LB08}} <div
+                                       class="mandetoryField">*</div>
+                                 </div>
+                              </span>
+                           </label>
+                           <input type="text" class="accountSettingInformInput cursoerInheri accountSettingBorder"
+                              name="userfullname" autocomplete="off" value="" id="editdepartmentName"
+                              placeholder="Enter Department">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accountInformationInputFields">
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label>
+                              <span>
+                                 <img src="images/icons/company.svg">
+                                 <div id='editcompanyHeading' class="strictMain">{{LB09}} <div class="mandetoryField">*
+                                    </div>
+                                 </div>
+                              </span>
+                           </label>
+                           <input type="text" class="accountSettingInformInput cursoerInheri accountSettingBorder"
+                              name="userfullname" autocomplete="off" value="" id="editcompanyName"
+                              placeholder="Enter Company">
+                        </div>
+                     </div>
+                     <div class="col-md-6 float-left">
+                        <!-- <div class="accountSettingInfo">
+                           <label><span><img src="images/icons/timezone.svg">{{LB10}}</span></label>
+                           <select class=" form-control bg-setting selecItems" name="language" id="timeZoneDropdown">
+                              <option value="">Select</option>
+                           </select>
+                        </div> -->
+                        <!-- suraj -->
+                        <div class="accountSettingInfo">
+                           <label>
+                              <span>
+                                 <img src="images/icons/timezone.svg">{{LB10}}
+                              </span>
+                           </label>
+                           <div class="acc-common-bg-dropdown" id="acctimezone-open"
+                              onclick="accountshowOrHideTimeZone(event)">
+                              <div class="dropdown-flex">
+                                 <div class="account-time-zone-text" id="accountselectTimeZone">
+                                    Select
+                                 </div>
+                                 <div class="dropdown-icon-bg-setting">
+                                    <img src="images/icons/onlineDropdown.svg" class="dropdown-icons-account">
+                                 </div>
+                              </div>
+                              <div id="acctimeZoneDropdown" class="dropdown-content-account" style="display: none;">
+                                 <input type="text" placeholder="{{PH05}} {{LB10}}" id="timezone-toogleacc"
+                                    onkeyup="accSettingfilterTimeZone()" autocomplete="off"
+                                    onclick="accfocusTimeZone(event)">
+                                 <div class="timeZone">
+                                    <ul class="common-dropdown-account-ul" id="accSettingTimeZoneDropdown"> </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accountInformationInputFields">
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label><span><img src="images/icons/language.svg">{{LB11}}</span></label>
+                           <!-- <select class="form-control bg-setting selecItems" name="language" id="preferredLanguage" onchange="changePreferredLang(this.value);">
+                              <option value="en" style="display:none">English</option>
+                              <option id="en" value="en">English</option>
+                              <option id="es" value="es" >Spanish</option>
+                              <option id="pt" value="pt">Portuguese</option>
+                            </select> 
+                                                       -->
+                              <div class="acc-common-bg-dropdown" id="preferredLanguage" onclick="showHideLanguage(event)">
+                                 <div class="dropdown-flex">
+                                    <div class="account-time-zone-text" id="selectedLanguage">English</div>
+                                    <div class="dropdown-icon-bg-setting">
+                                       <img src="images/icons/onlineDropdown.svg" class="dropdown-icons-account">
+                                    </div>
+                                 </div>
+                                 <div id="preferredLanguageDropdown" class="dropdown-content-account" style="display: none;">
+                                    <ul class="language-ul" style="display: block;">
+                                       <li onclick="selectAppLanguage('en')">
+                                          <div class="list-items">English</div>
+                                       </li>
+                                       <li onclick="selectAppLanguage('es')">
+                                          <div class="list-items">Español</div>
+                                       </li>
+                                       <li onclick="selectAppLanguage('pt')">
+                                          <div class="list-items">Português</div>
+                                       </li>
+                                       <li onclick="selectAppLanguage('de')">
+                                          <div class="list-items">German</div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label><span><img src="images/icons/resume.svg">{{LB12}}</span></label>
+                           <label class="uploadfile-main-area profileDragArea" data-resume="true">
+                              <span class="upload-file-label accounSettingUpoadLabel">
+                                 <span class="uploadText" id="resumeUploading">{{BT05}}</span>
+                                 <span id="file-count" class="file-count"></span>
+                                 <img src="images/attachment.svg" title="Attachment file"
+                                    class="attachment-icon-meeting">
+                              </span>
+
+                              <input type="file" class="upload-setting-file" id="edituploadResume"
+                                 accept="doc,pdf,rtf,docx" onchange="uploadResume(event)">
+                           </label>
+                           <div class="uploadeddFiles" id="resumeMain">
+                              <div class="uloadedFilesView">
+                                 <div class="uloadedFilesViewIneer">
+                                    <span class="fileExection" id="resumePath"></span>
+                                    <span class="downloadFile" id="editdownloadResume"> <img
+                                          src="images/icons/accountSettingDowload.svg" title="Attachment file"
+                                          class="attachment-download-icon-meeting"></span>
+                                 </div>
+                                 <span class="settingRemove" onclick="removeResume()">Remove</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--tabs-end-->
+            <!--tab3-->
+            <div class="accountSettingForm hideCls" id="accountTab3">
+               <div class="accountSettingFormInner">
+                  <div class="col-md-12">
+                     <div class="accountSettingNewPass">
+                        <span>{{LB13}}. <img src="images/icons/newPassIcon.svg">
+                        </span>
+
+                        <ul id="passwordHint">
+                           <span class="passwordHead">{{LB32}}</span>
+                           <li class="lengthChar"> {{LB14}}</li>
+                           <li class="upperChar">{{LB15}}</li>
+                           <li class="lowerChar">{{LB16}}</li>
+                           <li class="numberChar">{{LB28}}</li>
+                           <li class="specialChar">{{LB29}}</li>
+                           <!-- <li class="repeatChar">{{LB30}}</li> -->
+
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="accountInformationInputFields">
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label><span>{{LB17}}</label>
+                           <div class="passwordInput">
+                              <input type="password" class="accountSettingInformInput" name="userfullname"
+                                 autocomplete="new-password" placeholder="{{PH02}}" id="newPassword"
+                                 onkeyup="isValidPasswordOnKeyUp(event)">
+                              <div class="newEyeIcon" onclick="showHidePassword(this, 'newPassword')"></div>
+                           </div>
+                           <span class="errormsgsignins coloErrorMsg" id="newpasswordmissmatcherror"></span>
+                        </div>
+                     </div>
+                     <div class="col-md-6 float-left">
+                        <div class="accountSettingInfo">
+                           <label><span>{{LB18}}</span></label>
+                           <div class="passwordInput">
+                              <input type="password" class="accountSettingInformInput" name="userfullname"
+                                 autocomplete="new-password" placeholder="{{PH03}}" id="confirmPassword">
+                              <div class="newEyeIcon" onclick="showHidePassword(this, 'confirmPassword')"></div>
+                           </div>
+                           <span class="errormsgsignins coloErrorMsg" id="verifypasswordmissmatcherror"></span>
+                        </div>
+                     </div>
+                  </div>
+                  <!--tabs-end-->
+               </div>
+            </div>
+            <!--tab4-->
+            <div class="accountSettingForm hideCls" id="accountTab4">
+               <div class="accountSettingFormInner">
+                  <div class="deleteConfirm">
+                     <div class="succesfullyContent">
+                        <div class="succesfullyHeading">{{AL09}}</div>
+                        <p>
+                           {{AL10}}
+                        </p>
+                        <b>{{AL11}}</b>
+                     </div>
+                  </div>
+                  <!--tabs-end-->
+               </div>
+            </div>
+            <div class="accountSettingBtn">
+               <button class="cancelButtonGlobal" onclick="accountSettingHide()">{{BT09}}</button>
+               <button id="saveBtnsetting" class="submitButtonGlobal" onclick="updateProfile()">{{BT10}}</button>
+            </div>
+         </div>
+</section>
+<!--accountSettingNew_pop_end_here-->
+
+<!-- delete otp popup start -->
+<div id="deleteVerifyPopup" class="tempPopup-common hideCls">
+   <!-- Modal content -->
+   <div class="external-main-section">
+      <!--  body section satrt -->
+      <div class="temp-inner-sections">
+         <div class="headings">{{LB27}}</div>
+         <div class="temp-input-section">
+            <div class="verif-label">
+               {{LB34}} <span id="userEmailAddress" class="guestEmailAddress"></span>
+            </div>
+            <!-- <div class="verif-sublabel">
+               {{PH04}}
+            </div> -->
+            <!-- <input type="text" class="otp-input" name="" id="otpnumber" placeholder="Enter Verification Code"> -->
+            <div class="otpContainer">
+               <input type="text" class="otp-inputs" onpaste="onPasteOtp('otp-inputs', event)" id="111" name="otpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" autofocus onkeyup="moveFocus(event)">
+               <input type="text" class="otp-inputs" onpaste="onPasteOtp('otp-inputs', event)" id="222" name="otpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-inputs" onpaste="onPasteOtp('otp-inputs', event)" id="333" name="otpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-inputs" onpaste="onPasteOtp('otp-inputs', event)" id="444" name="otpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-inputs" onpaste="onPasteOtp('otp-inputs', event)" id="555" name="otpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+               <input type="text" class="otp-inputs" onpaste="onPasteOtp('otp-inputs', event)" id="666" name="otpnumber[]" autocomplete="off" maxlength="1"
+                  placeholder="" onkeyup="moveFocus(event)">
+
+            </div>
+            <div class="resend">
+               <span class="verif-sublabel">
+                  {{LB35}}
+               </span>
+               <span class="resend-color" id="deleteVerifyCodeResend" onclick="deleteResend()">{{LB25}}</span>
+               <span id="deleteVerifyCodeTimer" class="verifyCodeTimer" style="display:none;"></span>
+            </div>
+         </div>
+         <!--cacel-save button-->
+         <div class="submit-cancel-btns clearfixed">
+            <button class="cancelButtonGlobal" id="cancel-otp" onclick="hideDeleteVerifyPopup()">{{BT09}}</button>
+            <button class="submitButtonGlobal" id="submit-otp"
+               data-loading-text="<i class='fa fa-spinner fa-spin'></i> Submit"
+               OnClick="confirmDeleteAccount()">{{BT12}}</button>
+         </div>
+         <!--cacel-save button-->
+      </div>
+      <!--  body section  end  -->
+   </div>
+</div>
+<!-- delete otp popup end -->
+

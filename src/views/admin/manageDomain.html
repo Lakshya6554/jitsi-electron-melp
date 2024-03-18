@@ -1,0 +1,80 @@
+<div class="mangeDomain">
+	<div class="manageDomainRow manageDomainRowB3">
+		<div class="manageDomainStrip">
+			<div class="manageDomainLeftColum">
+				<h2 id="heading">Manage Domain</h2>
+				<p>Managing Your Domain Name in Your Admin Panel: Steps for Domain Control and Configuration</p>
+			</div>
+			<div class="manageDomainRightColum">
+				<div class="domainSaerchSec">
+					<input placeholder="Search" class="manageDomainSearch" type="text" autocomplete="off" onkeyup="domainSearch()">
+					<span class="manageDomainSaerchIcon"></span>
+				</div>
+				<div class="manageDomainFilter" onclick="domainFilter()">
+					<span class="domainFiltter">
+						<img src="images/admin/icons/domainfilter.svg">
+					</span>
+				</div>
+				<div class="adminInnerStatusDropDown domainFilterDropdown" id="domainFilterDropdown" style="display: none;">
+					<div class="form__group" style="text-align: center;">
+						<div class="form__radio-group" onclick="listDomain(true, false)">
+							<label class="form__label-radio pdUnset">
+								Manage Domain
+							</label>
+						</div>
+						<div class="form__radio-group" onclick="listDomain(true, true)">
+							<label class="form__label-radio pdUnset">
+								Merged Domain
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="manageDomainB2">
+		<div class="adminUserListingContainer">
+			<div class="adminUserListRow">
+				<div class="adminUserListHeader">
+					<div class="adminListingTop">
+						<!-- adminuserlist start -->
+						<div class="adminListUser">
+							<div class="adminListingFilter">
+								<div class="adminShortFiltter">
+									<span class="shortIcon adminListigBg" data-clientName="1" onclick="sortDomainList('clientName', this)">Client Name</span>
+								</div>
+							</div>
+							<div class="adminListingFilter">
+								<div class="adminShortFiltter">
+									<span class="shortIcon adminListigBg" data-domainName="1" onclick="sortDomainList('domainName', this)">Domain Name</span>
+								</div>
+							</div>
+							<div class="adminListingFilter">
+								<div class="adminInnerStatus"><span class="adminListigBg">Status</span></div>
+							</div>
+							<div class="adminStatus">
+								<div class="adminInnerStatus"><span class="adminListigBg">Users</span></div>
+							</div>
+						</div>
+						<!-- adminuserlist end -->
+						<!-- DEACTIVATE and Export selected btn  -->
+						<!-- <div class="deactiveExportBtn hideCls">
+							<button class="activDeactiveBtn">DEACTIVATE </button>
+							<button class="activDeactiveBtn">Export selected </button>
+						</div> -->
+						<!-- DEACTIVATE and Export selected btn  -->
+					</div>
+				</div>
+			</div>
+			<div class="adminListingRow screenHeight">
+				<div class="adminListingScroll heightAdjustAuto" id="domainListContainer">
+					
+				</div>
+				<div class="adButtonA4 alignRight">
+					<!-- <button class="addUserBtn" onclick="">DEACTIVATE</button> -->
+					<button id="mergeDomain" onclick="mergeUnMergeDomain()" class="addUserBtnDelete inActiveBtn" disabled onclick="">MERGE DOMAIN</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

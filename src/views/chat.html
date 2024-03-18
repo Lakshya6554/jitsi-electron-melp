@@ -1,0 +1,57 @@
+<!--message information-start-here-task-id-->
+<section class="teamPopup-common" id="message-info-template">
+    <div class="common-popup-model messageInfo messageSpace">
+        <div class="accountSettingHeader">
+            <div class="accountSettingTittle">
+                <h2>Message Info</h2>
+            </div>
+            <div class="accountSettingCLose" onclick="closeMsgInfo()">
+                <button type="button"><img src="images/icons/cancel.svg"></button>
+            </div>
+        </div>
+        <div class="editContainer">
+            <div class="tabbable-panel">
+                <div class="tabbable-line">
+                    <ul class="nav nav-tabs ">
+                        <li><span href="javascript:void(0);" data-toggle="tab" id="deliverHeading" class="active" onclick="openMsgInfoTab(1)">DELIVERED </span></li>
+                        <li><span href="javascript:void(0);" data-toggle="tab" id="readHeading" onclick="openMsgInfoTab(2)">READ BY</span></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="msgInfoWaitingState" class="hideCls">
+                            <div id="loading-bar" class="spinner">
+                                <div class="spinner-icon"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id="deliveredTab">
+                            <div class="myInfoContainer contact-scroll-section">
+                                <ul class="common-ul-section ul-padd-m-none"></ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="readTab">
+                            <div class="myInfoContainer contact-scroll-section">
+                                <ul class="common-ul-section ul-padd-m-none"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--message information-end-here-task-id-1827-->
+<section class="teamPopup-common" id="voiceMemoPopup">
+    <div class="wrapper" style="height: 50%;display: flex;background-color: white;width: 50%;flex-direction: column;margin: 10% auto;">
+        <header>
+            <h1>MelpApp Audio Recording</h1>
+        </header>
+    </div>
+    <section class="voic-main-controls" style="padding: 0.5rem 0;">
+    <canvas class="visualizer" id="waveform" height="60px"></canvas>
+    
+    <div id="buttons">
+        <button id="record" class="invite record" style="width: 48%;margin-left: 2%;">Record</button>
+        <button id="stop" class="invite stop"  style="width: 48%;">Stop</button>
+        <button id="close" class="invite" onclick="closePopup('voiceMemoPopup', true)" style="width: 48%;">Close</button>
+        <button id="pause" class="invite pause"> Pause  </button>
+    </div>
+</section>

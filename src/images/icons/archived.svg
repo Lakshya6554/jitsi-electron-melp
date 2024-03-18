@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="30px" viewBox="0 0 32 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Read</title>
+    <g id="Testing-Web-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-1042.000000, -6388.000000)" fill="#EE4136">
+            <g id="Read" transform="translate(1042.000000, 6388.000000)">
+                <path d="M27,15 C27,21.6 21.6,27 15,27 C8.4,27 3,21.6 3,15 C3,8.4 8.4,3 15,3 C16.2,3 17.25,3.15 18.3,3.45 L20.7,1.05 C18.9,0.45 16.95,0 15,0 C6.75,0 0,6.75 0,15 C0,23.25 6.75,30 15,30 C23.25,30 30,23.25 30,15 L27,15 L27,15 Z" id="Path"></path>
+                <path d="M24.9017077,6.51514541 L23.3865623,5 L16.5737808,11.8127815 L18.0889262,13.3279269 L24.9017077,6.51514541 Z M29.4578896,5 L18.0889262,16.3689635 L13.5972185,11.8880015 L12.0820731,13.4031469 L18.0889262,19.41 L30.9837808,6.51514541 L29.4578896,5 Z M6,13.4031469 L12.0068531,19.41 L13.5219985,17.8948546 L7.52589113,11.8880015 L6,13.4031469 Z" id="Shape" stroke="#EE4136" stroke-width="0.7" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

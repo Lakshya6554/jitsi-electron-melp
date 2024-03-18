@@ -1,0 +1,772 @@
+.right-sidebar {
+    position: fixed;
+    top: 7.2rem;
+    right: -500px;
+    background-color: var(--white);
+    box-shadow: -0.3rem 0 0.4rem 0 rgb(198 198 198);
+    border-left: 0.1rem solid var(--gray);
+    height: 100%;
+    width: 43rem;
+    z-index: 99;
+}
+
+/* animation on tray panel start */
+.notificationUsername {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    max-width: 10.9rem !important;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0.06rem;
+    width: auto !important;
+    margin-bottom: 0px !important;
+}
+
+.notificationMsg {
+    width: auto !important;
+    max-width: 55.5% !important;
+}
+
+.empty-state-sidebar {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.trayPanel-image {
+    /* margin-left: 13rem; */
+    max-height: 20rem;
+}
+
+.display-sidebar-main {
+    width: 100%;
+}
+
+.display-sidebar-main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.common-label-emptystate {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: var(--black);
+    text-align: center;
+    padding-top: 3.5%;
+}
+
+.notification-label-icon {
+    padding: 1.8rem 0.5rem 1.5rem;
+    border-bottom: solid 0.1rem var(--gray);
+    /* background-color: var(--white); */
+}
+
+.notificationPanel span.user-team {
+    color: var(--black);
+    vertical-align: text-top;
+}
+
+span.pinned-user-msg.user-name {
+    margin-bottom: 0.4rem;
+    width: 22.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0.06rem;
+}
+
+.notificationPanel .user-team-label {
+    color: var(--black);
+    vertical-align: top;
+}
+
+.notifications-chat {
+    display: inline-block;
+    margin-right: 1.6rem;
+}
+
+.notifications-chat-label {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: 0.1rem;
+    color: var(--black);
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.messageNotification {
+    padding: 0rem;
+    cursor: pointer;
+    background: var(--dark-white);
+    border-radius: 0.2rem;
+    box-shadow: 0 0.2rem 0.5rem 0 #c9cfd7;
+    margin-bottom: 1rem;
+}
+
+.messageNotification .common-postion {
+    padding: 2rem 0rem 2rem 1.5rem !important;
+}
+
+.messageNotification .display-sidebar-main {
+    align-items: center !important;
+}
+
+/*now*/
+.messageNotification .meeting-img-p-t {
+    padding-top: 0rem !important;
+}
+
+.messageNotification .user-name {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: 0.6rem;
+    color: var(--brown);
+    padding-top: 0.3rem;
+}
+
+.messageNotification .user-team {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.06rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.messageNotification .user-team-label {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: 0.06rem;
+    color: var(--brown);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* width: 100%; */
+}
+
+.messageNotification .common-user-icon {
+    position: inherit !important;
+    top: 0 !important;
+}
+
+.notify-meeting-name {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.06rem;
+    color: var(--black);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.notificationTitle {
+    width: 75% !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.notificationUserName {
+    display: flex;
+}
+
+.notificationTime {
+    font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+}
+
+.notify-meeting-date {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: 0.06rem;
+    color: var(--brown);
+    padding-top: 0.3rem;
+
+}
+
+.notify-meeting-time {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: 0.06rem;
+    color: var(--brown);
+}
+
+.notify-organizer {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.06rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.notify-organizer-name {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: 0.06rem;
+    color: var(--brown);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.messageNotificationIcon .meeting-img-p-t img {
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    width: 100%;
+    max-width: 1.8rem;
+    max-height: 1.8rem;
+}
+
+#trayList .display-sidebar-main {
+    align-items: center;
+}
+
+#trayList .common-postion {
+    padding: 1.8rem 1rem !important;
+}
+
+#trayList .common-user-icon {
+    position: inherit;
+    top: 0rem;
+}
+
+.trayList .date-common {
+    bottom: 1.7rem !important;
+}
+
+.trayList .common-badge {
+    /* bottom: 20px; */
+    /* width: 2.6rem; */
+    /* height: 2rem; */
+}
+
+#trayList .common-sidebar-padd {
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    border-bottom: solid 0.1rem var(--gray);
+    cursor: pointer;
+}
+
+#trayList .user-team {
+    vertical-align: top;
+    font-weight: 600;
+    /* width: 53px; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: bottom;
+    letter-spacing: 0.06rem;
+}
+.chatTrayCount {
+    bottom: 3rem !important;
+}
+#trayList .common-icons-size {
+    width: 4rem;
+    height: 4rem;
+}
+
+.traytopicName {
+    width: auto;
+    max-width: 69.2%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.traytopicsender {
+    width: auto;
+    max-width: 74.5% !important;
+    display: block;
+}
+
+.traytopicRecentMsg {
+    width: auto !important;
+    /* max-width: 58.55% !important; */
+}
+
+.notificationMsg {
+    vertical-align: middle !important;
+}
+
+/*now-end*/
+.common-sidebar-padd {
+    padding: 1.5rem 1.4rem;
+    border-bottom: solid 0.1rem var(--gray);
+    cursor: pointer;
+}
+
+.common-badge {
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.04rem;
+    color: var(--white);
+    border-radius: 0.2rem;
+    background-color: var(--red);
+    position: relative;
+    text-align: center;
+    position: absolute;
+    bottom: 3.9rem;
+    right: 1rem;
+    cursor: pointer;
+    padding: 0.3rem 0.8rem;
+}
+
+.notify-m-t {
+    /* margin-top: 20px; */
+}
+
+.common-trancate-sidebar {
+    width: 25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0.06rem;
+}
+#trayList .common-trancate-sidebar{
+    vertical-align: middle !important;
+}
+.trancate-text-meeting {
+    width: 20rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pingedTeam {
+    width: 100%;
+}
+
+.trancate-text-pinned {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 500;
+    color: var(--brown) !important;
+}
+
+.user-img-size-s {
+    width: 100%;
+    height: 30rem;
+}
+
+.cancel-img-sidebar {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.user-img-area-side {
+    width: 83%;
+}
+
+.pinnedImageArea {
+    width: 100%;
+}
+
+.pinned-media-name {
+    width: 30rem;
+    height: 20rem;
+    max-width: 100%;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.margin-top-piined {
+    /* margin-top: 38px; */
+    width: 100%;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+
+.margin-piined-text {
+    /* margin-top: -5px; */
+}
+
+.margin-30px-p {
+    margin-top: 2.9rem;
+}
+
+.cancel-common-side {
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+}
+
+.cancel-common-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.trancate-text-sidebar {
+    width: 20rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    /* vertical-align: top; */
+    margin-bottom: 0;
+    line-height: 1.9rem;
+}
+
+.trayList .user-name {
+    font-weight: 600;
+    margin-bottom: 0;
+    max-width: 5.9rem;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0.06rem;
+}
+
+.trancate-text-meeting {
+    width: 16.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.meeting-img-p-t {
+    padding-top: 3rem;
+}
+
+.sidebar-scroll-common {
+    height: calc(100vh - 13.6rem);
+    overflow: auto;
+    overflow-x: hidden;
+    clear: both;
+}
+
+/*notificationPanel*/
+.notificationPanel .common-sidebar-padd {
+    padding-left: 1.5rem;
+    /* padding-bottom: 1.1rem; */
+    /* padding-top: 1.8rem; */
+    border-bottom: solid 0.1rem var(--gray);
+    cursor: pointer;
+}
+
+.notificationPanel .common-postion {
+    padding: 0 !important;
+    border-bottom: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.notificationPanel .display-sidebar-main {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    align-items: center;
+}
+
+.notificationPanel .common-user-icon {
+    /* width: 9.3%; */
+}
+
+/* .notificationPanel .user-label {
+    margin-bottom: 0.3rem;
+    line-height: 1.9rem;
+} */
+
+.notificationPanel .common-user-icon {
+    /* position: relative; */
+    /* top: 2px; */
+}
+
+.date-common {
+    display: block;
+    text-align: right;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.82rem;
+    letter-spacing: 0.06rem;
+    color: var(--slate-gray);
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+}
+
+img.participants-image {
+    width: 100%;
+    height: 100%;
+    max-width: 39rem;
+    margin: 0px auto;
+    display: block;
+}
+
+.participants-sidebar {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 100%;
+    margin: 0px auto;
+}
+
+.emptt-state-content {
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.65px;
+    text-align: center;
+    color: var(--brown);
+    padding-top: 1rem;
+}
+
+.trayListNameRow {
+    /* width: 100%; */
+    /* padding-right: 6rem; */
+    max-width: 98%;
+    /* margin-bottom: 0.4rem; */
+}
+
+.trayTeamName {
+    font-weight: 500 !important;
+}
+
+.notifyNameTop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.pingeMsg {
+    width: 100%;
+    /* display: flex; */
+}
+
+.trancate-text-pinned {
+    max-width: 26rem;
+}
+
+/* .notificationPanel .common-trancate-sidebar {
+    width: 100%;
+    max-width: 62%;
+} */
+
+
+
+/* scroll listion start here */
+.notificationPanel .common-user-list {
+    width: 100%;
+    overflow: hidden;
+}
+
+.notificationPanel .allListCommonWrapUserContact {
+    max-width: 70%;
+}
+
+.notificationPanel .common-name-trancate {
+    min-width: 66%;
+    max-width: 66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.notificationPanel .check-box-icon {
+    right: 1.2rem;
+    top: 40%;
+}
+.notifications-chat img {
+    width: 100%;
+    max-width: 1.8rem;
+    max-height: 1.8rem;
+}
+
+img.notify-m-t {
+    width: 100%;
+    max-width: 2.3rem;
+    max-height: 2.3rem;
+}
+.notifications-chat img {
+    width: 100%;
+    max-width: 1.8rem;
+    max-height: 1.8rem;
+}
+.notificationIconWidth {
+    width: 100%;
+    min-width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* scroll listion end here */
+.notificationPanelListing {
+    border-bottom: 0.1rem solid var(--gray);
+}
+.notificationPanelListing .notificationTime {
+    font-size: 0.9rem;
+    color: #554D4D;
+    text-align: right;
+}
+.notificationLeft {
+    width: 100%;
+    max-width: 70%;
+    padding-right: 2%;
+    float: left;
+}
+
+.notificationLeft .notificationTitle {
+    width: 100%;
+    max-width: 100% !important;
+    margin-bottom: 0.3rem;
+    line-height: 1.9rem;
+}
+.notificationLeft .notificationWrap {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0.06rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.9rem;
+}
+.notificationTimeWrap {
+    float: right;
+}
+.notificationUnread {
+    width: 100%;
+    max-width: 1.3rem;
+    max-height: 1.3rem;
+    float: right;
+}
+
+.notificationUnreadMsg {
+    background-color: var(--dark-white);
+}
+.notificationReadMsg {
+    background-color: var(--white);
+}
+.notificationUnreadMsg .commonReadUnredIcon{
+    padding-bottom: 2.5rem;
+    display: block;
+    background-image: url(../../images/icons/UnreadMail.svg);
+    background-size: 15%;
+    background-position: right;
+    background-repeat: no-repeat;
+} 
+
+.notificationReadMsg .commonReadUnredIcon{
+    padding-bottom: 2.5rem;
+    display: block;
+    background-image: url(../../images/icons/notificationRead.svg);
+    background-size: 15%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.notificationTrayHead {
+    width: 100%;
+    float: left;
+    max-width: 70%;
+}
+
+.notificationLabelVolume {
+    width: 100%;
+    max-width: 30%;
+    float: right;
+}
+.userAlign {
+    line-height: 1.6;
+}
+.notificationWIconWidth {
+    cursor: pointer;
+}
+/* scroll listion end here */
+.meeting-appointment-notifi{
+    display: flex;
+}
+.meeting-appointment-notifi .notificationWrap{
+    width: auto;
+}
+.meeting-appointment-notifi .coworker-label{
+    padding-top: 0.4rem;
+}

@@ -1,0 +1,849 @@
+/*adminDomainVerifiation start  */
+
+:root {
+	--white: #FFFFFF;
+	--dark-white: #F2F2F2;
+	--light-white: #F1F1F1;
+
+	--black: #222020;
+	--dark-black: #030303;
+	--light-black: #1A1A1B;
+	--light-slate-black: #222223;
+	
+	--red: #EE4136;
+	--light-red: #FF8787;
+	--dark-gray: #9C9696;
+	--gray: #D6DBE1;
+	--dim-gray: #F2F2F27A;
+	--slate-gray: #737070;
+	--dark-slate-gray: #F8F8F8;
+	--light-slate-gray: #F4F4F4;
+
+	--brown: #554D4D;
+	--dark-browm: #484849;
+	--light-brown: #343334;
+	--light-slate-brown: #272729;
+
+	--popup: #323131;
+  --bar-width: 0%;
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  height: 100vh;
+  background: var(--white);
+  overflow: hidden;
+}
+*{
+  margin:0px;
+  padding: 0px;
+}
+::-webkit-scrollbar {
+	width: 0.4rem;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 0.4rem transparent;
+	border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--dark-gray);
+	border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--dark-gray);
+}
+
+::-moz-scrollbar {
+	width: 0.5rem;
+}
+
+::-moz-scrollbar-track {
+	box-shadow: inset 0 0 0.4rem transparent;
+	border-radius: 0.3rem;
+}
+
+::-moz-scrollbar-thumb {
+	background: var(--dark-gray);
+	border-radius: 0.3rem;
+}
+
+::-moz-scrollbar-thumb:hover {
+	background: var(--dark-gray);
+}
+input, button:focus{
+  outline: none;
+}
+.padding-left-0 {
+  padding-left: 0px;
+}
+.padding-right-0 {
+  padding-left: 0px;
+}
+/* hideCls */
+.hideCls {
+  display: none !important;
+}
+/* page-wrapper  */
+.page-wrapper {
+  transition: margin .1s ease, width .1s ease;
+}
+.adminContainer {
+  width: 100%;
+  /* max-width: 96%; */
+  /* margin: 0px -15px; */
+}
+.adminDashBoard {
+	padding-top: 2.6rem;
+	margin-left: 3.5rem;
+	margin-right: 3.5rem;
+}
+.adminRightBar {
+	background: var(--white);
+	height: 100vh;
+	margin: 0px 0 0 25rem;
+}
+.adminTopStrip {
+	display: inline-block;
+	padding-bottom: 2.6rem;
+}
+.adminTopHeader span {
+	font-size: 2.4rem;
+	color: #000;
+	font-weight: 600;
+}
+
+.adminTopHeader span img {
+	padding-left: 1.2rem;
+}
+.adminRow {
+	display: flex;
+	flex-wrap: inherit;
+}
+.cancelButtonGlobal {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	padding: 0.8rem 1.5rem;
+	border-radius: 0.3rem;
+	border: solid 0.1rem var(--dark-gray);
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.9rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	color: var(--dark-gray);
+	text-transform: uppercase;
+	margin-right: 1rem;
+	background-color: var(--white);
+	cursor: pointer;
+}
+
+.submitButtonGlobal {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  border: solid 0.1rem var(--red);
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--red);
+  cursor: pointer;
+}
+.adminDomainVerifiation {
+  background: #ffffff;
+  height: 100vh;
+}
+
+/* side bar popup */
+/* admin pael more option popup */
+.adminSelected {
+  position: fixed;
+  right: 0rem;
+  top: 0rem;
+  /* width: 43.9rem; */
+  /* height: 98.9rem; */
+  box-shadow: -0.3rem 0 0.4rem 0 rgb(198 198 198 / 50%);
+  border: solid 0.1rem #d6dbe1;
+  background-color: var(--white);
+  /* background: var(--white); */
+  z-index: 9999;
+  min-width: 36rem;
+  max-width: 25%;
+  width: 100%;
+  height: 100vh;
+  /* display: none; */
+}
+.adminPopupSidebar li {
+  list-style: none;
+  position: relative;
+}
+
+.adminPopupSidebarWrap {
+  padding: 1rem 0rem 2.0rem 3.77%;
+  border-bottom: solid 0.1rem #d6dbe1;
+  cursor: pointer;
+  position: relative;
+}
+
+.adminPopupSidebarList {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.adminPopupSidebarListUserIcon {
+  margin-right: 3.5%;
+  cursor: default;
+  position: relative;
+}
+
+.adminListTitle {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.3rem;
+  letter-spacing: 0.06rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--black);
+  font-weight: 600;
+}
+
+span.adminListUserProfileLabel {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  color: var(--brown);
+  /* font-weight: 500; */
+}
+.adminRolesProfileHeader span {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+/* or 127% */
+  letter-spacing: 0.06rem;
+  color: var(--black);
+}
+.adminRolesProfileHeader {
+    padding-bottom: 2rem;
+}
+.adminRolesProfile {
+  /* padding-top: 1rem; */
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+}
+.adminRole {
+    border-bottom: 1px solid #D6DBE1;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+}
+
+.adminRole p {
+    margin-bottom: 0px;
+    color: var(--brown);
+    font-size: 1.3rem;
+    padding-bottom: 1.2rem;
+}
+.resetButtonColumA2{
+  position: absolute;
+  bottom: 1rem;
+  right: 2.3rem;
+}
+.adminEditA3 .adminGroupHeadeA8 {
+  padding-bottom: 0.5rem;
+}
+.adminEditA3 {
+  padding-top: 2rem;
+}
+.adRoleUserA5 {
+    color: #222020;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 1rem;
+}
+.adRoleDropA7 ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    /* line-height: 3.8rem; */
+    letter-spacing: 0.6px;
+    color: #222020;
+    margin-bottom: 0;
+    line-height: 3.3rem;
+    border-bottom: 0.1rem solid #f2f2f2;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+.adRoleDropA7 ul li:hover {
+    background: #f2f2f2;
+}
+.adRoleA4 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.adRoleFieldA7{
+  background: url(../../../images/admin/icons/arrowtop.svg) no-repeat center right 1rem #F2F2F2;
+    border: 1px solid #D6DBE1;
+    border-radius: 2px;
+    height: 4.2rem;
+    line-height: 4.2rem;
+    font-size: 1.3rem;
+    color: #9C9696;
+    font-weight: 500;
+    padding-left: 1rem;
+    /* padding-right: 0.5rem; */
+    width: 100%;
+}
+.adRoleDropA8 {
+    position: absolute !important;
+    top: 1rem;
+    z-index: 999;
+    background: #FFFFFF;
+    border: 1px solid #D6DBE1;
+    box-shadow: 1.2px 1.2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 0rem 0;
+    clear: both;
+    width: 100%;
+    top: 8rem;
+    list-style: none;
+    padding-left: 0rem;
+    height: calc(100vh - 73rem);
+    overflow: scroll;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+.adRoleDropA7 ul {
+  /* position: absolute !important; */
+  /* top: 1rem; */
+  /* z-index: 999; */
+  /* background: #FFFFFF; */
+  /* border: 1px solid #D6DBE1; */
+  /* box-shadow: 1.2px 1.2px 10px rgba(0, 0, 0, 0.1); */
+  /* border-radius: 2px; */
+  /* padding: 0rem 0; */
+  /* clear: both; */
+  /* width: 100%; */
+  /* top: 8rem; */
+  list-style: none;
+  /* padding-left: 0rem; */
+  /* height: calc(100vh - 73rem); */
+  overflow: scroll;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.adroleEmailA4 .adRoleUserA5 {
+  opacity: 0.6;
+}
+
+.adroleEmailA4 .adFilterInputA1 {
+  opacity: 0.6;
+}
+.adminRolesA2 {
+    padding-right: 2rem;
+}
+.adminEditA3 .adminGroupTopA5 {
+  padding-top: 1.2rem;
+  padding-bottom: 1.3rem;
+}
+
+.adminEditA3 .adminGroupA4 {
+  padding-bottom: 1.3rem;
+}
+.adminProfile {
+    /* margin-top: 2rem; */
+}
+.adminDelteBtn {
+  float: right;
+  margin-right: 1.8rem;
+  margin-top: 1.8rem;
+}
+
+.adminCloseBtn img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.copy-link-msg {
+	background-color: var(--brown);
+	color: var(--white);
+	text-align: center;
+	border-radius: 0.2rem;
+	padding: 1.6rem;
+	position: fixed;
+	z-index: 9999;
+	left: 50%;
+	top: 50%;
+	width: 30rem;
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.3rem !important;
+	font-weight: 400 !important;
+	font-stretch: normal !important;
+	font-style: normal !important;
+	line-height: 1.86rem !important;
+	letter-spacing: 0.06rem !important;
+	transform: translate(-50%, -50%);
+}
+
+/* AG Code shifted from dashboard.css to here - STARTS */
+.adminPanelA1{
+  background: #FFFFFF;
+  border: 0.1rem solid rgba(151, 151, 151, 0.4);
+  box-shadow: 5.75052px 0px 28.7526px rgba(0, 0, 0, 0.1);
+  border-radius: 0.9rem;
+  padding-top: 3.7rem;
+  padding-left: 2.7rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3.7rem;
+}
+
+.adOverViewleft {
+  width: 100%;
+}
+
+.adTopStrip {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 3.7rem;
+}
+
+.adUSer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  /* border-bottom: 0.3rem solid #D6DBE1;
+  padding-bottom: 0.3rem; */
+  position: relative;
+  min-width: 100rem;
+  flex-wrap: wrap-reverse;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 0.2rem solid #c1c1c1;
+  padding-bottom: 0.3rem;
+  /* position: relative; */
+  /* width: 60vw; */
+  min-width: 63vw;
+}
+
+.adUserTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.adMiddle {
+  border-bottom: 0.1rem solid #D6DBE1;
+  padding-top: 2.0rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.adOverViewRight {
+  display: flex;
+  align-items: end;
+  height: 100%;
+}
+.adOverViewRight img {
+  width: 100%;
+  max-width: 35.6rem;
+  height: 100%;
+  max-height: 25rem;
+}
+
+.adHeader h3 {
+  color: #222020;
+  font-size: 3.0rem;
+  padding-top: 2rem;
+  margin-bottom: 0px;
+}
+
+.adHeader h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.0rem;
+  line-height: 21px;
+/* identical to box height, or 105% */
+  color: var(--black);
+}
+
+.adUSer:before {
+  position: absolute;
+  background: var(--red);
+  width: var(--bar-width);
+  max-width: 100%;
+  content: "";
+  height: 0.3rem;
+  bottom: -0.2rem;
+  z-index: 9;
+}
+
+.activeUserBar{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  /* border-bottom: 0.3rem solid #c1c1c1; */
+  padding-bottom: 0.3rem;
+  /* position: relative; */
+  width: 60vw;
+  min-width: 63vw;
+}
+
+.adPanelA2 {
+  padding-top: 2.2rem;
+}
+.leftMargin{
+  margin-left: 5rem;
+}
+/* AG Code shifted from dashboard.css to here - ENDS */
+
+/* loader */
+/* new loader start here */
+
+/* left panel loader */
+#adminLeftLoader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0px auto;
+}
+/* left panel loader */
+#adminMainBodyLoader{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0px auto;
+  z-index: 99;
+}
+.righPanelLoader {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  z-index: 9;
+}
+#participantsListLoader{
+  top: 60%;
+}
+.adRoleNoDatFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.adResultA1 {
+  font-size: 1.3rem;
+  color: #000;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+}
+@keyframes ldio-dpbvxcmmyw {
+  0% {
+      opacity: 1;
+      backface-visibility: hidden;
+      transform: translateZ(0) scale(1.5, 1.5);
+  }
+  100% {
+      opacity: 0;
+      backface-visibility: hidden;
+      transform: translateZ(0) scale(1, 1);
+  }
+}
+
+.ldio-dpbvxcmmyw div>div {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #ff727d;
+  animation: ldio-dpbvxcmmyw 1s linear infinite;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(1)>div {
+  left: 74px;
+  top: 44px;
+  animation-delay: -0.875s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(1) {
+  transform: rotate(0deg);
+  transform-origin: 80px 50px;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(2)>div {
+  left: 65px;
+  top: 65px;
+  animation-delay: -0.75s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(2) {
+  transform: rotate(45deg);
+  transform-origin: 71px 71px;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(3)>div {
+  left: 44px;
+  top: 74px;
+  animation-delay: -0.625s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(3) {
+  transform: rotate(90deg);
+  transform-origin: 50px 80px;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(4)>div {
+  left: 23px;
+  top: 65px;
+  animation-delay: -0.5s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(4) {
+  transform: rotate(135deg);
+  transform-origin: 29px 71px;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(5)>div {
+  left: 14px;
+  top: 44px;
+  animation-delay: -0.375s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(5) {
+  transform: rotate(180deg);
+  transform-origin: 20px 50px;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(6)>div {
+  left: 23px;
+  top: 23px;
+  animation-delay: -0.25s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(6) {
+  transform: rotate(225deg);
+  transform-origin: 29px 29px;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(7)>div {
+  left: 44px;
+  top: 14px;
+  animation-delay: -0.125s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(7) {
+  transform: rotate(270deg);
+  transform-origin: 50px 20px;
+}
+
+.ldio-dpbvxcmmyw div:nth-child(8)>div {
+  left: 65px;
+  top: 23px;
+  animation-delay: 0s;
+}
+
+.ldio-dpbvxcmmyw>div:nth-child(8) {
+  transform: rotate(315deg);
+  transform-origin: 71px 29px;
+}
+
+.loadingio-spinner-spin-ethrqhs3zzm {
+width: 5.8rem;
+height: 5.8rem;
+display: inline-block;
+/* overflow: hidden; */
+/* background: var(--white); */
+}
+
+.ldio-dpbvxcmmyw {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.58);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  /* see note above */
+}
+
+.ldio-dpbvxcmmyw div {
+  box-sizing: content-box;
+}
+
+
+/* new loader end here */
+
+
+/* empty state */
+.empty-state-center {
+  position: relative;
+  height: 100vh;
+}
+.admin-emty-container{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: scroll;
+flex-direction: column;
+}
+.admin-emty-container img {
+  width: 30rem;
+}
+.admin-empty-text-area {
+  text-align: center;
+  margin-top: 1.3rem;
+  width: 100%;
+}
+.admin-emty-head{
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: #222020;
+  text-transform: none;
+  margin-bottom: 0rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.admin-emty-content{
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: #554d4d;
+  margin-bottom: 0rem;
+}
+.disableList{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.textempty-h {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: none;
+  margin-bottom: 0rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px 2.5rem;
+}
+
+.textempty-p {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: var(--brown);
+  margin-bottom: 0rem;
+  margin-top: 0.3rem;
+}
+
+.admin-teams-empty-text-area {
+  position: absolute;
+  top: 65%;
+}
+.inTeamTagWrapper {
+  display: flex;
+  align-items: center;
+}
+
+span.adminParticipantsUserA2.inTeamTag {
+  width: auto;
+  line-height: inherit;
+}
+
+span.coworker-label {
+  line-height: inherit !important;
+  font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-weight: 500 !important;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: var(--black);
+  border-radius: 0.2rem;
+  border: 1px solid var(--dark-gray);
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.1rem 0.3rem;
+  margin-left: 0.5rem;
+  font-size: 0.9rem !important;
+  top: 0rem !IMPORTANT;
+  background: rgb(242, 242, 242);
+}
+.lowOpacity{
+  opacity: 0.5;
+}
+
+.corporate-logo{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#adminbodyloader{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0px auto;
+  z-index: 99;
+}

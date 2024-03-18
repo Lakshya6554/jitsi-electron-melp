@@ -1,0 +1,22 @@
+
+/* .teamAudioIcon{
+    background-image: url(../../images/icons/team-audio-call.svg);
+    background-size: 100% 100% !important;
+    padding: 0.4rem 1.2rem !important;
+    background-color: yellow;
+} */
+
+@media(max-width:1200px){
+    .title-section {
+        width: 60.2%;
+    }
+    .search-section {
+        width: 20.4%;
+    }
+}
+
+
+
+
+
+

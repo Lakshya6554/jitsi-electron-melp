@@ -1,0 +1,192 @@
+<!-- crop image popup start -->
+<div id="cropImage" class="modal" tabindex="-1">
+   <div class="cropImageContainer">
+      <div class="modal-header">
+         <button type="button" class="closepop" data-dismiss="modal" aria-hidden="true"></button>
+         <h4 class="modal-title">Upload Image</h4>
+      </div>
+      <div class="modal-body">
+         <div class="container">
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <div class="row">
+                     <div class="col-md-12 text-center">
+                        <div id="imageArea"></div>
+                     </div>
+                     <div class="col-md-12 text-center pdngbtm">
+                        <button class="submitButtonGlobal btncreate spcreate cropped_image"
+                           onclick="uploadProfilePic()">Upload
+                           Image</button>
+                     </div>
+                     <div class="col-md-12 crop_preview">
+                        <div id="upload-image-i"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- crop image popup end -->
+
+
+<!--javascriptpop start Here-->
+<section class="teamPopup-common">
+   <div class="javascriptModalBody">
+      <div class="javascriptModalPopupBody">
+         <div class="javascriptModalPopupBodyInner">
+            <div class="javascriptPopupContent">
+               <h2>Javascript is disabled</h2>
+               <p>Javascript seems to be disabled. This will break some site features. Please enable javascript from
+                  browser settings.</p>
+            </div>
+            <div class="saveUpdateCancel">
+               <button class="javascriptBtn"> Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!--javascriptpop end Here-->
+<!--javascriptpop start Here-->
+<section class="teamPopup-common hideCls" id="cookies">
+   <div class="javascriptModalBody">
+      <div class="javascriptModalPopupBody">
+         <div class="javascriptModalPopupBodyInner">
+            <div class="javascriptPopupContent">
+               <h2>Cookies consent</h2>
+               <p>By clicking 'Accept', you agree for storing cookies on your device to enhance your experience on this
+                  website better. To learn more about how
+                  we use cookies, please see our <a href="">cookie policy.</a>
+            </div>
+            <div class="saveUpdateCancel">
+               <button class="submitButtonGlobal"> Accept & Close</button>
+            </div>
+         </div>
+</section>
+
+<!--javascriptpop end Here-->
+<!--javascriptpop start Here-->
+
+
+<!--javascriptpop end Here-->
+<!--invitationNetwork-Start-->
+<section class="invitationNetwork">
+   <section class="invitationNetworkBody">
+      <div class="invitationNetworkimage">
+         <img src="images/invationPopImage.png">
+      </div>
+      <div class="invitationNetworkContent">
+         <h2>Hooray! Invitations has been sent</h2>
+         <p>You can manage all your sent invitation in networks.</p>
+         <div class="invitationNetworkClose">Close</div>
+      </div>
+   </section>
+</section>
+<!-- new notification start -->
+<section class="notifyPermission" id="notifyPermission">
+   <div class="notifcationBody">
+      <div class="notificationContent">
+         <img class="notifyBellPermission" src="images/notification_Active.svg">
+         <h2>Please provide notification permission for smooth
+            interaction</h2>
+         <img class="notifyClosePermisssion" src="images/close.svg" onclick="hideNotification()">
+      </div>
+   </div>
+</section>
+<!-- new notification end -->
+<!-- meeting details popup start -->
+<div class="calendarModalPop" id="meetingpopup-modal" style="display: none;">
+   <div class="meetingpopup-center">
+      <div class="meetingpopup-modal">
+         <!-- Modal content -->
+         <div class="meetingpopup-modal-content">
+            <div class="meetingpopup-top"></div>
+
+            <div class="meetingpopup-heading">
+               <span class="meetingpopup-Oval"></span><span class="meetingpopup-title">NYC Marketing Team
+                  Meetup</span>
+               <div class="meetingpopup-day">
+                  <span class="meetingpopup-date">09/10/2024</span>
+                  <span class="meetingpopup-date">|</span>
+                  <span class="meetingpopup-date">04:00 - 05:00 PM</span>
+               </div>
+            </div>
+            <div class="meetingpopup-organiser">
+               <i class="meetingpopup-user-icon" title="User Name"></i><span class="meetingpopup-user-name">John
+                  Doe</span><span class="meetingpopup-invited">invited you</span>
+            </div>
+            <div class="total-participants">
+               <span class="total-participants-style">Total Participants (<span id="all-participants"></span>)</span>
+
+            </div>
+            <div class="meetingpopup-user">
+            </div>
+            <div class="meetingpopup-description">
+               <div class="meetingpopup-description-heading">
+                  <i title="Description" class="meetingpopup-description-icon"><img src="images/align-left.svg" class="meetingOverIcon"></i>
+                  <span class="meetingpopup-desc">Description</span>
+               </div>
+               <div class="meetingpopup-description-details">Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing
+                  elit.
+                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                  pretium
+                  quis, sem. Nulla consequat massa quis enim. Donec.</div>
+            </div>
+            <div class="meetingpopup-notification">
+               <i class="meetingpopup-notification-icon" title="Notification"></i><span
+                  class="meetingpopup-notification-content">15 minutes before</span>
+            </div>
+            <div class="meetingpopup-notification attachment">
+
+            </div>
+
+         </div>
+         <div class="attendingshowhide">
+            <div class="meetingpopup-attending">
+               <div class="meetingpopup-attending-title">Attending?</div>
+               <div class="meetingpopup-attending-content">
+                  <span class="meetingpopup-accept" title="Accept">Accept</span>
+                  <span class="meetingpopup-decline" title="Decline">Decline</span>
+                  <span class="meetingpopup-tentative" title="Tentative">Tentative</span>
+               </div>
+            </div>
+         </div>
+         <div class="meetingpopup-notifyme">
+            <div class="meetingpopup-notify-button meetingpopup-notify-button-flex" id="notifyButtonPanel">
+               <span id="notifyBtn"></span>
+               <span id="joinBtn"></span>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--Recurrence Instance Popup Start-->
+   <section class="teamPopup-common removeBg hideCls" id="deleteRecurring">
+      <div class="deleteRecurrenceBody">
+         <div class="deleteRecurrenceContent">
+            <div class="deleteRecurrenceTitle">Delete Instance</div>
+            <div class="dataSection">
+               <input type="hidden" id="updateDeleteInstance">
+               <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(1, 'currentInstance')">
+                  <span class=""><i class="currentInstance unCheckInstance"></i></span>
+                  <div class="instance" id="label1">Current Instance</div>
+               </div>
+               <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(0, 'allInstance')">
+                  <span class=""><i class="allInstance unCheckInstance"></i></span>
+                  <div class="instance" id="label2">Current and all future instances</div>
+               </div>
+            </div>
+            <div class="saveUpdateCancel notifyBtn">
+               <button class="cancelButtonGlobal" onclick="hideDeleteRecurrence()"> Cancel</button>
+               <button class="saveBtn-profile-page" id="deleteRecurrenceBtn" onclick="deleteRecurrence()">
+                  ok</button>
+            </div>
+         </div>
+   </section>
+   <!--Recurrence Instance Popup End Here-->
+</div>
+<!-- meeting details popup end -->
+

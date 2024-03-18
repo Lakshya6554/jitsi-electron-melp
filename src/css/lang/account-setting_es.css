@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+
+    .accountSettingLangForm .accountSettingFormInner div.langNewPassword {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+
+    .accountSettingLangForm .accountSettingFormInner div.langConfPassword {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 55.333333%;
+        flex: 0 0 55.333333%;
+        max-width: 55.333333%;
+    }
+
+}
+
+.accountSettingLangForm .passwordInput {
+    max-width: 87%;
+}
+
+.accountSettingLangForm .accountSettingInfo input.accountSettingInformInput {
+    max-width: 35.2rem;
+}
+
+.accountSettingNewLeftPart {
+    padding: 2.5rem 0 0 1.9rem;
+}

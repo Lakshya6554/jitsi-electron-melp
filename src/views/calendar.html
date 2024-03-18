@@ -1,0 +1,408 @@
+<section id="calender-view">
+    <input type="hidden" id="updateDeleteInstance">
+    <div class="calendarTopStrip">
+        <div class="calendarLeftBar">
+            <!-- <div class="monthViewToggle" id="monthViewToggle" onclick="hideCalendarRightPanel()">
+                <img src="images/monthToggleBtn.svg">
+            </div> -->
+            <div class="monthViewCalenderBtn">
+                <button class="submitButtonGlobal newMeetingEventStartID" onclick="createMeeting()"
+                    id="create-meeting-button">
+                    <span class=" New-Event">{{BT06}}</span>
+                </button>
+            </div>
+            <!-- <div class="nextPrev" id="prevArrow" onclick="changeMonth(-1)"><img
+                    src="images/icons/chevron-left-calendar.svg" class="left-arrow-icon"></div>
+            <div class="month-name"></div>
+            <div class="nextPrev" id="nextArrow" onclick="changeMonth(1)"><img src="images/icons/chevron-right.svg"
+                    class="right-arrow-icon">
+            </div> -->
+            <div class="calenderMidBar">
+                <div class="date-inner-header">
+                    <div class="monthNameDate">
+                        <!-- <span class="leftViewDateIcon" onclick="hideleftCalendarView()"><img src="images/meetinChevron-1.svg"></span> -->
+                        <span class="leftViewDate" id="headDiv" onclick="hideMethodSelection(event)">
+                            <span id="headingDate"></span> <img src="images/dateChev.svg">
+                        </span>
+                        <div class="calenderLeftDropDown" id="calenderLeftDropDown">
+                            <div class="newevent-calendar-popup-right">
+                                <div class="monthNameDate" onclick="preventDropdown(event)">
+                                    <!-- <span class="leftViewDateIcon" onclick="hideleftCalendarView()"><img src="images/meetinChevron-1.svg"></span> -->
+                                    <span class="leftViewDate headerYearView" id="headerYearView"
+                                        onclick="headerYearView()">
+                                        <span id="headerYear"></span>
+                                    </span>
+                                    <span class="upDownArrow hideCls" id="yearDropDown">
+                                        <span class="upArrow" onclick="changeYearList(0)"><img src="images/upArrow.png"
+                                                alt=""></span>
+                                        <span class="downArrow" onclick="changeYearList(1)"><img
+                                                src="images/downArrow.png" alt=""></span>
+                                    </span>
+                                </div>
+
+                                <!-- <span class="dateDropdown newevent-calendar-popup-arrow-left">
+                                    <span class="monthLeftIcon"> <img src="images/icons/chevron-left-l.svg" class="chevron-left dateDropdown"></span>
+                                    <span class="monthRightIcon"> <img src="images/icons/chevron-right-r.svg" class="chevron-right dateDropdown"></span>
+                                </span> -->
+                            </div>
+                            <div class="calenderViewDropDown" id="calendarViewDropDownMonth">
+                                <div class="popup-months"><span class="popup-days-span-months active" id="month0"
+                                        onclick="selectMonth(0)">Jan</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month1"
+                                        onclick="selectMonth(1)">Feb</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month2"
+                                        onclick="selectMonth(2)">Mar</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month3"
+                                        onclick="selectMonth(3)">Apr</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month4"
+                                        onclick="selectMonth(4)">May</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month5"
+                                        onclick="selectMonth(5)">Jun</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month6"
+                                        onclick="selectMonth(6)">Jul</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month7"
+                                        onclick="selectMonth(7)">Aug</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month8"
+                                        onclick="selectMonth(8)">Sep</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month9"
+                                        onclick="selectMonth(9)">Oct</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month10"
+                                        onclick="selectMonth(10)">Nov</span>
+                                </div>
+                                <div class="popup-months"><span class="popup-days-span-months" id="month11"
+                                        onclick="selectMonth(11)">Dec</span>
+                                </div>
+                            </div>
+                            <div class="calenderViewDropDown" id="calendarViewDropDownYear" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cancelButtonGlobal todayBtn" onclick="today()">{{LB42}}</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendarRightBar">
+            <!-- <button class="submitButtonGlobal newMeetingEventStartID" onclick="createMeeting()">
+                <span class=" New-Event">{{BT06}}</span>
+            </button> -->
+            <div class="newevent-calendar-popup-right">
+                <span class="dateDropdown newevent-calendar-popup-arrow-left">
+                    <span class="monthLeftIcon" onclick="changeViewFromHeader(0, event)" tooltip="Previous" flow="down">
+                        <img src="images/icons/chevron-left-l.svg" class="chevron-left dateDropdown"></span>
+                    <span class="monthRightIcon" onclick="changeViewFromHeader(1, event)" tooltip="Next" flow="down">
+                        <img src="images/icons/chevron-right-r.svg" class="chevron-right dateDropdown"></span>
+                </span>
+            </div>
+            <button class="cancelButtonGlobal Check-Availability-Class" id="month-connect-cloud"
+                onclick="openCloudCalendar()" id="connect-calendar">
+                <span id="synchOffice" class="office-icons hideCls"><img src="images/icons/office.png"
+                        class="cloud-cal-icon"></span>
+                <span id="synchGoogle" class="google-icons hideCls"><img src="images/icons/google.svg"
+                        class="cloud-cal-icon"></span>
+                <span id="synchIcon" class="cloud-icons"><img src="images/icons/cloud-calendar.svg"
+                        class="cloud-cal-icon cloudIcon"></span>
+                <span id="synchText" class="Check-Availability">{{BT03}}</span>
+            </button>
+            <div class="view-dropdown-parent">
+                <button class="cancelButtonGlobal marginRightInherit viewDropdown" id="viewDropdown"
+                    onclick="showHideDropdown(event)">
+                    <span class="viewText" id="viewText">{{DD01}}</span><i class="material-icons">
+                        <img anima-src="images/dateChev.svg" class="chevronicon" src="images/dateChev.svg"></i>
+                </button>
+                <ul class=" changeMyViewMain hideCls" id="viewList">
+                    <li onclick="changeView('month', true)"><a>{{DD01}}</a></li>
+                    <li onclick="changeView('year', true)"><a>{{DD02}}</a></li>
+                    <li onclick="changeView('day', true)"><a>{{DD03}}</a></li>
+                    <li onclick="changeView('week', true)"><a>{{DD04}}</a></li>
+                    <li onclick="changeView('schedule', true)"><a>{{DD05}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="monthLeft" id="leftMonthView">
+        <div class="monthView-leftContainer">
+            <div class="">
+                <div class="date-inner-header">
+                    <div class="monthNameDate">
+                        <span class="leftViewDateIcon" id="rightCalendarArrowIcn" onclick="hideleftCalendarView()">
+                            <img src="images/meetinChevron-1.svg"></span>
+                        <span class="leftViewDate" id="leftMonthDate">
+                            January 2022
+                        </span>
+                    </div>
+                    <div class="newevent-calendar-popup-right">
+                        <span class="dateDropdown newevent-calendar-popup-arrow-left">
+                            <span class="monthLeftIcon" onclick="changeMonth(-1, true)" tooltip="Previous" flow="down">
+                                <img src="images/icons/chevron-left-l.svg" class="chevron-left dateDropdown"></span>
+                            <span class="monthRightIcon" onclick="changeMonth(1, true)" tooltip="Next" flow="down">
+                                <img src="images/icons/chevron-right-r.svg" class="chevron-right dateDropdown"></span>
+                        </span>
+                    </div>
+                </div>
+                <div id="leftViewCalendar">
+                    <div class="newevent-calendar-popup-days">
+                        <div class="popup-days"><span class="popup-days-span">S</span></div>
+                        <div class="popup-days"><span class="popup-days-span">M</span></div>
+                        <div class="popup-days"><span class="popup-days-span">T</span></div>
+                        <div class="popup-days"><span class="popup-days-span">W</span></div>
+                        <div class="popup-days"><span class="popup-days-span">T</span></div>
+                        <div class="popup-days"><span class="popup-days-span">F</span></div>
+                        <div class="popup-days"><span class="popup-days-span">S</span></div>
+                    </div>
+                    <div class="newevent-calendar-popup-date-main" id="dateContainer">
+                        <div class="leftViewDate">
+                        </div>
+                        <div class="fullPageloader loadingio-spinner-spin-ethrqhs3zzm" id="spinner1">
+                            <div class="ldio-dpbvxcmmyw calenderLeftloader">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="meetingLeftCopyLink">
+            <button class="cancelButtonGlobal" onclick="copyLink(1)">
+                <span class="meetingLeftCopyLinkOuterclipboard">{{LB70}}
+                    <!-- <img src="images/meetingCopyLink.svg" alt=""> -->
+                    <img src="images/clipboard.svg" alt="">
+                </span>
+            </button>
+        </div>
+        <div class="myMeetingsLink">
+            <div class="myMeetingLinkInside">
+                <!-- <h2>MY MEETINGS</h2> -->
+                <span>
+                    <img src="images/myMeeingCalender.svg">
+                    <span id="leftCurentDateOfMeeting"></span>
+                </span>
+            </div>
+            <div class="myMeetingAction" id="meetingListinLeft">
+            </div>
+            <div id="meetingListEmpty" class="meetingListEmpty hideCls">
+                <p class="first">{{LB74}}</p>
+                <p class="second">{{LB75}}!</p>
+            </div>
+        </div>
+    </div>
+    <div class="calenderContainer" id="calenderContainer">
+        <div id="monthviewAllMeetings" class="calendarbody">
+            <div class="tp">
+                <div class="month-header-container">
+                    <div class="col-sm-12 bg float-left month-header">
+                        <div class="col-sm-1 base float-left">
+                            <span class="days weekdays">{{LB52}}</span>
+                        </div>
+                        <div class="col-sm-1 base float-left">
+                            <span class="days weekdays">{{LB53}}</span>
+                        </div>
+
+                        <div class="col-sm-1 base float-left">
+                            <span class="days weekdays">{{LB54}}</span>
+                        </div>
+                        <div class="col-sm-1 base float-left">
+                            <span class="days weekdays">{{LB55}}</span>
+                        </div>
+                        <div class="col-sm-1 base float-left">
+                            <span class="days weekdays">{{LB56}}</span>
+                        </div>
+                        <div class="col-sm-1 base float-left">
+                            <span class="days weekdays">{{LB57}}</span>
+                        </div>
+                        <div class="col-sm-1 base float-left">
+                            <span class="days weekdays">{{LB58}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 bg borderTNone float-left">
+                <div class="fullPageloader" id="eventsLoader">
+                    <!-- <div class="spinner">
+                        <div class="body-spinner-icon"></div>
+                    </div> -->
+                    <div class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+                        <div class="ldio-dpbvxcmmyw">
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">{{LB73}}</div>
+                </div>
+                <div class="month-list-parent screenHeight1"></div>
+            </div>
+        </div>
+        <div id="yearviewAllMeetings" class="bodyPadddingTop" style="display:none;">
+            <!-- <div class="nextPrev" onclick="changeYear('prev')"><img src="images/icons/chevron-left-calendar.svg"></div>
+        <div class="nextPrev" onclick="changeYear('next')"><img src="images/icons/chevron-right.svg"></div>
+        <div class="month-name"></div> -->
+            <div class="borderLeft">
+                <div id="yearviewAllMeetings-allMonths" class="row tp"></div>
+            </div>
+        </div>
+        <div id="dayviewAllMeetings" class="dayviewAllMeetings bodyPadddingTop" style="display:none;">
+            <!-- <div class="nextPrev" onclick="changeDay(-1)"><img src="images/icons/chevron-left-calendar.svg"></div>
+        <div class="nextPrev" onclick="changeDay(1)"><img src="images/icons/chevron-right.svg"></div>
+        <div class="month-name"></div> -->
+            <div class="tp">
+                <div class="row-header dateCustomHeader">
+                    <div class="header-date"><span class="header-date-span" id="header-date-span">10 October</span>
+                    </div>
+                </div>
+                <div class="row-body">
+                    <div class="day-time-main">
+                        <div class="day-time-left"></div>
+                        <div class="day-time-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="weekviewAllMeetings" class="weekviewAllMeetings weekviewAllMeetings bodyPadddingTop"
+            style="display:none;">
+            <!-- <div class="nextPrev" onclick="changeWeek(-7, 'week')">Previous</div>
+        <div class="nextPrev" onclick="changeWeek(7, 'week')">Next</div>
+        <div class="month-name"></div> -->
+            <div class="tp">
+                <div class="col-sm-12 bg float-left">
+                    <div class="col-sm-1 base float-left"></div>
+                    <div class="padding-left-base weekheader week-time-right"></div>
+                </div>
+            </div>
+            <div class="body-bg">
+                <div class="all-time">
+                    <div class="week-time-left"></div>
+                    <div class="week-time-right"></div>
+                </div>
+            </div>
+        </div>
+        <div id="scheduleviewAllMeetings" class="weekviewAllMeetings bodyPadddingTop" style="display:none;">
+            <!-- <div class="nextPrev" onclick="changeWeek(-7, 'schedule')">Previous</div>
+        <div class="nextPrev" onclick="changeWeek(7, 'schedule')">Next</div>
+        <div class="month-name"></div> -->
+            <input type="hidden" val="" id="scheduleDay">
+            <div class="tp">
+                <div class="col-sm-12 bg float-left">
+                    <div class="col-sm-1 base float-left"></div>
+                    <div class="padding-left-base weekheader week-time-right"></div>
+                </div>
+            </div>
+            <div class="body-bg">
+                <div class="scheduleEmptyMain">
+                    <img src="images/emptystate/schedule.svg">
+                    <div class="heading">{{ERR01}}</div>
+                    <div class="para">{{AL10}} <br>{{AL11}} </div>
+                </div>
+            </div>
+        </div>
+        <!-- yearpopup start here -->
+        <div class="yearpopup-center">
+            <div id="yearpopup-modal" class="yearpopup-modal">
+                <!-- Modal content -->
+                <div class="yearpopup-modal-content">
+                    <span class="yearpopup-close">&times;</span>
+                    <div class="yearpopup-date">06/02/2024</div>
+                    <div class="yearpopup-heading">
+                        <span class="yearpopup-Oval"></span><span class="yearpopup-title">NYC Marketing Team
+                            Meetup</span>
+                        <div class="yearpopup-day">
+                            <span class="yearpopup-title-date">09/10/2024</span>
+                            <span class="yearpopup-title-date">|</span>
+                            <span class="yearpopup-title-date">04:00 - 05:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- conflicting booking end here-->
+        <!--Recurrence Instance Popup Start-->
+        <section class="teamPopup-common removeBg hideCls" id="updateRecurring">
+            <div class="deleteRecurrenceBody">
+                <div class="deleteRecurrenceContent">
+                    <div class="deleteRecurrenceTitle">{{LB76}}</div>
+                    <div class="dataSection">
+                        <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(1, 'currentInstance')">
+                            <span class=""><i class="currentInstance unCheckInstance"></i></span>
+                            <div class="instance">{{LB77}}</div>
+                        </div>
+                        <div class="deleteFirstInstance" onclick="selectUpdateDeleteInstance(0, 'allInstance')">
+                            <span class=""><i class="allInstance unCheckInstance"></i></span>
+                            <div class="instance">{{LB78}}</div>
+                        </div>
+                    </div>
+                    <div class="saveUpdateCancel notifyBtn">
+                        <button class="cancelButtonGlobal" onclick="hideDeleteRecurrence()"> {{BT01}}</button>
+                        <button class="submitButtonGlobal" id="updateRecurrenceBtn" onclick="deleteRecurrence()">
+                            {{BT15}}</button>
+                    </div>
+                </div>
+        </section>
+        <!--Recurrence Instance Popup End Here-->
+
+        <!-- Meeting Details Popup -->
+        <div class="meeting-details-popup-center" id="meeting-details-popup" style="display: none;">
+            <div class="meeting-details-popup-modal">
+                <div class="meeting-details-popup-modal-content">
+                    <span class="meeting-details-popup-close" onclick="hideThreeDotPopup()"><img
+                            src="images/cancel.svg"></span>
+                    <div class="meeting-details-popup-title">{{LB19}}</div>
+                    <div class="meeting-details-popup-main"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Meeting Details Popup End -->
+</section>

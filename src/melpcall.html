@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-version="162.0.0">
+
+<head>
+    <script src="./lang/en.js"></script>
+    <link defer rel="stylesheet" href="./lang/pt.css?v=162.0.0">
+    <script defer src="./js/library/mustache.min.js"></script>
+    <script src="helpers/heightAdjust_melper.js?v=162.0.0"></script>
+    <meta charset="utf-8">
+    <title>MelpApp | Conference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link async rel="icon" href="images/favicon.png" type="image/png" sizes="16x16" importance="low">
+
+    <!-- CSS Library Include Area Starts -->
+    <link defer rel="stylesheet" href="./css/plugins/fontStyle/font-awesome.min.css">
+    <link defer href="./css/plugins/fontStyle/font-montserrat.css" rel="stylesheet">
+    <link defer href="./css/plugins/fontStyle/font-lato.css" rel="stylesheet" importance="low">
+
+    <link defer rel="stylesheet" href="./css/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- CSS Library Include Area Ends -->
+
+    <link defer rel="stylesheet" href="./css/custom/main.css?v=162.0.0">
+    <link defer rel="stylesheet" href="./css/custom/common.css?v=162.0.0">
+    <link defer rel="stylesheet" href="./css/custom/call-screen.css?v=162.0.0">
+
+    <!-- Emoji library CSS Starts Here -->
+    <link defer rel="stylesheet" href="./css/plugins/emojionearea/emojionearea.min.css">
+    <!-- Emoji library CSS Ends Here -->
+    <script defer src="./js/library/elastic-apm-rum.umd.min.js"></script>
+</head>
+
+<div class="spinner-body fullPageloader" id="bodyloader" style="visibility: visible;">
+    <!-- <div id="body-spinner-bar" class="spinner">
+        <div class="body-spinner-icon"></div>
+    </div> -->
+    <div id="body-spinner-bar" class="loadingio-spinner-spin-ethrqhs3zzm spinner">
+        <div class="ldio-dpbvxcmmyw">
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <span>Please wait while we connect...</span>
+</div>
+
+<body ondragstart="return false;" ondrop="return false;" class="callBody">
+    <input type="hidden" autocomplete="off" id="inCallConvId" value="" />
+    <input type="hidden" autocomplete="off" id="browserName" value="" />
+    <input type="hidden" autocomplete="off" id="browserversion" value="" />
+    <iframe id="downloadFileFrame" style="display:none;"></iframe>
+    <div id="callStatusCode" style="display: none;"></div>
+    <div id="notification-sound-control">
+        <div id="dial-sound"></div>
+    </div>
+    <div id="callFrame" class="">
+        <div id="incallMsgNotification" class="msg-notification-parent msgNotiHideCls"></div>
+
+        <div id="inCall-notification" class="call-request-notification hideCls"></div>
+        <div id="copyCallLinkMsg" class="copy-link-msg hideCls"></div>
+
+        <!-- <div class="spinner-body fullPageloader recentloadersection">
+            <div id="body-spinner-bar" class="spinner">
+                <div class="body-spinner-icon"></div>
+            </div>
+            <span>Loading...</span>
+        </div> -->
+
+        <div class="modal-scrollable" id="model_content"></div>
+        <!--Add to Call Pop-up Start-here-->
+        <section class="hideCls" id="contactPanel">
+            <div class="addtoCallBody">
+                <!-- initiate call section  -->
+
+                <div class="newmeetinglinksection hideCls" id="newmeetinglinksection">
+                    <div class="common-modal-header" id="addRequiredHead">Add Required Invitees</div>
+                    <div class="shareMeeting-label">
+                        <span class="share_content">Share this meeting link with people you want in the meeting.
+                            <span class="permision-icon">
+                                <img src="images/info-icon-2.svg" alt="" class=""
+                                    title="People you add here will have to take your permission before joining this meeting.">
+                            </span>
+                        </span>
+                    </div>
+                    <div class="shareMeetingUrl">
+                        <span class="shareMeetingUrl-link" id="personalmeetinglink"></span>
+                        <span id="copyClip" onclick="copyMeetingLink()">
+                            <img src="images/icons/copy-to-clipboard.svg" alt="Copy" class="copy-invite-icon">
+                        </span>
+                        <span class="toast-calendar-message" id="linkCopiedHead" style="display: none;">Link copied in
+                            clipboard</span>
+                    </div>
+                    <div class="invite-user-border">
+                    </div>
+                    <!-- <section class="permision-label-section">
+                        <span class="permision-icon">
+                            <img src="images/info-icon.svg" alt="" class="">
+                        </span>
+                        <span class="permision-label">
+                            People you add here will have to take your permission before joining this meeting.
+                        </span>
+                    </section> -->
+                </div>
+                <div class="users_for_invitation hideCls"></div>
+                <div class="users_for_invitation_message hideCls"></div>
+                <div id="searchUserInvieId">
+                    <div class="common-modal-header"><span id="addToCallHead">ADD TO CALL</span>
+                        <span class="close-invite-Incall" onclick="closeCallInvite()">
+                            <img src="images/icons/close.svg" class="">
+                        </span>
+
+                    </div>
+
+                    <div class="max-added" id="validation-msg"></div>
+                    <div class="call_right">
+                        <div class="columCallScreen seracCloumScreen">
+                            <input type="text" id="searchUser" class="search-class" autocomplete="off"
+                                placeholder="Add by name or email address">
+                            <span class="serchHeaderClose" id="serchHeaderClose" onclick="clearGlbSearch()"></span>
+                            <ul class="externalUserList" id="externalUserDropdown"></ul>
+                        </div>
+
+                    </div>
+                    <h1 class="all-contact-title" id="allContactHead">All contacts</h1>
+                    <div class="">
+                        <ul id="contactList"
+                            class="addCallList common-ul-section ul-padd-m-none commom-chat-listing addInvitaionCall">
+                        </ul>
+                        <div class="columCallScreen inviteCallBtn">
+                            <div id="callInviteUser"></div>
+                            <button class="submitButtonGlobal inActiveBtn" disabled id="addInviteBtn"
+                                onclick="sendInvitation()">Add</button>
+                        </div>
+                        <div class="addToCallemptyState hideCls" id="addToCallemptyState"></div>
+                    </div>
+                </div>
+
+        </section>
+        <!--Add to Call Pop-up end-here-->
+
+        <!-- Message Section -->
+        <div id="chatDiv" class="hideCls"></div>
+
+        <!--successfully msg Strat here-->
+        <section class="teamPopup-common hideCls" id="alertPopup">
+            <div class="successfullySection">
+                <div class="succesfullyContent">
+                    <div class="succesfullyHeading" id="alertContent"></div>
+                    <div class="succesfullyFooter">
+                        <button type="button" class="submitButtonGlobal" onclick="hideAlert('alertPopup')">OK</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--successfully msg Strat here-->
+
+        <!--Confirm pop-up msg Strat here-->
+        <section class="teamPopup-common hideCls" id="confirmPopup">
+            <div class="successfullySection">
+                <div class="succesfullyContent">
+                    <div class="succesfullyHeading" id="confirmContent"></div>
+                    <div class="succesfullyFooter">
+                        <button class="cancelBtn" id="confirmCancel" onclick="hideAlert('confirmPopup')">
+                            Cancel</button>
+                        <button class="submitButtonGlobal" id="confirmDone">OK</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Confirm pop-up msg Strat here-->
+        <!-- no network connectivity start -->
+        <section class="notifyPermission hideCls" id="noNetworkConnection">
+            <div class="noInternetBody">
+                <div class="notificationContent">
+                    <img class="notifyBellPermission" src="images/noNetwork.svg">
+                    <h2>No internet,
+                        Please check your connection and try again..</h2>
+                </div>
+            </div>
+        </section>
+        <!-- no network connectivity end -->
+        <!-- network connectivity start -->
+        <section class="notifyPermission hideCls" id="connectionEstablished">
+            <div class="noInternetBody">
+                <div class="notificationContent">
+                    <img class="notifyBellPermission" src="images/connectionEstablished.svg">
+                    <h2>Your connection is established</h2>
+                </div>
+            </div>
+        </section>
+        <!-- network connectivity end -->
+    </div>
+
+    <!--WAITING PARTICIPANTS START-->
+    <section class="addtoCallBody waitingParticipent hideCls" id="participant-listing">
+        <div class="participant-main-heading">
+            <span id="waitingHead">Waiting Participants</span>
+            <div class="close-button">
+                <button class="participentCloseBtn" onclick="closeWaitingUserPopup()">
+                    <img class="image-style" src="images/waiting-participenent-close.svg">
+                </button>
+            </div>
+        </div>
+        <div id="emptyState"></div>
+        <section id="invite-location-tab" class="invite-margin-common">
+            <div class="participant-body-section" id="participant-list">
+                <ul class="participant-inner-ul">
+                </ul>
+            </div>
+        </section>
+    </section>
+    <!--WAITING PARTICIPANTS End-->
+    <!-- image preview start -->
+    <div class="modal hide fade fileImagePreview" id="image-gallery" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg fileImageBody">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="imageName"></h2>
+                    <span id="previewDownloadFile"><img src="images/icons/download_Icon.svg" alt="Download"></span>
+                    <!-- <h4 class="modal-title" id="image-gallery-title"></h4> -->
+                    <button type="button" class="close" data-dismiss="modal" onclick="stopVideo()"><span
+                            aria-hidden="true"><img src="images/close-img.svg" loading="lazy" title="close"
+                                class="close-img-w"></span><span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <!-- <div class="modal-body">
+                   <img id="image-gallery-image" class="img-responsive col-md-12 hideCls" src="">
+                   <video id="videoPlayer" src="" width="1250" autoplay="" controls></video>
+                </div> -->
+                <div class="modal-body">
+                    <div class="easyzoom easyzoom--overlay">
+                        <a id="image-gallery-image-link" href="">
+                            <img id="image-gallery-image" class="img-responsive col-md-12 hideCls" src="">
+                        </a>
+                    </div>
+                    <video id="videoPlayer" src="" width="1250" autoplay="" controls></video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary float-left" id="previousImage">
+                        <img src="images/prevI.svg" loading="lazy" title="prev">
+                    </button>
+
+                    <button type="button" id="nextImage" class="btn btn-secondary float-right">
+                        <img src="images/nextI.svg" loading="lazy" title="next">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- image preview end -->
+</body>
+
+<script defer src="https://meetdev.melp.us/libs/external_api.min.js?v=140"></script>
+<!-- JS Library Include Area Starts -->
+<script defer src="js/library/jquery-3.4.1.min.js"></script>
+
+<!-- <script defer src="js/library/popper.min.js"></script> -->
+<script defer src="js/library/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script defer src="./js/library/noSleep.js"></script>
+
+<script defer src="constant.min.js?v=162.0.0"></script>
+<!-- JS Library Include Area Stops -->
+
+<script defer src="bower_components/js-signals/dist/signals.min.js"></script>
+<script defer src="bower_components/crossroads/dist/crossroads.min.js"></script>
+<script defer src="bower_components/Hasher-master/dist/js/hasher.min.js"></script>
+<script defer src="route.js?v=162.0.0"></script>
+
+<!-- FireBase Library added -->
+<script defer src="./js/library/firebase8.1.1/firebase.js"></script>
+<!-- FireBase Security library added -->
+<script defer src="./js/library/securityjsNew/jsbn.js"></script>
+<script defer src="./js/library/securityjsNew/prng4.js"></script>
+<script defer src="./js/library/securityjsNew/rng.js"></script>
+<script defer src="./js/library/securityjsNew/ec.js"></script>
+<script defer src="./js/library/securityjsNew/sec.js"></script>
+<script defer src="./js/library/securityjsNew/sha256.min.js"></script>
+<script defer src="./js/library/securityjsNew/base64js.min.js"></script>
+<script defer src="./js/library/securityjsNew/index.js"></script>
+
+<!-- Candy Files starts -->
+<script defer src="./js/library/chatjs/libs.min.js"></script>
+<script defer src="./js/library/chatjs/candy.bundle.js"></script>
+<!-- Candy Files ends -->
+
+<script defer src="./helpers/chatConnection_helper.js?v=162.0.0"></script>
+<script defer type="module" src="./js/custom/call.js?v=162.0.0"></script>
+<script defer type="module" src="./helpers/callwindow_helper.js?v=162.0.0"></script>
+<script defer type="module" src="./helpers/globalEvent_helper.js?v=162.0.0"></script>
+<script defer type="module" src="./js/custom/chat.js?v=162.0.0"></script>
+
+<!-- Emoji library Starts Here -->
+<script defer language="JavaScript" src="./js/library/emojionearea/emojionearea.min.js"></script>
+<!-- Emoji library End Here -->
+
+<!-- Google Analytics Libraries Starts -->
+<script defer src="./js/library/analytics/analytics.js"></script>
+<script defer src="./js/library/analytics/gtag.js?id=UA-71451202-1"></script>
+<script defer type="module" src="./helpers/ga_helper.js?v=162.0.0"></script>
+<!-- Google Analytics Libraries Ends -->
+
+<link defer rel="stylesheet" href="css/plugins/zoom/easyzoom.css" />
+<!-- <script defer src="./js/library/zoom/zoomIn.js"></script> -->
+<script defer src="./js/library/zoom/easyzoom.js" importance="low"></script>
+
+</html>

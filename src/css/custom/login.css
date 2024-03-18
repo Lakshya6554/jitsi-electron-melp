@@ -1,0 +1,5026 @@
+:root {
+  --white: #ffffff;
+  --dark-white: #f2f2f2;
+  --light-white: #f1f1f1;
+
+  --black: #222020;
+  --dark-black: #030303;
+  --light-black: #1a1a1b;
+  --light-slate-black: #222223;
+
+  --red: #ee4136;
+  --light-red: #ff8787;
+  --dark-gray: #9c9696;
+  --gray: #d6dbe1;
+  --dim-gray: #f2f2f27a;
+  --slate-gray: #737070;
+  --dark-slate-gray: #f8f8f8;
+  --light-slate-gray: #f4f4f4;
+
+  --brown: #554d4d;
+  --dark-browm: #484849;
+  --light-brown: #343334;
+  --light-slate-brown: #272729;
+
+  --popup: #323131;
+
+  /* --navbar: #554d4d;
+	--navbarheader: #FFFFFF;
+	--middle-panel: #F2F2F2;
+	--middle-msg: #554d4d;
+	--menu-text: #FFFFFF; */
+}
+html {
+  /* font-size: 30px; */
+  font-size: 2.85rem;
+  /* font-size: clamp(0.66rem, 0vw, 0.5rem); */
+}
+
+body {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  position: relative;
+  font-size: clamp(1rem, 1vw, 2rem);
+  /* height  : 100vh; */
+}
+
+/*scroll-bar*/
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.4rem transparent;
+  border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+::-moz-scrollbar {
+  width: 5px;
+}
+
+::-moz-scrollbar-track {
+  box-shadow: inset 0 0 0.4rem transparent;
+  border-radius: 0.3rem;
+}
+
+::-moz-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 0.3rem;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+/*************  Login Page Css Starts **************/
+
+:root {
+  /* --font-regular: helveticaneue;
+	--font-md: HelveticaNeueMed;
+	--font-bold: HelveticaNeuBold;
+	--font-super: AkzidenzGroteskPro-Super; */
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+a {
+  color: var(--red);
+}
+
+#username::-moz-placeholder,
+#username::-webkit-placeholder,
+#username::-ms-placeholder,
+#username::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 600 !important;
+}
+
+#password::-moz-placeholder,
+#password::-webkit-placeholder,
+#password::-ms-placeholder,
+#password::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 600 !important;
+}
+
+#name::-moz-placeholder,
+#name::-webkit-placeholder,
+#name::-ms-placeholder,
+#name::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 600 !important;
+}
+
+#email_id::-moz-placeholder,
+#email_id::-webkit-placeholder,
+#email_id::-ms-placeholder,
+#email_id::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 600 !important;
+}
+
+#spassword::-moz-placeholder,
+#spassword::-webkit-placeholder,
+#spassword::-ms-placeholder,
+#spassword::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 600 !important;
+}
+
+.email-signUp-forms {
+  /* width: 75rem; */
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.6rem 0 rgb(0 0 0 / 18%);
+  background-color: var(--white);
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 4rem;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 70%);
+  background-color: var(--dark-slate-gray);
+}
+
+.company-user-nameImg {
+  /* margin-top: 10px; */
+}
+
+.email-signUp-forms .company-user-nameImg .email-info {
+  width: 5rem;
+  height: auto;
+}
+
+.email-signUp-forms .company-user-name {
+  /* margin-top: 16px; */
+  margin-top: 1.45rem;
+}
+
+.email-signUp-forms .company-user-name span {
+  font-family: var(--font-md);
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+  color: var(--black);
+  text-transform: uppercase;
+  line-height: initial;
+  font-weight: 700;
+}
+
+.email-signUp-forms .company-text {
+  /* margin-bottom: 25px; */
+  margin-bottom: 2.3rem;
+}
+
+.email-signUp-forms .company-text span {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.47;
+  /* letter-spacing: 0.5px; */
+  letter-spacing: 0.045rem;
+  text-align: center;
+  color: var(--brown);
+  display: inline-block;
+  width: auto;
+  padding-top: 1rem;
+}
+
+.email-signUp-forms .saveButton button {
+  box-shadow: 0.2px 0.8rem 2.85rem 0 rgb(241 68 68 / 15%) !important;
+}
+
+/*************  Login Page Css Ends ***************/
+
+.sign-up-flow .sign-up-flow-cont {
+  /*background-image: url(../../../images/back-signin.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;*/
+  background-color: var(--white);
+  /* margin-top   : 6rem; */
+}
+
+.sign-up-flow .navbar-brand img {
+  width: auto;
+  height: 5rem;
+  /* margin-top: 5px; */
+  margin-top: 0.045rem;
+}
+
+.signup-login-m {
+  margin: 0 auto;
+}
+
+.login-common-box-style {
+  box-shadow: 0 0.045rem 1.45rem 0.03rem rgb(0 0 0 / 10%);
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 0.3rem;
+  /* border       : 0.1rem solid var(--gray); */
+  width: 100%;
+  /* display      : flex; */
+  overflow: hidden;
+  width: 100%;
+  max-width: 53.9rem;
+  margin: 0px auto;
+  min-width: 53.9rem;
+}
+
+.common-padding-login {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.display-flex-login {
+  display: flex;
+  width: 100%;
+  /* justify-content: space-between; */
+  display: flex;
+  /* align-items    : center; */
+  /* justify-content: space-between; */
+  /* max-width      : 1440px; */
+}
+
+.flex-left {
+  width: 100%;
+}
+
+.bg-login {
+  /* background-color: #272527; */
+}
+
+img.width-login-img {
+  width: 100%;
+}
+
+.login-logo-commmon {
+  /* width: 100%; */
+}
+
+.log-m-top {
+  margin-top: 0;
+  /* margin-top :3.6rem; */
+  display: inline-block;
+  text-align: left;
+  float: left;
+  padding-bottom: 2.6rem;
+}
+
+.login-logo-commmon img {
+  /* width: 168px; */
+  width: 22.2rem;
+  margin-bottom: 2rem;
+  /* height    : 41px; */
+  /* height    : 7.1rem; */
+  /* float        : left; */
+}
+
+.or-div {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.signup-privacy-a:hover {
+  color: var(--red);
+}
+
+.or-border {
+  display: inline-block;
+  height: 1px;
+  width: 41%;
+  /* margin-bottom: 2px; */
+  margin-bottom: 0.02rem;
+}
+
+.or-text {
+  margin: 0px 5px 0px 5px;
+  margin: 0rem 0.045rem 0rem 0.045rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: 0.092rem;
+  text-align: center;
+  color: var(--dark-gray);
+  position: relative;
+  display: block;
+  background: var(--white);
+  /* z-index    : 9; */
+  padding: 0px 0rem;
+  width: 40rem;
+}
+
+.passwordeye {
+  cursor: pointer !important;
+}
+
+.sign-up-flow .navbar-brand {
+  padding: 0;
+}
+
+.sign-up-flow .navbar.navbar-inverse #myNavbar .nav.navbar-nav li > a {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+  text-align: center;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  color: var(--black);
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 1.5rem 0 1.5rem;
+}
+
+.sign-up-flow
+  .navbar.navbar-inverse
+  #myNavbar
+  .nav.navbar-nav.navbar-nav-form
+  li
+  > a {
+  margin: 0;
+}
+
+.sign-up-flow
+  .navbar.navbar-inverse
+  #myNavbar
+  .nav.navbar-nav.navbar-nav-form
+  li
+  #sign-up-button {
+  margin-left: 1rem;
+}
+
+.sign-up-flow .navbar.navbar-inverse #myNavbar .nav.navbar-nav li.active > a {
+  background: transparent !important;
+}
+
+.sign-up-flow .navbar.navbar-inverse {
+  background-color: var(--white);
+  border: none;
+  margin-bottom: 6rem;
+  padding-top: 1.2rem;
+  padding-left: 5rem;
+  padding-bottom: 1.2rem;
+  /* border-bottom: 2px solid var(--red) */
+  border-bottom: 0.02rem solid var(--red);
+}
+
+.sign-up-flow .nav.navbar-nav.navbar-nav-menu {
+  width: auto;
+  display: flex;
+  position: absolute;
+  padding-top: 1.5rem;
+  left: 50%;
+  right: 50%;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.sign-up-flow .nav.navbar-nav.navbar-nav-form {
+  width: 37%;
+  display: flex;
+  padding-top: 1.5rem;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.sign-up-flow .nav.navbar-nav.navbar-nav-form .signup a {
+  height: 5.5rem;
+  /* border-radius: 3px; */
+  border-radius: 0.03rem;
+  padding: 0.9rem 1.5rem !important;
+  position: relative;
+  top: -0.6rem;
+  /* width        : 200px; */
+  width: 18.5rem;
+}
+
+.sign-up-flow .nav.navbar-nav.navbar-nav-form .signin a {
+  height: 5.5rem;
+  /* border-radius: 3px; */
+  border-radius: 0.03rem;
+  padding: 0.9rem 1.5rem !important;
+  position: relative;
+  top: -0.6rem;
+  width: 12rem;
+}
+
+/************ Sign Up Form******************/
+
+.sign-up-flow .signUp-form-new .fullname-signUp input:focus,
+.sign-up-flow .signUp-form-new .email-id-signUp input:focus,
+.sign-up-flow .signUp-form-new .password-signUp input:focus,
+.sign-up-flow .signUp-form-new .saveButton button,
+.sign-up-flow .signUp-form-new input:focus {
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 1rem;
+  /*box-shadow    : 0.02rem 0.2rem 0.3rem 0 rgba(214, 219, 225, 0.79);*/
+  background-color: var(--dark-white);
+  border: solid 1px var(--gray);
+  /*margin-bottom : 1.2rem;*/
+  padding-left: 2rem;
+  padding-right: 2rem;
+  outline: none;
+  line-height: normal;
+}
+
+.tringle-password {
+  /* width: 0;
+    height: 0;
+    border-top: 0.7rem solid transparent;
+    border-bottom: 0.7rem solid transparent;
+    border-right: 0.7rem solid var(--white); */
+  position: absolute;
+  top: 10%;
+  left: -0.5rem;
+  display: block;
+}
+
+.tringle-password-icon {
+  width: 0;
+  height: 0;
+  border-top: 0.7rem solid transparent;
+  border-bottom: 0.7rem solid transparent;
+  border-right: 0.7rem solid var(--slate-gray);
+  position: absolute;
+  top: 10%;
+  left: -0.5rem;
+  display: none;
+}
+
+.sign-up-flow .signUp-form-new .saveButton button:focus {
+  outline: none;
+}
+
+.sign-up-flow .signUp-form-new .company-text {
+  margin-bottom: 2.5rem;
+}
+
+.sign-up-flow .signUp-form-new .company-user-name {
+  margin-bottom: 0.8rem;
+}
+
+.sign-up-flow .signUp-form-new .saveButton button {
+  background-color: var(--red);
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.9rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+.sign-up-flow .signUp-form-new input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+}
+
+.sign-up-flow .signUp-form-new input::-moz-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.resetPasswordId {
+  margin-top: 0rem !important;
+}
+
+.sign-up-flow .signUp-form-new input::-ms-input-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.sign-up-flow .signUp-form-new input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.sign-up-flow .signUp-form-new .signUp-social-icons {
+  position: relative;
+  text-align: left;
+  height: 5.5rem;
+  /* border-radius: 3px; */
+  border-radius: 0.03rem;
+  /* box-shadow   : 0 2px 3px 0 rgba(214, 219, 225, 0.79); */
+  box-shadow: 0 0.02rem 0.03rem 0 rgba(214, 219, 225, 0.79);
+  border: solid 1px var(--gray);
+  background-color: var(--white);
+  margin-bottom: 1.2rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.52px;
+  color: var(--brown);
+  cursor: pointer;
+}
+
+.sign-up-flow .signUp-form-new .float-left-google:hover {
+  background-color: #eee;
+}
+
+.sign-up-flow .signUp-form-new .float-left-office:hover {
+  background-color: #eee;
+}
+
+.sign-up-flow .signUp-form-new .float-left-google a {
+  color: var(--slate-gray);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 4.8rem;
+  letter-spacing: 0.6px;
+  color: var(--black);
+  text-align: center;
+  /* padding     : 1.7rem 10.6rem; */
+}
+
+.sign-up-flow .signUp-form-new .float-left-office a {
+  color: var(--slate-gray);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 4.8rem;
+  /* letter-spacing: 0.6px; */
+  letter-spacing: 0.06rem;
+  color: var(--black);
+  /* padding       : 1.7rem 9.6rem; */
+  text-align: center;
+}
+
+.clearfixe {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sign-up-flow .signUp-form-new .signUp-social-icons img {
+  margin-right: 1.3rem;
+  /* width    : 8.5%; */
+}
+
+.sign-up-flow .signUp-form-new .float-left-office img {
+}
+
+.sign-up-flow .signUp-form-new .signup-text {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 2rem;
+  padding-bottom: 0.6rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.37;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.privacy-common {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8rem;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: var(--black);
+  text-align: center;
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 0px 0px;
+  padding-bottom: 0px !important;
+}
+
+.float-left-google a img {
+  /* width:9.5% !important; */
+}
+
+.float-left-office {
+  margin-top: 1rem;
+}
+
+.sign-up-flow .signUp-form-new .password-signUp {
+  position: relative !important;
+}
+
+.sign-up-flow .signUp-form-new .password-signUp .passwordeye {
+  position: absolute;
+  /* right : 18px; */
+  right: 1.65rem;
+  top: 1.5rem;
+  /* height: 24px; */
+  height: 2.4rem;
+  cursor: pointer !important;
+}
+
+.sign-up-flow .signUp-form-new #errormsgnamereg,
+.sign-up-flow .signUp-form-new #errormsgemailreg,
+.sign-up-flow .signUp-form-new #errormsgpwdreg {
+  line-height: normal;
+  color: var(--red);
+  margin-bottom: 0rem;
+  /* position      : relative; */
+  top: -0.3rem;
+  font-size: 0.9rem;
+  text-align: left;
+  letter-spacing: 0.15rem;
+  /* padding-left  : 0rem; */
+  /* text-transform: uppercase; */
+}
+
+.error-margin {
+  margin-right: 1rem;
+  display: inline-block;
+  width: 2.5%;
+  margin-top: -1.2rem;
+}
+
+.error-msg-m {
+  display: inline-block;
+  width: 94%;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+#password {
+  color: var(--black) !important;
+  font-weight: 500 !important;
+  font-size: 1.3rem;
+}
+
+.title-pass {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: 0.6px;
+  color: var(--black);
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.subtitle-error-pass {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.58;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+  margin-top: 1rem;
+  margin-bottom: 0px;
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.error-signin-info {
+  margin-right: 1rem;
+  display: inline-block;
+  width: 1.2rem;
+  /* margin-top: -5px; */
+  margin-top: -0.05rem;
+}
+
+.error-signin-msg {
+  display: inline-block;
+  /* width      : 2.86rem; */
+  text-align: left;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  letter-spacing: 0.06rem;
+  font-style: normal;
+  padding: 1.2rem;
+  line-height: 1.9rem;
+}
+.error-signin-msg u{
+  cursor: pointer;
+}
+/************ Sign Up Form******************/
+
+/************ Sign In Form******************/
+
+.sign-up-flow .signIn-form-new .fullname-signUp input,
+.sign-up-flow .signIn-form-new .email-id-signUp input,
+.sign-up-flow .signIn-form-new .password-signUp input,
+.sign-up-flow .signIn-form-new .saveButton button,
+.sign-up-flow .signIn-form-new input {
+  width: 100%;
+  /* height       : 5rem; */
+  border-radius: 1rem;
+  background-color: var(--white);
+  /* border          : solid 0rem var(--gray); */
+  /*margin-bottom : 1.2rem;*/
+  padding-left: 1.6rem;
+  /* padding-right: 2rem; */
+  outline: none;
+  line-height: normal;
+  /* border-color : #201F1F !important; */
+}
+
+.sign-up-flow .signIn-form-new .saveButton button:focus {
+  outline: none;
+}
+
+.sign-up-flow .signIn-form-new .company-text {
+  margin-bottom: 2.5rem;
+}
+
+.sign-up-flow .signIn-form-new .company-user-name {
+  margin-bottom: 0.8rem;
+}
+
+.sign-up-flow .signIn-form-new .saveButton button {
+  background-color: var(--red);
+
+  height: 5.5rem;
+  border-radius: 0.3rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.1rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: var(--white);
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+  border: 0.1rem solid var(--red);
+}
+
+.sign-up-flow .signIn-form-new .saveButton button:hover {
+  /* border: 1px solid var(--red);
+
+	height: 5.5rem;
+	border-radius: 0.3rem;
+	font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.1rem;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	color: var(--white);
+	text-align: center;
+	color: var(--white);
+	text-transform: uppercase;
+	padding-left: 0;
+	padding-right: 0;
+	cursor: pointer;
+	}
+	.sign-up-flow .signIn-form-new .saveButton button:hover {
+		/* border: 1px solid var(--red);
+
+		background: #272527;
+		color: var(--dark-slate-gray);
+		border: 1px solid #000; */
+}
+
+.sign-up-flow .signIn-form-new input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  line-height: 1.7rem;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.sign-up-flow .signIn-form-new input::-moz-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  line-height: 1.7rem;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.sign-up-flow .signIn-form-new input::-ms-input-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  line-height: 1.7rem;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.sign-up-flow .signIn-form-new input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  line-height: 1.7rem;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.signUp-form-new .signIn-form-new input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  line-height: 1.7rem;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.signUp-form-new .signIn-form-new input::-moz-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  line-height: 1.7rem;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.signUp-form-new .signIn-form-new input::-ms-input-placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  line-height: 1.7rem;
+  font-stretch: normal;
+  letter-spacing: 0.15rem;
+  color: var(--slate-gray) !important;
+  text-transform: uppercase;
+}
+
+.sign-up-flow .signIn-form-new .signUp-social-icons {
+  /* border-radius: 0.03rem; */
+  /* box-shadow: 0 0.02rem 0.03rem 0 rgba(214, 219, 225, 0.79); */
+  /* border: solid 1px var(--gray); */
+  /* background-color: var(--white); */
+  margin-bottom: 1.2rem;
+  /* font-family   : 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important; */
+  /* font-size     : 1.3rem; */
+  /* font-weight   : 300; */
+  /* font-stretch  : normal; */
+  /* font-style    : normal; */
+  /* line-height   : normal; */
+  /* letter-spacing: 0.52px; */
+  /* color         : var(--brown); */
+  /* cursor        : pointer; */
+}
+
+.sign-up-flow .signIn-form-new .float-left-office:hover {
+  background-color: #eee;
+}
+
+.sign-up-flow .signIn-form-new .float-left-google:hover {
+  background-color: #eee;
+}
+
+.sign-up-flow .signIn-form-new .float-left-google a {
+  color: var(--slate-gray);
+  /* text-decoration: none; */
+  /* display        : inline-block; */
+  /* width          : 100%; */
+  /* font-family    : 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important; */
+  font-size: 1.5rem;
+  /* font-weight    : 600; */
+  /* font-stretch   : normal; */
+  /* font-style     : normal; */
+  /* line-height    : 1.8rem; */
+  /* letter-spacing : 0.6px; */
+  /* color          : var(--black); */
+  /* padding        : 1.7rem 11.6rem; */
+  /* text-align     : center; */
+}
+
+.sign-up-flow .signIn-form-new .float-left-office a {
+  color: var(--slate-gray);
+  /* text-decoration: none; */
+  /* display        : block; */
+  /* width          : 100%; */
+  /* font-family    : 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important; */
+  /* font-size      : 1.3rem; */
+  /* font-weight    : 600; */
+  /* font-stretch   : normal; */
+  /* font-style     : normal; */
+  /* line-height    : 1.8rem; */
+  /* letter-spacing : 0.06rem; */
+  /* color          : var(--black); */
+  /* padding        : 1.4rem 9.6rem; */
+  /* text-align     : center; */
+}
+
+.common-login-w {
+  /* margin: 0px 38px; */
+  margin: 0;
+  display: grid;
+  /* row-gap: 2rem; */
+}
+
+.sign-up-flow .signIn-form-new .signUp-social-icons img {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.sign-up-flow .signIn-form-new .float-left-google a img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sign-up-flow .signIn-form-new .signup-text {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: var(--black);
+  text-align: left;
+  float: left;
+  padding-bottom: 2.6rem;
+  padding-left: 0.5rem;
+}
+
+.sign-up-flow .signIn-form-new .signup-privacy {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.signup-privacy {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2rem;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: var(--black);
+  text-align: center;
+  /* margin-top : 0.5rem; */
+  display: inline-block;
+  /* padding    : 0.5rem 0rem 2rem; */
+}
+
+a.signup-privacy-a {
+  font-weight: bold;
+}
+
+.sign-up-flow .signIn-form-new .text-input-div .password-signUp {
+  position: relative;
+}
+
+.sign-up-flow .signIn-form-new .text-input-div .password-signUp .signIn-forgot {
+  padding-top: 0.2rem;
+  text-decoration: none;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  /* line-height : 22px; */
+  line-height: 2rem;
+  letter-spacing: 0.6px;
+  color: var(--red);
+}
+
+.sign-up-flow
+  .signIn-form-new
+  .text-input-div
+  .password-signUp
+  .signIn-forgot:hover {
+  color: var(--red);
+}
+
+.sign-up-flow .signIn-form-new .password-signUp .sign-checkbox input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.sign-up-flow .signIn-form-new .password-signUp .sign-checkbox label {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem !important;
+  font-weight: 300 !important;
+  font-stretch: normal;
+  font-style: normal;
+  /* line-height: 22px; */
+  line-height: 2rem;
+  letter-spacing: 0.6px;
+  color: var(--brown) !important;
+  margin-right: 7rem;
+}
+
+.sign-up-flow .signIn-form-new .password-signUp .sign-checkbox label {
+  cursor: pointer;
+}
+
+.sign-up-flow .signIn-form-new .password-signUp .sign-checkbox label span {
+  position: relative;
+}
+
+.sign-up-flow .signIn-form-new .password-signUp .passwordeye {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.2rem;
+}
+
+.sign-up-flow .signIn-form-new #signinpassworderror {
+  line-height: normal;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.15rem;
+  /* position      : absolute; */
+  bottom: 5.6rem;
+  font-size: 0.9rem;
+  /* position      : relative; */
+  top: -6px;
+}
+
+#error-email-signup {
+  top: 0rem;
+}
+
+#error-pass-signup {
+  top: 0rem;
+}
+
+/************ Sign In Form******************/
+
+/************ Forgot form******************/
+
+.sign-up-flow .forgot-form-new {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.6rem 0 rgba(0, 0, 0, 0.18);
+  background-color: var(--white);
+  margin: 0 auto;
+  text-align: center;
+  padding: 2.8rem 0 2.8rem 0;
+  padding: 3rem 5rem 3rem 5rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  /* position     : absolute;
+	left            : 50%;
+	top             : 50%;
+	transform       : translate(-50%, -50%); */
+}
+
+.sign-up-flow .forgot-form-new .email-id-signUp input {
+  /* width: 32.8rem!important; */
+}
+
+.sign-up-flow .forgot-form-new .fullname-signUp input,
+.sign-up-flow .forgot-form-new .email-id-signUp input,
+.sign-up-flow .forgot-form-new .password-signUp input,
+.sign-up-flow .forgot-form-new .saveButton button,
+.sign-up-flow .forgot-form-new input:focus {
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 1rem;
+  /* box-shadow   : 0.02rem 0.2rem 0.3rem 0 rgba(214, 219, 225, 0.79); */
+  background-color: var(--dark-white);
+  border: none;
+  margin-bottom: 1.2rem;
+  padding-left: 2.4rem;
+  outline: none;
+  /* border-radius: 3px ; */
+  border-radius: 0.03rem;
+  border-radius: 1px solid var(--gray);
+  width: 100%;
+}
+
+.sign-up-flow .forgot-form-new .saveButton button:focus {
+  outline: none;
+}
+
+.sign-up-flow .forgot-form-new .company-text {
+  margin-bottom: 2.5rem;
+}
+
+.sign-up-flow .forgot-form-new .company-user-name {
+  margin-bottom: 0.8rem;
+}
+
+.sign-up-flow .forgot-form-new .saveButton button {
+  background-color: var(--red);
+  padding: 1rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-style: normal;
+  width: 100% !important;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-left: 0;
+  height: 5.5rem;
+  cursor: pointer;
+}
+
+.sign-up-flow .forgot-form-new input::-webkit-input-placeholder {
+  /* font-size: 1.1rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;
+	color: var(--slate-gray);
+	text-transform: capitalize; */
+}
+
+.sign-up-flow .forgot-form-new input::-moz-placeholder {
+  /* font-size: 1.1rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;;
+	line-height: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray)!important;
+	text-transform: uppercase; */
+}
+
+.sign-up-flow .forgot-form-new input::-ms-input-placeholder {
+  /* font-size: 1.1rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.1rem;
+	font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;
+	color: var(--slate-gray);
+	text-transform: capitalize; */
+}
+
+.sign-up-flow .forgot-form-new input::placeholder {
+  /* font-size: 1.1rem;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu  !important;;
+	line-height: normal;
+	letter-spacing: 0.15rem;
+	color: var(--slate-gray)!important;
+	text-transform: uppercase; */
+}
+
+.sign-up-flow .forgot-form-new .signup-text {
+  padding: 1rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: 1.37;
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  /* border-bottom: 0.2rem solid var(--red); */
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.sign-up-flow .forgot-form-new .signup-privacy {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  /* font-size: 15px; */
+  font-size: 1.35rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.53;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--dark-gray);
+  margin-top: 2rem;
+  display: none;
+}
+
+.sign-up-flow .forgot-form-new .text-input-div,
+.sign-up-flow .forgot-form-new .text-social-div {
+  padding: 0 3rem;
+}
+
+.redborder {
+  border: 1px solid var(--red) !important;
+  color: var(--red);
+}
+.redText {
+  color: var(--red) !important;
+}
+
+#signinpassworderror {
+  color: var(--red);
+  /* margin-bottom: 1.2rem; */
+}
+
+#forgot-password-error-message {
+  display: inline-block;
+  /* width      : 2.86rem; */
+  text-align: left;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  letter-spacing: 0.06rem;
+  font-style: normal;
+  /* padding    : 1rem; */
+  line-height: 1.9rem;
+  margin-left: 2rem;
+}
+
+.sign-up-flow .forgot-form-new .saveButton button {
+  margin-top: 2rem;
+}
+
+.sign-up-flow .sign-up-flow-cont input {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  letter-spacing: 0.06rem;
+}
+
+/************ Forgot Form******************/
+
+.sign-up-flow,
+.sign-up-flow .sign-up-flow-cont {
+  /* height: 81vh; */
+  /* margin-bottom: 11.88rem; */
+  /*Can also be `fixed`*/
+  /* position: absolute; */
+  /* left: 50%; */
+  /* right: 50%; */
+  /* top: 50%; */
+  /* bottom: 0; */
+  /* margin: auto; */
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  /* clear       : both; */
+  /* margin      : 0px auto; */
+  /* display     : inline-flex; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.tooltips-cont {
+  /* position: absolute; */
+  left: 2rem;
+  top: 4rem;
+  display: inline-block;
+  line-height: normal;
+  transition: all 0.4s ease-in-out;
+}
+
+.password-signUp .tooltips-cont {
+  display: inline-block;
+  line-height: normal;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  z-index: 9;
+}
+
+.tooltips-cont::after {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  left: 9rem;
+  /* margin-left: -5px;
+	border-width  : 6px; */
+  margin-left: -0.05rem;
+  border-width: 0.06rem;
+  border-style: solid;
+  border-color: transparent transparent var(--dark-white) transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.tooltips-cont .tooltiptext,
+.passwordHint {
+  width: 100% !important;
+  background-color: var(--dark-slate-gray);
+  color: var(--black);
+  text-align: center;
+  /* border-radius: 6px; */
+  border-radius: 0.06rem;
+  /* padding      : 16px 0px 16px 0px; */
+  padding: 1.45rem 0rem 1.45rem 0rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  /* font-size    : 11px; */
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  /* line-height  : 19px; */
+  line-height: 1.7rem;
+  letter-spacing: 0.6px;
+  color: var(--black);
+  display: none;
+  top: 4.3rem;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  z-index: 1;
+  border: solid 1px var(--gray);
+  /* box-shadow   : 0 2px 4px 0 rgba(0, 0, 0, 0.28); */
+  box-shadow: 0 0.02rem 0.04rem 0 rgba(0, 0, 0, 0.28);
+  left: 0;
+}
+
+#passwordHint {
+  /* right: -1rem !important; */
+  /* top: -4.3rem !important; */
+  /* left: inherit !important; */
+  width: auto !important;
+}
+
+.password-tooltips {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: var(--black);
+  /* margin-bottom: 15px; */
+  margin-bottom: 1.4rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.after-float-pass::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pass-character-section {
+  text-align: left;
+  /* margin-bottom: 16px; */
+  margin-bottom: 1.5rem;
+}
+
+.charact-icon-default {
+  float: left;
+  width: 8%;
+  background-image: url(../../images/disabled.svg);
+  height: 2rem;
+  z-index: 9999;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+  /* margin-left     : 8px; */
+  margin-left: 0.08rem;
+  cursor: pointer;
+}
+
+.charact-icon-active {
+  float: left;
+  width: 8%;
+  background-image: url(../../images/Good-pass.svg);
+  height: 2rem;
+  z-index: 9999;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+  /* margin-left     : 8px; */
+  margin-left: 0.08rem;
+  cursor: pointer;
+}
+
+.more-chart-label {
+  text-align: left;
+  float: left;
+  width: 80%;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+}
+
+.upper-character-section {
+  text-align: left;
+  /* margin-bottom: 16px; */
+  margin-bottom: 1.45rem;
+}
+
+.upper-icon-default {
+  float: left;
+  width: 8%;
+  background-image: url(../../images/disabled.svg);
+  height: 2rem;
+  z-index: 9999;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+  /* margin-left     : 8px; */
+  margin-left: 0.08rem;
+  cursor: pointer;
+}
+
+.upper-icon-active {
+  float: left;
+  width: 8%;
+  background-image: url(../../images/Good-pass.svg);
+  height: 2rem;
+  z-index: 9999;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+  /* margin-left     : 8px; */
+  margin-left: 0.08rem;
+  cursor: pointer;
+}
+
+.upper-chart-label {
+  text-align: left;
+  float: left;
+  width: 80%;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+}
+
+.number-character-section {
+  text-align: left;
+  /* margin-bottom: 16px; */
+  margin-bottom: 1.45rem;
+}
+
+.number-icon-default {
+  float: left;
+  width: 8%;
+  background-image: url(../../images/disabled.svg);
+  height: 2rem;
+  z-index: 9999;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+  /* margin-left     : 8px; */
+  margin-left: 0.08rem;
+  cursor: pointer;
+}
+
+.number-icon-active {
+  float: left;
+  width: 8%;
+  background-image: url(../../images/Good-pass.svg);
+  height: 2rem;
+  z-index: 9999;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+  /* margin-left     : 8px; */
+  margin-left: 0.08rem;
+  cursor: pointer;
+}
+
+.number-chart-label {
+  text-align: left;
+  float: left;
+  width: 80%;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+}
+
+.sign-up-flow .signIn-form-new #formlogin .errorHandler {
+  line-height: normal !important;
+  background: var(--white);
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  color: var(--red);
+}
+
+.button-active {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+}
+
+.button-notactive {
+  border: 1px solid var(--red);
+}
+
+/*new css signup*/
+
+.position-signup-new {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.lable-signup {
+  position: absolute;
+  top: -5px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.73;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+  margin: 1rem;
+  padding: 0 1rem;
+
+  -webkit-transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+
+.move-input {
+  /* border-radius: 3px; */
+  border-radius: 0.03px;
+  /* box-shadow   : 0 5px 16px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 0.05rem 1.45rem 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--dark-white);
+  /* height       : 64px; */
+  height: 6.2rem;
+}
+
+.top-lable {
+}
+
+.move-top-label {
+  /* top: -8px;
+  font-size: 9px; */
+  top: -0.08rem;
+  font-size: 0.09rem;
+}
+
+.newsignup {
+  /* border-radius:3px !important; */
+  border-radius: 0.03rem !important;
+  height: 4.8rem !important;
+  border: solid 1px var(--gray) !important;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem !important;
+  font-weight: 300 !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: 0.6px;
+  padding-top: 15px;
+}
+
+.password-newsignup {
+  /* border-radius:3px !important; */
+  border-radius: 0.03rem !important;
+  height: 4.8rem !important;
+  border: solid 1px var(--gray) !important;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem !important;
+  font-weight: 300 !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+  padding-left: 2rem !important;
+}
+
+.saveButton {
+  /* margin-top:16px; */
+}
+
+.or-spacing {
+  /* padding: 2rem 0rem; */
+  position: relative;
+}
+
+.login {
+  padding: 2rem 0rem;
+}
+
+.signup-btn-new {
+  border-radius: 0.3rem !important;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem !important;
+  font-weight: 600 !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.password-newsignup::-webkit-input-placeholder {
+  text-transform: initial !important;
+}
+
+.password-newsignup:-moz-placeholder {
+  text-transform: initial !important;
+}
+
+.password-newsignup:moz-placeholder {
+  text-transform: initial !important;
+}
+
+.password-newsignup:-ms-input-placeholder {
+  text-transform: initial !important;
+}
+
+.remember-login {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.2rem !important;
+  letter-spacing: 0.6px;
+  color: var(--brown) !important;
+  /* line-height   : 1.8rem; */
+  float: left;
+  /* margin-top    : 1rem; */
+  margin-left: 3rem;
+}
+
+.navigation-small .meeting-left-margin {
+  /* margin-left: 28px; */
+  margin-left: 2.6rem;
+  width: 84%;
+}
+
+.login-logo {
+  width: 90%;
+}
+
+.border-bottom-sign {
+  /* display: block;
+	width: 59px;
+	height: 2px;
+	background-color: var(--red);
+	 text-align: center; 
+	margin: 0 auto;
+	margin-top: 15px;*/
+}
+
+.check-login {
+  background-image: url(../../images/check-contact.svg);
+  display: inline-block;
+  /* width                 : 2rem;
+	height                : 2rem; */
+  background-repeat: no-repeat;
+  top: 0.1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-size: contain;
+}
+
+.check-login-click {
+  background-image: url(../../images/accept.svg);
+  display: inline-block;
+  display: inline-block;
+  background-repeat: no-repeat;
+  top: 0.1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-size: contain;
+  /* width              : 2rem;
+	height             : 2rem; */
+  padding: 1rem;
+  z-index: 99;
+}
+
+/*	sign in page css*/
+
+.new-sign-in-section label {
+  /* position: relative; */
+  /* display: block; */
+}
+
+.new-sign-in-section label input {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  display: block;
+  padding: 1.8rem 1.9rem;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--gray);
+  font-weight: 500;
+  /* height       : 5.5rem; */
+  background-color: var(--white) !important;
+  border-radius: 0.1rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8rem;
+  letter-spacing: 0.06rem;
+  color: var(--black);
+  /* position     : relative; */
+}
+
+.new-sign-in-section label input::placeholder {
+  transition: all 0.2s ease-in-out;
+  color: var(--brown);
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.new-sign-in-section label input:focus,
+.new-sign-in-section label input.populated {
+  /* padding-top: 28px; */
+  padding-top: 2.65rem;
+  padding-bottom: 1.2rem;
+  background-color: var(--dark-white) !important;
+  border: 1px solid var(--gray) !important;
+  border-radius: 0px !important;
+}
+
+.new-sign-in-section label input:focus::placeholder,
+.new-sign-in-section label input.populated::placeholder {
+  color: var(--dark-white) !important;
+}
+
+.new-sign-in-section label input:focus + span,
+.new-sign-in-section label input.populated + span {
+  opacity: 1;
+  top: 0.8rem;
+  color: var(--slate-gray);
+  background: none;
+}
+
+.new-sign-in-section label span {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  position: absolute;
+  color: var(--black);
+  top: 0rem;
+  left: 2rem;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4rem;
+  letter-spacing: 0.1rem;
+  color: var(--brown);
+  text-transform: uppercase;
+}
+
+.new-sign-in-section input[type="submit"] {
+  transition: all 0.2s ease-in-out;
+  /* font   : 18px Helvetica, Arial, sans-serif; */
+  border: none;
+  background: #1aaf75;
+  color: var(--white);
+  /* padding: 16px 40px; */
+  padding: 1.45rem 3.85rem;
+}
+
+.new-sign-in-section input[type="submit"]:hover {
+  background: #109f67;
+}
+
+.new-sign-in-section .passwordeye {
+  position: absolute;
+  /* right : 18px; */
+  right: 1.65rem;
+  top: 1.5rem;
+  /* height: 24px; */
+  height: 2.3rem;
+}
+
+.sign-checkbox {
+  position: relative;
+  /* top    : -1rem; */
+  margin-top: 2rem;
+}
+
+.check-login {
+  position: absolute;
+  left: 0px;
+  /* top     : 1rem; */
+  cursor: pointer;
+}
+
+.remember-login {
+  /* position: absolute; */
+  /* left: 3rem; */
+  /* top: 11px; */
+  /* top: 1rem; */
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.signIn-forgot {
+  /* position      : absolute; */
+  /* right         : 0px; */
+  /* top           : 2rem; */
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  line-height: 2.5rem;
+  /* margin-right: 136px; */
+  float: right;
+  color: var(--black);
+  text-decoration: none;
+  /* position: relative; */
+  /* left: -241px; */
+}
+
+.signIn-forgot:hover {
+  color: var(--red);
+  text-decoration: none;
+}
+
+/* a.signIn-forgot:hover {
+
+} */
+a.signup-privacy-a {
+  color: var(--red);
+}
+
+a.signup-privacy-a:hover {
+  color: var(--red);
+  text-decoration: none;
+}
+
+/*	sign in page css*/
+
+#username::-moz-placeholder,
+#username::-webkit-placeholder,
+#username::-ms-placeholder,
+#username::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 500 !important;
+}
+
+#password::-moz-placeholder,
+#password::-webkit-placeholder,
+#password::-ms-placeholder,
+#password::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 500 !important;
+}
+
+#name::-moz-placeholder,
+#name::-webkit-placeholder,
+#name::-ms-placeholder,
+#name::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 500 !important;
+}
+
+#email_id::-moz-placeholder,
+#email_id::-webkit-placeholder,
+#email_id::-ms-placeholder,
+#email_id::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 500 !important;
+}
+
+#spassword::-moz-placeholder,
+#spassword::-webkit-placeholder,
+#spassword::-ms-placeholder,
+#spassword::-o-placeholder {
+  color: var(--brown) !important;
+  font-weight: 500 !important;
+}
+
+.label1440px {
+  /* padding: 1rem 0rem 2rem; */
+}
+
+.tooltips-common-error {
+  width: auto;
+  /* background-color: var(--dark-slate-gray); */
+  color: var(--black);
+  text-align: center;
+  border-radius: 0.1rem;
+  /* padding      : 0.7rem 0rem 0.7rem 0rem; */
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  /* line-height  : 1.9rem; */
+  letter-spacing: 0.06rem;
+  color: var(--red);
+  top: 0rem;
+  /* position        : absolute; */
+  z-index: 1;
+  /* border          : solid 0.1rem var(--red); */
+  box-shadow: 0 0.2rem 0.4rem 0 rgb(0 0 0 / 28%);
+  right: 50%;
+  display: none;
+  left: 100%;
+  /* margin-left     : 2rem; */
+  text-align: left;
+  margin-bottom: 2.6rem;
+  margin-top: 2.5rem;
+  /* margin-bottom: 2rem; */
+}
+
+#error-fullname-signup {
+}
+
+.subtitle-error-fullName {
+}
+
+.tringle-NameEmail {
+  /* width: 0;
+    height: 0;
+    border-top: 0.7rem solid transparent;
+    border-bottom: 0.7rem solid transparent;
+    border-right: 0.7rem solid var(--red); */
+  position: absolute;
+  top: 33%;
+  left: -0.8rem;
+  display: block;
+}
+
+.box-register .tringle-NameEmail {
+  top: 37%;
+  display: block;
+}
+
+.display-none-1440 {
+  display: block;
+}
+
+.display-block-1440 {
+  display: none;
+}
+
+.display-middle-1440px {
+  display: none;
+}
+
+.display-middle-signin-1440px {
+  display: none;
+}
+
+#signin-google {
+  display: inline-block;
+}
+
+#signin-google {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#emailerrortooltip .error-signin-msg {
+  display: inline-block;
+  /* width      : 2.86rem; */
+  text-align: left;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.2rem !important;
+  font-weight: 500;
+  font-stretch: normal;
+  letter-spacing: 0.06rem;
+  font-style: normal;
+  padding: 1rem;
+  line-height: 1.9rem;
+}
+
+#loginerrortooltip .error-signin-msg {
+  display: inline-block;
+  /* width      : 2.86rem; */
+  text-align: left;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  letter-spacing: 0.06rem;
+  font-style: normal;
+  padding: 1rem;
+  line-height: 1.9rem;
+}
+
+#backBtn {
+  font-size: 1.7rem;
+  width: 100%;
+  height: 5.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#redirectTologin {
+  margin-right: 0 !important;
+}
+.forgot-label {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.1rem;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.forgot-text-title {
+  padding: 1rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: 1.37;
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.box-register .tringle-NameEmail {
+  top: 37%;
+  display: block;
+}
+
+.display-none-1440 {
+  display: block;
+}
+
+.display-block-1440 {
+  display: none;
+}
+
+.display-middle-1440px {
+  display: none;
+}
+
+.display-middle-signin-1440px {
+  display: none;
+}
+
+#signin-google {
+  display: inline-block;
+}
+
+#signin-google {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#emailerrortooltip .error-signin-msg {
+  display: inline-block;
+  /* width      : 2.86rem; */
+  text-align: left;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.2rem !important;
+  font-weight: 500;
+  font-stretch: normal;
+  letter-spacing: 0.06rem;
+  font-style: normal;
+  padding: 1rem;
+  line-height: 1.9rem;
+}
+
+#loginerrortooltip .error-signin-msg {
+  display: inline-block;
+  /* width      : 2.86rem; */
+  text-align: left;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-stretch: normal;
+  letter-spacing: 0.06rem;
+  font-style: normal;
+  padding: 1rem;
+  line-height: 1.9rem;
+}
+
+#backBtn {
+  font-size: 1.7rem;
+  width: 100%;
+  height: 5.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#redirectTologin {
+  margin-right: 0 !important;
+}
+
+.forgot-label {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.1rem;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: #222020;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.forgot-text-title {
+  padding: 1rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: 1.37;
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: #201f1f;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+@media (max-width: 1700px) {
+}
+
+@media (max-width: 1600px) {
+}
+
+@media (max-width: 1500px) {
+  .sign-up-flow .signIn-form-new .saveButton button {
+    height: 4.5rem;
+  }
+
+  .sign-up-flow .signIn-form-new .signUp-social-icons {
+    height: 5rem;
+  }
+
+  .new-sign-in-section label input {
+    /* height: 5.0rem; */
+  }
+
+  .sign-up-flow .signIn-form-new .fullname-signUp input,
+  .sign-up-flow .signIn-form-new .email-id-signUp input,
+  .sign-up-flow .signIn-form-new .password-signUp input,
+  .sign-up-flow .signIn-form-new .saveButton button,
+  .sign-up-flow .signIn-form-new input:focus {
+    height: 5rem;
+  }
+
+  .sign-up-flow .signUp-form-new .fullname-signUp input:focus,
+  .sign-up-flow .signUp-form-new .email-id-signUp input:focus,
+  .sign-up-flow .signUp-form-new .password-signUp input:focus,
+  .sign-up-flow .signUp-form-new .saveButton button,
+  .sign-up-flow .signUp-form-new input:focus {
+    height: 5.5rem;
+  }
+
+  .sign-up-flow .signUp-form-new .signUp-social-icons {
+    height: 5rem;
+  }
+
+  .signup-btn-new {
+    height: 5rem !important;
+  }
+
+  .sign-up-flow .signUp-form-new .signUp-social-icons a {
+    /* padding:1.7rem 9.6rem; */
+    text-align: center;
+  }
+
+  .sign-up-flow .signIn-form-new .signUp-social-icons a {
+    /* padding:1.7rem 9.6rem; */
+    text-align: center;
+  }
+
+  .login-logo {
+    width: 80%;
+  }
+
+  .sign-up-flow .signIn-form-new .signup-text {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .sign-up-flow .forgot-form-new .fullname-signUp input,
+  .sign-up-flow .forgot-form-new .email-id-signUp input,
+  .sign-up-flow .forgot-form-new .password-signUp input,
+  .sign-up-flow .forgot-form-new .saveButton button,
+  .sign-up-flow .forgot-form-new input:focus {
+    /* height: 5rem; */
+  }
+
+  .display-left-1440px .new-sign-in-section label input {
+    width: 100%;
+  }
+
+  .display-left-1440px .sign-up-flow .signUp-form-new .saveButton button {
+    width: 85% !important;
+  }
+
+  .sign-up-flow .signUp-form-new .password-signUp .passwordeye {
+    position: absolute;
+    right: 2.7rem;
+    top: 1rem;
+  }
+
+  .display-right-1440px .signUp-form-new .signUp-social-icons {
+    width: 85%;
+  }
+
+  .display-left-1440px
+    .sign-up-flow
+    .signUp-form-new
+    .fullname-signUp
+    input:focus,
+  .display-left-1440px
+    .sign-up-flow
+    .signUp-form-new
+    .email-id-signUp
+    input:focus,
+  .display-left-1440px
+    .sign-up-flow
+    .signUp-form-new
+    .password-signUp
+    input:focus,
+  .display-left-1440px .sign-up-flow .signUp-form-new .saveButton button,
+  .display-left-1440px .sign-up-flow .signUp-form-new input:focus {
+    width: 100%;
+  }
+
+  .display-left-1440px .saveButton {
+    /* margin-top: 16px; */
+    margin-top: 1.45rem;
+    width: 100%;
+  }
+
+  .display-middle-1440px .or-border {
+    background-color: var(--gray);
+    height: 7.3rem;
+    width: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .display-middle-1440px .or-text {
+    margin: 0rem 0.05rem 0rem 0.05rem;
+    font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+      sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+      Ubuntu !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.92px;
+    text-align: center;
+    color: var(--slate-gray);
+    padding: 1.2rem 0rem;
+  }
+
+  .display-right-1440px .office-1440 {
+    padding: 1.7rem 7.6rem 1.7rem 7.6rem !important;
+  }
+
+  .sign-up-flow .signUp-form-new .signup-text {
+    font-size: 1.7rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .display-left-1440px .new-sign-in-section label input {
+    font-size: 1.3rem;
+  }
+
+  .display-left-1440px .sign-up-flow .signUp-form-new input::placeholder {
+    font-size: 0.9rem;
+  }
+
+  .display-left-1440px .new-sign-in-section label span {
+    font-size: 0.9rem;
+  }
+
+  .display-left-1440px .signup-btn-new {
+    font-size: 1.7rem !important;
+  }
+
+  .box-register .signup-text {
+    margin-bottom: 3rem !important;
+    margin-top: 3rem;
+  }
+
+  .sign-up-flow .signUp-form-new .float-left-office img {
+    /* width: 7.5%; */
+  }
+
+  .box-login {
+    /* padding: 4rem 4rem 4rem 4rem; */
+    /* width: 65%; */
+  }
+
+  .signin-right1440 {
+    float: left;
+    width: 47.7%;
+  }
+
+  .signin-left1440 {
+    float: left;
+    width: 46.7%;
+  }
+
+  .display-middle-signin-1440px {
+    float: left;
+    width: 5.6%;
+    display: block;
+  }
+
+  .display-middle-signin-1440px .or-border {
+    background-color: var(--gray);
+    height: 4rem;
+    width: 0.2rem;
+    margin-bottom: 2px;
+  }
+
+  .box-login .login-logo-commmon img {
+    /* width: 25%; */
+    margin-bottom: 0rem;
+  }
+
+  .box-login .signup-text {
+    /* margin-bottom: 3rem !important; */
+    /* margin-top: 3rem; */
+  }
+
+  .display-middle-signin-1440px .or-text {
+    padding: 1.2rem 0rem;
+  }
+
+  #signup-google {
+    display: inline-block;
+  }
+
+  #signup-google {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #signin-google {
+    display: inline-block;
+  }
+
+  #signin-google {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sign-up-flow .signUp-form-new .signUp-social-icons a {
+    /* padding: 1.5rem 7.6rem; */
+    text-align: center;
+  }
+
+  .sign-up-flow .signIn-form-new .signUp-social-icons a {
+    /* padding: 1.5rem 8.6rem; */
+    text-align: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .display-right-1440px .office-1440 {
+    padding: 1.5rem 3.6rem 1.5rem 3.6rem !important;
+  }
+  .sign-up-flow .signUp-form-new .float-left-office img {
+    width: 5.5%;
+  }
+  .sign-up-flow .signIn-form-new .signUp-social-icons a {
+    padding: 1.5rem rem !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1100px) {
+  .sign-up-flow .nav.navbar-nav.navbar-nav-form li a {
+    width: 10.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .loginSignupRighContainer {
+    padding: 0px 2.8rem !important;
+  }
+
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+  }
+
+  .tooltips-common-error {
+    /* width: 24.1rem; */
+    right: -25.1rem;
+  }
+
+  #error-fullname-signup {
+    /* top: -2rem; */
+    right: -27.3rem;
+  }
+
+  .password-signUp .tooltips-cont {
+    right: 40rem;
+    left: unset;
+    top: 5rem;
+  }
+
+  .display-left-1440px {
+    float: left;
+    width: 41%;
+    margin-right: 1rem;
+  }
+
+  .sign-up-flow .signUp-form-new .signUp-social-icons a {
+    /* padding: 1.2rem 4.6rem 1.2rem 3.6rem; */
+  }
+
+  .display-right-1440px .office-1440 {
+    padding: 1.5rem 3.6rem 1.5rem 4.6rem !important;
+  }
+
+  .sign-up-flow .signUp-form-new .signup-text {
+    font-size: 1.5rem;
+  }
+
+  .signup-privacy {
+    /* font-size: 1.2rem; */
+  }
+
+  .sign-up-flow .signUp-form-new .float-left-google a {
+    font-size: 1.2rem;
+  }
+
+  .display-none-1440 {
+    display: block;
+  }
+
+  .display-block-1440 {
+    display: none;
+    width: 98%;
+  }
+
+  .display-middle-1440px {
+    display: none;
+  }
+
+  .display-left-1440px {
+    float: none;
+    width: 100%;
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .display-right-1440px {
+    /* float: none; */
+    /* width: 100%; */
+    /* margin-left: 0rem; */
+  }
+
+  .box-register {
+    /* padding: 2rem 7rem 2rem 7rem; */
+  }
+
+  .sign-up-flow .signUp-form-new .signUp-social-icons a {
+    /* padding: 1.2rem 7.6rem; */
+  }
+
+  .sign-up-flow .signUp-form-new .signUp-social-icons img {
+    /* margin-right: 15px; */
+    margin-right: 1.45rem;
+    width: unset;
+  }
+
+  .box-register {
+    /* width: 57%; */
+  }
+
+  .box-register .login-logo-commmon img {
+    /* width: 39%; */
+    /* margin-bottom: 2rem; */
+  }
+
+  .box-login {
+    /* padding: 3rem 4rem 3rem 5rem; */
+    /* width: 65%; */
+  }
+
+  .signin-right1440 {
+    float: none;
+    width: 100%;
+  }
+
+  .signin-left1440 {
+    float: none;
+    width: 100%;
+  }
+
+  .display-middle-signin-1440px {
+    float: left;
+    width: 4%;
+    display: none;
+  }
+
+  .display-middle-signin-1440px .or-border {
+    background-color: var(--gray);
+    height: 5.3rem;
+    width: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .box-login .login-logo-commmon img {
+    /* width: 25%; */
+    margin-bottom: 0rem;
+  }
+
+  .box-login .signup-text {
+    /* margin-bottom: 3rem !important; */
+    /* margin-top: 5rem; */
+  }
+
+  .sign-up-flow .signIn-form-new .signUp-social-icons img {
+    /* margin-right: 1.5rem; */
+    /* width: 4.5%; */
+  }
+
+  .box-register .signup-text {
+    margin-bottom: 2rem !important;
+    margin-top: 2rem;
+  }
+
+  .box-login .signup-text {
+    /* margin-bottom: 2rem !important; */
+    /* margin-top: 2rem; */
+  }
+
+  .tooltips-common-error {
+    /* width: 26.1rem;
+    background-color: var(--dark-slate-gray);
+    color: var(--black);
+    text-align: center;
+    border-radius: 0.1rem;
+    padding: 0.7rem 0rem 0.7rem 0rem;
+    font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+      sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+      Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.9rem;
+    letter-spacing: 0.06rem;
+    color: var(--black);
+    top: 0rem;
+    position: absolute;
+    z-index: 1;
+    border: solid 0.1rem var(--red);
+    box-shadow: 0 0.2rem 0.4rem 0 rgb(0 0 0 / 28%);
+    right: -27.3rem; */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .sign-up-flow .forgot-form-new .text-input-div::before {
+    content: "";
+    left: 36rem;
+  }
+  .sign-up-flow .signIn-form-new .password-signUp .sign-checkbox label {
+    width: 40%;
+    margin-right: 4.8rem;
+  }
+  .sign-up-flow .navbar.navbar-inverse #myNavbar .nav.navbar-nav li > a {
+    line-height: 2;
+  }
+  .sign-up-flow
+    .signIn-form-new
+    .text-input-div
+    .password-signUp
+    .signIn-forgot {
+    width: 44%;
+    display: inline-block;
+  }
+  .sign-up-flow .signIn-form-new .text-input-div::before {
+    content: "";
+    left: 37.5rem;
+  }
+  /* .sign-up-flow .company-signUp-form{
+	width: auto;
+	} */
+  .navbar-nav.navbar-right:last-child {
+    /* margin-right: 24px; */
+    margin-right: 2.3rem;
+  }
+  .sign-up-flow .signUp-form-new .text-input-div::before {
+    content: "";
+    left: 37.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+  }
+  .sign-up-flow .nav.navbar-nav.navbar-nav-form {
+    justify-content: flex-end;
+  }
+  .tooltips-common-error {
+    width: 28.1rem;
+    right: 0.9rem;
+    top: 6.2rem;
+  }
+  .sign-up-flow .signUp-form-new .signUp-social-icons a {
+    padding: 1.5rem 8.6rem;
+    text-align: center;
+  }
+  .sign-up-flow .signIn-form-new .signUp-social-icons a {
+    padding: 1.5rem 2.6rem;
+    text-align: center;
+  }
+  .display-left-1440px .saveButton {
+    /* margin-top: 16px; */
+    margin-top: 1.45rem;
+    width: 100%;
+  }
+  .sign-up-flow .signUp-form-new .signUp-social-icons a {
+    padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+  }
+  .display-right-1440px .office-1440 {
+    padding: 1.5rem 1.6rem 1.5rem 3.6rem !important;
+  }
+  .display-right-1440px {
+    /* margin-left: 2rem; */
+  }
+  #error-fullname-signup {
+    right: 0.9rem;
+  }
+  #emailerrortooltip .tooltips-common-error {
+    width: 28.1rem;
+    right: -4.1rem;
+    top: 0.2rem;
+  }
+  #loginerrortooltip .tooltips-common-error {
+    width: 28.1rem;
+    right: -4.1rem;
+    top: 0.2rem;
+  }
+}
+
+.list-section {
+  /* margin-top: 25px;
+    margin-left: 25px; */
+  margin-top: 2.3rem;
+  margin-left: 2.3rem;
+}
+
+.discover-label {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  /* font-size     : 17px; */
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  /* letter-spacing: 0.79px; */
+  letter-spacing: 0.07rem;
+  text-align: left;
+  color: var(--white);
+  /* margin        : 10px 0px 25px; */
+  margin: 0.6rem 0rem 2.2rem;
+}
+
+.login-list {
+  list-style-type: none;
+  /* padding     : 0px;
+    margin      : 0px; */
+  padding: 0rem;
+  margin: 0rem;
+}
+
+.login-list li {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  /* font-size       : 12px; */
+  font-size: 1.12rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  /* letter-spacing  : 0.55px; */
+  letter-spacing: 0.06rem;
+  text-align: left;
+  color: var(--white);
+  background-image: url(../../images/list-ok.svg);
+  background-position: 0%;
+  background-repeat: no-repeat;
+  /* padding-left    : 32px; */
+  padding-left: 3rem;
+  /* margin          : 15px 0px; */
+  margin: 1.3rem 0rem;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999999px;
+}
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* carousel start */
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* height    : 80%; */
+  /* max-height: 80%; */
+  /* min-height: 70%; */
+}
+
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  line-height: 1;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-inner > .item {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+    left: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  .carousel-inner > .item.next.left,
+  .carousel-inner > .item.prev.right,
+  .carousel-inner > .item.active {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+.carousel-inner > .active {
+  left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel-inner > .next {
+  left: 100%;
+}
+
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  /* font-size: 20px; */
+  font-size: 2rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 0 0.01rem 0.02rem rgba(0, 0, 0, 0.6);
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.0001) 100%
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.0001) 100%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.5)),
+    to(rgba(0, 0, 0, 0.0001))
+  );
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.0001) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.0001)),
+    to(rgba(0, 0, 0, 0.5))
+  );
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: var(--white);
+  text-decoration: none;
+  filter: alpha(opacity=90);
+  outline: 0;
+  opacity: 0.9;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  /* margin-top:-10px; */
+  margin-top: -1rem;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+  left: 50%;
+  /* margin-left: -10px; */
+  margin-left: -1rem;
+}
+
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 50%;
+  /* margin-right: -10px; */
+  margin-right: -1rem;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  /* width: 20px;
+  height: 20px; */
+  width: 2rem;
+  height: 2rem;
+  font-family: serif;
+  line-height: 1;
+}
+
+.carousel-control .icon-prev:before {
+  content: "\2039";
+}
+
+.carousel-control .icon-next:before {
+  content: "\203a";
+}
+
+.carousel-indicators {
+  /* position: absolute; */
+  /* bottom: 10px; */
+  bottom: 18rem;
+  /* left        : 50%; */
+  /* z-index     : 15; */
+  /* width       : 60%; */
+  /* padding-left: 0; */
+  /* margin-left : -30%; */
+  /* text-align  : center; */
+  /* list-style  : none; */
+  bottom: 0;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  /* width        : 10px; */
+  width: 0.8rem;
+  /* height       : 10px; */
+  height: 0.8rem;
+  /* margin       : 1px; */
+  margin: 0.01rem;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: var(--black) \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid var(--white);
+  /* border-radius: 10px; */
+  border-radius: 0.8rem;
+  display: none;
+}
+
+.carousel-indicators .active {
+  /* width: 12px; */
+  width: 1rem;
+  /* height       : 12px; */
+  height: 1rem;
+  margin: 0;
+  background-color: var(--white);
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  /* bottom      : 20px; */
+  bottom: 1.8rem;
+  left: 15%;
+  z-index: 10;
+  /* padding-top : 20px;
+  padding-bottom: 20px; */
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption .btn {
+  text-shadow: none;
+}
+
+.forgetWidth {
+  width: 50rem;
+}
+
+.forgetInput {
+  /* border: 1px solid var(--gray) !important; */
+  border: 0.01px solid var(--gray) !important;
+}
+
+.avoid-clicks {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Thank you screen css, All CSS copied form thankyou.css STARTS */
+
+/************ Email Sign Up Form******************/
+
+.sign-up-flow .email-signUp-form {
+  box-shadow: 0 0.5rem 1.6rem 0.4rem rgb(0 0 0 / 10%);
+  text-align: center;
+  /* position     : absolute; */
+  /* top          : 50%;
+	left            : 50%; */
+  /* transform    : translate(-50%, 12.55%); */
+  background-color: var(--white);
+  padding: 3rem 7rem 3rem 7rem;
+  /* border-radius: 3px; */
+  border-radius: 0.3rem;
+  border: 1px solid var(--gray);
+  width: 60%;
+  margin: 0px auto;
+}
+
+.sign-up-flow .email-signUp-form .saveButton button:focus {
+  outline: none;
+}
+
+.sign-up-flow .email-signUp-form .company-text {
+  margin-bottom: 2.5rem;
+}
+
+.sign-up-flow .email-signUp-form .company-text .email-info-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 1.6rem;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.sign-up-flow .email-signUp-form .company-user-name {
+  /* margin-bottom: 11px; */
+  margin-bottom: 1.1rem;
+  margin-top: 3rem;
+}
+
+.sign-up-flow .email-signUp-form .company-user-name span {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.4rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.sign-up-flow .email-signUp-form .company-text span {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.8rem;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: var(--brown);
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
+
+span.email-div {
+  padding: 1rem 0 0 0;
+  display: block;
+}
+
+.sign-up-flow .email-signUp-form .company-text .email-span {
+  width: 100% !important;
+}
+
+.started-div {
+  padding: 1rem;
+}
+
+.text-started {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.8rem;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  color: var(--brown);
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
+
+.sign-up-flow .email-signUp-form .company-text .email-text {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.65;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: var(--black) !important;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
+
+.sign-up-flow .email-signUp-form .company-user-icon {
+  border: 1px solid var(--gray);
+  position: absolute;
+  top: 3.8rem;
+  height: 1px;
+  width: 50%;
+  left: 25%;
+}
+
+.sign-up-flow .email-signUp-form .company-user-icon .leftimg,
+.sign-up-flow .email-signUp-form .company-user-icon .rightimg {
+  position: absolute;
+  top: -1.2rem;
+}
+
+.sign-up-flow .email-signUp-form .company-user-icon .leftimg {
+  left: -1px;
+}
+
+.sign-up-flow .email-signUp-form .company-user-icon .rightimg {
+  right: -1px;
+}
+
+.sign-up-flow .email-signUp-form .saveButton .saveButton-emailText {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.4rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.email-span {
+  margin-top: 1rem;
+}
+
+#resendMessage {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: var(--black);
+}
+
+a.editSignup,
+.href-back {
+  cursor: pointer;
+  margin-left: 1.4rem;
+}
+
+a.editSignup:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+  outline: 0;
+  color: var(--red) !important;
+}
+
+.back-signup {
+  float: left;
+  padding-left: 1.5rem;
+}
+
+.href-back:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+  outline: 0;
+  color: var(--black) !important;
+}
+
+.href-back {
+  color: var(--black) !important;
+}
+
+.please-text {
+  margin-top: 1.6rem;
+}
+
+/*.email-div{
+    margin-top: 1rem;
+}*/
+
+.logo-padding {
+  padding-bottom: 3rem;
+}
+
+.please-text-here {
+  margin-bottom: 0px !important;
+}
+
+/************ Email Sign Up Form******************/
+
+@media (max-width: 1500px) {
+  .remember-login {
+    line-height: 2.3rem !important;
+  }
+  .logo-padding {
+    padding-bottom: 2rem;
+  }
+
+  .sign-up-flow .email-signUp-form {
+    /* padding: 1rem 7rem 0px 7rem; */
+  }
+
+  .sign-up-flow .email-signUp-form .company-user-nameImg .email-info {
+    width: 35%;
+  }
+
+  .sign-up-flow .email-signUp-form .company-user-name {
+    margin-bottom: 6px;
+    margin-top: 2.5rem;
+  }
+
+  .sign-up-flow .email-signUp-form .company-user-name span {
+    font-size: 1.6rem;
+  }
+
+  .text-started,
+  .text-after-started,
+  .sign-up-flow .email-signUp-form .company-text span,
+  .sign-up-flow .email-signUp-form .company-text .email-text {
+    font-size: 1.5rem;
+  }
+
+  .sign-up-flow .email-signUp-form .saveButton .saveButton-emailText {
+    font-size: 1.5rem;
+  }
+
+  /* .sign-up-flow .email-signUp-form {
+		padding: 2rem 7rem 2rem 7rem;
+	} */
+  .sign-up-flow .email-signUp-form .saveButton .saveButton-emailText {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .started-div {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  /* .sign-up-flow .email-signUp-form {
+		padding: 1rem 7rem 1rem 7rem;
+	} */
+  .sign-up-flow .email-signUp-form .company-user-name {
+    margin-bottom: 0px;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer-lik-signup ul li a {
+    padding: 0.1rem;
+  }
+  .footer-lik-signup ul li {
+    display: inline-block;
+    margin: 1.4rem;
+  }
+  /* .sign-up-flow .email-signUp-form {
+		top: 47%;
+	} */
+  .text-started,
+  .text-after-started,
+  .sign-up-flow .email-signUp-form .company-text span,
+  .sign-up-flow .email-signUp-form .company-text .email-text {
+    font-size: 1.3rem;
+  }
+  .sign-up-flow .email-signUp-form .saveButton .saveButton-emailText {
+    font-size: 1.3rem;
+  }
+  .sign-up-flow .email-signUp-form .company-user-name span {
+    font-size: 1.5rem;
+  }
+  /* .sign-up-flow .email-signUp-form {
+		padding: 2rem 7rem 2rem 7rem;
+	} */
+}
+
+@media (max-width: 1024px) {
+  .sign-up-flow .email-signUp-form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sign-up-flow .email-signUp-form {
+    width: 80%;
+  }
+}
+
+/* @media screen and (min-width: 768px) and (max-width: 992px) {
+	.sign-up-flow .company-signUp-form {
+		width: auto;
+	}
+} */
+
+/* Thank you screen css, All CSS copied form thankyou.css ENDS */
+
+@media screen and (min-width: 768px) {
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    /* width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    font-size: 30px; */
+    width: 3rem;
+    height: 3rem;
+    margin-top: -1.5rem;
+    font-size: 3rem;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .icon-prev {
+    /* margin-left: -15px; */
+    margin-left: -1.5rem;
+  }
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-next {
+    /* margin-right: -15px; */
+    margin-right: -1.5rem;
+  }
+  .carousel-caption {
+    right: 20%;
+    left: 20%;
+    /* padding-bottom: 30px; */
+    padding-bottom: 3rem;
+  }
+  .carousel-indicators {
+    /* bottom: 20px; */
+    /* bottom: 2rem; */
+  }
+}
+
+@media (max-width: 767px) {
+  .display-flex-login {
+    flex-direction: column;
+  }
+  .footer-lik-signup {
+    position: inherit !important;
+  }
+  .sign-up-flow .signIn-form-new .float-left-office a {
+    padding: 1.4rem 1.6rem;
+  }
+  .common-login-w {
+    /* margin: 0px 15px; */
+    margin: 0rem 1.5rem;
+  }
+  .login-common-box-style {
+    position: inherit;
+    transform: inherit;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1600px) {
+  .subtitle-error-fullName {
+    font-size: 1.3rem !important;
+    line-height: 1.7rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .signup-login-m {
+    /* min-height: 85%; */
+  }
+
+  .tooltips-common-error {
+    width: 20rem;
+    margin-left: 1rem;
+    width: 100% !important;
+  }
+
+  .login-common-box-style {
+    /* width: 90rem; */
+  }
+
+  #emailerrortooltip .error-signin-msg {
+    padding: 0.5rem;
+  }
+
+  .subtitle-error-fullName {
+    align-items: flex-start;
+    padding: 0rem;
+    margin: 0rem;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .tringle-NameEmail {
+    display: none !important;
+  }
+
+  .sign-up-flow .signIn-form-new .float-left-office a {
+    /* padding: 1.4rem 3.6rem; */
+  }
+
+  .login-logo-commmon img {
+    width: 100%;
+    margin-bottom: 1rem !important;
+    height: 100%;
+    object-fit: contain;
+    height: 4.5rem;
+  }
+
+  .tooltips-common-error {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+    border: none;
+    border-left: 1px solid var(--red);
+    /* top     : 5rem; */
+    position: inherit;
+    background: none;
+    border: none !important;
+    box-shadow: inherit;
+  }
+
+  .position-signup-new .tooltips-fullname {
+    /* top: 0rem !important; */
+    display: none;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+
+  .position-signup-new .tooltips-Email {
+    /* top: 5rem !important;
+		display: none; */
+    margin-bottom: 1rem;
+  }
+  .position-signup-new .tooltips-Pass {
+    /* top: 5rem !important;
+		display: none; */
+    margin-bottom: 1rem;
+  }
+  .new-sign-in-section {
+    position: inherit;
+  }
+  /* .new-sign-in-section label input {
+		margin-bottom: 0;
+	} */
+  span.error-signin-msg {
+    padding: 0px !important;
+  }
+  .email-id-signUp {
+    position: inherit;
+  }
+  .display-left-1440px .new-sign-in-section label input {
+    margin-bottom: 1rem;
+  }
+  .sign-up-flow .signUp-form-new .signup-text {
+    font-size: 1.8rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.8rem !important;
+    margin-top: 0.8rem !important;
+  }
+  .signup-privacy.privacy-common {
+    margin-top: 0.2rem;
+  }
+  .sign-up-flow .signUp-form-new .signUp-social-icons {
+    margin-bottom: 1rem;
+  }
+  /* .position-signup-new .tooltipTextFullName {
+		top: 5rem;
+	} */
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .sign-up-flow .sign-up-flow-cont {
+    margin-top: 0rem !important;
+  }
+  body {
+    font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+      sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+      Ubuntu !important;
+    /* position: relative; */
+    /* height  : calc(100rem - 3.33cm); */
+  }
+  .signIn-form-new {
+    /* margin-top: 10rem !important; */
+  }
+  .footer-lik-signup {
+    /* position: inherit !important; */
+    /* margin-top: 11rem; */
+  }
+  .forgot-form-new {
+    margin-top: 30% !important;
+    margin-bottom: 34% !important;
+  }
+  .tringle-NameEmail {
+    display: none !important;
+  }
+  span.signup-privacy {
+    padding: 0 3rem;
+  }
+  .tooltips-cont .tooltiptext {
+    width: 30.1rem !important;
+  }
+  .password-signUp .tooltips-cont {
+    right: 30rem !important;
+    left: unset;
+    top: 2rem !important;
+  }
+  .tringle-password-icon {
+    display: none;
+  }
+  .login-logo-commmon img {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  .sign-up-flow .sign-up-flow-cont {
+    /* margin-top: 6rem !important; */
+  }
+  .footer-lik-signup {
+    /* position: inherit !important; */
+    /* margin-top: 5rem; */
+  }
+  .signIn-form-new {
+    /* margin-top: 5rem !important; */
+  }
+  .forgot-form-new {
+    margin-top: 16% !important;
+    margin-bottom: 22% !important;
+  }
+  .tooltips-common-error {
+    top: 0rem !important;
+  }
+  .tooltips-cont .tooltiptext {
+    width: 39.1rem !important;
+  }
+  .password-signUp .tooltips-cont {
+    right: 39rem !important;
+    left: unset;
+    top: 2rem !important;
+  }
+  .tringle-password-icon {
+    display: none;
+  }
+}
+
+@media only screen and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+  body {
+    font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+      sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+      Ubuntu !important;
+    position: relative;
+    height: calc(100rem - 3.33cm);
+  }
+  .sign-up-flow .sign-up-flow-cont {
+    margin-top: 0rem !important;
+  }
+  .signIn-form-new {
+    /* margin-top: 10rem !important; */
+  }
+  .footer-lik-signup {
+    /* position: inherit !important; */
+    /* margin-top: 11rem; */
+  }
+  .forgot-form-new {
+    margin-top: 24% !important;
+    margin-bottom: 24% !important;
+  }
+  #error-fullname-signup {
+    top: 0rem !important;
+  }
+  .tooltiptext {
+    min-width: 100% !important;
+    left: 1rem !important;
+    top: 2rem !important;
+    width: 39rem !important;
+  }
+  .tringle-password-icon {
+    display: none;
+  }
+}
+
+@media only screen and (device-width: 1366px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+  body {
+    font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+      sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+      Ubuntu !important;
+    position: relative;
+    max-height: calc(100rem - 3.33cm);
+  }
+  .sign-up-flow .sign-up-flow-cont {
+    margin-top: 0rem !important;
+  }
+  .signIn-form-new {
+    /* margin-top: 10rem !important; */
+  }
+  .footer-lik-signup {
+    /* position: inherit !important; */
+    /* margin-top: 11rem; */
+  }
+  .forgot-form-new {
+    margin-top: 18% !important;
+    margin-bottom: 22% !important;
+  }
+  #error-fullname-signup {
+    top: 0rem !important;
+  }
+  .password-signUp .tooltips-cont {
+    left: 0;
+    top: 2rem;
+  }
+  .tooltiptext {
+    width: 96.1% !important;
+  }
+  .tringle-password-icon {
+    display: none;
+  }
+}
+
+/* @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+	.sign-up-flow .sign-up-flow-cont {
+		margin-top: 5.5rem !important;
+	}
+	.tooltips-common-error {
+		left: 0;
+		width: 100%;
+		margin-left: 0;
+		border: none;
+		border-left: 1px solid var(--red);
+		top: 5rem;
+		position: inherit;
+		background: none;
+		border: none !important;
+		box-shadow: inherit;}
+		.tringle-NameEmail {
+			display: none;
+		}
+		.sign-up-flow .sign-up-flow-cont {
+			margin-top: 10.5rem !important;
+	margin-bottom: 10.5rem;
+		}
+		.footer-lik-signup {
+			position: inherit  !important;
+		}
+		.sign-up-flow .forgot-form-new{
+			margin-bottom: 20rem !important;
+	margin-top: 20rem !important;	
+		}
+} */
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  /* .sign-up-flow .sign-up-flow-cont {
+		margin-top: 5.5rem !important;
+	margin-bottom: 5.5rem;
+	}
+	.footer-lik-signup {
+		position: inherit  !important;
+	}
+	.subtitle-error-fullName {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		padding-left: 0 !important;}
+		span.error-signin-msg {
+			padding: 0px 0.5rem !important;}
+
+			.sign-up-flow .forgot-form-new{
+				margin-bottom: 16rem !important;
+				margin-top: 18rem !important;
+			}
+			.sign-up-flow .sign-up-flow-cont{
+				margin-top: 10.88rem !important;
+			margin-bottom: 10.88rem;
+			}
+			.sign-up-flow .forgot-form-new{
+				margin-bottom: 26rem !important;
+	margin-top: 18rem !important;
+			}
+			.signup-login-m {
+				margin-top: 22rem !important;
+				margin-bottom: 22rem !important;
+			} */
+}
+
+@media only screen and (device-width: 1366px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+  /* .sign-up-flow .sign-up-flow-cont {
+		margin-top: 10.88rem !important;
+		margin-bottom: 10.88rem;
+	}
+	.footer-lik-signup {
+
+		margin-top: 8rem;
+		position: inherit !important;
+	}
+	.sign-up-flow .forgot-form-new{
+		margin-bottom: 16rem !important;
+		margin-top: 18rem !important;
+	} */
+}
+
+@media only screen and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+  /* .sign-up-flow .sign-up-flow-cont {
+		margin-top: 10.88rem !important;
+		margin-bottom: 10.88rem;
+	}
+	.footer-lik-signup {
+
+		margin-top: 8rem;
+		position: inherit !important;
+	}
+	.sign-up-flow .forgot-form-new{
+		margin-bottom: 16rem !important;
+		margin-top: 18rem !important;
+	} */
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .forgot-form-new {
+    /* margin-top: 35% !important; */
+    /* margin-bottom: 31% !important; */
+  }
+
+  .tooltips-common-error {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+    border: none;
+    border-left: 1px solid var(--red);
+    top: 5rem;
+    position: inherit;
+    background: none;
+    border: none !important;
+    box-shadow: inherit;
+  }
+
+  .tringle-NameEmail {
+    display: none;
+  }
+
+  .footer-lik-signup {
+    /* position: inherit !important; */
+    /* margin-top: 11rem; */
+  }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .sign-up-flow .sign-up-flow-cont {
+    /* margin-top: 6rem !important; */
+  }
+  .login-common-box-style {
+    width: 75%;
+    margin: 0px auto;
+    /* max-width: 1440px !important; */
+  }
+  .position-signup-new {
+    position: inherit !important;
+  }
+  /*login*/
+  .sign-up-flow,
+  .sign-up-flow .sign-up-flow-cont {
+    /* height: 100%; */
+    margin: 0px auto;
+    /* width        : clamp(900px, 75%, 500px); */
+    /* place-content: center; */
+    /* justify-self : center; */
+    /* display      : grid; */
+    /* height       : 100%  !important; */
+    /* overflow-y   : scroll; */
+    /* margin-bottom: 1%; */
+    margin-top: 0 !important;
+  }
+  /* .log-m-top {
+		margin-top:20px;} */
+  /* .log-m-top {
+		margin-top:20px;
+	}
+	.sign-up-flow .signIn-form-new .signup-text {
+		font-size: 1.2rem;
+	}
+	 */
+  /* .sign-up-flow .sign-up-flow-cont input {
+		padding: 1.3rem 1.9rem !important;
+	} */
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1900px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .sign-up-flow,
+  .sign-up-flow .sign-up-flow-cont {
+    /* transform: translate(0%, 10%); */
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  /* 
+	.sign-up-flow .email-signUp-form{
+		transform: translate(-50%, 15%);
+	} */
+}
+
+@media only screen and (min-device-width: 1536px) and (max-device-width: 1900px) {
+  /* insert styles here */
+  .sign-up-flow .email-signUp-form {
+    /* transform: translate(-50%, 4%);
+		padding: 1% !important; */
+  }
+  .sign-up-flow,
+  .sign-up-flow .sign-up-flow-cont {
+    /* transform: translate(0%, 5%); */
+  }
+  .sign-up-flow .signIn-form-new .float-left-google a {
+    /* padding: 1.7rem 8.6rem !important; */
+  }
+  .sign-up-flow .signIn-form-new .float-left-office a {
+    /* padding: 1.7rem 7.6rem !important; */
+  }
+  #passwordHint {
+    width: 33vw;
+  }
+}
+
+/* @media  screen and (max-width: 1600px) {
+	.sign-up-flow, .sign-up-flow .sign-up-flow-cont{
+		transform: translate(-50%, 10%);
+	}
+	.sign-up-flow .email-signUp-form{
+		transform: translate(-50%, 5.55%);
+	}
+}
+@media  screen and (max-width: 1280px) {
+    .sign-up-flow, .sign-up-flow .sign-up-flow-cont{
+		transform: translate(-50%, 15%);
+	}
+	.sign-up-flow .email-signUp-form {
+		transform: translate(-50%, 16.55%);
+	}
+} */
+
+/* @media  screen and (max-width: 1440px) {
+	.sign-up-flow .email-signUp-form {
+		transform: translate(-50%, 16.55%);
+	}
+}
+@media  screen and (max-width: 1366px) {
+	.sign-up-flow .email-signUp-form {
+		transform: translate(-50%, 16.55%);}
+} */
+
+/* @media  screen and (max-width: 1680px) {
+	.sign-up-flow .email-signUp-form {
+		transform: translate(-50%, 16.55%);}
+} */
+
+.password_position {
+  position: relative;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  input::-webkit-textfield-decoration-container {
+    visibility: hidden;
+  }
+}
+
+.resetPasswordCheckBox {
+  text-align: left;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+  height: 1rem;
+  /* display: flex; */
+  align-items: center;
+  /* margin-top: 3rem; */
+  margin-bottom: 3rem;
+  pointer-events: none;
+}
+
+.timer-data-cont {
+  position: absolute;
+  display: block;
+  right: 5rem;
+  top: 1.5rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+}
+
+/* .populated {
+		height:inherit !important;
+		padding: 0px !important;
+		width: inherit  !important;
+	} */
+
+input#expireSessions:focus {
+  /* height: 1.5rem;
+    width: auto;
+    margin-top: 1.2rem; */
+}
+
+input#expireSessions {
+  height: 1.5rem;
+  float: left;
+  width: 1.5rem;
+  pointer-events: none;
+}
+
+/* == login and SignUp CSS Start == */
+
+.loginSignupRighContainer {
+  height: 100%;
+  max-width: 40rem;
+  /* width          : 99vw; */
+  /* max-width      : 74%; */
+  margin: 4rem auto 2rem;
+  /* padding        : 0px 10rem; */
+  /* max-width      : 28vw; */
+  /* min-width      : 100%; */
+  display: flex;
+  flex-direction: column;
+  /* align-items    : center; */
+  /* justify-content: center; */
+  /* flex-wrap      : wrap; */
+}
+
+.item img {
+  height: 100vh;
+}
+
+.loginInput {
+  border: 1px solid var(--gray);
+  border-radius: 5px !important;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.8rem !important;
+  letter-spacing: 0.006em !important;
+  color: var(--black) !important;
+  height: 4.8rem;
+  width: 100%;
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.floating-label-group {
+  position: relative;
+  /* margin-top   : 15px; */
+  /* margin-bottom: 1.6rem; */
+}
+
+.floating-labelInput {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  background: var(--white);
+  height: 1.2rem;
+  padding: 0 0.5rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.006em;
+  color: var(--slate-gray);
+  font-size: 1.3rem;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 12px !important;
+  transition: all 0.1s ease;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.006em;
+  color: var(--slate-gray);
+  top: 0px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -4px !important;
+  bottom: 0px !important;
+  opacity: 1;
+  background: var(--white);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.2rem;
+  letter-spacing: 0.005em;
+  color: var(--dark-gray);
+  padding: 0px 0.5rem;
+  height: 1.2rem;
+}
+
+.toolTipsCommonErrors {
+  position: inherit !important;
+  width: 100% !important;
+  border: initial !important;
+  background: inherit !important;
+  box-shadow: inherit !important;
+  padding-left: 0px !important;
+  margin-left: 0px !important;
+  margin-bottom: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+.subTitleErrorBox {
+  width: 100%;
+  margin: 0px !important;
+  padding: 0px !important;
+  line-height: normal !important;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 12px !important;
+  transition: all 0.1s ease;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.006em;
+  color: var(--slate-gray);
+  top: 0px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label,
+.filledValue {
+  top: 0px !important;
+  bottom: 0px !important;
+  opacity: 1;
+  background: var(--white);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.2rem;
+  letter-spacing: 0.005em;
+  color: var(--dark-gray);
+  padding: 0px 0.5rem;
+  height: 1.2rem;
+}
+.toolTipsCommonErrors {
+  position: inherit !important;
+  width: 100% !important;
+  border: initial !important;
+  background: inherit !important;
+  box-shadow: inherit !important;
+  padding-left: 0px !important;
+  margin-left: 0px !important;
+  /* margin-bottom: 1rem;
+		margin-top: 1rem; */
+  left: 0;
+}
+.subTitleErrorBox {
+  width: 100%;
+  margin: 0px !important;
+  padding: 0px !important;
+  line-height: normal !important;
+}
+
+.subTitleErrorBox span.error-signin-msg {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.loginNewBtn {
+  background-color: var(--red);
+  height: 4.8rem;
+  border-radius: 0.4rem;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8rem;
+  letter-spacing: 0.11rem;
+  color: var(--white) !important;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+  border: 1px solid var(--red);
+}
+
+.signUpBtnCustom {
+  background-color: var(--dark-gray) !important;
+  height: 4.8rem !important;
+  border-radius: 0.4rem !important;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.8rem !important;
+  letter-spacing: 0.11rem !important;
+  color: var(--white) !important;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+  border: 1px solid var(--dark-gray) !important;
+}
+.resetPasswordCustom {
+  background-color: var(--dark-gray) !important;
+  height: 5.5rem !important;
+  border-radius: 0.03rem !important;
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.8rem !important;
+  letter-spacing: 0.11rem !important;
+  color: var(--white) !important;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+  border: 1px solid var(--dark-gray) !important;
+  margin-top: 0rem !important;
+}
+span.or-text:before {
+  position: absolute;
+  content: "";
+  background: var(--gray);
+  height: 1px;
+  width: 28%;
+  left: 0;
+  top: 1rem;
+  /* z-index: 99999; */
+}
+
+span.or-text:after {
+  position: absolute;
+  content: "";
+  background: var(--gray);
+  height: 1px;
+  width: 28%;
+  right: 0;
+  top: 1rem;
+  /* z-index: 99999; */
+}
+
+.text-social-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.commonUserloginBtn {
+  display: flex !important;
+  height: inherit !important;
+  line-height: inherit !important;
+  padding: 0px !important;
+  width: 46%;
+  margin: 0px;
+}
+
+.commonUserloginBtn a {
+  height: inherit !important;
+  padding: 1.2rem 0rem !important;
+  /* line-height : 4.8rem !important; */
+  border: 1px solid #c9cfd7;
+  width: 100%;
+  border-radius: 4px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.006em;
+  color: var(--black) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.passwordEyePosition {
+  position: relative;
+}
+
+.signUpOr {
+  margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
+}
+.passwordHead {
+  padding-bottom: 1rem !important;
+  font-size: 1.3rem !important;
+}
+.accountSettingNewPass span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--black);
+  padding-bottom: 2.4rem;
+  text-transform: capitalize;
+}
+
+.accountSettingNewPass span img {
+  padding-left: 2rem;
+}
+
+.accountSettingNewPass ul {
+  /* position: absolute; */
+  width: 38.5rem;
+  /* height    : 94px; */
+  /* left      : 710px; */
+  /* top       : 388px; */
+  background: var(--dark-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  padding: 1rem 1rem 1rem 1.7rem;
+  margin-bottom: 4.5rem;
+  position: relative;
+}
+
+.accountSettingNewPass ul:before {
+  background: url(../../images/icons/passwordPollygon.svg) no-repeat left center;
+  content: "";
+  width: 2.5rem;
+  position: absolute;
+  /* top       : -21px; */
+  top: -10px;
+  right: 17.99rem;
+  height: 2.5rem;
+}
+
+.accountSettingNewPass ul li {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  /* or 146% */
+  letter-spacing: 0.006em;
+  color: var(--brown);
+  background: url(../../images/icons/inactive.svg) no-repeat left center;
+  padding: 0 1.5rem;
+  list-style: none;
+  text-align: left;
+  background-size: 1rem;
+}
+
+.accountSettingNewPass ul li.active {
+  background: url(../../images/icons/newpassActive.svg) no-repeat left center;
+}
+
+.commonPass {
+  position: absolute;
+  /* top     : 6.6rem; */
+  top: 5.5rem;
+  left: 0;
+  width: 100%;
+}
+
+.commonPass ul:before {
+  background: url(../../images/icons/passwordPollygon.svg) no-repeat top left !important;
+  left: 2rem;
+  width: 2.3rem;
+  height: 1.2rem;
+}
+
+.newEyeIcon {
+  background-image: url(../../images/icons/newEye.svg);
+  width: 3rem;
+  height: 100%;
+  position: absolute;
+  right: 2.5%;
+  top: 0;
+  bottom: 0;
+  margin: 0px auto;
+  cursor: pointer;
+  background-size: 1.8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.newEyeIconRed {
+  background: url(../../images/icons/changepasswordclosenew.svg) no-repeat
+    center center;
+  width: 3rem;
+  height: 100%;
+  position: absolute;
+  right: 2.5%;
+  top: 0;
+  bottom: 0;
+  margin: 0px auto;
+  cursor: pointer;
+  background-size: 1.8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.InputMb {
+  margin-bottom: 1rem;
+}
+
+.flex-left.bg-login.slider-cont {
+  /* width: 55%; */
+}
+
+.disableCursor {
+  cursor: not-allowed !important;
+}
+
+#signUpBtn.active {
+  background-color: var(--red) !important;
+  border: solid 0.1rem var(--red) !important;
+}
+
+label.forgetLabel {
+  display: block;
+  position: relative;
+}
+
+span.login-logo-commmon.forgetLogo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -15px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 11px;
+  opacity: 1;
+  color: var(--brown);
+}
+
+.floating-label-group {
+  position: relative;
+  margin-top: 1.5rem;
+  /* margin-bottom: 2.5rem; */
+}
+
+.floating-label {
+  /* font-size: 13px; */
+  /* color: #cccccc; */
+  position: absolute;
+  pointer-events: none;
+  top: 2px;
+  left: 12px;
+  transition: all 0.1s ease;
+  pointer-events: none;
+  left: 12px !important;
+  transition: all 0.1s ease;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.006em;
+  color: var(--slate-gray);
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -15px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 11px;
+  opacity: 1;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+}
+
+.tootips_position {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0% !important;
+  transition: inherit !important;
+  z-index: 9;
+}
+
+.loginInput:focus {
+  border-color: var(--black) !important;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -15px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 1.5rem;
+  opacity: 1;
+  color: var(--brown);
+}
+
+.floating-label {
+  /* font-size: 13px; */
+  /* color: #cccccc; */
+  position: absolute;
+  pointer-events: none;
+  top: 2px;
+  left: 12px;
+  transition: all 0.1s ease;
+  pointer-events: none;
+  left: 12px !important;
+  transition: all 0.1s ease;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.006em;
+  color: var(--slate-gray);
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -15px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 1.1rem;
+  opacity: 1;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+}
+.thankyou-template {
+  width: 100%;
+}
+.invitePopupBottominput:focus {
+  /* width: 85% !important; */
+}
+/* .floating-label-group input:focus + label,
+.floating-label-group input:not(:placeholder-shown) + label {
+  top: -24px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.floating-label-group input:focus,
+.floating-label-group input:not(:placeholder-shown) {
+  top: 17px;
+} */
+
+/* == login and SignUp CSS End == */
+
+.forgetWidth {
+  overflow: inherit;
+}
+
+section#resetPassword-template {
+  width: 50%;
+}
+
+.new-sign-in-section label {
+  display: block;
+}
+
+.floating-label-signup {
+  position: absolute !important;
+}
+
+.forgetresetPassword {
+  margin-left: 0px !important;
+}
+
+/* .signup-login-m {
+    box-shadow: inherit !important ;
+} */
+.submitButtonGlobal {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  border: solid 0.1rem var(--red);
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--red);
+  cursor: pointer;
+}
+.cancelButtonGlobal {
+  font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI",
+    sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+    Ubuntu !important;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  border: solid 0.1rem var(--dark-gray);
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  margin-right: 1rem;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.inActiveBtn {
+  cursor: not-allowed !important;
+  background-color: var(--dark-gray) !important;
+  border: solid 0.1rem var(--dark-gray) !important;
+}
+
+.inviteWrap {
+  display: flex;
+}
+
+.inviteEmailDisplay {
+  width: 100%;
+  max-width: 48rem;
+  margin-bottom: inherit !important;
+  border: 1px solid var(--gray) !important;
+}
+
+.invitePopupBottomPlusIcon.invitationPlusIcon {
+  position: relative;
+  left: 4%;
+}
+
+.userDomain {
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: right !important;
+  float: left;
+  background: var(--white);
+  width: auto !important;
+  height: 4rem !important;
+  top: 0.5rem;
+}
+
+input#coworkerEmail:focus {
+  width: auto !important;
+}
+
+input#coworkerEmail {
+  max-width: 100%;
+  padding-right: 0;
+  width: auto;
+  min-width: 85%;
+}
+
+.invitePopup-margin-common-row {
+  display: flex;
+}
+
+.resetPasswordCheckBox input[type="checkbox"] {
+  accent-color: var(--red);
+}
+/* button interaction on click event */
+button:active {
+  transform: scale(0.96);
+}
+button.disableCursor:active {
+  transform: unset !important;
+}
+.languageWrap {
+  position: fixed;
+  top: 3.8rem;
+  right: 3.2rem;
+}
+@media screen and (max-width: 1400px) {
+  .languageWrap {
+    margin-left: 120rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .languageWrap {
+    margin-left: 105rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .languageWrap {
+    margin-left: 95rem;
+  }
+}
+
+.languageWrap .languageBtn {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  color: #545151;
+  background-image: url(../../images/langCaret.svg);
+  background-repeat: no-repeat;
+  background-position: center right 0.8rem;
+  border: 0.1rem solid #97979766;
+  padding: 0.8rem 2.8rem 0.8rem 1.2rem;
+  display: initial;
+  letter-spacing: 0.1rem;
+  /* position: absolute; */
+  /* right: 0; */
+}
+
+.languageWrap .languageBtn:hover, .languageBtn.active {
+  /* background-color: #f2f2f2; */
+  color: #ee4136;
+}
+
+.languageWrap .languageDropDown {
+  /* position: absolute; */
+  /* top: 100%; */
+  right: 0;
+  z-index: 999;
+  /* padding: 15px; */
+  background-color: #fff;
+  color: #545151;
+  white-space: nowrap;
+}
+
+.languageWrap:hover .languageDropDown {
+  display: block;
+}
+
+.languageWrap .languageDropDown ul {
+  list-style-type: none;
+  margin: 0;
+  /* padding: 10px; */
+  position: absolute;
+  top: 2.2rem;
+  right: 0rem;
+}
+
+.languageWrap .languageDropDown li {
+  padding: 1.8rem 1.6rem;
+  text-align: left;
+  cursor: pointer;
+  border: #d6dbe1 solid 0.5px;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+.languageWrap .languageDropDown li:hover {
+  background-color: #f2f2f2;
+  color: #ee4136;
+  cursor: pointer;
+}
+.languageWrap .languageDropDown li:first-child,
+.languageWrap .languageDropDown li:nth-child(2) {
+  border-bottom: none;
+}
+
+.accountSettingNewPass ul li:first-letter {
+  text-transform: capitalize;
+}
+/* Hide the browser eye icon on tab in Microsoft Edge */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+.signUp .invitePopupBottomPlusIcon {
+  height: auto !important;
+  background-size: 4.1rem;
+  margin-left: 2%;
+  /* overflow: hidden; */
+}
+
+.signUp .invitePopupBottominput {
+  height: 4rem;
+  /* padding: 0px !important; */
+  margin-bottom: 0px !important;
+  padding-top: 0;
+}
+
+.signUp .userDomain {
+  top: 0;
+  height: inherit !important;
+}
+
+.signUp .invitePopupBottominput:focus {
+  background-color: none !important;
+}
+
+.inviteCommonErrorField {
+  margin-top: 0.5rem;
+}
+
+#coworker-skip:hover {
+  color: #fff;
+}
+
+.signUp .invite-full-name {
+  max-width: 78%;
+}
+
+
+
+/* Hide the key icon for Safari */
+input::-webkit-keygen-select {
+  display: none;
+}
+
+/* Hide the show password icon for Safari */
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+}

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-version="162.0.0">
+
+<head>
+   <script src="helpers/heightAdjust_melper.js?v=162.0.0"></script>
+   <meta charset="utf-8">
+   <title id="mainWinTitle">MelpApp | Team Conferencing, Chat, Calendar and More</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+   <meta name="HandheldFriendly" content="true" />
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <meta content="" name="description" />
+   <meta content="" name="author" />
+   <!-- CSS Library Include Area Starts -->
+   <link async rel="icon" href="images/favicon.png" type="image/png" sizes="16x16" importance="low">
+   <link defer async rel="stylesheet" href="css/plugins/bootstrap/css/bootstrap.min.css">
+   <link defer rel="stylesheet" href="css/plugins/fontStyle/font-awesome.min.css">
+   <link defer href="css/plugins/fontStyle/font-montserrat.css" rel="stylesheet">
+   <link defer href="css/plugins/fontStyle/font-lato.css" rel="stylesheet" importance="low">
+
+   <!-- admin-panel-css-start -->
+   <link defer href="css/custom/admin/admin-panel.css" rel="stylesheet">
+   <link defer href="css/custom/admin/admin-panel-leftPanel.css" rel="stylesheet">
+   <link defer href="css/custom/admin/admin-panel-user.css" rel="stylesheet">
+   <link defer href="css/custom/admin/admin-panel-registration.css" rel="stylesheet">
+   <link defer href="css/custom/admin/admin-panel-dashboard.css" rel="stylesheet">
+   <!-- admin-panel-css-end -->
+   <script defer src="./js/library/momentjs/moment.min.js"></script>
+
+   <!-- JS Library Include Area Starts -->
+   <script defer src="constant.min.js?v=162.0.0"></script>
+   <script defer src="js/library/jquery-3.4.1.min.js"></script>
+   <script defer src="js/library/bootstrap.min.js" crossorigin="anonymous"></script>
+   <!-- Route Libraries Starts -->
+   <script defer src="bower_components/js-signals/dist/signals.min.js"></script>
+   <script defer src="bower_components/crossroads/dist/crossroads.min.js"></script>
+   <script defer src="bower_components/Hasher-master/dist/js/hasher.min.js"></script>
+   <script defer src="route.js?v=162.0.0"></script>
+   <!-- Route Libraries Ends -->
+
+   <script defer src="./js/library/elastic-apm-rum.umd.min.js"></script>
+
+   <script defer src="js/library/securityjsNew/base64js.min.js"></script>
+   <script defer src="js/library/securityjsNew/index.js"></script>
+
+   <!-- Security Library starts here -->
+   <script defer src="js/library/securityjsNew/jsbn.js"></script>
+   <script defer src="js/library/securityjsNew/prng4.js"></script>
+   <script defer src="js/library/securityjsNew/rng.js"></script>
+   <script defer src="js/library/securityjsNew/ec.js"></script>
+   <script defer src="js/library/securityjsNew/sec.js"></script>
+   <script defer src="js/library/securityjsNew/sha256.min.js"></script>
+   <!-- Security Library Ends here -->
+
+   <!-- Custom JS library Starts -->
+   <script defer type="module" src="js/admin/adminCore.js?v=162.0.0"></script>
+   <!-- Custom JS library Ends -->
+
+</head>
+
+<body>
+   <div id="adminbodyloader" style="visibility: hidden;">
+      <div class="ldio-dpbvxcmmyw">
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+         <div>
+            <div></div>
+         </div>
+      </div>
+   </div>
+   <input type="hidden" value="" id="extraParam" />
+   <div id="copyLinkMsg" class="copy-link-msg hideCls"></div>
+
+   <div class="main-wrapper">
+      <div class="page-wrapper" id="body-row">
+         <nav class="navbarHeader" id="navbar-header">
+            <div class="serachOpacity hideCls" id="serachOpacity"></div>
+            <div class="navSideBar" id="side-nav-bar">
+               <div class="sideBarHeadrer" onclick="switchPage('dashboard', '', event)" id="sidebar-header">
+                  <img src="images/transparent-logo.svg">
+               </div>
+            </div>
+            <div class="navbar-content">
+               <div class="navBarLeftTitle">
+                  <div class="navbar-title">
+                     <span class="navbar-title" id="mainDomainName" onclick="toggleDoaminDD()"> Admin Panel </span>
+                     <div id="dropdownContent" class="hideCls">
+                        <ul class="filter-list-item" id="domainDropdown"></ul>
+                     </div>
+                     <span class="navbar-sub-title" id="header-module-type"></span>
+                  </div>
+               </div>
+               <!-- <div class="headerSearchBarMiddle" id="gloablSearchKeywordTour">
+                  <input id="gloablSearchKeyword" name="keywords" placeholder="Search" data-default="130"
+                     class="headerSearchBarMiddleInput" type="text" autocomplete="off" onkeyup="typeGlobalSearch()"
+                     onclick="changeGlobalSearch()">
+                  <span class="serchHeaderIcon"></span>
+               </div> -->
+            </div>
+            <div class="navBarRightPanel">
+               <span class="adminNavA1">
+                  <ul>
+                     <li><span class="adminNotificationItem adSelectInActive"><img
+                              src="images/admin/icons/notification.svg"></span></li>
+                     <li><span class="adminNotificationHelp adSelectInActive"><img
+                              src="images/admin/icons/help.svg"></span></li>
+                  </ul>
+            </div>
+      </div>
+      </nav>
+      <!-- admin-panel Starts-->
+      <div class="adminPanelLeft hideCls" id="adminPageContent">
+         <div class="coll padding-left-0 padding-right-0 dashboard_wrap">
+            <div id="ad_loadable_content">
+               <div class="adminDashboardWraper">
+                  <div class="adminLeftPanel" id='adminLeftPanel'>
+                     <!-- loader start here-->
+                     <div id="adminLeftLoader" class="loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                        <div class="ldio-dpbvxcmmyw">
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- loader end here -->
+                     <div class="adminSidebar">
+                        <ul>
+                           <input type="hidden" id="filterTypeValue" value="sort">
+                           <input type="hidden" id="filterDataValue" />
+                           <input type="hidden" id="updatedheader" />
+                           <li class="active" id="adDashboard-btn" onclick="changeRoute('panel');">
+                              <span><i class="dashbaoardIcon"><img
+                                       src="images/admin/icons/adDashBoardActive.svg"></i>Dashboard</a>
+                           </li>
+                           <li id="adUser-btn">
+                              <span class="feat-btn" id="adUserList-btn" onclick="getAllUsers()">
+                                 <i class="dashbaoardIcon"><img src="images/admin/icons/adDashBoardGroup.svg"></i>Users
+                                 <i class="adminPanelCarret first"><img
+                                       src="images/admin/icons/adDashBoardGroupicon.svg"></i>
+                              </span>
+                              <ul class="feat-show userSubmenu" id="userLists">
+                                 <li onclick="getAllUsers('all')" id="allmenu"><span><i class="dashbaoardIcon"><img
+                                             src="images/admin/icons/alluser.svg"></i>All
+                                       Users</span></li>
+                                 <li onclick="getAllUsers('active')" id="activemenu"><span><i
+                                          class="dashbaoardIcon"><img
+                                             src="images/admin/icons/adminActiveuser.svg"></i>Active
+                                       Users</span></li>
+                                 <li onclick="getAllUsers('inactive')" id="inactivemenu"><span><i
+                                          class="dashbaoardIcon"><img
+                                             src="images/admin/icons/admininactiveuser.svg"></i>Inactive
+                                       Users</span></li>
+                                 <li onclick="getAllUsers('deleted')" id="deletemenu"><span><i
+                                          class="dashbaoardIcon delteIcon"><img
+                                             src="images/admin/icons/admindeleteduser.svg"></i>Deleted
+                                       Users</span></li>
+                                 <!-- class="adSelectInActive" -->
+                              </ul>
+                           </li>
+                           <li id="adTeam-btn">
+                              <span class="feat-btn" id="adTeamList-btn" onclick="getTeamGroup(0)">
+                                 <i class="dashbaoardIcon"><img src="images/admin/icons/adTeams.svg"></i>Teams
+                              </span>
+                           </li>
+                           <li id="adGroup-btn">
+                              <span class="feat-btn" id="adGroupList-btn" onclick="getTeamGroup(1)">
+                                 <i class="dashbaoardIcon"><img src="images/admin/icons/adGroups.svg"></i>Groups
+                              </span>
+                           </li>
+                           <li id="adInvite-btn">
+                              <span onclick="openInvite()">
+                                 <i class="dashbaoardIcon"><img
+                                       src="images/admin/icons/adRegistration.svg"></i>Registration
+                                 <i class="adminPanelCarret second"><img
+                                       src="images/admin/icons/adDashBoardGroupicon.svg"></i>
+                              </span>
+                              <ul class="feat-show" id="inviteLists">
+                                 <li onclick="openInvite('manual')" id="manualmenu">
+                                    <span><i class="dashbaoardIcon"><img src="images/admin/icons/addUser.svg"></i>Add
+                                       User</span>
+                                 </li>
+                                 <li onclick="openInvite('status')" id="statusmenu">
+                                    <span><i class="dashbaoardIcon"><img src="images/admin/icons/userList.svg"></i>User
+                                       List</span>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li onclick="changeRoute('domain')"><span><i class="dashbaoardIcon"><img
+                                       src="images/admin/icons/adDomain.svg"></i>Domain</span></li>
+                           <li class="adSelectInActive"><span><i class="dashbaoardIcon"><img
+                                       src="images/admin/icons/adminPanelgroupspayment.svg"></i>Payments</span></li>
+                           <li class="adSelectInActive"><span><i class="dashbaoardIcon"><img
+                                       src="images/admin/icons/adminPanelgroupspaymentsettings.svg"></i>Settings</span>
+                           </li>
+                        </ul>
+                        <div class="logOutBtn" onclick="logoutAdmin()">
+                           <button class="adminlogoutBtn"><i class="logOut"><img
+                                    src="images/admin/icons/logout.svg"></i>Logout</button>
+                        </div>
+                     </div>
+                  </div>
+                  <!--admin panel left bar end-->
+                  <!--admin panel rigt bar start-->
+                  <div class="adminRightBar" id="ad_rightPanel">
+                  </div>
+                  <!--admin Dashboard end-->
+                  <div class="adminSelected adminEditA3 hideCls" id="adminSelected">
+                     <!-- loader start here-->
+                     <div id="adminMainBodyLoader" class="loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                        <div class="ldio-dpbvxcmmyw">
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                           <div>
+                              <div></div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- loader end here -->
+                     <div class="adminPanlePopupSideBarWrap">
+                        <div class="adminGroupA4">
+                           <div class="adminCloseBtn" onclick="adminMoreOption(false)">
+                              <img src="images/cancel-modal.svg">
+                           </div>
+                           <div class="adminGroupTopA5">
+                              <span class="adminGroupA6"><img src="images/admin/adminGroup.jpg"
+                                    id="rightPanelUserImg"></span>
+                           </div>
+                           <div class="adminGroupTestA7">
+                              <span class="adminGroupHeadeA8" id="rightPanelUserName"></span>
+                              <span class="adminGroupA9" id="rightPanelUserEmail"></span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="adminRolesProfile">
+                        <div class="adminProfile" id="roleProfileSection">
+                           <div class="adminRolesProfileHeader">
+                              <span>Roles and Profile</span>
+                           </div>
+                           <div class="adminRole" id="makeAdmin" onclick="makeAdmin(1)">
+                              <p>Make Admin</p>
+                           </div>
+                           <div class="adminRole hideCls" id="removeAdmin" onclick="makeAdmin(0)">
+                              <p>Remove Admin</p>
+                           </div>
+                           <div class="adminRole" onclick="showHideEditProfile()">
+                              <p>Edit Profile</p>
+                           </div>
+                        </div>
+                        <!-- adminRole colum -->
+                        <div class="adminRolesA2 hideCls" id="editProfile">
+                           <input type="hidden" id="melpId">
+                           <div class="adminRolesRowA3">
+                              <span class="adRoleA4">
+                                 <span class="adRoleUserA5">Name</span>
+                                 <span class="adRoleFieldA6">
+                                    <input class="adFilterInputA1 bgRemove" id="name" placeholder="Enter Name...">
+                                 </span>
+                              </span>
+                              <span class="adRoleA4 adroleEmailA4">
+                                 <span class="adRoleUserA5">Email</span>
+                                 <span class="adRoleFieldA6">
+                                    <input class="adFilterInputA1 bgRemove" readonly id="email"
+                                       placeholder="Enter Email...">
+                                 </span>
+                              </span>
+                              <span class="adRoleA4">
+                                 <span class="adRoleUserA5">Title</span>
+                                 <span class="adRoleFieldA6">
+                                    <input class="adFilterInputA1 bgRemove" id="title" placeholder="Enter Title..."
+                                       onkeyup="searchTitle(event)">
+                                 </span>
+                                 <span class="adRoleDropA7 hideCls" id="professionList">
+                                    <div class="adRoleDropA8">
+                                       <!-- loader start here-->
+                                       <div id="adminProfessionLoader"
+                                          class="loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                                          <div class="ldio-dpbvxcmmyw">
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <!-- loader end here -->
+                                       <!-- <div class="adRoleNoDatFound"><span class="adResultA1">No Data Found</span></div> -->
+                                       <ul>
+                                       </ul>
+                                    </div>
+                                 </span>
+                              </span>
+                              <span class="adRoleA4">
+                                 <span class="adRoleUserA5">Department</span>
+                                 <span class="adRoleFieldA7" onclick="showDepartment(true)"
+                                    id="department">Operations</span>
+                                 <span class="adRoleDropA7 hideCls" id="departmentList">
+                                    <div class="adRoleDropA8">
+                                       <!-- loader start here-->
+                                       <div id="adminDepartmentLoader"
+                                          class="loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                                          <div class="ldio-dpbvxcmmyw">
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                             <div>
+                                                <div></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <!-- loader end here -->
+                                       <!-- <div class="adRoleNoDatFound"><span class="adResultA1">No Data Found</span></div> -->
+                                       <ul>
+                                       </ul>
+                                    </div>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                        <!-- admin role colum -->
+                     </div>
+                     <div class="adRightBtn resetButtonColumA2 hideCls" id="editProfileButtonSection">
+                        <button class="addUserBtn" onclick="showHideEditProfile(false)">CANCEL</button>
+                        <button class="addUserBtnDelete" onclick="updateProfile()">UPDATE</button>
+                     </div>
+                     <div class="adRightBtn resetButtonColumA2" id="resetButtonSection">
+                        <button class="addUserBtn" id="resetPasswordBtn">Reset Password</button>
+                        <!-- deleteUserAccount() -->
+                        <button class="addUserBtnDelete" onclick="deleteUserAccount()">Delete account</button>
+                     </div>
+                  </div>
+                  <!--admin Right bar-->
+                  <div class="modal-scrollable" id="ad_model_content"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="navbar-content">
+         <div class="navBarLeftTitle">
+            <div class="navbar-title">
+               <span class=".navbar-title" id="header-module">dashboard </span>
+               <span class="navbar-sub-title" id="header-module-type"></span>
+            </div>
+         </div>
+      </div>
+      </nav>
+   </div>
+   <!-- admin-panel-end -->
+   <!--alert pop-up msg Strat here-->
+   <section class="teamPopup-common hideCls" id="alertPopup">
+      <div class="successfullySection">
+         <div class="succesfullyContent">
+            <div class="succesfullyHeading" id="alertContent"></div>
+            <div class="succesfullyFooter">
+               <button type="button" class="submitButtonGlobal" onclick="hideAlert('alertPopup')">OK</button>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--successfully msg Strat here-->
+   <!--Confirm pop-up msg Strat here-->
+   <section class="teamPopup-common hideCls" id="confirmPopup">
+      <div class="successfullySection">
+         <div class="succesfullyContent">
+            <div class="succesfullyHeading" id="confirmContent"></div>
+            <div class="succesfullyFooter">
+               <button class="cancelButtonGlobal" id="confirmCancel" onclick="hideAlert('confirmPopup')">
+                  Cancel</button>
+               <button class="submitButtonGlobal" id="confirmDone">OK</button>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--Confirm pop-up msg Strat here-->
+   </div>
+   <!-- chart graph -->
+   <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script> -->
+   <!-- chart graph -->
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<svg id="Group_31" data-name="Group 31" xmlns="http://www.w3.org/2000/svg" width="149" height="109.542" viewBox="0 0 149 109.542">
+    <defs>
+        <linearGradient id="linear-gradient" x1=".5" y1="1" x2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#9c9696" stop-opacity=".251"/>
+            <stop offset=".54" stop-color="gray" stop-opacity=".122"/>
+            <stop offset="1" stop-color="gray" stop-opacity=".102"/>
+        </linearGradient>
+        <style>
+            .cls-4{fill:#9c9696;opacity:.247}
+        </style>
+    </defs>
+    <path id="Path" d="M96.39 0H0v69.507h62.562l5.794 12.481 6.508-12.481H96.39V0z" transform="translate(52.61 27.553)" style="opacity:.248;fill:#9c9696"/>
+    <path id="Path-2" data-name="Path" d="M0 0h99.221v71.9H36.135l-6.816 12.247L22.158 71.9H0V0z" transform="translate(1.307 .541)" style="opacity:.499;fill:url(#linear-gradient)"/>
+    <path id="Path-3" data-name="Path" d="M0 0h96.39v69.507H33.828l-5.794 12.482-6.509-12.482H0V0z" style="fill:#f8f8f8"/>
+    <path id="Rectangle" class="cls-4" transform="rotate(180 42.002 11.953)" d="M0 0h71.812v3.073H0z"/>
+    <path id="Rectangle-2" data-name="Rectangle" class="cls-4" transform="rotate(180 42.002 15.313)" d="M0 0h71.812v3.073H0z"/>
+    <path id="Rectangle-3" data-name="Rectangle" class="cls-4" transform="rotate(180 42.002 18.673)" d="M0 0h71.812v3.073H0z"/>
+    <path id="Rectangle-4" data-name="Rectangle" class="cls-4" transform="rotate(180 42.002 22.033)" d="M0 0h71.812v3.073H0z"/>
+    <path id="Path-4" data-name="Path" d="M96.39 0H0v69.507h62.562l5.794 12.481 6.508-12.481H96.39V0z" transform="translate(48.951 23.467)" style="fill:#fff"/>
+    <circle id="Oval" cx="6.336" cy="6.336" transform="translate(72.58 52.994)" style="fill:#554d4d" r="6.336"/>
+    <circle id="Oval-2" data-name="Oval" cx="6.336" cy="6.336" transform="translate(90.054 52.994)" style="fill:#9c9696" r="6.336"/>
+    <circle id="Oval-3" data-name="Oval" cx="6.336" cy="6.336" transform="translate(107.526 52.994)" style="opacity:.246;fill:#9c9696" r="6.336"/>
+</svg>

@@ -1,0 +1,59 @@
+<!-- Cloud Calendar Start -->
+<section id="cloud-calendar-view">
+    <div class="calandarconnectionpage">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="calendar-add-more headertitle cloud-calendar-back topCalenderStrip" onclick="moveBack()">
+                    <span class="back-icon">
+                        <img src="images/icons/back.svg" class="" alt="User Image"></span>
+                    {{BT04}}
+                </div>
+                <div class="panel-scroll ps-container addevent">
+                    <div class="col-lg-12" id="connect-calendar-list"></div>
+                </div>
+                <div class="panel-scroll ps-container connectAdd addevent">
+                    <div class="calendar-add-more headertitle">{{LB12}}</div>
+                    <div class="col-lg-12">
+                        <div class="dvconnected">
+                            <div class="row">
+                                <div class="googleclass calendar-box">
+                                    <div class="col-lg-1 col-md-2 col-sm-2 float-left own-acc">
+                                        <img src="images/social/google.svg" width="37">
+                                    </div>
+                                    <div class="col-lg-8 col-md-7 col-sm-7 float-left header-textCont">
+                                        <p class="heading-calendar"> {{LB13}} </p>
+                                        <p class="cloudEmail">{{LB14}} </p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 float-left">
+                                        <button class="invite connectButton connectBtnCalender"
+                                            onclick="connectMyCalendar(1)">{{BT05}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="dvconnected">
+                            <div class="row">
+                                <div class="googleclass calendar-box col-md-12 col-sm-12">
+                                    <div class="col-lg-1 col-sm-2 float-left own-acc"><img
+                                            src="images/social/outlook.png" width="37">
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7 float-left header-textCont">
+                                        <p class="heading-calendar"> {{LB15}}/{{LB16}} </p>
+                                        <p class="cloudEmail">{{LB17}}</p>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-3 float-left">
+                                        <button class="invite connectButton connectBtnCalender"
+                                            onclick="connectMyCalendar(2)">{{BT05}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Cloud Calendar End -->

@@ -1,0 +1,95 @@
+<!-- View/Edit Team Popup -->
+<section id='editTeam'>
+    <div class="teamPopup-common">
+        <!-- Modal content -->
+        <div class="create-team-main-section">
+            <!--  body section satrt -->
+            <div class="new-teamSection">
+                <div class="create-team-title" id='teamHeading'>{{LB12}}</div>
+                <div class="edit-close-section">
+                    <span class="edit-team" id="editBtn">{{BT05}}</span>
+                    <span class="close-team" onclick="hideViewTeam()"><img src="images/cancel.svg"></span>
+                </div>
+                <!--group-top-section-start-here-->
+                <div class="create-team-inner-section">
+                    <section class="team-details-main-section-edit">
+                        <div class="team-details-icon-left">
+                            <div class="create-team-icon">
+                                <!-- Loader start -->
+                                <div id="teamProfilePicLoader" class="hideCls">
+                                    <div class="uploading-label-file">{{LB09}}
+                                        <span id="uploadTeamProfileCount"> 0%</span>
+                                    </div>
+                                </div>
+                                <!-- Loader end -->
+                                <img alt="" onerror="this.onerror=null; this.src='images/teamGrp.svg'"
+                                    class="createTeam-size-edit" id='teamImage'>
+                                <div class="UploadteamImageIcon uploadPicture" id='UploadteamImageIcon'
+                                    style="display:none;">
+                                    <input type="file" name="" class="iconUpload upload-file-area">
+                                    <img src="images/update-picture.svg" class="createTeam-size-edit">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-details-textbox-right">
+                            <div class="team-edit-label-name">
+                                <span class="team-sub-name" id='teamNameTitle'>{{LB07}}: </span><br>
+                                <span class="team-sub-title" id='teamName' onkeyup="editTeamInputCounter(event)" onkeypress="characterLimitOnEditTeam('teamName', 49, event)"></span>
+                                <div class="teamOrGroupDescCount hideCls" id="editTeamNameCount">
+                                    <input type="hidden" name="teamNameCarLimit" id="teamNameCarLimit" value="50">
+                                    <span class="teamOrGroupDescIncCount" id="userTeamNameCounter">0</span>
+                                    <span class="limitcharacter">/ 50</span>
+                                </div>
+                            </div>
+                            <div class="team-edit-label-dscription">
+                                <span class="team-sub-name">{{LB05}}:</span>
+                                <span class="team-sub-title descriptionTextArea" id='teamDesc' onkeyup="editTeamInputCounter(event, 'teamDesc')" onkeypress="characterLimitOnEditTeam('teamDesc', 299, event)"></span>
+                                <div class="teamOrGroupDescCount hideCls" id="editTeamDescCount">
+                                    <input type="hidden" name="teamDescCarLimit" id="editTeamDescCarLimit" value="300">
+                                    <span class="teamOrGroupDescIncCount" id="userDescriptionCounter">0</span>
+                                    <span class="limitcharacter">/ 300</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--group-top-section-end-here-->
+                <!-- team-member-head-start -->
+                <div class="team-member" id='teamMember'>
+                    <span>{{LB13}} (<span id='totalMember'>0</span>)</span>
+                </div>
+                <!-- team-member-head-end -->
+                <!-- add member-start-->
+                <div id='addMember' class="addMemberSec" style="display:none;">
+                    <div class="add-Members-section">
+                        <span class="topic-title">{{LB06}} </span><span class="topic-start">*</span>
+                    </div>
+                    <div class="addmember-section clearfixe">
+                        <div class="addmember-area" id="addmember-Width">
+                            <div>
+                                <input type="text" id="searchUser" class="add-newteam-input form_custom_width"
+                                    placeholder="{{PH06}}" onkeyup="searchContact('team', true)" autocomplete="off">
+                                <span class="add-team-popup" onclick="rightContactPanel('team', false, true)"><img
+                                        src="images/add-team.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- add member-end-->
+                <div class="add-invitees-popup-main" id="add-invitees-popup-main" style="display: none;"></div>
+                <!-- team list start here -->
+                <div class="team-list-section forView" id="teamParticipants">
+                    <ul class="teamlist-item-section create-team-scroll"></ul>
+                    <!-- <ul class="common-ul-section ul-padd-m-none commom-chat-listing scrol-listing"></ul> -->
+                </div>
+                <!-- team list end here -->
+                <!-- input type hidden of teamId for use at the time of add/remove user on contact controller in addRemove function -->
+                <span id="editTeamId" style="display:none"></span>
+                <!-- cancle-save-btn start here -->
+                <div class="cancle-save-btn" id="buttonSection" style="display: none;">
+                    <button class="save-topic" onclick="hideViewTeam()">{{BT07}}</button>
+                </div>
+                <!-- cancle-save-btn end here -->
+            </div>
+        </div>
+</section>

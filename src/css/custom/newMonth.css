@@ -1,0 +1,1046 @@
+	html {
+		font-size: 62.5%;
+	}
+
+	.single-meeting-year {
+		cursor: pointer;
+	}
+
+	.meetingpopup-top {
+		width: 100%;
+	}
+
+	.meetingpopup-edit {
+		width: 4.5rem;
+		float: right;
+		margin-top: 0rem;
+		/* margin-right: 16px; */
+		cursor: pointer
+	}
+
+	.meetingClose img {
+		width: 1.5rem;
+	}
+
+	.topCalenderStrip {
+		padding: 1rem 0em;
+	}
+
+	.sharemeetingcall img {}
+
+	.editmeetingcall img {
+		width: 1.5rem;
+	}
+
+	.date-select {
+		background-color: #ee413670;
+		padding-top: 0.7rem;
+		border-radius: 50%;
+		padding-bottom: 0.7rem;
+		padding-left: 0.7rem;
+		padding-right: 0.7rem;
+		color: #333;
+	}
+
+	.dateclasscenter1 {
+		margin-left: -6%;
+	}
+
+	.dateclasscenter {
+		text-align: right;
+	}
+
+	div#upcomingMeetings {
+		padding: 0;
+	}
+
+	.meetingImageClass.org {
+		margin-right: 0.6rem;
+		border-radius: 0.8rem;
+	}
+
+	.meetingImageClass {
+		width: 42;
+		height: 42;
+		border-radius: 0.4rem;
+		border: 0.1rem solid var(--red);
+		padding: 0.2rem;
+		border-radius: 0.8rem;
+	}
+
+	.meetingImageClass.org {
+		margin-right: 1.6rem;
+		border: 0.1rem solid var(--red);
+	}
+
+	.description {
+		padding: 0rem 0rem 0rem !important;
+	}
+
+	.Meeting-details {
+		font-size: 1.4rem;
+		font-weight: bold;
+		color: var(--black);
+	}
+
+	.Choose-your-timing {
+		font-size: 1.4rem;
+		font-weight: bold;
+		color: var(--black);
+	}
+
+	.Line-3 {
+		opacity: 0.34;
+		border: solid 0.1rem var(--dark-gray);
+		margin-top: 0.7rem;
+	}
+
+	.Time-zone {
+		font-size: 1.2rem;
+		font-weight: bold;
+		padding-top: 1rem;
+		color: var(--black);
+	}
+
+	.Schedule-meeting-No-data-entered {
+		height: 0.4rem;
+		background-color: var(--white);
+	}
+
+	.Rectangle-8 {
+		height: 3.2rem;
+		border-radius: 0.2rem;
+		border: solid 0.1rem var(--slate-gray);
+	}
+
+	.Duration {
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: var(--black);
+		text-transform: uppercase;
+	}
+
+	.Line-2 {
+		width: 0.1rem;
+		height: 3.2rem;
+		border: solid 0.1rem var(--dark-gray);
+	}
+
+	.Topic {
+		font-size: 1.2rem;
+		font-weight: bold;
+		padding-top: 1rem;
+		color: var(--black);
+	}
+
+	.Description {
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: var(--black);
+	}
+
+	.Meeting-date {
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: var(--black);
+	}
+
+	.timedurationlast {
+		width: 30%;
+	}
+
+	.Rectangle-meeting {
+		height: 3.2rem;
+		border-radius: 0.2rem;
+		border: solid 0.1rem var(--black);
+	}
+
+	.Recurrence {
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin-left: 4.7rem;
+	}
+
+	.Reminder {
+		width: 6.4rem;
+		height: 1.4rem;
+		font-family: Arial;
+		font-size: 1.2rem;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0rem;
+	}
+
+	.Rectangle-recurrance {
+		width: 13.3rem;
+		height: 3.2rem;
+		border-radius: 0.2rem;
+		border: solid 0.1rem var(--black);
+	}
+
+	.Rectangle-reminder {
+		height: 3.2rem;
+		border-radius: 0.2rem;
+		border: solid 0.1rem var(--black);
+	}
+
+	.addparticipent {
+		border: 0;
+		outline: 0;
+		background: transparent;
+		border-bottom: 0.1rem solid var(--black);
+	}
+
+	.Organizer {
+		font-size: 1.2rem;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0rem;
+		color: var(--black);
+	}
+
+	.Shape {
+		width: 1.8rem;
+		height: 1.8rem;
+		background-color: var(--slate-gray);
+	}
+
+	.addmemserch {
+		width: 100%;
+		border: none !important;
+		border-bottom: 0.1rem solid #ccc !important;
+		border-radius: 0rem !important;
+	}
+
+	.timeunitselect {
+		height: 3.1rem;
+		margin-top: -0.6em;
+		margin-right: 0rem;
+		background-color: transparent;
+		border: 0rem solid transparent;
+		color: var(--white);
+		border-color: var(--black) transparent transparent transparent;
+	}
+
+	#timedurationselect {
+		position: relative;
+	}
+
+	#custommins {
+		position: absolute;
+		left: 0;
+		width: 50%;
+	}
+
+	#durationunit {
+		position: absolute;
+		right: 0;
+		width: 50%;
+		top: 0.8rem;
+	}
+
+	.timedurationlast {
+		width: 100%;
+		position: relative;
+	}
+
+	.timedurationlast.active input::placeholder {
+		color: var(--black);
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	#s2id_durationunit {
+		width: 50% !important;
+		position: absolute;
+		right: 0;
+		top: 0.85rem;
+		height: 100%;
+		z-index: 999;
+	}
+
+	#durationunit {
+		position: absolute;
+		right: 0;
+		top: 0.8rem;
+	}
+
+	#s2id_durationunit .select2-choice {
+		border: none;
+		padding-left: 0rem !important;
+		border: 0rem var(--white) !important;
+		height: 3rem !important;
+	}
+
+	.select2-arrow {
+		width: 25%;
+	}
+
+	.timedurationlast::after {
+		content: "";
+		position: relative;
+		height: 2.2rem;
+		left: 50%;
+		top: 0rem;
+		background: var(--gray);
+		color: var(--gray);
+		width: 0.1rem;
+		z-index: 1000;
+		display: block;
+	}
+
+	.calandarconnectionpage {
+		/* display: none !important; */
+	}
+
+	.select2-results li:first-child {
+		margin-top: 0.4rem !important;
+	}
+
+	.select2-container--default .select2-search--inline .select2-search__field {
+		width: auto !important;
+	}
+
+	@media (min-width:992px) and (max-width:1256px) {
+		.timeduration {
+			width: 22%;
+		}
+
+		.customtimesec {
+			width: 38%;
+		}
+	}
+
+	:focus {
+		outline: -webkit-focus-ring-color auto 0rem;
+		outline-color: -webkit-focus-ring-color;
+		outline-style: none;
+		outline-width: 0rem;
+	}
+
+	#availabletimeslotheading {
+		font-family: var(--font-regular);
+		font-size: 1.4rem;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0.15rem;
+		color: var(--white);
+	}
+
+	#availabletimeslotheading {
+		font-family: var(--font-regular);
+		font-size: 2.4rem;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0.23rem;
+		text-align: center;
+		color: var(--red) !important;
+	}
+
+	.chatbox_meeting_class {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#teamdata {
+		padding-left: 0 !important;
+	}
+
+	.table>thead>tr>th,
+	.table>tbody>tr>th,
+	.table>tfoot>tr>th,
+	.table>thead>tr>td,
+	.table>tbody>tr>td,
+	.table>tfoot>tr>td {
+		padding: 0.8rem;
+		line-height: 1.428571429;
+		vertical-align: top;
+		border-top: 0rem solid #ddd;
+	}
+
+	.titletd {
+		width: 13.5rem;
+	}
+
+	.organizer {
+		font-size: 1.6rem;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0rem;
+		color: var(--slate-gray);
+	}
+
+	.calendartab {
+		padding: 1rem 0 !important;
+		margin-right: 1.5rem !important;
+		margin-left: 1.5rem !important;
+	}
+
+	#upcomingmeeting .recentmeting {
+		cursor: pointer;
+	}
+
+	.pendingfullicon {
+		margin-left: 0rem;
+	}
+
+	.calendar-box {
+		margin-top: 4rem;
+		width: 100%;
+		display: table;
+		clear: both;
+	}
+
+	.muted {
+		color: var(--slate-gray);
+	}
+
+	.calendar-box .btncreate {
+		margin-right: 1rem;
+		cursor: pointer;
+	}
+
+	.calendar-box div.spine {
+		border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+		position: absolute;
+		top: 0;
+		transition: bottom 0.5s linear 0s;
+		width: 0.4rem;
+		left: 50%;
+		margin-left: -0.2rem;
+		bottom: 0;
+		background-color: #CCCCCC;
+	}
+
+	.addevent .calendar-box-parent .calendar-box-cont {
+		height: auto;
+		width: 100%;
+		border: 0.1rem solid var(--gray);
+		margin-bottom: 3rem;
+		background: var(--white);
+	}
+
+	.calendar-box-cont.calendar-box-contS {
+		float: right;
+	}
+
+	.addevent .calendar-box-parent {
+		margin-top: 3rem;
+	}
+
+	.addevent .calendar-box-parent .calendar-add-more {
+		color: #201f1f;
+		margin-bottom: 1.5rem;
+	}
+
+	.addevent .calendar-box-parent .calendar-box-cont .btncreate-cont {
+		text-align: right;
+		position: relative;
+	}
+
+	.addevent .calendar-box-parent .calendar-box-cont .btncreate-cont .btncreate.spcreate {
+		position: absolute;
+		top: 2.9rem;
+		line-height: normal;
+		right: 0;
+		background: none;
+		padding: 1rem 1.5rem;
+		color: #333;
+		height: auto;
+		border-radius: 0.3rem;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: var(--red);
+		border: solid 0.1rem var(--red);
+		text-align: center;
+		width: auto;
+		letter-spacing: 0.15rem !important;
+	}
+
+	.addevent .calendar-box-parent .calendar-box-cont .img-icon,
+	.addevent .dvconnected .calendar-box .own-acc {
+		text-align: center;
+		position: relative;
+		height: 9.5rem;
+		border-right: 0.1rem solid var(--gray);
+	}
+
+	.header-textCont {
+		padding-top: 2.2rem;
+	}
+
+	.cloudTest {
+		font-family: var(--font-md);
+		font-size: 1.5rem;
+		letter-spacing: 0.06rem;
+		color: var(--black);
+		margin-bottom: 0rem;
+		font-weight: 500;
+	}
+
+	.heading-calendar {
+		font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+		font-size: 1.5rem;
+		letter-spacing: 0.06rem;
+		color: var(--black);
+		font-weight: 500;
+		margin-top: 1rem;
+		margin-bottom: 1.2rem;
+		line-height: 1.1rem;
+	}
+
+	.cloudEmail {
+		font-size: 1.3rem;
+		letter-spacing: 0.06rem;
+		color: var(--dark-gray);
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.addevent .calendar-box-parent .calendar-box-cont .img-icon img {
+		width: 3.7rem;
+		height: auto;
+		position: relative;
+		top: 2.8rem;
+	}
+
+	.addevent #dvconnected .dvconnected .calendar-box .btncreate {
+		position: absolute;
+		/* top: 3.1rem; */
+		line-height: normal;
+		right: 0;
+		padding: 1rem 2.5rem;
+		height: auto;
+		border-radius: 0.3rem;
+		font-size: 1.2rem;
+		font-weight: bold;
+		background: var(--red);
+		color: var(--white);
+		border: none;
+		text-align: center;
+		width: auto;
+		margin-right: 0;
+		letter-spacing: 0.15rem !important;
+		cursor: pointer;
+	}
+
+	/*.addevent  #dvconnected .dvconnected{padding: 0 2.1rem;}*/
+	.addevent .dvconnected .calendar-box {
+		margin-top: 1rem;
+		border: 0.1rem solid var(--gray);
+		height: auto;
+		background: var(--white);
+		padding-left: inherit;
+		padding-right: inherit;
+	}
+
+	.calandarconnectionpage {
+		width: 100%;
+		float: left;
+		padding-left: 3.5rem;
+		padding-top: 1rem;
+		max-width: 95%;
+	}
+
+	.addevent .calendar-box-parent .calendar-box-cont .heading-calendar {
+		font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+		font-size: 1.5rem;
+		letter-spacing: 0.06rem;
+		color: #272323;
+		font-weight: 600;
+	}
+
+	.addevent .calendar-box-parent .calendar-box-cont .heading-content {
+		font-size: 1.3rem;
+		letter-spacing: 0.06rem;
+		color: var(--dark-gray);
+	}
+
+	/* .addevent  .calendar-box-parent .calendar-box-cont .common{
+			position: relative;
+			top: 4.4rem;
+		}*/
+	#schedulemeetingpage {
+		padding-left: 1.7rem;
+		padding-right: 3rem;
+		overflow: auto;
+		padding-top: 3rem;
+	}
+
+	#schedulemeetingpage .addevent .tab-content #mycon .Organizer {
+		font-size: 1.4rem;
+		letter-spacing: 0.04rem;
+		color: var(--black);
+		font-weight: 600;
+		margin-top: 1.6rem;
+	}
+
+	#schedulemeetingpage #meetingDetailsDisplayId,
+	#schedulemeetingpage .addevent .Choose-your-timing,
+	#schedulemeetingpage .addevent .tab-content #mycon .Organizer {
+		text-transform: uppercase;
+		letter-spacing: 0.15rem;
+	}
+
+	#schedulemeetingpage .addevent .Topic,
+	#schedulemeetingpage .addevent .Description,
+	#schedulemeetingpage .addevent .Time-zone,
+	#schedulemeetingpage .addevent .Duration,
+	#schedulemeetingpage .addevent .label-form.Duration {
+		letter-spacing: 0.15rem !important;
+	}
+
+	#schedulemeetingpage .addevent .tab-content #mycon .activities.attendees li {
+		padding: 0;
+		border: none;
+	}
+
+	#schedulemeetingpage .addevent .tab-content #mycon .activities.attendees li .activity,
+	#schedulemeetingpage .addevent #dvaddparticipant .activities li .activity:hover {
+		border-radius: 0.4rem;
+	}
+
+	#schedulemeetingpage .addevent .tab-content #mycon .activities.attendees li .activity .addedbutton {
+		top: 2.6rem;
+	}
+
+	@media (max-width: 1057px) and (min-width: 992px) {
+
+		#schedulemeetingpage .addevent #dvaddparticipant .activities li .activity .addbutton,
+		#schedulemeetingpage .addevent .tab-content #mycon .activities.attendees li .activity .addedbutton {
+			margin-right: 0;
+		}
+	}
+
+	#schedulemeetingpage .addevent #dvaddparticipant .activities li .activity {
+		margin-top: 0.8rem;
+	}
+
+	.btn-group.form-group.form-group-cont {
+		margin-bottom: 0;
+	}
+
+	#schedulemeetingpage .addevent #dvaddparticipant .activities .Line-3 {
+		border: none;
+	}
+
+	#schedulemeetingpage .addevent #dvaddparticipant .activities .Line-3.Line-3-cont {
+		border-bottom: 0.1rem solid var(--dark-gray) !important;
+	}
+
+	#schedulemeetingpage .addevent #dvaddparticipant .activities li .activity .addbutton,
+	#schedulemeetingpage .addevent #dvaddparticipant .activities li .activity .addedbutton {
+		top: 3.6rem;
+	}
+
+	.calendarMeeting #custom-calendar {
+		height: 41rem;
+		border-radius: 0.2rem;
+		background-color: var(--brown);
+		padding: 0 1.5rem;
+	}
+
+	.calendarMeeting #custom-calendar .calendar .monthNow,
+	.calendarMeeting #custom-calendar .calendar .dayNames {
+		color: var(--white);
+		font-size: 1.2rem;
+		letter-spacing: 0.06rem;
+		color: var(--white);
+		padding-top: 2.4rem;
+		text-align: center;
+	}
+
+	.calendarMeeting #custom-calendar .calendar .dayNames td {
+		padding-bottom: 0.6rem;
+		text-transform: uppercase;
+	}
+
+	.calendarMeeting #custom-calendar .calendar {
+		width: 100%;
+	}
+
+	.calendarMeeting #custom-calendar .btn-left,
+	.calendarMeeting #custom-calendar .btn-right {
+		background: none;
+		border: none;
+	}
+
+	.calendarMeeting #custom-calendar {
+		position: relative;
+	}
+
+	.calendarMeeting #custom-calendar .btn-left,
+	.calendarMeeting #custom-calendar .btn-right {
+		position: absolute;
+		top: 18%;
+	}
+
+	.calendarMeeting #custom-calendar .btn-left {
+		right: 5.2rem;
+	}
+
+	.calendarMeeting #custom-calendar .btn-right {
+		right: 2rem;
+	}
+
+	.calendarMeeting #custom-calendar .calendar .monthNow th {
+		padding-bottom: 2rem;
+
+		font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+		font-size: 1.3rem;
+		font-weight: 600;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0.06rem;
+		color: var(--white);
+	}
+
+	.calendarMeeting #custom-calendar .select-date-text {
+		font-family: var(--font-md);
+		font-size: 1.3rem;
+		letter-spacing: 0.15rem !important;
+		color: var(--white);
+		text-transform: uppercase;
+		margin: 2rem 0;
+	}
+
+	.calendarMeeting #custom-calendar button {
+		background: none;
+		border: none;
+		padding: 0;
+		color: var(--white);
+		font-family: var(--font-md);
+		font-size: 1.3rem;
+		font-weight: normal;
+		font-style: normal;
+		text-transform: uppercase;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0.15rem;
+		color: var(--white);
+		margin-top: 4rem;
+	}
+
+	.calendarMeeting #custom-calendar .calendar tr .monthNow {
+		cursor: pointer;
+	}
+
+	.calendarMeeting #custom-calendar .calendar .dayNames {
+		border-bottom: 0.1rem solid;
+		color: var(--slate-gray);
+	}
+
+	.calendarMeeting #custom-calendar .calendar .dayNames td {
+		color: var(--white);
+	}
+
+	.calendarMeeting #custom-calendar .calendar .monthNow.active .monthDayActive,
+	.calendarMeeting #custom-calendar .calendar .monthNow .monthDay:hover,
+	.calendarMeeting #custom-calendar .calendar .monthNow .monthDay:focus {
+		border-radius: 0.6rem;
+		padding: 0.6rem 0.8rem;
+		background: var(--red);
+	}
+
+	.calendarMeeting #custom-calendar .calendar .monthNow .monthDay {
+		padding: 0.6rem 0.8rem;
+	}
+
+	.calendarMeeting .timeZone-parent {
+		padding: 2rem 1.2rem;
+		background-color: var(--dark-white);
+		position: relative;
+	}
+
+	.calendarMeeting .timeZone-parent .timeZone-text {
+		font-family: var(--font-md);
+		font-size: 1.2rem;
+		letter-spacing: 0.15rem !important;
+		color: var(--black);
+		margin-bottom: 0.8rem;
+	}
+
+	.calendarMeeting .timeZone-parent #eventTimeZoneNewDetails {
+		font-size: 1.3rem;
+		letter-spacing: 0.06rem;
+		color: var(--slate-gray);
+		position: relative;
+	}
+
+	.calendarMeeting .timeZone-parent #eventTimeZoneNewDetails .change-btn-meeting {
+		position: absolute;
+		right: 0.8rem;
+	}
+
+	.calendarMeeting .timeZone-parent #eventTimeZoneNewDetails .change-btn-meeting button {
+		background: none;
+		border: none;
+		font-size: 1.3rem;
+		letter-spacing: 0.04rem;
+		color: var(--red);
+		text-decoration: underline;
+		text-transform: uppercase;
+	}
+
+	.select2-display-none {
+		box-shadow: 0 0.4rem 0.9rem 0.1rem rgba(168, 168, 168, 0.34);
+		border: solid 0.1rem var(--gray) !important;
+		border-radius: 0.3rem !important;
+	}
+
+	.select2-display-none .select2-results {
+		margin: 0 !important;
+		padding: 0;
+		border-radius: 0.3rem !important;
+	}
+
+	.select2-display-none .select2-results li {
+		padding: 0.6rem 0;
+		color: var(--dark-gray);
+	}
+
+	.dvconnected .own-acc img {
+		width: 3.7rem !important;
+		height: auto !important;
+		margin-top: 0 !important;
+		position: relative;
+		top: 2.8rem;
+	}
+
+	.select2-display-none .select2-results li.select2-highlighted {
+		color: var(--white) !important;
+	}
+
+	.recentchatbox {
+		position: fixed;
+		display: none;
+	}
+
+	.heilight-color {
+		background-color: var(--brown);
+		border-radius: 0.2rem;
+		padding: 0.8rem;
+		color: var(--white);
+	}
+
+	.popup-date-span.heilight-color {
+		color: var(--white) !important;
+	}
+
+	/*meeting css upload file*/
+	.upload-section-calendar {
+
+		position: relative;
+		top: 20.7rem;
+		/*left: 21px;*/
+		padding-left: 2.2rem;
+
+	}
+
+	.upload-file-area-calender {
+		position: relative;
+		top: -2.5rem;
+		right: 0;
+		opacity: 0;
+		cursor: pointer;
+		width: 95%;
+	}
+
+
+	.calender-upload-section {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.3rem;
+		font-weight: 400;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.9rem;
+		letter-spacing: 0.06rem;
+		color: var(--slate-gray);
+		border-radius: 0.3rem;
+		border: solid 0.1rem var(--gray);
+
+		width: 15.3rem;
+		padding: 0.4rem;
+		margin-top: 1rem;
+		cursor: pointer;
+		height: 3.5rem;
+		border-radius: 0.3rem;
+
+		background-color: var(--white);
+		width: 97%;
+		position: relative;
+	}
+
+	.span-upload-title {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.3rem;
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.9rem;
+		letter-spacing: 1.5rem;
+		color: var(--black);
+	}
+
+	.upload-icon-name {
+		padding-left: 0.8rem;
+		font-size: 1.3rem;
+		font-weight: 500;
+		color: var(--brown);
+		letter-spacing: 0.06rem;
+	}
+
+	.uploaded-icon {
+		position: absolute;
+		/* right: 5px;
+    top: 10px;*/
+	}
+
+	.main-file-uploaded {
+		width: 97%;
+		height: 5.8rem;
+		border-radius: 0.3rem;
+		border: solid 0.1rem var(--gray);
+		background-color: var(--dark-slate-gray);
+		position: relative;
+		margin-top: 1.5rem;
+		display: none;
+	}
+
+	.uploaded-cancel {
+		position: absolute;
+		/* float: right; */
+		right: 2rem;
+		top: 2rem;
+	}
+
+	.calander-file-name {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.3rem;
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.9rem;
+		letter-spacing: 0.06rem;
+		color: var(--black);
+		padding-left: 1.6rem;
+		padding-top: 0.7rem;
+	}
+
+	.calander-file-size {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.3rem;
+		font-weight: 400;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.9rem;
+		letter-spacing: 0.06rem;
+		color: var(--slate-gray);
+		text-transform: uppercase;
+		padding-left: 1.6rem;
+	}
+
+	.newevent-modal {
+		width: 68%;
+		height: 75.2rem;
+	}
+
+	#monthviewAllMeetings .cloud-calender {
+		width: 18.4rem;
+		height: 3.5rem;
+		border-radius: 0.3rem;
+		border: solid 0.1rem var(--gray);
+		background-color: var(--white);
+		width: 14rem;
+		height: 1.6rem;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.3rem;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: 0.1rem;
+		color: var(--dark-gray);
+		text-transform: uppercase;
+	}
+
+	.headertitle {
+		font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+		font-size: 1.3rem;
+		font-weight: 600;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.9rem;
+		letter-spacing: 0.1rem;
+		color: var(--black) !important;
+		cursor: pointer;
+	}
+
+	.connectAdd .headertitle {
+		/* padding-top: 1.4rem; */
+		text-transform: uppercase;
+	}
+
+	.connectAdd {
+		padding-top: 3rem;
+	}
+
+	@media(max-width:1400px) {
+		.upload-section-calendar {
+			position: relative;
+			top: 15.7rem;
+		}
+	}
+
+	@media screen and (min-width:1740px) and (max-width:1800px) {
+		#mynetworkpage-cont-invite #teamdata {
+			width: 99.5%;
+		}
+	}
+
+	@media screen and (min-width:1680px) and (max-width:1739px) {
+		#mynetworkpage-cont-invite #teamdata {
+			width: 99%;
+		}
+	}
+
+	@media screen and (min-width:1501px) and (max-width:1679px) {
+		#mynetworkpage-cont-invite #teamdata {
+			width: 98.5%;
+		}
+	}
+
+	@media screen and (min-width:1401px) and (max-width:1500px) {
+		#mynetworkpage-cont-invite #teamdata {
+			width: 99.5%;
+		}
+	}
+
+	@media screen and (min-width:1301px) and (max-width:1400px) {
+		#mynetworkpage-cont-invite #teamdata {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width:1300px) {
+		#mynetworkpage-cont-invite #teamdata {
+			width: 101%;
+		}
+	}

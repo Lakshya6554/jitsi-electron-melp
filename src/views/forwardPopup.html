@@ -1,0 +1,64 @@
+<!--File/Media Send preview-start-here-task-id-1828-->
+<section class="teamPopup-common" id="forwardPopup">
+    <div class="common-popup-model fleMediaPreview">
+        <div class="filePreviewSettingHeader">
+            <div class="filePreviewTittle">
+                <h2>{{LB14}}</h2>
+            </div>
+        </div>
+        <div class="fleMediaPreviewContainer">
+            <div class="tabbable-panel">
+                <div class="tabbable-line">
+                    <ul class="nav nav-tabs ">
+                        <li class="forwardSection" id="selected">
+                            <span class="active">{{LB15}}</span>
+                            <span id="forwardSelectedCount"></span>
+                        </li>
+                        <li class="forwardSection" id="contacts">
+                            <span>{{LB16}}</span>
+                        </li>
+                        <li class="forwardSection" id="topics">
+                            <span>{{LB17}}</span>
+                        </li>
+                        <li class="forwardSection" id="groups">
+                            <span>{{LB18}}</span>
+                        </li>
+                    </ul>
+                    <div class="form-group" id="input-box-fwd-msg">
+                        <input id="chatfwdbox" class="form-control" onkeyup="forwardSearch()" type="text"
+                            placeholder="{{LB19}}" autocomplete="off">
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active forwardDataSection" id="dataSelected">
+                            <div class="myInfoContainer msg-read-show-data">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane forwardDataSection" id="dataContacts">
+                            <div class="myInfoContainer msg-read-show-data">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane forwardDataSection" id="dataTopics">
+                            <div class="myInfoContainer msg-read-show-data">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane forwardDataSection" id="dataGroups">
+                            <div class="myInfoContainer msg-read-show-data">
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="saveUpdateCancel">
+                        <button class="cancelButtonGlobal" onclick="closePopup('forwardPopup')"> {{LB21}}</button>
+                        <button class="submitButtonGlobal inActiveBtn" disabled id="shareForwardButton"
+                            onclick="shareForward(false)">
+                            {{LB20}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--File/Media Send preview-end-here-task-id-1828-->

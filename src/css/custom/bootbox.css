@@ -1,0 +1,84 @@
+.bootbox.modal .modal-body .bootbox-body, #myinfotab .form-control, #myinfotab .select2-chosen, #workexptab input{letter-spacing: 0.15rem;}
+.bootbox.modal .modal-footer .button{border: none;}
+.bootbox.modal .modal-body .close:focus, .bootbox.modal .modal-footer .btn:focus{outline: none!important;}
+.bootbox.modal .modal-body .close{
+    text-shadow: unset!important;
+    opacity: unset!important;
+    color: var(--slate-gray);
+}
+
+#updateteampop.modal, #updateteampop.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #teamprofilepopup.modal, #teamprofilepopup.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #updateuserprofilepopup.modal, #updateuserprofilepopup.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #settingandprefmodal.modal, #settingandprefmodal.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #sharepost.modal, #sharepost.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #dvsharelink.modal, #dvsharelink.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #responsive1.modal, #responsive1.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #dismodal1.modal, #dismodal1.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #conflict-meeting-modal-id.modal, #conflict-meeting-modal-id.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), .bootbox.modal, .bootbox.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i), #addgrouptopicmodal.modal, #addgrouptopicmodal.modal *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i){
+    color: var(--black);
+}
+
+/***********Bootbox Alert*************/
+.bootbox.modal, .bootbox.modal>div, .bootbox.modal .modal-content, .bootbox.modal .modal-content .modal-body, .bootbox.modal .modal-content .modal-footer{
+    border-radius: 0.5rem!important;
+    border:none!important;
+    box-shadow: none!important;
+    outline: none!important;
+}
+.bootbox.modal .modal-content .modal-body{padding-top: 1.6rem;}
+.bootbox.modal{
+    box-shadow: 0 0.4rem 1rem 0 rgba(0, 0, 0, 0.54)!important;;
+}
+.bootbox.modal .modal-content .modal-body .bootbox-body{
+    font-size: 1.5rem;
+    letter-spacing: 0.06rem;
+    font-family: var(--font-md);
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+}
+.bootbox.modal .modal-content .modal-body .bootbox-close-button.close{display: none;}
+.bootbox.modal .modal-content .modal-footer{
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.bootbox.modal .modal-content .modal-footer .btn.btn-default{
+    background: var(--red);
+    border: 0.1rem solid var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-family: var(--font-md);
+    font-weight: 600;
+    font-size: 1.3rem;
+    width: auto;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-radius: 0.3rem!important;
+}
+.bootbox.modal .modal-content .modal-footer .btn.btn-red{
+    border: 0.1rem solid var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-family: var(--font-md);
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 0.8rem 3.3rem;
+    background: var(--white)!important;
+    color: var(--red);
+    border-radius: 0.3rem!important;
+}
+.bootbox.modal>div::after{
+    background: var(--light-red);
+    width: 0.6rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 11rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.bootbox.modal .modal-content{height: 11rem !important;}
+
+.bootbox.modal{
+    top: 37%;
+    overflow: hidden;
+    height: 11rem;
+    width: 58%;
+    float: left;
+    margin: 0 auto;
+}

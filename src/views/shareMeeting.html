@@ -1,0 +1,36 @@
+<!-- Share Meeting Popup Start -->
+<section class="teamPopup-common " id="shareMeetingPopup">
+    <div class="common-popup-model fleMediaPreview">
+        <div class="filePreviewSettingHeader">
+            <div class="filePreviewTittle">
+                <h2>{{LB14}}</h2>
+            </div>
+        </div>
+        <div class="fleMediaPreviewContainer">
+            <div class="tabbable-panel">
+                <div class="tabbable-line">
+                    <ul class="nav nav-tabs ">
+                        <li class="forwardSection" id="contacts">
+                            <span>{{LB16}}</span>
+                        </li>
+                    </ul>
+                    <div class="form-group" id="input-box-fwd-msg">
+                        <input id="chatfwdbox" class="form-control" onkeyup="forwardSearch()" type="text"
+                            placeholder="{{LB19}}" autocomplete="off">
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane forwardDataSection" id="dataContacts">
+                            <div class="myInfoContainer msg-read-show-data">
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="saveUpdateCancel">
+                        <button class="cancelButtonGlobal" onclick="closePopup('shareMeetingPopup')"> {{LB21}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Share Meeting Popup End -->

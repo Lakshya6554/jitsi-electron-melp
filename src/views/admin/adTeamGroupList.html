@@ -1,0 +1,385 @@
+<div class="adminUserListing" id="teamContainer">
+   <!-- loader start here-->
+   <div id="adminMainBodyLoader" class="loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+       <div class="ldio-dpbvxcmmyw">
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+       </div>
+   </div>
+   <!-- loader end here -->
+   <div class="adminUserListingContainer">
+
+    <section class="admin-empty-state hideCls">
+        <div class="admin-emty-container">
+           <img src="images/emptystate/group.svg" class="common-empty-img">
+           <div class="admin-empty-text-area">
+              <p class="admin-emty-head">SELECT A GROUP TO CONNECT</p>
+              <p class="admin-emty-content">Select a group from the left panel and start<br>Select users from different department and perform actions</p>
+        
+           </div>
+        </div>
+     </section>
+
+
+       <div class="manageDomainRow">
+           <div class="manageDomainStrip">
+               <div class="manageDomainLeftColum">
+                   <div class="adManageBtn">
+                       <button type="" id="teamRefresh" class="adButtonA3" onclick="showTeamGroup(0)"><img
+                               src="images/admin/icons/refresh.svg">Refresh</button>
+                   </div>
+                   <!-- <h2>Manage Domain</h2>
+                   <p>Managing Your Domain Name in Your Admin Panel: Steps for Domain Control and Configuration</p> -->
+               </div>
+               <div class="manageDomainRightColum">
+                   <div class="domainSaerchSec">
+                       <input placeholder="Search by team" class="manageDomainSearch"
+                           onkeyup="searchTeamList(event)" type="text" autocomplete="off" id="searchTeamInput">
+                       <span class="manageDomainSaerchIcon"></span>
+                   </div>
+                   <div class="manageDomainFilter" onclick="openCloseFilterPanel()">
+                       <span class="domainFiltter">
+                           <img src="images/admin/icons/domainfilter.svg">
+                       </span>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="adminScrollA2" style="display: nsone;" id="teamMainSection">
+        <input type="hidden" id="addColumnChecked" value="false">
+       <div class="adminUserListRow">
+           <div class="adminUserListHeader">
+               <div class="adminListingTop">
+                   <!-- adminuserlist start -->
+                   <div class="adminListUser">
+                    <!-- adminuserlist start -->
+                    <div class="adminListUser">
+                        <div class="adminListingFilter teamMarginRight">
+                            <div class="adminShortFiltter leftMargin">
+                                <span class="shortIcon adminListigBg GROUP_NAME" data-order="1" 
+                                onclick="sortTeamList('GROUP_NAME', this)" id="headingTeam">Teams</span>
+                            </div>
+                        </div>
+                        <div class="adminAddress hideCls" id="topicRow">
+                            <div class="adminInnerAddress"><span class="adminListigBg">Total Topics</span> </div>
+                        </div>
+                        <div class="adminAddress">
+                            <div class="adminInnerAddress"><span class="adminListigBg">Total Participants</span> </div>
+                        </div>
+                        <div class="adminAddress">
+                            <div class="adminInnerAddress"><span class="adminListigBg">Created By</span> </div>
+                        </div>
+                        <div class="adminJoining">
+                            <div class="adminInnerJoiningDate">
+                                <span class="adminListigBg shortIcon CREATED_FROM" data-order="1" 
+                                onclick="sortTeamList('CREATED_FROM', this)">Created Date</span> </div>
+                        </div>
+                    </div>
+                    <!-- adminuserlist end -->
+                </div>
+                <div class="adminListingRow"></div>
+            </div>
+            <div class="adminListingScroll screenHeight" id="adTeamListArea">
+                <!-- <div class="sdsf"></div> -->
+            </div>
+        </div>
+        
+        
+            <div class="paginationWrap">
+                <div class="paginationResult">
+                    <div class="paginationResultBox" onclick="openPageSizeSelection()">
+                        <span class="adResultA2">
+                            <span class="resultBox"><span>Results</span></span>
+                            <span class="adPaginationA2">
+                                <span id="pagesize">20 <img src="images/icons/paginationCret.svg"></span>
+                            </span>
+                        </span>
+                        <div class="paginationDropDown" id="paginationDropDown">
+                            <ul>
+                                <li class="selected" onclick="changePageSize(20, this)">20</li>
+                                <li onclick="changePageSize(50, this)">50</li>
+                                <li onclick="changePageSize(75, this)">75</li>
+                                <li onclick="changePageSize(100, this)">100</li>
+                                <li onclick="changePageSize(150, this)">150</li>
+                                <li onclick="changePageSize(200, this)">200</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEACTIVATE and Export selected btn  -->
+                <div class="deactiveExportBtn hideCls" id="deactiveExportBtn">
+                    <button class="activDeactiveBtn" onclick="deactiveAll()">DEACTIVATE </button>
+                    <!-- <button class="activDeactiveBtn">Export selected </button> -->
+                </div>
+                <!-- DEACTIVATE and Export selected btn  -->
+                <div class="pagination" id="pagination"></div>
+    </div>
+   </div>
+</div>
+
+<div class="adminPanelFilterF1 hide" id="teamFilterPanel">
+   <div class="adFilterTopColum">
+       <span class="filterArrow" onclick="openCloseFilterPanel(1)"><img src="images/admin/icons/filterArrow.svg"></span>
+       <h3>Select Filters</h3>
+   </div>
+   <div class="adfilterOptions">
+       <div class="adFilterColumF2">
+           <div class="adColum">
+               <label class="adFilterLabel" id="groupTypeLabel">Team Name</label>
+               <span class="adUserListS1">
+                   <input type="text" class="departm1entA1 bgRemove1" placeholder="Enter team name"
+                       id="filterTeam"/>
+               </span>
+            </div>
+        </div>
+
+        <div class="adFilterColumF2">
+           <div class="adColum">
+               <label class="adFilterLabel">Participants Name</label>
+               <span class="adUserListS1">
+                   <input type="text" class="departm1entA1 bgRemove1" placeholder="Select Participants"
+                       id="searchParticipantsInput" onkeyup="searchParticipants(event)" />
+                   <span class="adFilterS2 hideCls" id="selectedParticipantsDiv"></span>
+               </span>
+
+                <!--saerch drop down item-->
+                <div class="adSearchFilters participantsListingA2 hideCls" id="participantsDiv">
+                    <div class="adSearchFiltersWrap adCommonFiletrs adSearchFiltersSpace">
+                        <div id="participantsLoader"
+                            class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                            <div class="ldio-dpbvxcmmyw">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adListL1">
+                            <ul class="adListingD1 searchEmptyResult ddContainer">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="adFilterColumF2 adFilterRowC3">
+            <label class="adFilterLabel">Date</label>
+            <div class="adColum adJoinA1" onclick="openCalendar('CreatedAfterDate')">
+                <div class="adFilterInputA1" id="CreatedAfterDateDiv">Created After</div>
+                <input type="hidden" id="CreatedAfterDateInput" value="" />
+            </div>
+            <div class="adSearchFilters dateFilterA1 dateFilter hideCls" data-range="CreatedAfterDate" id="CreatedAfterDate"></div>
+            <div class="adColum adJoinA2" onclick="openCalendar('CreatedBeforeDate')">
+                <div class="adFilterInputA1" id="CreatedBeforeDateDiv">Created Before</div>
+                <input type="hidden" id="CreatedBeforeDateInput" value="" />                
+            </div>
+            <div class="adSearchFilters dateFilterA4 dateFilter hideCls" data-range="CreatedBeforeDate" id="CreatedBeforeDate"></div>
+        </div>
+
+        <div class="adFilterColumF2">
+            <div class="adColum">
+                <label class="adFilterLabel">Admin Name</label>
+                <span class="adUserListS1">
+                    <input type="text" class="departm1entA1 bgRemove1" placeholder="Select Admin"
+                        id="searchAdminInput" onkeyup="searchAdmin(event)" />
+                    <span class="adFilterS2 hideCls" id="selectedAdminDiv"></span>
+                </span>
+ 
+                 <!--saerch drop down item-->
+                <div class="adSearchFilters participantsListingA2 hideCls" id="adminDiv">
+                     <div class="adSearchFiltersWrap adCommonFiletrs adSearchFiltersSpace">
+                        <div id="adminLoader" class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                            <div class="ldio-dpbvxcmmyw">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adListL1">
+                            <ul class="adListingD1 searchEmptyResult ddContainer"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="adRightBtn resetButtonColumB2">
+           <button class="addUserBtn" onclick="resetTeamFilter(true)">Reset</button>
+           <button class="addUserBtnDelete" onclick="applyTeamFilter('filter')">Apply Filter</button>
+       </div>
+   </div>
+</div>
+
+<div class="adminGroupA1 hideCls" id="teamGroupMoreOption">
+    <div class="adminGroupRowA2 adminGoupItemA1">
+        <div class="adminGroupA3">
+            <div class="adminGroupA4">
+                <div class="adminCloseBtn" onclick="hideTeamMoreOption()">
+                    <img src="images/cancel-modal.svg">
+                 </div>
+                <div class="adminGroupTopA5">
+                    <span class="adminGroupA6"><img id="teamImage" src="images/admin/adminGroup.jpg"></span>
+                </div>
+                <div class="adminGroupTestA7">
+                    <sapn class="adminGroupHeadeA8" id="teamName"></sapn>
+                    <span class="adminGroupA9" id="teamDesc"></span>
+                </div>
+            </div>
+            <div class="adminItemsTabA2">
+                <ul>
+                    <li id="tab1"><span onclick="selectTab(this, 1)" class="itemActive">Participants (<span class="totalParticipant" id="totalParticipant">0</span>)</span></li>
+                    <li id="tab2"><span onclick="selectTab(this, 2)">Topics List</span></li>
+                </ul>
+            </div>
+            <div class="adminParticipantsA1">
+                <div class="adminParticipantsA2">
+                    <div class="domainSaerchSec">
+                        <input placeholder="Search" class="manageDomainSearch" id="search"
+                           onkeyup="searchLocalList()" type="text" autocomplete="off">
+                        <span class="manageDomainSaerchIcon"></span>
+                    </div>
+                    <div class="adSearchFilters participantsListingA2 hideCls" id="addedParticipantsDiv">
+                        <div class="adSearchFiltersWrap adCommonFiletrs adSearchFiltersSpace">
+                            <div id="addedParticipantsLoader"
+                                class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                                <div class="ldio-dpbvxcmmyw">
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="adListL1">
+                                <ul class="adListingD1 searchEmptyResult ddContainer addedUserUl">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="adminParticipantsListA1">
+                    <div class="hideCls" id="listEmptyState">
+                        <p class="textempty-h">Teams and groups make collaboration easy</p>
+                        <!-- <p class="textempty-p">Invite a coworker and start creating your first team!</p> -->
+                    </div>
+                    <div id="participantsListLoader" class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                        <div class="ldio-dpbvxcmmyw">
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list" id="participantList"></ul>
+                    <ul class="list" id="topicList" class="hideCls"></ul>
+                    <div class="addUserBtnWrapper hideCls">
+                        <button class="adminVerifyButtonVerify addUserBtnTeam" id="addUserTeamBtn">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

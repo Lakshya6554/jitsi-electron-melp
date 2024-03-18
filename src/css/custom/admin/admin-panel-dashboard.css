@@ -1,0 +1,209 @@
+
+.adUserUsed {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--black);
+}
+
+.adMidTitel {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.adMidDecription {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.7;
+/* identical to box height, or 131% */
+  display: flex;
+  align-items: center;
+  color: var(--dark-gray);
+}
+
+.adInfo {
+  padding-top: 2rem;
+}
+
+.adInfoContent {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.7;
+/* identical to box height, or 131% */
+  color: var(--black);
+}
+
+.adInfoContent img {
+  width: 100%;
+  max-width: 1.8rem;
+  max-height: 1.8rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.adPanelLeftBoxRow {
+  /* display: flex; */
+  /* flex-wrap: nowrap; */
+}
+.adPanelLefSubBoxes {
+    /* width: 70%; */
+}
+
+.adPanelLeftBoxA2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.adPanelGraphA2 img {
+  width: 100%;
+}
+.adPanelSubBoxA2 {
+  width: 100%;
+  /* max-width: 32.3rem; */
+  /* float: left; */
+  background: #FFFFFF;
+  border: 1px solid rgba(151, 151, 151, 0.4);
+  box-shadow: 5.75052px 0px 28.7526px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  height: 5.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1%;
+  cursor: pointer;
+  flex: 1 1 38ch;
+}
+
+.adPanelLeftWrap {
+  /* width: 95%; */
+  /* display: flex; */
+  /* flex-direction: inherit; */
+  /* background-blend-mode: hue; */
+}
+
+
+.adPanelLeftA2 h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+
+#line-chart
+{
+  max-height: 17rem;
+  /* padding: 1% 1%; */
+}
+.grphWrap {
+    border: 0.884303px solid rgba(151, 151, 151, 0.4);
+    box-shadow: 5.0852px 0px 25.426px rgba(0, 0, 0, 0.1);
+    border-radius: 8.47533px;
+    clear: both;
+    padding: 1% 1%;
+    max-width: 99% !important;
+}
+
+.grphWrap label.label.label-success {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1C1C1C;
+    padding-left: 1%;
+}
+
+.adPanelGraphA2 {
+    clear: both;
+    padding-top: 1rem;
+    /* width: 94%; */
+}
+.morris-hover {
+  position:absolute;
+  z-index:1000;
+}
+.adPanelRowA2 {
+  display: flex;
+  /* width: 98%; */
+  /* flex-wrap: nowrap; */
+}
+.morris-hover.morris-default-style {     border-radius:10px;
+  padding:6px;
+  color:#666;
+  background:rgba(255, 255, 255, 0.8);
+  border:solid 2px rgba(230, 230, 230, 0.8);
+  font-family:sans-serif;
+  font-size:12px;
+  text-align:center;
+}
+
+.morris-hover.morris-default-style .morris-hover-row-label {
+  font-weight:bold;
+  margin:0.25em 0;
+}
+
+.morris-hover.morris-default-style .morris-hover-point {
+  white-space:nowrap;
+  margin:0.1em 0;
+}
+
+svg { width: 100%; }
+.adPanelLeftA2 {
+    width: 100%;
+    /* float: right; */
+    margin-right: 0rem;
+}
+.addIcons img {
+    width: 100%;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    margin-right: 1.5rem;
+    vertical-align: middle;
+}
+.adPanelRightSubBoxes {
+    background: #FFFFFF;
+    border: 1px solid rgba(151, 151, 151, 0.4);
+    box-shadow: 5.75052px 0px 28.7526px rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    float: right;
+    /* margin-left: 4rem; */
+}
+.adPanelRightSubHeadings p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 01rem;
+}
+
+.adPanelRightSubHeadings h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #554D4D;
+    padding-bottom: 1.2rem;
+    margin-bottom: 0;
+}
+.adPanelRightBoxesWrap {
+    display: flex;
+}
+
+.adPanelSubBoxA2:hover {
+    background: #F2F2F2;
+    border: 1px solid #554D4D;
+}
+
+.adPanelSubBoxA3 {
+    box-shadow: inherit;
+    margin-bottom: 0.8rem;
+}
+.adPanelDomain {
+    width: auto;
+}
+.adPanelLeftA2.LeftCustomRow {
+  width: 100%;
+  margin-right: 3%;
+}
+.canvasjs-chart-credit {
+  display: none;
+}

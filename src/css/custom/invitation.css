@@ -1,0 +1,550 @@
+/*new-invitePopup-start*/
+
+#multipleInvitePopup{
+    z-index: 999;
+}
+.invitePopup {
+	position: fixed;
+    margin-top: 0rem;
+    left: 0;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border-radius: 0.2rem;
+    background-color: rgba(34, 32, 32, 0.8);
+    z-index: 99;
+}
+.invitePopupbody{
+	width: 100%;
+	border-radius: 0.3rem;
+	border: solid 0.1rem var(--gray);
+	background-color: var(--white);
+	padding: 0rem 0rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 84.9rem;
+	padding: 3.5rem 4.5rem;
+	/* height: 472px; */
+}
+.invitePopupIneerSec{
+	/* height: 188px; */
+	background: #F4F5F5;
+	border-radius: 0.5rem;
+	display: inline-block;
+}
+.invitePopupIneerSecLeft{
+	float: left;
+	width: 54%;
+}
+.invitePopupIneerSecLeftSpace{
+	padding: 4.9rem 0rem 0rem 3.7rem;
+}
+.inviteTitleLeft {
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.7rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.41;
+	letter-spacing: 0.1rem;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.inviteTitleLeftSubTitle{
+	font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2.3rem;
+	letter-spacing: 0.038rem;
+	color: var(--brown);
+	margin-top: 0.8rem;
+}
+.invitePopupIneerSecRight{
+	float: left;
+	width: 45%;
+}
+.invitePopupIneerSecImagePart{
+	text-align: center;
+}
+.invitePopupIneerSecImagePart img {
+    width: 100%;
+    height: 18.7rem;
+    padding-top: 1rem;
+    object-fit: scale-down;
+}
+.invitePopupBottomBody{
+    margin-top: 0rem;
+    /* text-transform: uppercase; */
+    /* width: 70%; */
+    margin-bottom: 2.5rem;
+    clear: both;
+}
+.invitePopupBottomBody span{
+    text-align: left;
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-stretch: normal;
+    letter-spacing: 0.06rem;
+    font-style: normal;
+    padding: 1rem;
+    line-height: 1.9rem;
+    /* margin-top: 1rem !important; */
+}
+.enterEmailInvitations{
+    font-family: "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.06rem;
+    color: var(--black);
+    margin-top: 1.2rem;
+    text-align: left;
+    display: block;
+    /* padding-bottom: 2rem;} */
+    margin-top: 2.5rem;
+}
+.invitePopupBottominput{
+	border: none;
+	/* background-color: var(--white); */
+	/* width: 100%; */
+	margin-bottom: 0.8rem;
+	padding: 1.6rem 0rem 0rem 1.3rem;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	font-weight: 500;
+	border-radius: 0.2rem;
+	/* color: var(--dark-gray); */
+	letter-spacing: 0.003rem;
+	/* border-radius: 4px; */
+	width: 100%;
+	margin-right: 2%;
+	float: left;
+	color: var(--black);
+	padding-right: 14rem;
+	white-space: nowrap;
+	overflow      : hidden;
+	text-overflow : ellipsis;
+	position: relative;
+	height: 4.8rem;
+}
+#multipleEmailInvite{
+    margin-bottom: inherit !important;
+    border: 1px solid var(--gray) !important;
+    padding-top: 0px;
+}
+.invitePopup-margin-common-row{
+	margin-top: 1.6rem;
+    width: 100%;
+    /* margin: 0px auto; */
+    /* min-width: 100%; */
+    align-items: center;
+    justify-content: space-between;
+}
+.skipBtn{
+    background: var(--white);
+    border: 1px solid var(--dark-gray);
+    border-radius: 3px;
+    width: 8rem;
+    height: 3.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 3.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--dark-gray);
+    display: inline-block;
+    cursor: pointer;
+}
+.invitePopupsaveUpdateCancel {
+	float: right;
+}
+.invitePopupsaveUpdateCancel .canclebtn-Profile-page {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border: solid 0.1rem var(--red);
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-right: 1rem;
+    background-color: var(--white);
+    cursor: pointer;
+}
+.invitePopupsaveUpdateCancel .saveBtn-profile-page {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border: solid 0.1rem var(--red);
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    background-color: var(--red);
+    cursor: pointer;
+}
+.invitePopupBottomPlusIcon {
+    width: 100%;
+    max-width: 4.8rem;
+    background-image: url(../../images/icons/invite-plus.svg);
+    /* border-radius: 4px; */
+    /* margin-left: -12rem; */
+    cursor: pointer;
+    float: left;
+    /* margin-left: 3%; */
+    /* background-position: center center; */
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    height: 100%;
+    height: 4.8rem;
+    background-size: 100%;
+}
+
+.inviteInputBar {
+    /* display: flex; */
+    /* width: 94%; */
+    clear: both;
+    position: relative;
+}
+.inviteCommonErrorField span.common-info-icons-section {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block !important;
+    vertical-align: text-top;
+}
+
+.inviteCommonErrorField span.common-error-field-label {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+}
+.invitePopupBottom .common-inputField-section {
+    overflow: hidden;
+    max-height: inherit !important;
+    margin-top: 0;
+}
+
+.input-invite-section {
+    position: relative;
+    margin-top: 2rem;
+}
+.add-invite-member {
+    /* margin-left: 1.6rem; */
+    /* margin-left: 1rem; */
+    /* margin-bottom: 1rem; */
+    /* float: left; */
+    clear: both;
+    /* width: 100%; */
+    max-height: calc(100vh - 75rem);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+.invitePopupBottom .add-invite-main {
+    border-radius: 0px 0.5rem 0.5rem 0px;
+    border: solid 0.1rem var(--silver);
+    background-color: var(--dark-white);
+    display: inline-block;
+    /* margin-right: 0.8rem; */
+    /* margin-top: 0.8rem; */
+    width: 32.5%;
+    margin: 0px;
+    padding: 0px !important;
+    /* margin-bottom: 1rem; */
+    /* float: left; */
+    /* clear: both; */
+    margin-right: 1.5rem;
+    /* clear: both; */
+    /* margin-bottom: 1rem; */
+    position: relative;
+    overflow: hidden;
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
+    line-height: 1rem;
+    height: 4.4rem;
+}
+
+.invite-short-name {
+    padding: 1rem;
+    border-radius: 0.1rem;
+    background-color: var(--dark-gray);
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.05rem;
+    color: var(--white);
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    text-transform: uppercase;
+    border-radius: 5px 0px 0 5px;
+    /* display: inline-block; */
+    vertical-align: top;
+    /* height: 5rem; */
+    line-height: 3rem;
+    /* float: left; */
+    flex: 0 0 auto;
+    width: fit-content;
+    }
+
+.inviteCoworkerEmail .invite-full-name {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.1rem;
+    background-color: inherit !important;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.05rem;
+    color: var(--brown);
+    font-family: 'Montserrat', 'Open Sans', 'Source Sans Pro', 'Segoe UI', sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+    width: 100%;
+    padding-right: 0;
+    /* position: relative; */
+    white-space: nowrap;
+    overflow: hidden;
+    /* display: inline-block; */
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    max-width: 72%;
+    flex: 0 0 auto;
+    width: fit-content;
+    min-width: inherit !important;
+    /* line-height: 8.3rem; */
+    }
+.remove-invite {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.invitees-close-new {
+    float: right;
+    /* margin-left: 1rem; */
+}
+.invitees-close-btn {
+    position: absolute;
+    right: 0.5rem;
+    /* height: 3.3rem; */
+    top: 1.2rem;
+    /* float: right; */
+    width: 3rem;
+    /* cursor: pointer; */
+    /* float: left; */
+    /* flex: 8 8 auto; */
+    /* width: fit-content; */
+    line-height: 3rem;
+    cursor: pointer;
+}
+#inviteCoworkerEmail .invitees-close-btn-inner{
+    display: block;
+    background: url(../../images/cancel.svg) no-repeat center top 0.7rem;
+    text-decoration: none;
+    background-size: 100% 54%;
+    height: 2rem;
+    /* line-height: 3rem; */
+}
+.InvitionWidth {
+    width: 100%;
+}
+/*new-invitePopup-end*/
+
+
+.invitationNetwork {
+    position: fixed;
+    margin-top: 0rem;
+    left: 0;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border-radius: 0.2rem;
+    background-color: rgba(34, 32, 32, 0.8);
+    z-index: 999;
+}
+.invitationNetworkBody {
+    width: 61.9rem;
+    /* height: 397px; */
+    background: var(--white);
+    border: 1px solid var(--gray);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.27229);
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.invitationNetworkimage {
+    /* width: 50%; */
+}
+
+.invitationNetworkimage img {
+    width: 100%;
+    max-width: 40%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.invitationNetworkContent h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+/* identical to box height */
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.6px;
+    color: var(--black);
+}
+
+.invitationNetworkContent p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+/* or 177% */
+    text-align: center;
+    letter-spacing: 0.6px;
+    color: var(--brown);
+    margin-bottom: 0;
+}
+.invitationNetworkClose {
+    background: var(--white);
+    border: 1px solid var(--red);
+    border-radius: 2px;
+    display: inline-block;
+    width: 8.0rem;
+    height: 3.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    
+/* identical to box height */
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--red);
+    line-height: 3.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.inviteCoworkerEmail {
+    max-height: calc(100vh - 71.5rem);
+    overflow-y: scroll;
+    width: 100%;
+}
+.invitePopup .margin-common-row {
+    overflow: hidden !important;
+}
+.add-invite-member .invite-full-name {
+    background: none !important;
+    /* line-height: 5rem; */
+    width: 67%;
+    /* max-width: 14rem; */
+    display: inline-block;
+    white-space: nowrap;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+}
+#inviteCoworkerEmail .add-invite-member .invite-full-name {
+    line-height: 5rem;
+}
+
+.invitePopupBottominput::placeholder {
+    color: var(--dark-gray);
+}
+.inviteEmailDispaly {
+    display: flex !important;
+    
+}
+.invitePosition {
+    width: 100%;
+    max-width: 92%;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    border: 1px solid var(--gray) !important;
+    display: inline-block;
+    float: left;
+    height: 4.8rem;
+    border-radius: 0.4rem;
+}
+
+.invitePosition .invitePopupBottominput {
+    width: 100%;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    float: left;
+    position: relative;
+    max-width: 70%;
+    line-height: 2.5rem;
+}
+
+.invitePosition  span {
+    float: right !important;
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.invitePosition .invitePopupBottomPlusIcon {
+    float: right;
+    /* position: absolute; */
+    /* right: 15rem; */
+    top: 4.3rem;
+}
+
+.socialButtonsWrapper{
+    display: inline-block;
+}
+#inviteCoworkerEmail .invite-short-name {
+    line-height: 2rem;
+    padding-top: 1.3rem;
+}
+
+#inviteCoworkerEmail .invite-full-name {
+    /* max-width: 82%; */
+    padding-right: 3rem;
+    line-height: 2.5rem;
+    padding-top: 1rem;
+    position: relative;
+    /* top: 0.2rem; */
+    width: 100%;
+}
+
+#inviteCoworkerEmail .invitees-close-btn {
+    top: 1.2rem;
+    right: 0;
+}

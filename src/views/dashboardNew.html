@@ -1,0 +1,128 @@
+<section id="dashboard-template">
+    <div class="dasboardTitle">
+        <h1 class="welcome-name">
+            {{LB02}}, <span id="fullname"><span>
+        </h1>
+    </div>
+    <div class="box-container screenHeight">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 section">
+                <div class="grey-border">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/calendar.svg" alt=""></span>
+                            <span class="header-content">{{SH01}}</span>
+                        </div>
+                    </div>
+                    <div class="image-section">
+                        <img src="images/dashboard/1.svg" alt="">
+                    </div>
+                    <div class="button-section">
+                        <button class="submitButtonGlobal dashboardBtn" title="{{BT01}}"
+                            onclick="switchPage('calendar', '', event, false, true)"><span>{{BT01}}</span></button>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h1>{{LB08}}</h1>
+                        <h2>{{LB09}}</h2>
+                        <span class="connect-button">
+                            <button class="invite-social" onclick="connectCalendar()">
+                                <img src="images/google-invite-cont.svg" alt="" title="Connect google calendar">
+                                <span class="google-invite-text google-invite-texts">
+                                    Google
+                                </span>
+                            </button>
+                            <button class="invite-social" onclick="connectCalendar()">
+                                <img src="images/icons/office.png" class="micosoftIcon" alt=""
+                                    title="Connect Microsoft calendar">
+                                <span class="google-invite-text google-invite-texts">
+                                    Microsoft
+                                </span>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h1>{{LB10}}</h1>
+                        <h2>{{LB13}}</h2>
+                        <div class="calendar-link-section">
+                            <span class="calendar-link-outer" onclick="copyLink(1)">
+                                <span class="calendar-link" id="calendarLink"> </span>
+                                <span class="clipboard"><img src="images/dashboard/copy-to-clipboard.svg" alt=""></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 section">
+                <div class="grey-border">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/video-cam.svg" alt=""></span>
+                            <span class="header-content">{{SH02}}</span>
+                        </div>
+                    </div>
+                    <div class="image-section">
+                        <img src="images/dashboard/2.svg" alt="">
+                    </div>
+                    <div class="button-section">
+                        <button class="submitButtonGlobal dashboardBtn" title="{{BT03}}" onclick="openpersonalroom()"><span>{{BT03}}</span>  </button>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h1 class="header-calendar-title">{{LB12}}</h1>
+                        <h2>{{LB11}}</h2>
+                        <div class="calendar-link-section">
+                            <span class="calendar-link-outer" onclick="copyLink(2)">
+                                <span class="calendar-link" id="roomLink"></span>
+                                <span class="clipboard"><img src="images/dashboard/copy-to-clipboard.svg" alt=""></span>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="empty-section"></div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 section ">
+                <div class="grey-border">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/teams.svg" alt=""></span>
+                            <span class="header-content">{{SH03}}</span>
+                        </div>
+                    </div>
+                    <div class="image-section">
+                        <img src="images/dashboard/3.svg" alt="">
+                    </div>
+
+                    <div class="button-section">
+                        <button id="dashboardTeamBtn" class="submitButtonGlobal dashboardBtn inActiveBtn"  disabled title="{{BT04}}"
+                            onclick="teamCreate()"><span>{{BT04}}</span></button>
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h2 class="">{{LB14}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 section">
+                <div class="grey-border flexHeight last_Colum">
+                    <div class="header">
+                        <div class="header-inner">
+                            <span class="header-icon"><img src="images/dashboard/invite-contact.svg" alt=""></span>
+                            <span class="header-content">{{SH04}}</span>
+                        </div>
+                    </div>
+                    <div class="image-section">
+                        <img src="images/dashboard/Invite.svg" alt="">
+                    </div>
+                    <div class="button-section">
+                        <button class="submitButtonGlobal dashboardBtn" title="INVITE" onclick="multipleInvitePopup()">
+                           <span>{{BT06}}</span> 
+                        </button>
+
+                    </div>
+                    <div class="connect-calendar-section">
+                        <h2 class="">{{LB15}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

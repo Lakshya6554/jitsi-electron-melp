@@ -1,0 +1,33 @@
+<!-- feedback popup start here  -->
+<section class="teamPopup-common" id="feedback">
+    <div class="feedbackBody">
+        <div class="feedbackWrap" id="feedBackRateArea">
+            <div class="feedbackthumbnail">
+                <img src="images/feedbackThumbnail.png">
+            </div>
+            <div class="feedbackContent">
+                <div class="feedbackContentTopstrip">
+                    <p>{{LB01}}</p>
+                    <h2>{{LB02}}</h2>
+                </div>
+                <div class="feedbackLike">
+                    <ul>
+                        <li class="feedbackLikeFirst" onclick="likeDisLike(true, 'App')"></li>
+                        <li class="feedbackLikeSecond" onclick="likeDisLike(false, 'App')"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="feedbackTesxtArea hideCls" id="feedBackTextArea">
+            <div class="feedbackInside">
+                <h2>{{LB03}}</h2>
+                <textarea id="feedBackTextBox" class="feedbackTesxtBox" placeholder="{{LB04}}"></textarea>
+            </div>
+            <div class="feedbackBtn">
+                <button class="feedbackCancleBtn" onclick="hideFeedBack()">cancel</button>
+                <button class="feedbackSubmiteBtn" id="submitFeedBack" onclick="submitFeedBack()">Submit</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- feedback popup end here  -->

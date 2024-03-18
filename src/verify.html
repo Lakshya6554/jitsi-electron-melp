@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelpApp | Team Conferencing, Chat, Calendar and More</title>
+    <style>
+        /*team loader start*/
+        #loading-bar-spinner.spinner {
+            left: 50%;
+            margin-left: -2rem;
+            top: 50%;
+            margin-top: -2rem;
+            position: absolute;
+            z-index: 19 !important;
+            animation: loading-bar-spinner 400ms linear infinite;
+        }
+
+        #loading-bar-spinner.spinner .spinner-icon {
+            width: 6rem;
+            height: 6rem;
+            border: solid 4px transparent;
+            border-top-color: #ee4136 !important;
+            border-left-color: #ee4136 !important;
+            border-radius: 50%;
+        }
+
+        @keyframes loading-bar-spinner {
+            0% {
+                transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        /*team loader end*/
+    </style>
+</head>
+
+<body>
+    <div class="connection-empty-state recentloadersection">
+        <div id="loading-bar-spinner" class="spinner">
+            <div class="spinner-icon"></div>
+        </div>
+    </div>
+</body>
+
+</html>

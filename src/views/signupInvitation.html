@@ -1,0 +1,69 @@
+<!-- invitation page start here -->
+<section id="invitation-template">
+    <!--invitePopup-New-PopUp-Start-->
+    <section class="invitePopup">
+        <div class="invitePopupbody">
+            <section class="invitePopupIneerSec">
+                <div class="invitePopupIneerSecLeft">
+                    <div class="invitePopupIneerSecLeftSpace">
+                        <div class="inviteTitleLeft">
+                            {{LB15}}
+                        </div>
+                        <div class="inviteTitleLeftSubTitle">
+                            {{LB16}}
+                        </div>
+                    </div>
+                </div>
+                <div class="invitePopupIneerSecRight">
+                    <div class="invitePopupIneerSecImagePart">
+                        <img src="images/invite-coworker.svg" alt="" class="">
+                    </div>
+                </div>
+            </section>
+            <section class="invitePopupBottom">
+                <span class="enterEmailInvitations">{{LB22}} :</span>
+                <div class="input-invite-section">
+                    <!-- addinvite section  start-->
+                    <!-- addinvite section end -->
+                    <!-- search listing invite  section-->
+                    <div class="search-listing-invite add-invitees-popup-main" style="display: none;">
+                    </div>
+                </div>
+                <div class="common-subtitle-invite margin-b-8px invitePopupBottomBody invitePopupBottomTitle signUp">
+                    
+                    <div class="common-inputField-section">
+                        <!-- repeat input fiel start here -->
+                        <div class="row margin-common-row">
+                            <div class="col-md-12">
+                                <div class="add-invite-member inviteCoworkerEmail" id="inviteCoworkerEmail"></div>
+                                <div class="inviteWrap">
+                                    <div class="inviteInputBar inviteEmailDisplay">
+                                        <input type="text" id="coworkerEmail" class="invitePopupBottominput text-left">
+                                        <span class="userDomain" id="userDomain"></span>
+                                    </div>
+                                    <div class="invitePopupBottomPlusIcon" onclick="addMultipleEmailInvite()"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inviteCommonErrorField" style="display:none;" id="errorField">
+                            <span class="common-info-icons-section">
+                                <img src="images/icons/info-Icons.svg" class="common-info-icons">
+                            </span>
+                            <span class="common-error-field-label" id="errorMessage"></span>
+                        </div>
+                        <!-- repeat input fiel end here -->
+                    </div>
+                </div>
+                <section class=" invitePopup-margin-common-row">
+                    <button class="cancelButtonGlobal logout-text" onclick="moveToSuggestion()" id="coworker-skip"> {{BT13}} </button>
+                    <div class="invitePopupsaveUpdateCancel">
+                        <button class="cancelButtonGlobal" onclick="moveToSuggestion()"> {{BT07}}</button>
+                        <button class="submitButtonGlobal" onclick="inviteUsers()"> {{BT08}}</button>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+    <!--invitePopup-New-PopUp-End-->
+</section>
+<!-- invitaion page end here -->

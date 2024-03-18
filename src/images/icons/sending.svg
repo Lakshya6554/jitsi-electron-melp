@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Sending_Icon</title>
+    <defs>
+        <path d="M1.22124533e-15,7.994 C1.22124533e-15,12.408 3.574,15.99 7.987,15.99 L7.987,15.99 C12.408,15.99 15.99,12.408 15.99,7.994 L15.99,7.994 C15.99,3.582 12.408,0 7.987,0 L7.987,0 C3.574,0 1.22124533e-15,3.582 1.22124533e-15,7.994 L1.22124533e-15,7.994 Z M1.599,7.994 C1.599,4.461 4.461,1.599 7.996,1.599 L7.996,1.599 C11.529,1.599 14.391,4.461 14.391,7.994 L14.391,7.994 C14.391,11.529 11.529,14.391 7.996,14.391 L7.996,14.391 C4.461,14.391 1.599,11.529 1.599,7.994 L1.599,7.994 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, -0.000000)">
+            <g id="Group-4" transform="translate(0.000000, 0.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <polygon id="Fill-1" fill="#9C9696" mask="url(#mask-2)" points="-0.999 16.989 16.989 16.989 16.989 -0.999 -0.999 -0.999"></polygon>
+                <polygon id="Fill-3" fill="#9C9696" mask="url(#mask-2)" points="-0.999 16.989 16.989 16.989 16.989 -0.999 -0.999 -0.999"></polygon>
+            </g>
+            <polygon id="Fill-5" fill="#9C9696" points="7.1955 3.9975 7.1955 8.7945 11.3935 11.3125 11.9925 10.3285 8.3955 8.1945 8.3955 3.9975"></polygon>
+            <polygon id="Fill-6" fill="#9C9696" points="7.1955 3.9975 7.1955 8.7945 11.3935 11.3125 11.9925 10.3285 8.3955 8.1945 8.3955 3.9975"></polygon>
+        </g>
+    </g>
+</svg>

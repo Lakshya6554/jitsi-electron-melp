@@ -1,0 +1,54 @@
+<section id="thankyou-template" class="thankyou-template">
+    <div id="" class="email-signUp-form">
+        <div class="row">
+            <div class="col-sm-12 company-user-nameImg logo-padding">
+                <img class="email-info" src="images/melpapp-logo.svg" importance="low" loading="lazy">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 company-user-nameImg">
+                <img class="email-info" src="images/thankyoupage.svg" importance="low" loading="lazy">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 company-user-name">
+                <span class="user_welcomename">{{LB01}}</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 company-text please-text-here">
+                <!-- <span class="text-started">{{LB02}}</span></br> -->
+                 <!-- <span class="text-after-started">we need to verify your email address first.</span>  -->
+            </div>
+            <div class="col-sm-12 company-text please-text-here">
+                <span>
+                    <!-- {{LB03}}</br> -->
+                    <span class="email-div">
+                        <span class="email-text"></span>
+                    </span>
+                    <!-- <img class="email-info-icon" src="images/icons/icon_warning_red.svg"> -->
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 saveButton">
+                <div class="saveButton-emailText">{{LB04}}</div>
+                <button class="submitButtonGlobal" id="resendEmailUser" onclick="sendEmailAgain()"
+                    type="button">{{BT01}}</button>
+                <div id="resendMessage" style="display: none;"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 saveButton">
+                <div class="saveButton-emailText">{{LB05}} </div>
+                <button class="cancelButtonGlobal" id="redirectTologin" onclick="redirectTologin()"
+                    type="button">{{BT02}}</button>
+                <div id="resendMessage" style="display: none;"></div>
+            </div>
+        </div>
+
+    </div>
+</section>

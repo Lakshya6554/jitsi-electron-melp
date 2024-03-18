@@ -1,0 +1,290 @@
+
+/* admin panel left bar css start here */
+.adminPanelLeft {
+  margin-left:0px ;
+}
+.navbarHeader {
+  border-bottom: 0.1rem solid #d6dbe1;
+  transition: all .1s ease-out;
+  background: var(--white);
+  padding-left: 0 !important;
+  display: flex;
+  align-items: center;
+}
+.navSideBar {
+  width: 8.1rem;
+  z-index: 99;
+  bottom: 0;
+  margin-top: 0;
+  position: inherit !important;
+  top: 0;
+  transition: all .1s ease-out;
+  float: left;
+}
+.navBarLeftTitle {
+  float: left;
+}
+.navbar-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--black);
+  /* padding-left: 3.3rem; */
+  /* padding-top: 2.5rem; */
+  line-height: 6.99rem;
+  float: left;
+}
+.navbar-sub-title {
+  color: var(--red);
+}
+.headerSearchBarMiddle {
+  /* width: 31.88vw; */
+  width: 100%;
+  height: 4.2rem;
+  border-radius: 4px;
+  position: fixed;
+  z-index: 9;
+  margin: 0rem auto;
+  transform: translate(-50%);
+  left: 50%;
+  max-width: 25vw;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 43rem;
+  top: 1.5rem;
+}
+.headerSearchBarMiddleInput {
+  line-height: 4.2rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.4px;
+  color: rgb(242 242 242);
+  width: 100vw;
+  height: 4.2rem;
+  position: relative;
+  padding-left: 5rem;
+  max-width: min-content;
+  min-width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  padding-right: 6%;
+  background: rgb(242, 242, 242);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--dark-white);
+}
+
+.serchHeaderIcon {
+  display: block;
+  background: url(../../../images/admin/icons/search-icon.svg) no-repeat center center;
+  text-decoration: none;
+  background-size: auto;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 9999;
+  cursor: pointer;
+  background-size: 1.5rem;
+}
+.sideBarHeadrer img {
+  width: 100%;
+  max-width: 7.5rem;
+  max-height: 7.5rem;
+}
+.adminLeftPanel {
+  background:var(--white);
+  border-right: 1px solid #D6DBE1;
+  width: 25.2rem;
+  height: 100vh;
+  float: left;
+  position: relative;
+  margin-right: 0rem;
+}
+.adminSidebar {
+  position: relative;
+  height: calc(100vh - 7rem);
+}
+.adminSidebar ul{
+  height: 10%;
+  width: 100%;
+  list-style: none;
+  padding-top: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1.5rem;
+}
+.adminSidebar ul li{
+  line-height: 4.2rem;
+  border-top: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.adminSidebar ul li span{
+  position: relative;
+  color: #585757;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+.adminSidebar ul li span i {
+  padding-right: 1rem;
+}
+.dashbaoardIcon img {
+  width: 100%;
+  max-width: 2.5rem;
+  min-height: 2.5rem;
+  object-fit: none;
+}
+.adminSidebar ul li.active span{
+  color: #1C1C1C;
+  background: var(--dark-white);
+  border-radius: 0.2rem;
+}
+/* sub menu */
+.adminSidebar ul ul{
+  position: static;
+  display: none;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem !important;
+}
+.adminSidebar ul ul li span{
+  font-size: 1.3rem;
+  color: var(--brown) !important;
+  padding-left: 0.8rem;
+  line-height: 2.5rem;
+}
+.logOutBtn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0px;
+  background: #F2F2F2;
+}
+.adminlogoutBtn {
+  border: none;
+  padding: 1.2rem;
+  text-align: center;
+  width: 100%;
+  font-size: 1.3rem;
+  color: #222020;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 2.2rem;
+}
+.logOut {
+  margin-right: 1rem;
+  display: inline-block;
+
+}
+.logOut img {
+  width: 100%;
+  max-width: 1.8rem;
+  max-height: 1.8rem;
+}
+.adminlogoutBtn:focus {
+  outline: none;
+}
+.adminSidebar ul li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.adminSidebar ul li span:hover{
+  background: var(--dark-white);
+  border-radius: 0.8rem;
+  color: #1C1C1C;
+}
+.adminSidebar ul .feat-show.show{
+  display: block;
+}
+.headerSearchBarMiddleInput:focus {
+  outline: none;
+  border: 1px solid var(--dark-white);
+}
+.navBarRightPanel {
+    position: absolute;
+    right: 2rem;
+}
+
+.adminNavA1 ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.adminNavA1 {
+    padding-right: 3%;
+    display: contents;
+}
+
+.adminNavA1 ul li span {
+    padding: 0 2.3rem;
+    min-height: 7rem;
+    display: flex;
+    align-items: center;
+    /* width: 4rem; */
+}
+
+.adminNavA1 ul li {
+    cursor: pointer;
+}
+.adminNavA1 ul li span:last-child {
+    padding-right: 0;
+}
+
+
+
+#dropdownContent ul li {
+  width: 100%;
+  background-color: var(--white);
+  text-align: left;
+  color: var(--black);
+  padding: 0.5rem 0rem 0.5rem 1.2rem !important;
+  height: auto;
+  border-top: 0.1rem solid var(
+  --gray);
+  border-right: 0.1rem solid var(
+  --gray);
+  border-left: 0.1rem solid var(
+  --gray);
+  font-family:
+  "Montserrat", "Open Sans", "Source Sans Pro", "Segoe UI", sans-serif, Lato, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Ubuntu !important;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1.9rem;
+  letter-spacing: 0.06rem;
+}
+
+div#dropdownContent {
+  position: absolute;
+  top: 6rem;
+  width: 15rem;
+  /* left: 2rem; */
+  box-shadow: 0 0.4rem 0.9rem 0.1rem rgb(168 168 168 / 34%);
+  z-index: 9;
+}
+
+span.navbar-title.dropdownMain {
+  position: relative;
+}
+
+ul.filter-list-item {
+  display: block;
+  list-style-type: none;
+  padding: 0rem;
+  margin: 0rem;
+  width: 100%;
+}

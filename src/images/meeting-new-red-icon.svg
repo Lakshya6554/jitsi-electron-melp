@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Calendar Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Calendar-Copy-2" fill="#EE4136">
+            <path d="M3,21 L21,21 L21,7.5 L3,7.5 L3,21 Z M22.5,3 L19.5,3 L19.5,0 L15,0 L15,3 L9,3 L9,0 L4.5,0 L4.5,3 L1.5,3 C0.672,3 0,3.672 0,4.5 L0,22.5 C0,23.328 0.672,24 1.5,24 L22.5,24 C23.328,24 24,23.328 24,22.5 L24,4.5 C24,3.672 23.328,3 22.5,3 L22.5,3 Z" id="Fill-1"></path>
+            <polygon id="Fill-3" points="6 13.5 9 13.5 9 10.5 6 10.5"></polygon>
+            <polygon id="Fill-4" points="10.5 13.5 13.5 13.5 13.5 10.5 10.5 10.5"></polygon>
+            <polygon id="Fill-5" points="6 18 9 18 9 15 6 15"></polygon>
+            <polygon id="Fill-6" points="10.5 18 13.5 18 13.5 15 10.5 15"></polygon>
+            <polygon id="Fill-7" points="15 13.5 18 13.5 18 10.5 15 10.5"></polygon>
+            <polygon id="Fill-8" points="15 18 18 18 18 15 15 15"></polygon>
+        </g>
+    </g>
+</svg>

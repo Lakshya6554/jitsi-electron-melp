@@ -1,0 +1,63 @@
+<!--invitePopup-New-PopUp-Start-->
+<section class="invitePopup" id="multipleInvitePopup">
+    <div class="invitePopupbody">
+        <section class="invitePopupIneerSec">
+            <div class="invitePopupIneerSecLeft">
+                <div class="invitePopupIneerSecLeftSpace">
+                    <div class="inviteTitleLeft">
+                        {{LB15}}
+                    </div>
+                    <div class="inviteTitleLeftSubTitle">{{LB16}}</div>
+                </div>
+            </div>
+            <div class="invitePopupIneerSecRight">
+                <div class="invitePopupIneerSecImagePart">
+                    <img src="images/invite-coworker.svg" alt="" class="">
+                </div>
+            </div>
+        </section>
+        <section class="invitePopupBottom">
+            <span class="enterEmailInvitations">{{LB17}} :</span>
+            <div class="input-invite-section">
+                <!-- addinvite section  start-->
+                <!-- addinvite section end -->
+                <!-- search listing invite  section-->
+                <div class="inviteCoworkerEmail" id="inviteCoworkerEmail">
+                </div>
+            </div>
+            <div class="common-subtitle-invite margin-b-8px invitePopupBottomBody invitePopupBottomTitle" id="email-invite-title">
+                <div class="common-inputField-section">
+                    <div class="add-invite-member" id="inviteEmail"></div>
+                    <!-- repeat input fiel start here -->
+                    <div class="row margin-common-row">
+                        <div class="col-md-12">
+                            
+                            <div class="inviteInputBar inviteEmailDispaly" id="invite-input">
+                                <input type="email" id="multipleEmailInvite" class="invitePopupBottominput text-left"
+                                    placeholder="{{PH06}}" autocomplete="off">
+                                <div class="invitePopupBottomPlusIcon" onclick="addMultipleEmailInvite()"
+                                    title="{{TT03}}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inviteCommonErrorField" style="display:none;" id="errorField">
+                        <span class="common-info-icons-section">
+                            <img src="images/icons/info-Icons.svg" class="common-info-icons">
+                        </span>
+                        <span class="common-error-field-label" id="errorMessage"></span>
+                    </div>
+                    <!-- repeat input fiel end here -->
+                </div>
+            </div>
+            <section class=" invitePopup-margin-common-row">
+                <div class="invitePopupsaveUpdateCancel">
+                    <button class="cancelButtonGlobal" onclick="hideInvitePopup()" id="cancel-invite-popup"> {{BT07}}</button>
+                    <button id="multipleInviteBtn" class="submitButtonGlobal inActiveBtn" disabled
+                        onclick="inviteUserEmail(true)">
+                        {{BT08}}</button>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+<!--invitePopup-New-PopUp-End-->

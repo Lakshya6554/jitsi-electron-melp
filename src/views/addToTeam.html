@@ -1,0 +1,37 @@
+<!-- add team popup start-->
+<section class="teamPopup-common" id="addToTeamPopup">
+    <div class="common-popup-model fleMediaPreview">
+        <div class="filePreviewSettingHeader">
+            <div class="accountSettingTittle">
+                <h2>{{TT06}}</h2>
+            </div>
+        </div>
+        <div class="myInfoContainer msg-read-show-data">
+            <div class="addToTeamEmpty hideCls" id="addToTeamEmpty">
+                <p class="textempty-h"></p>
+            </div>
+        </div>
+        <div class="fleMediaPreviewContainer">
+            <div class="tabbable-panel">
+                <div class="tabbable-line">
+                    <div class="tab-content">
+                        <div class="tab-pane active forwardDataSection" id="addToTeamList">
+                            <div class="myInfoContainer msg-read-show-data">
+                                <ul></ul>
+                                <div class="addToTeamEmpty hideCls" id="addToTeamEmpty">
+                                    <p class="textempty-h"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="saveUpdateCancel">
+                        <button class="cancelButtonGlobal" onclick="closePopup('addToTeamPopup')"> {{BT07}}</button>
+                        <button id="addTeamBtn" class="submitButtonGlobal inActiveBtn" disabled
+                            onclick="saveAddToTeam()">{{BT14}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- add team popup end-->

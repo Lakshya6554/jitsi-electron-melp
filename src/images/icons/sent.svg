@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Singletick</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.170800, 0.000000)">
+            <path d="M14.4,8 C14.4,11.52 11.52,14.4 8,14.4 C4.48,14.4 1.6,11.52 1.6,8 C1.6,4.48 4.48,1.6 8,1.6 C8.64,1.6 9.2,1.68 9.76,1.84 L11.04,0.56 C10.08,0.24 9.04,0 8,0 C3.6,0 0,3.6 0,8 C0,12.4 3.6,16 8,16 C12.4,16 16,12.4 16,8 L14.4,8 Z" id="Fill-15" fill="#9C9696"></path>
+            <polygon id="Fill-17" fill="#9C9696" points="13.7142 3.1947 7.8102 9.3987 5.4142 7.0087 4.6062 7.8177 7.8092 11.0217 14.6872 4.1447 13.8732 3.3367"></polygon>
+            <polygon id="Stroke-19" stroke="#9C9696" stroke-width="0.7" points="13.7142 3.1947 7.8102 9.3987 5.4142 7.0087 4.6062 7.8177 7.8092 11.0217 14.6872 4.1447 13.8732 3.3367"></polygon>
+        </g>
+    </g>
+</svg>

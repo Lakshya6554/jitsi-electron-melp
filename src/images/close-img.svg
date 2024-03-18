@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.623" height="26.623">
+    <defs>
+        <filter id="a" x="0" y="0" width="26.623" height="26.623" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur stdDeviation=".5" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g style="filter:url(#a)">
+        <path data-name="Cancel" d="M23.623 2.379 21.244 0l-9.433 9.432L2.379 0 0 2.379l9.432 9.432L0 21.244l2.379 2.379 9.432-9.432 9.432 9.432 2.379-2.379-9.432-9.432z" transform="translate(1.5 .5)" style="fill:#989292"/>
+    </g>
+</svg>

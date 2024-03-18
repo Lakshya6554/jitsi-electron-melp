@@ -1,0 +1,1280 @@
+.darkmode,
+.darkmode section#dashboard-template {
+    background-color: var(--light-black-v2);
+}
+.darkmode .sideBarHeadrer{
+    background-color: var(--popup);
+    border-right: 0.1rem solid var(--light-brown);
+    border-bottom: 0.1rem solid var(--light-brown);
+}
+.darkmode .navbarHeader{
+    background-color: var(--popup);
+}
+.darkmode .navbarHeader,
+.darkmode .globaListMsg li:before{
+    border-bottom: 0.1rem solid var(--light-brown);
+}
+.darkmode .headerSearchBarMiddleInput, 
+.darkmode .fileMangerRight input[type=text]:active, 
+.darkmode input[type=text]:focus,
+.darkmode .common-input-label-meeting,
+.darkmode .common-bg-dropdown,
+.darkmode .toggle-availbe-list,
+.darkmode .meeting-popup-section #summernote,
+.darkmode .editor-main-section .note-toolbar,
+.darkmode .uplaodfileMonthView,
+.darkmode #timeZoneInput,
+.darkmode .calendar-in-meeting-schedule,
+.darkmode .main-upload-body-section,
+.darkmode .calenderMsgBar{
+    background-color: var(--light-slate-brown-v2) !important;
+    color: var(--white) !important;
+}
+.darkmode input.headerSearchBarMiddleInput::placeholder,
+.darkmode .uploaded-label-name,
+.darkmode .uploaded-label-size,
+.darkmode .forwardedMessage,
+.darkmode .workingHoursColumLeft h2,
+.darkmode .workingHoursColumMiddleRow h3,
+.darkmode .timeSlot1,
+.darkmode .subCalenderTabs li span.active,
+.darkmode .subCalenderTabs li span{
+    color: var(--white);
+}
+.darkmode .navbar-title{
+    color: var(--white);
+}
+.darkmode #sidebar-container{
+    background-color: var(--popup);
+}
+.darkmode .list-group-item:hover,
+.darkmode .panel-body,
+.darkmode .divider, 
+.darkmode .common-dropdown-account-ul li:hover, .darkmode ul.userTopDropDown li:hover,
+.darkmode .open .accordionItemContent{
+    background-color: var(--light-slate-brown-v2);
+}
+.darkmode .list-group-item.active:hover{
+    background-color: var(--red);
+}
+.darkmode .list-group-item ul{
+    background-color: var(--light-slate-brown-v2);
+}
+.darkmode .list-group-item ul li,
+.darkmode .collapse-team-title,
+.darkmode .team-message-name,
+.darkmode .team-message-body,
+.darkmode .selected-member-title,
+.darkmode .common-modal-header,
+.darkmode .all-contact-title,
+.darkmode .trancate-text-pinned,
+.darkmode .cloudTest{
+    color: var(--white);
+}
+
+.darkmode .middle-section,
+.darkmode .common-acc-ul-section,
+.darkmode .selected-member-list,
+.darkmode .selectedMemberCommonBg,
+.darkmode .meetingpopup-attending,
+.darkmode .availble-inner-part,
+.darkmode .addtoCallBody,
+.darkmode .columCallScreen.inviteCallBtn{
+    background-color: var(--light-black-v2);
+}
+.darkmode .common-list-header, 
+.darkmode .common-postion, 
+.darkmode .chat-header-bg, 
+.darkmode .common-acc-ul-section li,
+.darkmode .team-innerscroll ul li,
+.darkmode .accountSettingDropDownNew ul li,
+.darkmode .darkmode .countryInput,
+.darkmode .ChatFormHeader.msgChatHeader{
+    border-bottom: 0.1rem solid var(--light-brown) !important;
+}
+.darkmode .middle-section{
+    border-right: 0.1rem solid var(--light-brown);
+}
+.darkmode .common-contact-section,
+.darkmode .btn-outline-danger:hover{
+    background-color: unset;
+}
+.darkmode .date-common,
+.darkmode .countdown-timer,
+.darkmode .voiceRecorderTest{
+    color: var(--white);
+}
+.darkmode .chat-inner-section,
+.darkmode #chatDiv .right-sidebar,
+.darkmode .chat-header-bg,
+.darkmode .ChatFormHeader.msgChatHeader{
+    background-color: var(--light-slate-black-v2);
+}
+.darkmode .emojionearea, .emojionearea.form-control,
+.darkmode #chatPanel .input-chat-border{
+    background-color: var(--light-slate-brown-v2);
+}
+
+.darkmode .grey-border,
+.darkmode .countryNumber,
+.darkmode .countryDropdownList,
+.darkmode .countryInput,
+.darkmode .accountSettingDropDownNew ul,
+.darkmode .common-dropdown-account-ul,
+.darkmode .otp-inputs,
+.darkmode ul.userTopDropDown,
+.darkmode .group-input,
+.darkmode .group-area,
+.darkmode .upload-name,
+.darkmode .teamEditDropDown,
+.darkmode .temaSearchOption,
+.darkmode .msg-read-show-data ul li,
+.darkmode .qucik-main-section,
+.darkmode .fleMediaPreviewContainer .tabbable-line>.nav-tabs,
+.darkmode .fleMediaPreviewContainer #chatfwdbox:focus,
+.darkmode .deleteRecurrenceBody,
+.darkmode .notifyInput,
+.darkmode .commonNotifyDropdown,
+.darkmode .notify-rsvp-dropdown-btn,
+.darkmode .common-input-label-meeting,
+.darkmode .common-bg-dropdown,
+.darkmode .toggle-availbe-list,
+.darkmode #summernote,
+.darkmode .invitees-main-section,
+.darkmode .availble-inner-part,
+.darkmode .uplaodfileMonthView,
+.darkmode .note-editor,
+.darkmode #timeZoneInput,
+.darkmode .dropdown-content,
+.darkmode .calendar-in-meeting-schedule,
+.darkmode .main-upload-body-section,
+.darkmode .invitePopupbody,
+.darkmode #multipleEmailInvite,
+.darkmode .fileSec,
+.darkmode #searchUserInvieId .search-class,
+.darkmode .add-invite-main .invite-short-name,
+.darkmode .emailChatBody .form-control,
+.darkmode .email-description,
+.darkmode .notificationPanel .common-postion{
+    border: unset !important;
+}
+.darkmode .emojionearea .emojionearea-editor{
+    color: var(--white);
+}
+.darkmode .emojionearea .emojionearea-editor::placeholder{
+    color: var(--dropdown);
+}
+.darkmode .reciever-user-details, .darkmode .sender-user-details{
+    background-color: var(--popup);
+}
+.darkmode .sender-name, .darkmode .sender-chat-time, 
+.darkmode .reciever-chat-time{
+    color: var(--white);
+}
+.darkmode .sender-chat-msg, .darkmode .msgText,.darkmode .transText{
+    color: var(--dark-white);
+}
+.darkmode .unreadbold,
+.darkmode .table-condensed thead th.dow,
+.darkmode .emailChatHeader h2,
+.darkmode .user-designation,
+.darkmode .notificationPanel span.user-team{
+    color: var(--white) !important;
+}
+.darkmode .msg-chat-divider{
+    background-color: var(--light-slate-black-v2);
+}
+.darkmode .commonHover:hover .li-hover-sender{
+    background-color: var(--popup);
+}
+.darkmode .chatTime{
+    background: var(--dropdown);
+    color: var(--white);
+}
+.darkmode .msg-chat-divider:before{
+    border-top: 0.1rem solid var(--dropdown);
+}
+.darkmode .textempty-p, .darkmode .textempty-h,
+.darkmode .gifPopup h2,
+.darkmode .chatSettingPopup h2,
+.darkmode .chatSettingPopup p,
+.darkmode .chatSettingPopup ul li,
+.darkmode .translators-subtitle,
+.darkmode .translation-title,
+.darkmode .language-title .common-color-black,
+.darkmode .language-title .subtitle-label,
+.darkmode .common-dropdown-ul li .dropdown-list-items,
+.darkmode .language-ul li .list-items,
+.darkmode .meetingPanelTitle p,
+.darkmode .bottom-section-chat p,
+.darkmode .bottom-section-chat p span,
+.darkmode .descrip h2,
+.darkmode .descrip p,
+.darkmode .attendingColum .attending-title,
+.darkmode .meetingListEmpty .first,
+.darkmode .protfolioIntro h2,
+.darkmode .protfolioIntro p{
+    color: var(--white);
+}
+.darkmode .chatSettingPopup,
+.darkmode .tooltip-language .tooltipInnertext,
+.darkmode .chatSort ul.filter-list-item li,
+.darkmode .changeMyViewMain li,
+.darkmode .notify-rsvp-dropdown-btn .dropdown,
+.darkmode .notify-rsvp-dropdown-btn .dropdown li,
+.darkmode .common-dropdown-ul,
+.darkmode .language-ul{
+    background: var(--light-slate-brown-v2);
+    color: var(--white);
+}
+.darkmode #loadGifArea,
+.darkmode #loadGifArea input, .darkmode #loadGifArea input::placeholder,
+.darkmode .emojionearea .emojionearea-picker, .darkmode .emojionearea .emojionearea-picker .emojionearea-scroll-area .emojionearea-category-title,
+.darkmode .emojionearea .emojionearea-picker .emojionearea-search>input::placeholder,
+.darkmode .common-sort-dropdown .filter-list-item li:hover,
+.darkmode .changeMyViewMain li:hover,
+.darkmode .search-invite-section,
+.darkmode .search-invite-section::placeholder,
+.darkmode .input-search-invite input,
+.darkmode .input-search-invite input::placeholder,
+.darkmode .otp-inputs,
+.darkmode .group-input,
+.darkmode .add-newteam-input,
+.darkmode .upload-name,
+.darkmode .group-icons-show,
+.darkmode .quick-msg,
+.darkmode .fleMediaPreviewContainer #chatfwdbox,
+.darkmode .team-edit-label-name,
+.darkmode .team-edit-label-dscription,
+.darkmode .headersearchbar,
+.darkmode .notifyInput,
+.darkmode .commonNotifyDropdown,
+.darkmode .notify-rsvp-dropdown-btn,
+.darkmode .notify-rsvp-dropdown-btn .dropdown li,
+.darkmode .common-dropdown-ul li,
+.darkmode .language-ul li,
+.darkmode #multipleEmailInvite,
+.darkmode #searchUserInvieId .search-class,
+.darkmode .note-editor .note-editable,
+.darkmode .note-editor .note-toolbar,
+.darkmode .emailChatBody .form-control,
+.darkmode textarea::placeholder,
+.darkmode .resportMsgBoxMsg,
+.darkmode .resportMsgBox .accountDescCount,
+.darkmode #uploadOption ul li{
+    background: var(--light-slate-brown-v2);
+    color: var(--white);
+}
+.darkmode .fileSearchIcon.navActive, 
+.darkmode .fileSearchIcon.navActive:hover{
+    background: url(../../images/closeIcon.svg) no-repeat center center var(--light-slate-brown-v2) !important;
+}
+.darkmode .fileSearchIcon:hover {
+    background: url(../../images/icons/searchicons-active.svg) no-repeat center center var(--light-slate-brown-v2) !important;
+    background-size: 30% !important;
+}
+.darkmode .fileForward:hover {
+    background: url(../../images/icon_forwords-hover.svg) no-repeat center center var(--light-slate-brown-v2) !important;
+    background-size: 37% 100% !important;
+}
+.darkmode .group-area,
+.darkmode .email-description,
+.darkmode .note-editor .btn{
+    background-color: var(--light-slate-brown-v2) !important;
+    color: var(--white) !important;
+    border-color :var(--light-slate-gray-secondary) !important;
+}
+.darkmode .note-editor .btn{
+    background-image: unset !important;
+}
+.darkmode .search-invite-section,
+.darkmode #recentMeetingDetails .meetingpopup-accept,
+.darkmode #recentMeetingDetails .acceptMeeting,
+.darkmode #recentMeetingDetails .declineMmeeting,
+.darkmode #recentMeetingDetails .tentativeMeeting,
+.darkmode #recentMeetingDetails .meetingpopup-decline, 
+.darkmode #recentMeetingDetails .meetingpopup-tentative,
+.darkmode #recentMeetingDetails .cancelButtonGlobal{
+    border:  0.1rem solid var(--light-brown) !important;
+}
+.darkmode .btn-search-invite{
+    border-left:  0.1rem solid var(--light-brown);
+}
+.darkmode .selectedCommonIcons{
+    border-right:  0.1rem solid var(--light-brown);
+}
+.darkmode .selectedCalls{
+    border-top:  0.1rem solid var(--light-brown);
+    border-bottom:  0.1rem solid var(--light-brown);
+}
+.darkmode #loadGifArea, .darkmode .chatSettingPopup,
+.darkmode .accountSettingInfo input.accountSettingInformInput,
+.darkmode .accountSettitMsg,
+.darkmode .acc-common-bg-dropdown,
+.darkmode .selecItems,
+.darkmode .uploadfile-main-area,
+.darkmode #timezone-toogleacc,
+.darkmode .passwordInput,
+.darkmode .external-main-section,
+.darkmode .quick-msg-section,
+.darkmode .fleMediaPreviewContainer #chatfwdbox,
+.darkmode .team-edit-label-name,
+.darkmode .team-edit-label-dscription,
+.darkmode .common-dropdown-ul,
+.darkmode .language-ul,
+.darkmode #chatPanel .input-chat-border,
+.darkmode .profile:hover .uploadProfile,
+.darkmode .videoSec,
+.darkmode .search-listing-invite{
+    border: unset;
+}
+
+.darkmode .emojionearea .emojionearea-picker .emojionearea-filters,
+.darkmode .attendingColum{
+    background: var(--light-black-v2);
+}
+.darkmode .emojionearea .emojionearea-picker .emojionearea-filters .emojionearea-filter.active,
+.darkmode .languageTranslator,
+.darkmode .userGroupList ul li:hover{
+    background: var(--light-slate-brown-v2);
+}
+.darkmode .navbar-nav li:hover, 
+.darkmode .navbar-nav li.navActive,
+.darkmode .notify-rsvp-dropdown-btn .dropdown li:hover,
+.darkmode .common-dropdown-ul li:hover,
+.darkmode .language-ul li:hover,
+.darkmode .currentOpenRecentMeeting,
+.darkmode .meetingPanelright .meetingSearch:hover,
+.darkmode .meetingPanelright .recentMeetingDetailsOption:hover,
+.darkmode .meetingPanelRightSide ul li:hover{
+    background-color: var(--popup) !important;
+}
+.darkmode .tanslator-on-of{
+    background-color: var(--light-slate-brown-v2);
+    border: unset;
+}
+.darkmode .language-main-section ul li, 
+.darkmode .language-title,
+.darkmode .notification-label-icon,
+.darkmode .notificationPanel .common-sidebar-padd,
+.darkmode .activities li,
+.darkmode .inner-file-main-section ul li,
+.darkmode .file-main-header-fixed,
+.darkmode .teamDropDown ul li:nth-child(2){
+    border-bottom: 0.1rem solid var(--light-brown) !important;
+}
+.darkmode .common-sort-dropdown,
+.darkmode .common-dropdown-account-ul,
+.darkmode .accountSettingNewPass ul,
+.darkmode .add-invitees-popup-main,
+.darkmode .teamEditDropDown,
+.darkmode .calendarModalPop,
+.darkmode .notifyModalBody,
+.darkmode .calendar-in-meeting-schedule,
+.darkmode #uploadOption ul{
+    box-shadow: unset;
+}
+.darkmode .selected-member-list,
+.darkmode .msg-notification-cell,
+.darkmode .tagTopicPepole{
+    box-shadow: unset;
+    border: unset;
+}
+.darkmode .chatSort ul.filter-list-item li,
+.darkmode .common-sort-dropdown .filter-list-item li,
+.darkmode .upload-options-cont li{
+    border-top: 0.1rem solid var(--border-v2) !important;
+    border-right: 0.1rem solid var(--border-v2) !important;
+    border-left: 0.1rem solid var(--border-v2) !important;
+    border-bottom: 0.1rem solid var(--border-v2) !important;
+}
+
+.darkmode .right-sidebar,
+.darkmode .meetingPanelBody,
+.darkmode .messageNotification{
+    background-color: var(--light-black-v2);
+    border-left: 0.1rem solid var(--light-brown);
+    box-shadow: unset
+}
+.darkmode .notifications-chat-label,
+.darkmode .notificationTime,
+.darkmode .common-label-emptystate,
+.darkmode .fullPageloader span,
+.darkmode .activities .active-teamName,
+.darkmode .activeConferencepopupBody .common-active-style,
+.darkmode .activeConferencepopupBody, 
+.darkmode .activeConferencepopupBody *:not(button):not(.ps-scrollbar-y):not(.cr-overlay):not(.cr-image):not(cr-boundary):not(.cr-viewport):not(.switch):not(.slider):not(.tabprofsel):not(i),
+.darkmode .addcolor-message,
+.darkmode .file-commmon-font,
+.darkmode .file-common-style,
+.darkmode .start-msg,
+.darkmode .teamDropDown ul li,
+.darkmode .exitBtn,
+.darkmode .newevent-calendar-popup-date, 
+.darkmode .newevent-calendar-popup-days,
+.darkmode input::placeholder,
+.darkmode .headertitle,
+.darkmode .notify-meeting-name,
+.darkmode .notify-meeting-date,
+.darkmode .notify-meeting-time,
+.darkmode .notify-organizer,
+.darkmode .notify-organizer-name,
+.darkmode .trancate-text-pinned,
+.darkmode .limitcharacter,
+.darkmode .blockUserLabel,
+.darkmode .reportPerson label,
+.darkmode .empty-tab h1,
+.darkmode .empty-tab p,
+.darkmode .common-username-team,
+.darkmode .translator-title,
+.darkmode .common-color-black{
+    color: var(--white) !important;
+}
+.darkmode .activities li:hover,
+.darkmode .common-search-box{
+    background: var(--light-slate-brown-v2);
+}
+.darkmode .filter-active, 
+.darkmode .filter-section:hover,
+.darkmode .search-section:hover,
+.darkmode .fr:hover,
+.darkmode .search-input,
+.darkmode .sort-section:hover,
+.darkmode .sortActive,
+.darkmode .search-connection,
+.darkmode #connectionSearchRight.navActive,
+.darkmode #connectionSearchRight:hover,
+.darkmode .accountSettingInfo input.accountSettingInformInput,
+.darkmode .accountSettitMsg,
+.darkmode span.countryNumerFlag,
+.darkmode .countryDropdownList,
+.darkmode .countryInput,
+.darkmode .accountSettingDropDownNew ul,
+.darkmode .acc-common-bg-dropdown,
+.darkmode .selecItems,
+.darkmode .uploadfile-main-area,
+.darkmode .uloadedFilesView,
+.darkmode .uloadedFilesViewIneer,
+.darkmode #timezone-toogleacc,
+.darkmode .common-dropdown-account-ul li,
+.darkmode .newEyeIcon,
+.darkmode ul.userTopDropDown,
+.darkmode .add-invitees-popup-main,
+.darkmode .teamEditDropDown,
+.darkmode .temaSearchOption,
+.darkmode .temaSearchOption:focus,
+.darkmode .notifyInput,
+.darkmode .meetingEmtyNotification,
+.darkmode .countryNumber{
+    background-color: var(--light-slate-brown-v2) !important;
+    color:  var(--white);
+}
+.darkmode .file-tab-start,
+.darkmode ul.eventMoreOptionDropDown{
+    background-color: var(--light-slate-black-v2);
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .dropdown-menu,
+.darkmode .common-sort-dropdown .filter-list-item li,
+.darkmode #passwordHint,
+.darkmode .infoDropDown,
+.darkmode ul.eventMoreOptionDropDown{
+    background-color: var(--light-slate-brown-v2);
+    color: var(--white);
+}
+.darkmode .coworker-label,
+.darkmode .network-label{
+    background-color: unset !important;
+    color: var(--white) !important;
+}
+.darkmode .meeting-popup-section{
+    background-color: var(--light-black-v2) !important;
+}
+.darkmode .color-black,
+.darkmode .meetingPanelTitle h1, 
+.darkmode .meetingPanelHeading h1,
+.darkmode .accountDescIncCount,
+.darkmode .account-time-zone-text,
+.darkmode .common-dropdown-account-ul li .dropdown-list-items,
+.darkmode .infoDropDown h2,
+.darkmode .infoDropDown p{
+    color: var(--white) !important;
+}
+.darkmode .color-grey{
+    color:  var(--dark-white);
+}
+
+/* calendar */
+.darkmode .calendarTopStrip,
+.darkmode .meetingPanelLeftheader{
+    background-color: var(--light-black-v2);
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .calenderMidBar .leftViewDate,
+.darkmode .monthLeft .leftViewDate, 
+.darkmode #dateContainer,
+.darkmode .monthLeft span.popup-days-span,
+.darkmode .myMeetingLinkInside span,
+.darkmode .myMeetingContent h2,
+.darkmode .myMeetingContent span,
+.darkmode .meetingListStatus,
+.darkmode #monthviewAllMeetings .days-bg .days,
+.darkmode #monthviewAllMeetings .bg .days,
+.darkmode .popup-months .popup-days-span-months,
+.darkmode #yearviewAllMeetings .tp .base .week-row .week-day, 
+.darkmode #yearviewAllMeetings .tp .base2 .week-row .week-day,
+.darkmode #yearviewAllMeetings .tp .base .week-row .week-date, 
+.darkmode #yearviewAllMeetings .tp .base2 .week-row .week-date,
+.darkmode .filemangerTab li span,
+.darkmode .accountSettingNewTabs ul li,
+.darkmode .logOutBtn span,
+.darkmode .accountSettingNewPass span,
+.darkmode .succesfullyHeading,
+.darkmode .deleteConfirm p,
+.darkmode .deleteConfirm b,
+.darkmode .create-team-title,
+.darkmode .topic-title,
+.darkmode .common-username-admin-team,
+.darkmode .common-color.newteam-padding-none, 
+.darkmode .createnew-team-padding, .common-color,
+.darkmode .teamEditDropDownItem li,
+.darkmode .accountSettingTittle h2,
+.darkmode .popover-title,
+.darkmode .popover-content,
+.darkmode .create-quick-title,
+.darkmode .protfolioPopHeaderDetail h1,
+.darkmode .protfolioPopHeaderTop ul li,
+.darkmode .protfolioPopTabsInner ul li,
+.darkmode .emailStrip span,
+.darkmode .protfolioPopWorkContent,
+.darkmode .resumeContent .resumeIcons,
+.darkmode .tabcontentInfo h2,
+.darkmode .tabcontentInfo p,
+.darkmode .resume-title,
+.darkmode span.protfolioPopWorkIcon,
+.darkmode .team-member,
+.darkmode .team-sub-name,
+.darkmode .team-sub-title,
+.darkmode .seeAllPepoleBtn,
+.darkmode .search-text-here,
+.darkmode ul.globalHeaderSearcTabbing li,
+.darkmode .meeting-common-label,
+.darkmode .time-section,
+.darkmode .dropdown-inner-label,
+.darkmode .meeting-header-label,
+.darkmode .inviteTitleLeft,
+.darkmode .inviteTitleLeftSubTitle,
+.darkmode .enterEmailInvitations,
+.darkmode #yearviewAllMeetings .month-name,
+.darkmode .eventTypeHeading h2{
+    color: var(--white);
+}
+.darkmode span.meetingLeftCopyLinkOuterclipboard{
+    color: var(--button);
+}
+.darkmode .todayBtn,
+.darkmode .Check-Availability-Class,
+.darkmode .viewDropdown,
+.darkmode .monthLeft{
+    background-color: var(--light-black-v2);
+    color: var(--white);
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .monthLeft .monthView-leftContainer,
+.darkmode span.meetingLeftCopyLinkOuter,
+.darkmode .monthLeft .newevent-calendar-popup-days,
+.darkmode #yearviewAllMeetings .tp,
+.darkmode #dayviewAllMeetings .tp .row-body,
+.darkmode #dayviewAllMeetings .tp .row-body .day-time-main, 
+.darkmode #weekviewAllMeetings .body-bg,
+.darkmode #scheduleviewAllMeetings .body-bg,
+.darkmode .globalMessageHeader,
+.darkmode .notificationReadMsg,
+.darkmode .notificationUnreadMsg{
+    background-color: var(--light-black-v2);
+}
+.darkmode span.meetingLeftCopyLinkOuter,
+.darkmode .weekviewAllMeetings .bg,
+.darkmode .calenderMsgBar,
+.darkmode .eventTypeColum,
+.darkmode .infoDropDown,
+.darkmode ul.eventMoreOptionDropDown{
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .myMeetingsLink,
+.darkmode #scheduleviewAllMeetings .schedule-day-body{
+    border-top: 0.1rem solid var(--light-brown);
+}
+.darkmode .upArrow:hover, 
+.darkmode .downArrow:hover, 
+.darkmode .popup-date:hover,
+.darkmode .teamEditDropDownItem li:hover{
+    background-color: var(--popup);
+}
+.darkmode .day-list.prevbase{
+    background-color: var(--light-black-v2);
+}
+.darkmode .day-list,
+.darkmode #uploadOption ul li:hover,
+.darkmode .chatSort ul.filter-list-item li:hover,
+.darkmode .evebtBg{
+    background-color: var(--light-slate-black-v2);
+}
+.darkmode #uploadOption ul li{
+    border-top: 0.1rem solid var(--light-brown);
+    border-right: 0.1rem solid var(--light-brown);
+    border-left: 0.1rem solid var(--light-brown);
+}
+.darkmode #uploadOption ul li:nth-child(3){
+    border-bottom: 0.1rem solid var(--light-brown);
+}
+.darkmode #monthviewAllMeetings .bg .base, 
+.darkmode #monthviewAllMeetings .bg .base2{
+    border-bottom: 0.1rem solid var(--light-brown);
+    border-right: 0.1rem solid var(--light-brown);
+}
+.darkmode #monthviewAllMeetings .bg,
+.darkmode .weekviewAllMeetings .bg,
+.darkmode #scheduleviewAllMeetings .bg{
+    background-color: var(--popup);
+    border-top: 0.1rem solid var(--light-brown);
+    border-right: 0.1rem solid var(--light-brown);
+}
+.darkmode .darkmode .month-header,
+.darkmode .weekviewAllMeetings .bg .base,
+.darkmode #scheduleviewAllMeetings .body-bg .left{
+    border-right: 0.1rem solid var(--light-brown);
+}
+.darkmode #monthviewAllMeetings .bg .base:nth-child(7n+1),
+.darkmode .week-day-slot-bottom,
+.darkmode .week-day-slot-top,
+.darkmode #select-member-list{
+    border-left: 0.1rem solid var(--light-brown);
+}
+.darkmode .event-listing-span{
+    background-color: var(--light-slate-brown-v2);
+    color: var(--white);
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode #dayviewAllMeetings .tp .row-body .day-time-main .meeting-day-box-main-red{
+    background-color: var(--light-slate-brown-v2);
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode #monthviewAllMeetings .days-bg .base .days.oval, 
+.darkmode #monthviewAllMeetings .days-bg .base2 .days.oval, 
+.darkmode #leftMonthView .oval{
+    background-color: var(--white);
+}
+.darkmode .changeMyViewMain li,
+.darkmode .dont-touch{
+    border-bottom: 0.1rem solid var(--light-brown);
+}
+.darkmode .calenderLeftDropDown{
+    background-color: var(--popup);
+    border: 0.1rem solid var(--light-slate-brown-v2);
+}
+.darkmode .headerYearView:hover,
+.darkmode .popup-days-span-months:hover,
+.darkmode .weekView .leftViewDate:hover,
+.darkmode .invitePopupIneerSec{
+    background-color: var(--light-slate-brown-v2);
+}
+.darkmode .popup-months .popup-days-span-months{
+    border: 0.1rem solid var(--light-slate-brown-v2);
+}
+.darkmode span.popup-days-span-months.active{
+    background: var(--red);
+    border: 0.1rem solid var(--red);
+}
+.darkmode #yearviewAllMeetings .base, 
+.darkmode #yearviewAllMeetings .base2{
+    background-color: var(--light-black-v2);
+    border-right: 0.1rem solid var(--light-brown);
+    border-top: 0.1rem solid var(--light-brown);
+}
+.darkmode #yearviewAllMeetings .tp,
+.darkmode #dayviewAllMeetings .tp .row-body .day-time-main, 
+.darkmode #weekviewAllMeetings .body-bg,
+.darkmode #dayviewAllMeetings .tp .row-header{
+    border: 0.1rem solid var(--light-slate-brown-v2);
+}
+.darkmode #dayviewAllMeetings .tp .row-header{
+    background-color: var(--popup);
+}
+.darkmode .MymeetingBg{
+    background: var(--red);
+}
+.darkmode #dayviewAllMeetings .tp .row-header .header-date .header-date-span,
+.darkmode .day-time-text,
+.darkmode #dayviewAllMeetings .meeting-time, 
+.darkmode #dayviewAllMeetings .meeting-time, 
+.darkmode #dayviewAllMeetings .meeting-time, 
+.darkmode #dayviewAllMeetings .meeting-time,
+.darkmode #dayviewAllMeetings .meeting-name, 
+.darkmode #dayviewAllMeetings .meeting-name, 
+.darkmode #dayviewAllMeetings .meeting-name, 
+.darkmode #dayviewAllMeetings .meeting-name,
+.darkmode .week-time-text,
+.darkmode .weekviewAllMeetings .bg .days,
+.darkmode #scheduleviewAllMeetings .sc-day,
+.darkmode #scheduleviewAllMeetings .left-time, 
+.darkmode #scheduleviewAllMeetings .left-duration,
+.darkmode #scheduleviewAllMeetings .meeting-name,
+.darkmode #scheduleviewAllMeetings .schedule-date, 
+.darkmode #scheduleviewAllMeetings .schedule-duration,
+.darkmode .meeeting-organiser-name,
+.darkmode .are-organiser,
+.darkmode #scheduleviewAllMeetings .schedule-attending,
+.darkmode .heading-calendar,
+.darkmode .cloudEmail,
+.darkmode #invite-contact .tabbable-line>.nav-tabs>li span.active,
+.darkmode .tabbable-line>.nav-tabs>li>span,
+.darkmode .myImortColumHeading,
+.darkmode .google-invite-texts,
+.darkmode .invite-social,
+.darkmode #uploadTextData,
+.darkmode .fullname-contact-suggestion,
+.darkmode .email-contact-suggestion,
+.darkmode .phone-contact-suggestion,
+.darkmode .profession-heading-text,
+.darkmode .single-skills-span,
+.darkmode .single-service-span,
+.darkmode .connection-right-header,
+.darkmode .hoveremail,
+.darkmode .hoverdate,
+.darkmode .hoversize,
+.darkmode .welcome-name,
+.darkmode .connect-calendar-section h1,
+.darkmode .connect-calendar-section h2,
+.darkmode .calendar-link,
+.darkmode .header-content,
+.darkmode .accountSettingNewRight ul li,
+.darkmode .accountSettingInfo span,
+.darkmode .accountSettingInfo input.accountSettingInformInput,
+.darkmode .accountSettitMsg,
+.darkmode .accountsettingslabels,
+.darkmode .accountSettingTopTittle h2,
+.darkmode .accountSettingTopTittle p,
+.darkmode #deleteVerifyPopup .headings, 
+.darkmode #verificationCodePopup .headings,
+.darkmode #deleteVerifyPopup .verif-label, 
+.darkmode #verificationCodePopup .verif-label,
+.darkmode #deleteVerifyPopup .verif-sublabel, 
+.darkmode #verificationCodePopup .verif-sublabel,
+.darkmode .logOut,
+.darkmode .cityname, 
+.darkmode .statename, 
+.darkmode .csortname,
+.darkmode .filePreviewTittle h2,
+.darkmode .meetingpopup-modal-content .meetingpopup-heading .meetingpopup-title,
+.darkmode .meetingpopup-modal-content .meetingpopup-day .meetingpopup-date,
+.darkmode .meetingpopup-user-name,
+.darkmode .meetingpopup-organiser .meetingpopup-invited,
+.darkmode .countAttending,
+.darkmode .total-participants-style,
+.darkmode .meetingpopup-user .meetingpopup-single-user .meetingpopup-user-detail .meetingpopup-user-position,
+.darkmode .meetingpopup-description .meetingpopup-description-heading .meetingpopup-desc,
+.darkmode .meetingpopup-description-details,
+.darkmode .meetingpopup-description-heading,
+.darkmode .meetingpopup-notification-content,
+.darkmode .meetingpopup-attending-title,
+.darkmode .deleteRecurrenceTitle,
+.darkmode .instance,
+.darkmode .notifyTitle,
+.darkmode .notify-rsvp-dropdown-btn .dropdown li:first-child,
+.darkmode .notify-rsvp-dropdown-btn .dropdown li:last-child,
+.darkmode .upoladFileLabel,
+.darkmode .priview-title,
+.darkmode .note-subtitle,
+.darkmode .belnotification-title,
+.darkmode .belnotification-subtitle,
+.darkmode .postChatHeader h2,
+.darkmode .tagpeople-name,
+.darkmode .tagpeople-designation,
+.darkmode .meetingAlertsHeader h2,
+.darkmode .meetingEmtyNotification h2,
+.darkmode .meetingEmtyNotification p,
+.darkmode .globalResultNoFound h3,
+.darkmode .globalResultNoFound p,
+.darkmode .documentHeader div,
+.darkmode .document-name span,
+.darkmode .calendar-name,
+.darkmode .calendar-size,
+.darkmode .calendar-date,
+.darkmode .linkName,
+.darkmode .inviteSelectAllTxt,
+.darkmode .teamprofilepopupheading{
+    color: var(--white) !important;
+}
+.darkmode .dot-line{
+    border-bottom: 1px dashed var(--light-slate-brown-v2);
+}
+.darkmode .minuteslsotfirstbottom{
+    border-bottom: 0.1rem solid var(--light-slate-brown-v2);
+}
+.darkmode #scheduleviewAllMeetings .shedule-day-main, 
+.darkmode #scheduleviewAllMeetings .common-acc-ul-section li{
+    border-top: 0.1rem solid var(--light-slate-brown-v2);
+    background-color: var(--popup);
+}
+.darkmode .monthRightIcon,
+.darkmode .monthLeftIcon{
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .addevent .dvconnected .calendar-box{
+    background-color: var(--popup);
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .addevent .calendar-box-parent .calendar-box-cont .img-icon, 
+.darkmode .addevent .dvconnected .calendar-box .own-acc{
+    border-right: 0.1rem solid var(--light-brown);
+}
+.darkmode .myNetworkFullColum,
+.darkmode .right-header,
+.darkmode .fileManagerTopStrip{
+    background-color: var(--light-black-v2);
+    border-bottom: 0.1rem solid var(--light-brown);
+}
+.darkmode .myImportTopStrip,
+.darkmode .invite-social,
+.darkmode .upload-div,
+.darkmode .suggestionDirectoryDiv ul .suggestion,
+.darkmode .profession-heading.skill-class{
+    background-color: var(--light-black-v2);
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .thumbnail .contentHover,
+.darkmode .grey-border,
+.darkmode .documentHeader,
+.darkmode .documentFiles{
+    background-color: var(--popup);
+}
+.darkmode .calendar-link-outer{
+    background-color: var(--light-slate-brown-v2);
+    border: unset;
+}
+.darkmode .header,
+.darkmode .accountSettingNewLeft{
+    background-color: var(--light-slate-brown-v2);
+}
+.darkmode .header {
+    border-bottom: 0.1rem solid var(--light-brown);
+}
+.darkmode .connect-calendar-section{
+    border-top: 0.1rem solid var(--light-brown);
+}
+
+.darkmode .dashboard1,
+.darkmode .dashboard2,
+.darkmode .dashboard3,
+.darkmode .dashboard4{
+    display: none;
+}
+.dashboard1-dark,
+.dashboard2-dark,
+.dashboard3-dark,
+.dashboard4-dark{
+    display: none;
+}
+
+.darkmode .dashboard1-dark,
+.darkmode .dashboard2-dark,
+.darkmode .dashboard3-dark,
+.darkmode .dashboard4-dark{
+    display: block !important;
+}
+
+.darkmode .accountSettingNewBody,
+.darkmode #deleteVerifyPopup .external-main-section, 
+.darkmode .external-main-section,
+.darkmode .create-team-main-section,
+.darkmode .common-popup-model,
+.darkmode .popover,
+.darkmode .tabbable-line>.tab-content,
+.darkmode .msg-read-show-data ul li,
+.darkmode .qucik-main-section,
+.darkmode .protfolioPopBody,
+.darkmode .successfullySection,
+.darkmode .globalHeaderSearcTabbing,
+.darkmode .global-msg-list-section,
+.darkmode .meetingpopup-modal-content,
+.darkmode .meetingpopup-modal,
+.darkmode .deleteRecurrenceBody,
+.darkmode .notifyModalContent,
+.darkmode .invitees-main-section,
+.darkmode .invitePopupbody,
+.darkmode .fileSec,
+.darkmode .msg-notification-cell,
+.darkmode .notification-box-popup-body,
+.darkmode .postContainer,
+.darkmode .emailChat,
+.darkmode .tagTopicPepole,
+.darkmode .meetingAlertsModalPopupBody,
+.darkmode .globalResultNoFound,
+.darkmode .noInternetBody,
+.darkmode .notifcationBody,
+.darkmode .editProfile,
+.darkmode .uploadCsv,
+.darkmode .videoSec,
+.darkmode .globalTabDiv, 
+.darkmode .singleSection{
+    background: var(--popup) !important;
+}
+.darkmode .accountSettingDropDownNew ul li,
+.darkmode .accountSettingNewPass ul,
+.darkmode .quick-msg-section,
+.darkmode .notifyModalBody,
+.darkmode .notificationPanel li.list-section,
+.darkmode ul.eventMoreOptionDropDown li:hover{
+    background: unset;
+}
+.darkmode .divider,
+.darkmode .common-dropdown-account-ul li,
+.darkmode ul.userTopDropDown li,
+.darkmode .teamlist-item-section li,
+.darkmode .msg-read-show-data ul li,
+.darkmode .fleMediaPreviewContainer .tabbable-line>.nav-tabs,
+.darkmode .tagTopicPepole .tagpeople-main ul li{
+    border-bottom: 0.1rem solid var(--dropdown) !important;
+}
+.darkmode .border-details{
+    background-color: var(--dropdown);
+}
+.darkmode .logOutBtn{
+    border-top: 0.1rem solid var(--dropdown);
+}
+.darkmode .selecItems:focus{
+    outline: unset;
+}
+
+
+.darkmode .teamPopup-common,
+.darkmode .accountSettingNew,
+.darkmode .protfolioPop,
+.darkmode .serachOpacity,
+.darkmode .calendarModalPop,
+.darkmode .invitePopup{
+    background-color: rgb(106 106 106 / 80%);
+}
+.darkmode .popover.right>.arrow:after{
+    border-right-color:  var(--popup)
+}
+.darkmode .popover.bottom>.arrow:after {
+    border-bottom-color: var(--popup) !important;
+
+}
+.darkmode .popover.left>.arrow:after {
+    border-left-color: var(--popup) !important;
+}
+.darkmode .popover.top>.arrow:after {
+    border-top-color: var(--popup) !important;;
+}
+.darkmode .tabbable-line>.tab-content,
+.darkmode .meetingpopup-notifyme{
+    border-top: unset;
+}
+.darkmode .meetingpopup-accept, 
+.darkmode .meetingpopup-decline, 
+.darkmode .meetingpopup-tentative{
+    background: unset !important;
+    border: 0.1rem solid var(--white);
+    color: var(--dropdown) !important;
+}
+.darkmode .cancelButtonGlobal{
+    background: unset !important;
+    border: 0.1rem solid var(--button);
+    color: var(--button) !important;
+}
+.darkmode .Check-Availability{
+    color: var(--button) !important;
+}
+.darkmode .attendingActive,
+.darkmode .notificationContent h2,
+.darkmode .editProfileTittle h2,
+.darkmode .userName,
+.darkmode .uploaded-label-size-chat,
+.darkmode .uploaded-label-name-chat,
+.darkmode .messageNotification .user-team-label{
+    color: var(--white) !important;
+}
+.darkmode .darkmode ul.globalHeaderSearcTabbing li{
+    border: 0.1rem solid var(--white);
+}
+.darkmode  .notify-rsvp-dropdown-btn .dropdown:before{
+    border-top: 0.6rem solid var(--light-slate-brown-v2);
+    border-right: 0.6rem solid var(--light-slate-brown-v2);
+    border-bottom: 0.6rem solid transparent;
+    border-left: 0.6rem solid transparent;
+} 
+.darkmode .note-editor .note-toolbar,
+.darkmode .common-dropdown-ul li,
+.darkmode .language-ul li{
+    border-bottom: 0.1rem solid var(--light-brown);
+}
+.darkmode .calendar-in-meeting-schedule{
+    border-top: 0.1rem solid var(--light-brown);
+}
+.darkmode .meeting-popup-header{
+    border: 0.1rem solid var(--light-brown);
+}
+.darkmode .meeting-left-part{
+    border-bottom: 0.1rem solid var(--light-brown);
+    border-right: 0.1rem solid var(--light-brown);
+}
+.darkmode .meeting-popup-body-section,
+.darkmode .meeting-popup-header,
+.darkmode .upload-chat-section ul li{
+    background-color: var(--light-black-v2);
+}
+
+.darkmode .peopleYouMayKnowEmpty,
+.darkmode .new-empty-state-subtitle,
+.darkmode .files-header,
+.darkmode .files-chat-time,
+.darkmode .upload-icon-name,
+.darkmode .msgRelpyCellPhoto,
+.darkmode .replybox h5,
+.darkmode .replymsgnew,
+.darkmode .invite-full-name,
+.darkmode .emailChatBodyListingSerachEmail,
+.darkmode .notificationContent h2,
+.darkmode .blockUserHeadeing,
+.darkmode .reportOption,
+.darkmode .protectPrivacy,
+.darkmode .upload-options-cont li,
+.darkmode .countryDropdown .contry-code-num,
+.darkmode .verification-text,
+.darkmode .verificationBoxWrap .headings,
+.darkmode .verificationBoxWrap span.verif-sublabel,
+.darkmode .myInfoInput,
+.darkmode .teamOrGroupDescCount,
+.darkmode .new-empty-state-title{
+    color: var(--white) !important;
+}
+.darkmode .teamCaret:before{
+    background: url(../../images/icons/darkLeftArrow.svg);
+}
+.darkmode .accountSettingNewPass ul:before{
+    transform: rotate(90deg);
+    background: url(../../images/icons/darkLeftArrow.svg);
+}
+
+.darkmode .files,
+.darkmode .msgRelpyCellImg,
+.darkmode .replyboxnew,
+.darkmode .add-invite-main,
+.darkmode .invite-full-name,
+.darkmode .input-search-invite input{
+    background-color: var(--light-slate-brown-v2) !important;
+}
+.darkmode .emailWrap{
+    background: var(--light-slate-brown-v2);
+}
+.darkmode .chatSettingPopup{
+    outline: 0.1rem solid rgb(100 100 100 / 77%);
+}
+.darkmode .emailChatBodyListingSerach{
+    box-shadow: unset;
+    border: unset;
+    background-color: var(--dropdown);
+}
+.darkmode .blockUserPopup{
+    background-color: var(--popup);
+    border: unset;
+}
+.darkmode .uploadProfile{
+    background: var(--dropdown);
+}
+.darkmode .datepicker thead tr:first-child th:hover{
+    background: var(--border-v2);
+}
+.darkmode .highlight-msg-cell{
+    background-color: var(--border-v2) !important;
+}
+.darkmode .countryDropdown,
+.darkmode .upload-csv-ui,
+.darkmode .uploaded-item-setion{
+    background: var(--light-slate-brown-v2);
+    border: unset;
+}
+.darkmode .conuntryContact input.myInfoInput,
+.darkmode .conflictingpopup-booking-modal-content,
+.darkmode .conflictingpopup-modal-content,
+.darkmode .conflictingpopup-modal,
+.darkmode .conflictingpopup-booking-modal{
+    background-color: var(--popup);
+}
+.darkmode .conflictingpopup-booking-title,
+.darkmode .conflictingpopup-booking-title-text-span,
+.darkmode .conflictingpopup-booking-end-text-span,
+.darkmode .conflictingpopup-title,
+.darkmode .downloadPercentage,
+.darkmode .upload-section .upload-csv-ui .fileupload-new-parent,
+.darkmode .upload-hint-msg-style,
+.darkmode .upload-section .download-csv-example a,
+.darkmode .dragDrop,
+.darkmode .UploadOr,
+.darkmode .upload-section .upload-csv-ui .fileToUploadText,
+.darkmode .upload-section .upload-csv-ui .fileupload-new-text,
+.darkmode .document-uploading-label-file,
+.darkmode .upload-chat-title{
+    color: var(--white) !important;
+}
+.darkmode .myShareColum:before,
+.darkmode .myImortColum:before{
+    border: unset;
+}
+.darkmode .user-label{font-weight: normal}
+
+.darkmode #file-manager-tour {
+    background-color: var(--light-black-v2) !Important;
+}
+.darkmode .timeSlot1 {
+    background: var(--red);
+    border: 0.1rem solid var(--light-slate-brown-v2) !important;
+    background: var(--light-slate-brown-v2) !important;
+}
+
+.darkmode .timeSlot {
+    border: unset !important;
+}
+.darkmode .subCalenderdropdown ul,
+.darkmode .timeFormatterDropDown ul {
+    background: var(--light-slate-brown-v2) !important;
+    border: unset !important;
+}
+.darkmode .subCalenderdropdown ul li,
+.darkmode .timeFormatterDropDown ul li,
+.darkmode .timeFormat{
+    color: var(--white);
+}
+
+
+.darkmode .subCalenderdropdown::-webkit-scrollbar-track,
+.darkmode .timeFormatterDropDown::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.4rem transparent;
+    border-radius: 0.3rem;
+}
+
+.darkmode .subCalenderdropdown ul::-webkit-scrollbar-thumb,
+.darkmode .timeFormatterDropDown ul::-webkit-scrollbar-thumb {
+    background: var(--light-slate-brown-v2) !important;
+	border-radius: 0.3rem;
+}
+
+.darkmode .subCalenderdropdown ul::-webkit-scrollbar-thumb:hover,
+.darkmode .timeFormatterDropDown ul::-webkit-scrollbar-thumb:hover {
+    background: var(--light-slate-brown-v2) !important;
+}
+.darkmode .subCalendarOpacity{
+    background: var(--light-black-v2) !important;
+}
+.darkmode .eventTypeMiddle ul li {
+    background: var(--light-slate-brown-v2) !important;
+    border: 0.1rem solid var(--light-slate-brown-v2) !important;
+    color: var(--white);
+}
+.darkmode button.eventBottomBtnEdit{
+    background: var(--light-slate-brown-v2) !important;
+    border: 0.1rem solid var(--light-slate-brown-v2) !important;
+    color: var(--white);
+}
+.darkmode .dropDownCaret:before {
+    border-top: 1rem solid var(--light-slate-brown-v2);
+}
+.darkmode .dayNight{    
+    color: var(--white);
+}
+.darkmode .tour-title{
+    color: var(--white) !important;
+}
+
+.darkmode .notificationUnreadMsg {
+    background: var(--popup) !important;
+}
+.darkmode .settingRemove {
+    background: var(--popup);
+}
+.darkmode .team-collapse-section:hover {
+        background-color: var(--light-black-v2);
+}
+
+.darkmode .notify-rsvp-dropdown .dropdown li {
+        background-color: var(--light-slate-brown-v2);
+    border: unset;
+    color: var(--white);
+}
+.darkmode .notify-rsvp-dropdown .dropdown li:hover {
+background-color: var(--light-slate-brown-v2) !important;}
+
+.darkmode .msg-notification-parent {
+    color: var(--white);
+}
+
+.darkmode .notify-rsvp-dropdown-btn .dropdown:before, .rsvp.dropdown:before {
+    border-top: 0.6rem solid var(--light-slate-brown-v2) !important;
+    border-right: 0.6rem solid var(--light-slate-brown-v2) !important;
+}
+.darkmode .msg-notification-parent {
+    color: var(--white) !important;
+}
+.darkmode .characterlimitInput, .darkmode .characterlimittest {
+    color: var(--white) !important;
+}
+
+.darkmode .emojionearea.chat-input-area.chat-input-label{
+border-color: var(--light-slate-brown-v2) !important;
+}
+
+.darkmode .characterlimittest {
+    color: var(--white) !important;
+}
+.darkmode .list-group-item ul li:hover {
+    color: #EE4136;
+}
+.darkmode .common-sort-dropdown .filter-list-item li:hover {
+    background: var(--light-black-v2);
+}
+.darkmode .businessUserDropDown{
+background-color: var(--light-slate-brown-v2) !important;
+}
+.darkmode .businessUserDropDownItem {
+    color: var(--white) !important;
+    border-bottom: 0.1rem solid var(--dropdown) !important;
+}
+.darkmode .businessUserDropDownItem:last-child{
+    border-bottom: none !important;
+}
+
+.darkmode .desktopNotificationValueNewDrop{
+    background-color: var(--light-slate-brown-v2) !important;
+    color: var(--white) !important;
+    border:unset;}
+.darkmode  .desktopNotificationValueNewDrop:focus {
+    border:unset;}
+.darkmode  .gifPopupPanel {
+    background-color: var(--popup);
+}
+.darkmode .gifPopupPanel p {
+    color: var(--white) !important;
+}
+.darkmode .coachmarks-content, .darkmode .popover-content {
+    color: var(--white) !important;
+}
+.darkmode .skip-text {
+    color: var(--white) !important;
+}
+.darkmode .note-dimension-display {
+    color: var(--dark-black) !important;
+}
+.darkmode .note-editor .caret{
+    border-top: 4px solid var(--white) !important;
+
+}
+.darkmode .datepicker td.day:hover{
+    background-color:var(--light-slate-brown) !important;
+}
+
+.darkmode .seeAllPepoleBtn{
+    border-top: 0.1rem solid var(--light-brown);
+}

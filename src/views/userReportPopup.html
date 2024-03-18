@@ -1,0 +1,46 @@
+<!-- Select a reason to report start -->
+<section class="teamPopup-common" id="userReportPopup">
+   <div class="blockUserPopup">
+      <!-- block inside start here -->
+      <div class="blockUserInside ">
+         <div class="blockHeader">
+            <div class="blockUserHeadeing selectReasonHeader">{{LB12}}</div>
+         </div>
+         <div class="reportPersonAbsue selectReport">
+            <div class="reportPersonFormGroup">
+               <div class="reportSlots">
+                  <ul class="reasonList">
+                     <li class="reportAvailbe active" data-reason="1" onclick="selectReport(this)">
+                        <span class="reportSlotsSelect"><i class="reportsloticon"></i><span class="reportOption">{{LB05}}</span></span>
+                     </li>
+                     <li class="reportAvailbe" onclick="selectReport(this)">
+                        <span class="reportSlotsSelect"><i class="reportsloticon"></i><span class="reportOption">{{LB06}}</span></span>
+                     </li>
+                     <li class="reportAvailbe" onclick="selectReport(this)">
+                        <span class="reportSlotsSelect"><i class="reportsloticon"></i><span class="reportOption">{{LB07}}</span></span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="resportMsgBox">
+                  <textarea class="resportMsgBoxMsg" maxlength="400" rows="4" cols="50" placeholder="{{LB08}}" id="reportMsg" onkeyup="countReportChar(this)"></textarea>
+                  <div class="accountDescCount">
+                     <input type="hidden" name="descCarLimit" value="400">
+                     <div class="accountDescIncCount" id="reportMsgCounter">0</div>
+                     <div class="limitcharacter">/ 400</div>
+                  </div>
+               </div>
+               <div class="protectPrivacy">
+                  {{LB09}} <a href="https://www.melp.us/privacy-policy" target="_blank">{{LB10}}</a>
+               </div>
+            </div>
+         </div>
+         <!-- Report abuse for this person end -->
+         <div class="blockUserBtn">
+            <button class="cancelButtonGlobal" onclick="hideUserBlockPopUp('userReportPopup')">{{BT01}}</button>
+            <button class="submitButtonGlobal" id="blockBtn">{{BT03}}</button>
+         </div>
+      </div>
+      <!-- block inside end here -->
+   </div>
+</section>
+<!-- Select a reason to report end -->

@@ -1,0 +1,704 @@
+<div class="adminUserListing" id="userContainer">
+   <!-- loader start here-->
+   <div id="adminMainBodyLoader" class="loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+       <div class="ldio-dpbvxcmmyw">
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+           <div>
+               <div></div>
+           </div>
+       </div>
+   </div>
+   <!-- loader end here -->
+   <div class="adminUserListingContainer">
+
+    <section class="admin-empty-state hideCls">
+        <div class="admin-emty-container">
+           <img src="images/emptystate/group.svg" class="common-empty-img">
+           <div class="admin-empty-text-area">
+              <p class="admin-emty-head">SELECT A GROUP TO CONNECT</p>
+              <p class="admin-emty-content">Select a group from the left panel and start<br>Select users from different department and perform actions</p>
+        
+           </div>
+        </div>
+     </section>
+
+
+       <div class="manageDomainRow">
+           <div class="manageDomainStrip">
+               <div class="manageDomainLeftColum">
+                   <div class="adManageBtn">
+                       <button type="" class="adButtonA3" id="addUserBtn" onclick="openInvite('manual')"><img
+                               src="images/admin/icons/person_add.svg">Add User</button>
+                       <button type="" class="adButtonA3" id="refreshBtn" onclick="showUserInfo('all', 'sort' , '' , '' , true)"><img
+                               src="images/admin/icons/refresh.svg">Refresh</button>
+                       <button type="" class="adButtonA3" id="adminBtn" onclick="applyFilter('category', 3)"><img
+                               src="images/admin/icons/subtract.svg">Admins</button>
+                       <button type="" class="adButtonA3" id="addColumnBtn" onclick="openFilterPanel(2)"><img
+                               src="images/admin/icons/addbox.svg">Add Columns</button>
+                        <button type="" class="adButtonA3" id="exportUserlbl" onclick="exportUser()"><img 
+                                src="images/admin/icons/export_notes.svg" />Export Users</button>
+                   </div>
+                   <!-- <h2>Manage Domain</h2>
+                   <p>Managing Your Domain Name in Your Admin Panel: Steps for Domain Control and Configuration</p> -->
+               </div>
+               <div class="manageDomainRightColum">
+                   <div class="domainSaerchSec">
+                       <input placeholder="Search by name, email" class="manageDomainSearch" id="userNameEmailSearch"
+                           onkeyup="typeGlobalSearch(event)" type="text" autocomplete="off">
+                       <span class="manageDomainSaerchIcon"></span>
+                   </div>
+                   <div class="manageDomainFilter" id="filterIcon" onclick="openFilterPanel(1)">
+                       <span class="domainFiltter">
+                           <img src="images/admin/icons/domainfilter.svg">
+                       </span>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="adminScrollA2" style="display: nsone;" id="userMainSection">
+        <input type="hidden" id="addColumnChecked" value="false">
+        <input type="hidden" id="sortBy" value="FULL_NAME">
+       <div class="adminUserListRow">
+           <div class="adminUserListHeader">
+               <div class="adminListingTop">
+                   <!-- adminuserlist start -->
+                   <div class="adminListUser">
+                    <div class="adminSearch">
+                        <span class="adminserchHeaderIcon" onclick="selectAll('selectAllImg', 'adminCheckbox')">
+                            <img id="selectAllImg" src="images/contact.svg">
+                        </span>
+                    </div>
+                    <!-- adminuserlist start -->
+                    <div class="adminListUser">
+                        <div class="adminListingFilter">
+                            <div class="adminShortFiltter">
+                                <span class="shortIcon adminListigBg FULL_NAME" data-order="1"
+                                    onclick="sortUserList('FULL_NAME', this)">Full Name</span>
+                                    <span class="shortIcon adminListigBg USER_NAME hideCls" data-order="1"
+                                    onclick="sortUserList('USER_NAME', this)">Full Name</span>
+                            </div>
+                        </div>
+                        <div class="adminAddress">
+                            <div class="adminInnerAddress"><span class="adminListigBg">Email Address</span> </div>
+                        </div>
+                        <div class="adminStatus" id="statusCol" onclick="statusDropdown(true)">
+                            <div class="adminInnerStatus"><span class="adminListigBg">Status <img
+                                        src="images/icons/statusCaret.svg"></span></div>
+                            <div class="adminInnerStatusDropDown" id="adminInnerStatusDropDown">
+                                <div class="form__group">
+                                    <div class="form__radio-group" onclick="changeUserFilterStatus('all')">
+                                        <input type="radio" name="size" id="allUsers"
+                                            class="form__radio-input statusRadioBtn">
+                                        <label class="form__label-radio" for="AllUsers" class="form__radio-label">
+                                            <span class="form__radio-button"></span> All Users
+                                        </label>
+                                    </div>
+
+                                    <div class="form__radio-group" onclick="changeUserFilterStatus('active')">
+                                        <input type="radio" name="size" id="activeUsers"
+                                            class="form__radio-input statusRadioBtn">
+                                        <label class="form__label-radio" for="ActiveUsers" class="form__radio-label">
+                                            <span class="form__radio-button"></span> Active Users
+                                        </label>
+                                    </div>
+                                    <div class="form__radio-group" onclick="changeUserFilterStatus('inactive')">
+                                        <input type="radio" name="size" id="inactiveUsers"
+                                            class="form__radio-input statusRadioBtn">
+                                        <label class="form__label-radio" for="InactiveUsers" class="form__radio-label">
+                                            <span class="form__radio-button"></span> Inactive Users
+                                        </label>
+                                    </div>
+                                    <!-- <div class="form__radio-group" onclick="changeUserFilterStatus('delete')">
+                                        <input type="radio" name="size" id="deleteUsers"
+                                            class="form__radio-input statusRadioBtn">
+                                        <label class="form__label-radio" for="DeletedUsers" class="form__radio-label">
+                                            <span class="form__radio-button"></span> DeletedUsers
+                                        </label>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adminStatus" id="DeletedstatusCol">
+                            <div class="adminInnerStatus"><span class="adminListigBg">Status</span></div>
+                        </div>
+                        <div class="adminJoining deletedBy hideCls">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg" data-order="1" onclick="">Deleted By</span> </div>
+                        </div>
+                        <div class="adminJoining deletedDate hideCls">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg shortIcon DELETE_ON" data-order="1" onclick="sortUserList('DELETE_ON', this)">Deleted Date</span> </div>
+                        </div>
+                        <div class="adminJoining">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg shortIcon JOIN_START" data-order="1" onclick="sortUserList('JOIN_START', this)">Joining Date</span> </div>
+                        </div>
+                        <div class="adminJoining departmentCol departmentWidth hideCls">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg shortIcon DEPARTMENT" data-order="1" onclick="sortUserList('DEPARTMENT', this)">Department</span> </div>
+                        </div>
+                        <div class="adminJoining designationCol designationColWidth hideCls">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg shortIcon PROFILE" data-order="1" onclick="sortUserList('PROFILE', this)">Designation</span> </div>
+                        </div>
+                        <div class="adminJoining skillsCol skillColWidth hideCls">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg shortIcon SKILL" data-order="1" onclick="sortUserList('SKILL', this)">Skills</span> </div>
+                        </div>
+                        <div class="adminJoining locationCol locationWidth hideCls">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg shortIcon" data-order="1" onclick="">Location</span> </div>
+                        </div>
+                        <div class="adminJoining deactivateDateCol deactivateDateColWidth hideCls">
+                            <div class="adminInnerJoiningDate"><span class="adminListigBg shortIcon TERMINATE_START" data-order="1" onclick="sortUserList('TERMINATE_START', this)">Deactivate Date</span> </div>
+                        </div>
+                        <div class="adminActiveDeactive">
+                            <div class="adminInnerActiveDeactive"> <span class="adminListigBg">Deactivate / Activate
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- adminuserlist end -->
+                </div>
+                <div class="adminListingRow"></div>
+            </div>
+            <div class="adminListingScroll screenHeight" id="adUserListArea">
+                <!-- <div class="sdsf"></div> -->
+            </div>
+        </div>
+        
+        
+            <div class="paginationWrap">
+                <div class="paginationResult">
+                    <div class="paginationResultBox" onclick="openPageSizeSelection()">
+                        <span class="adResultA2">
+                            <span class="resultBox"><span>Results</span></span>
+                            <span class="adPaginationA2">
+                                <span id="pagesize">20 <img src="images/icons/paginationCret.svg"></span>
+                            </span>
+                        </span>
+                        <div class="paginationDropDown" id="paginationDropDown">
+                            <ul>
+                                <li class="selected" onclick="changePageSize(20, this)">20</li>
+                                <li onclick="changePageSize(50, this)">50</li>
+                                <li onclick="changePageSize(75, this)">75</li>
+                                <li onclick="changePageSize(100, this)">100</li>
+                                <li onclick="changePageSize(150, this)">150</li>
+                                <li onclick="changePageSize(200, this)">200</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEACTIVATE and Export selected btn  -->
+                <div class="deactiveExportBtn hideCls" id="deactiveExportBtn">
+                    <button class="activDeactiveBtn" onclick="deactiveAll()">DEACTIVATE </button>
+                    <!-- <button class="activDeactiveBtn">Export selected </button> -->
+                </div>
+                <!-- DEACTIVATE and Export selected btn  -->
+                <div class="pagination" id="pagination"></div>
+    </div>
+   </div>
+</div>
+
+<div class="adminPanelFilterF1 hide" id="userFilterPanel">
+   <div class="adFilterTopColum">
+       <span class="filterArrow" onclick="openFilterPanel(1)"><img src="images/admin/icons/filterArrow.svg"></span>
+       <h3>Select Filters</h3>
+   </div>
+   <div class="adfilterOptions">
+       <div class="adFilterColumF2">
+           <div class="adColum">
+               <label class="adFilterLabel">Department</label>
+               <span class="adUserListS1">
+                   <!-- <span class="adminCloseA1"><img src="images/admin/icons/arrowtop.svg"></span> adFilterInputA111 -->
+                   <input type="text" class="departm1entA1 bgRemove1" placeholder="Select department"
+                       id="filterDepartment" onfocus="showDepartment()" onkeyup="searchFieldInfo(event, 1)" />
+                   <span class="adFilterS2 hideCls" id="selectedDepartmentsDiv"></span>
+               </span>
+
+                <!--saerch drop down item-->
+                <div class="adSearchFilters hideCls" id="departmentDiv">
+                    <div class="adSearchFiltersWrap adCommonFiletrs adSearchFiltersSpace">
+                        <div id="adminDepartmentLoader"
+                            class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                            <div class="ldio-dpbvxcmmyw">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adListL1">
+                            <ul class="adListingD1 ddContainer">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--saerch drop down item-->
+            </div>
+        </div>
+
+       <div class="adFilterColumF2">
+           <div class="adColum">
+               <label class="adFilterLabel">Designation</label>
+               <span class="adUserListS1">
+                   <input type="text" class="departm1entA1 bgRemove1" placeholder="Select Designations"
+                       id="filterProfile" onfocus="showProfile()" onkeyup="searchFieldInfo(event, 2)" />
+                   <span class="adFilterS2 hideCls" id="selectedProfilesDiv"></span>
+               </span>
+
+                <!--saerch drop down item-->
+                <div class="adSearchFilters hideCls" id="profileDiv">
+                    <div class="adSearchFiltersWrap adCommonFiletrs adSearchFiltersSpace">
+                        <div id="adminProfileLoader"
+                            class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                            <div class="ldio-dpbvxcmmyw">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adListL1">
+                            <ul class="adListingD1 ddContainer">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="adFilterColumF2 adFilterRowC3">
+            <label class="adFilterLabel">Joining Date</label>
+            <div class="adColum adJoinA1" onclick="openCalendar('JoinStartDate')">
+                <div class="adFilterInputA1" id="JoinStartDateDiv">Start date</div>
+                <input type="hidden" id="JoinStartDateInput" value="" />
+            </div>
+            <div class="adSearchFilters dateFilterA1 dateFilter hideCls" data-range="JoinStartDate" id="JoinStartDate"></div>
+            <div class="adColum adJoinA2" onclick="openCalendar('JoinEndDate')">
+                <div class="adFilterInputA1" id="JoinEndDateDiv">End date</div>
+                <input type="hidden" id="JoinEndDateInput" value="" />                
+            </div>
+            <div class="adSearchFilters dateFilterA4 dateFilter hideCls" data-range="JoinStartDate" id="JoinEndDate"></div>
+        </div>
+
+        <div class="adFilterColumF2 adFilterRowC3">
+            <label class="adFilterLabel">Deactivate Date</label>
+            <div class="adColum adJoinA1" onclick="openCalendar('leaveStartDate')">
+                <div class="adFilterInputA1" id="leaveStartDateDiv">Start date</div>
+                <input type="hidden" id="leaveStartDateInput" value="" />
+            </div>
+            <div class="adSearchFilters dateFilterA1 dateFilter hideCls" data-range="leaveStartDate" id="leaveStartDate"></div>
+            <div class="adColum adJoinA2" onclick="openCalendar('leaveEndDate')">
+                <div class="adFilterInputA1" id="leaveEndDateDiv">End date</div>
+                <input type="hidden" id="leaveEndDateInput" value="" />
+            </div>
+            <div class="adSearchFilters dateFilterA4 dateFilter hideCls" data-range="leaveStartDate" id="leaveEndDate"></div>
+        </div>
+
+
+       <div class="adFilterColumF2">
+           <div class="adColum">
+               <label class="adFilterLabel">Location</label>
+               <input class="adFilterInputA1 bgRemove" id="locationInput" value="" placeholder="Enter work location..."
+                   onkeyup="searchLocation(event)">
+               <!--saerch drop down item-->
+               <div class="adSearchFilters hideCls" id="locationDiv">
+                   <div class="adSearchFiltersWrap adCommonFiletrs adSearchFiltersSpace adSearchWidth">
+                       <div id="adminLocationLoader"
+                           class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                           <div class="ldio-dpbvxcmmyw">
+                               <div>
+                                   <div></div>
+                               </div>
+                               <div>
+                                   <div></div>
+                               </div>
+                               <div>
+                                   <div></div>
+                               </div>
+                               <div>
+                                   <div></div>
+                               </div>
+                               <div>
+                                   <div></div>
+                               </div>
+                               <div>
+                                   <div></div>
+                               </div>
+                               <div>
+                                   <div></div>
+                               </div>
+                               <div>
+                                   <div></div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="adListL1">
+                           <ul class="adListingD1 adListingLocation"></ul>
+                       </div>
+                   </div>
+               </div>
+               <!--saerch drop down item-->
+           </div>
+       </div>
+       <div class="adRightBtn resetButtonColumB2">
+           <button class="addUserBtn" onclick="resetFilter(true)">Reset</button>
+           <button class="addUserBtnDelete" onclick="applyFilter('all')">Apply Filter</button>
+       </div>
+   </div>
+</div>
+
+
+<div class="adminSelectColumsA1 hideCls" id="columnPanel">
+   <div class="adminSelectColumnsRow">
+       <div class="adFilterTopColum">
+           <span class="filterArrow" onclick="openFilterPanel(2)"><img src="images/admin/icons/filterArrow.svg"></span>
+           <h3>Select columns</h3>
+       </div>
+       <div class="adSelectColumA2">
+           <h2>Column List</h2>
+           <div class="adSelectA2">
+               <ul class="adSelectA3">
+                   <li id="nameCol" class="adSelectInActive">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox defaultChecked"></p>
+                           <p class="adListingD4">Full Name</p>
+                       </span>
+                   </li>
+                   <li id="emailCol" class="adSelectInActive">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox defaultChecked"></p>
+                           <p class="adListingD4">Email Address</p>
+                       </span>
+                   </li>
+                   <li id="statusCol" class="adSelectInActive">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox defaultChecked"> </p>
+                           <p class="adListingD4">Status</p>
+                       </span>
+                   </li>
+                   <li id="joinCol" class="adSelectInActive">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox defaultChecked"></p>
+                           <p class="adListingD4">Joinging Date</p>
+                       </span>
+                   </li>
+                   <li id="departmentCol" class="otherColumn" onclick="addColumns(this)">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox"></p>
+                           <p class="adListingD4">Department</p>
+                       </span>
+                   </li>
+                   <li id="designationCol" class="otherColumn" onclick="addColumns(this)">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox"></p>
+                           <p class="adListingD4">Designation</p>
+                       </span>
+                   </li>
+                   <li id="skillsCol" class="otherColumn" onclick="addColumns(this)">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox"></p>
+                           <p class="adListingD4">Skills</p>
+                       </span>
+                   </li>
+                   <li id="deactivateDateCol" class="otherColumn" onclick="addColumns(this)">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox"></p>
+                           <p class="adListingD4">Deactivate Date</p>
+                       </span>
+                   </li>
+                   <li id="locationCol" class="otherColumn" onclick="addColumns(this)">
+                       <span class="adListingD2">
+                           <p class="adListingD3 adminCheckbox"></p>
+                           <p class="adListingD4">Location</p>
+                       </span>
+                   </li>
+               </ul>
+           </div>
+           <div class="adRightBtn resetButtonColumB2">
+               <button class="addUserBtn" onclick="resetColumns()">Reset</button>
+               <button class="addUserBtnDelete" onclick="applyAddColumns()">Apply</button>
+           </div>
+       </div>
+   </div>
+</div>
+
+<div class="adminPanelFilterF1 hideCls" id="deleteUserFilterPanel">
+    <div class="adFilterTopColum">
+        <span class="filterArrow" onclick="openFilterPanel(3)"><img src="images/admin/icons/filterArrow.svg"></span>
+        <h3>Select Filters</h3>
+    </div>
+    <div class="adfilterOptions">
+        <!-- <div class="delteUserPanel"> -->
+         <div class="adFilterColumF2 adFilterRowC3">
+             <label class="adFilterLabel">Deleted From</label>
+             <div class="adColum adJoinA1" onclick="openCalendar('deletedFrom')">
+                 <div class="adFilterInputA1" id="deletedFromDiv">Deleted From</div>
+                 <input type="hidden" id="deletedFromInput" value="" />
+             </div>
+             <div class="adSearchFilters dateFilterA1 dateFilter hideCls" data-range="deletedFrom" id="deletedFrom"></div>
+             <!-- <label class="adFilterLabel">Deleted To</label> -->
+             <div class="adColum adJoinA2" onclick="openCalendar('deletedTo')">
+                <div class="adFilterInputA1" id="deletedToDiv">Deleted To</div>
+                <input type="hidden" id="deletedToInput" value="" />                
+            </div>
+            <!-- <div class="adSearchFilters dateFilterA4 dateFilter hideCls" data-range="JoinStartDate" id="JoinEndDate"></div> -->
+            <!-- </div> -->
+             <div class="adSearchFilters dateFilterA4 dateFilter hideCls" data-range="deletedTo" id="deletedTo"></div>
+         </div> 
+         <div class="adFilterColumF2">
+            <div class="adColum">
+                <label class="adFilterLabel">Deleted By</label>
+                <span class="adUserListS1">
+                    <input type="text" class="departm1entA1 bgRemove1" placeholder="Select Participants"
+                        id="searchDeletedParticipantsInput" onkeyup="searchDeletedParticipants(event)" />
+                    <span class="adFilterS2 hideCls" id="selectedParticipantsDiv"></span>
+                </span>
+ 
+                 <!--saerch drop down item-->
+                 <div class="adSearchFilters participantsListingA2 hideCls" id="participantsDiv">
+                     <div class="adSearchFiltersWrap adCommonFiletrs adSearchFiltersSpace">
+                         <div id="participantsLoader"
+                             class="righPanelLoader loadingio-spinner-spin-ethrqhs3zzm spinner hideCls">
+                             <div class="ldio-dpbvxcmmyw">
+                                 <div>
+                                     <div></div>
+                                 </div>
+                                 <div>
+                                     <div></div>
+                                 </div>
+                                 <div>
+                                     <div></div>
+                                 </div>
+                                 <div>
+                                     <div></div>
+                                 </div>
+                                 <div>
+                                     <div></div>
+                                 </div>
+                                 <div>
+                                     <div></div>
+                                 </div>
+                                 <div>
+                                     <div></div>
+                                 </div>
+                                 <div>
+                                     <div></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="adListL1">
+                             <ul class="adListingD1 searchEmptyResult ddContainer">
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        <div class="adRightBtn resetButtonColumB2">
+            <button class="addUserBtn" onclick="resetFilter(true)">Reset</button>
+            <button class="addUserBtnDelete" onclick="applyFilter('all')">Apply Filter</button>
+        </div>
+    </div>
+ </div>
+<div class="adminGroupA1 hideCls" id="groupItem">
+   <div class="adminGroupRowA2">
+       <div class="adminGroupA3">
+           <div class="adminGroupA4">
+               <div class="adminGroupTopA5">
+                   <span class="adminGroupA6"><img src="images/admin/adminGroup.jpg"></span>
+               </div>
+               <div class="adminGroupTestA7">
+                   <sapn class="adminGroupHeadeA8">General Discussion</sapn>
+                   <span class="adminGroupA9">A diverse conversation encouraging open sharing and exchange of
+                       ideas among participants.</span>
+               </div>
+           </div>
+           <div class="adminParticipantsA1">
+               <div class="adminParticipantsA2">
+                   <div class="domainSaerchSec">
+                       <input placeholder="Search by name, email" class="manageDomainSearch" id="userNameEmailSearch"
+                           onkeyup="typeGlobalSearch(event)" type="text" autocomplete="off">
+                       <span class="manageDomainSaerchIcon"></span>
+                   </div>
+               </div>
+               <div class="adminParticipantsListA1">
+                   <ul>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class="adminParticipantsInnerListA2">
+                               <span class="adminParticipantsIconA1"><img
+                                       src="https://cdnmedia-fm.melpapp.com/6077d379-df4a-406a-bb85-c116aa9e8aa0/9594@f385@download1=.jfif"></span>
+                               <span class="adminParticipantsUserA2">Benjamin Gomez</span>
+                               <span class="adminParticipantsUserA3"><img
+                                       src="images/admin/icons/moreoptions.svg"></span>
+                           </span>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
