@@ -8,9 +8,28 @@ const { RemoteControl,
 // ipcRenderer.
 const whitelistedIpcChannels = ['protocol-data-msg', 'renderer-ready'];
 
-// const ElectronStore = require('electron-store');
-// ElectronStore.initRenderer();
-//const store = new electronStore();
+function sendToMain(channel, data) {
+    ipcRenderer.send(channel, data);
+}
+
+// Function to receive data from main.js in preload.js
+function receiveFromMain(channel, callback) {
+    ipcRenderer.on(channel, (event, data) => {
+        callback(data);
+    });
+}
+
+// Function to demonstrate usage within communication.js
+function exampleFunction() {
+    console.log("This is an example function in preload.js");
+}
+
+// Expose functions to be used in communication.js
+window.preloadAPI = {
+    sendToMain,
+    receiveFromMain,
+    exampleFunction
+};
 
 /**
  * Open an external URL.
@@ -23,13 +42,21 @@ function openExternalLink(url) {
 }
 
 contextBridge.exposeInMainWorld('electron', {
-    // Expose a function to receive the melpCallInst object from the renderer process
-    setMelpCallInstance: (melpCallInst) => {
-        console.log(`contextBridge called ${JSON.stringify(melpCallInst)}`)
-        window.melpCallInst = melpCallInst;
+    openNewWindow: (url, name, size) => {
+        console.log('Opening new window...');
+        ipcRenderer.send('open-new-window', { url, name, size });
+    },
+    setuprenderer : (api , options) => {
+        window.jitsiNodeAPI.setuprenderer(api,options);
+    }, 
+    hello : () => {
+        console.log("HEllo bro from preload.js");
     }
 });
 
+window.hello = () => {
+    console.log('Hello bro from preload')
+}
 
 /**
  * Setup the renderer process.

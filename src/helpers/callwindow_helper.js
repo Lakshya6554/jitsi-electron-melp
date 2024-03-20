@@ -20,10 +20,13 @@ let channel = new BroadcastChannel(channelName);
 channel.postMessage({ callWindowLoaded: [true] });
 
 $(document).ready(function () {
-    const callURL = window.location.hash.substring(1);
-    const callPckt = callURL.split("/");
-    const RoomId = callPckt[0];
+    const callURL = window.location.hash;
+    console.log(callURL);
+    const callPckt = callURL.split("\\");
+    const RoomId = callPckt[0].substring(1);
+    debugger
     const accessToken = callPckt[1];
+    debugger
     callObj = callInst.utilityObj.getLocalSessionData("callinformations", true, RoomId);
 
     /** 
@@ -86,8 +89,11 @@ window.openCallScreen = function (roomId, accesstoken) {
      */
     melpCallInst = new JitsiMeetExternalAPI(JITSE_BASE, options);
     window.externalCallApi = melpCallInst;
-    //window.jitsiNodeAPI.setupRenderer(melpCallInst);
-    electron.setMelpCallInstance(melpCallInst);
+    console.log(`Melp call instance --> ${JSON.stringify(melpCallInst)}`)
+    console.log(`options --> ${JSON.stringify(options)}`)
+    // electron.setMelpCallInstance(melpCallInst , options);
+    electron.setuprenderer(melpCallInst, options);
+    // window.jitsiNodeAPI.setuprenderer(melpCallInst , options);
 
 
     listenCallPackets(roomId, myEmailId);

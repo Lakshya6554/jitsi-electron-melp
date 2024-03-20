@@ -2218,7 +2218,8 @@ export default class AppController {
 			document.body.removeChild(callLink) */;
 
 			// let newWindow = window.open(url, name, size);
-			let newWindow = openNewWindow(url,name,size)
+			debugger
+			let newWindow = electron.openNewWindow(url,name,size)
 			// Check if the new window was successfully opened
 			if (newWindow) {
 				_this.openedWindows[`${name}`] = newWindow;
@@ -2232,7 +2233,9 @@ export default class AppController {
 				});
 			}
 		} else {
-			let win = window.open(url, name, size);
+			let win = electron.openNewWindow(url,name,size)
+			let newWindow = electron.openNewWindow(url,name,size)
+
 			_this.openedWindows[`${name}`] = win;
 		}
 		if(callback) callback('callback called');
