@@ -24,9 +24,7 @@ $(document).ready(function () {
     console.log(callURL);
     const callPckt = callURL.split("\\");
     const RoomId = callPckt[0].substring(1);
-    debugger
     const accessToken = callPckt[1];
-    debugger
     callObj = callInst.utilityObj.getLocalSessionData("callinformations", true, RoomId);
 
     /** 
@@ -92,9 +90,19 @@ window.openCallScreen = function (roomId, accesstoken) {
     console.log(`Melp call instance --> ${JSON.stringify(melpCallInst)}`)
     console.log(`options --> ${JSON.stringify(options)}`)
     // electron.setMelpCallInstance(melpCallInst , options);
-    electron.setuprenderer(melpCallInst, options);
+    // const newMelpcallinst = { ...melpCallInst };
+    electron.setuprenderer(JSON.parse(JSON.stringify(melpCallInst)), options);
+    // window.jitsiNodeAPI.setupRenderer(melpCallInst, options);
     // window.jitsiNodeAPI.setuprenderer(melpCallInst , options);
+    // window.jitsi
+    melpCallInst.on("_requestDesktopSources", async (request, callback) => {
+        const { options } = request;
+        console.log(`options in the request desktop sources ----> ${options}`)
 
+        window.jitsiAPI.getDesktopSources(options)
+            .then(sources => callback({ sources }))
+            .catch((error) => callback({ error }));
+    });
 
     listenCallPackets(roomId, myEmailId);
 
@@ -205,14 +213,14 @@ const listenCallPackets = function (roomId, myEmailId) {
                     window.openAttendeesPanel(true);
 
                     /* Hide waiting Participant if not organizer */
-                    if (!is_organiser) document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideWaitingParBtn", "https://meetstaging.melp.us");
+                    if (!is_organiser) document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideWaitingParBtn", "https://meet.melpapp.com");
                 } else {
 
                     /* Calling Tone will be play for all caller and groupt types except meeting */
                     callInst.utilityObj.PlayCallDialSound();
 
                     /* Hide waiting participants, if not meeting call */
-                    document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideWaitingParBtn", "https://meetstaging.melp.us");
+                    document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideWaitingParBtn", "https://meet.melpapp.com");
                 }
                 /* Check Participant join the call or not (only for one-to-one call), if not then resend the request in 15,30 and 45 seconds */
                 //if (grouptype == 6) reattemptCounterStart(reattemptCnt);
@@ -220,7 +228,7 @@ const listenCallPackets = function (roomId, myEmailId) {
                 /* Calling Tone will be play for all caller and groupt types except meeting */
                 callInst.utilityObj.PlayCallDialSound();
                 /* Hide invite button, if user is add to call user from private room */
-                document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideInviteBtn", "https://meetstaging.melp.us");
+                document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideInviteBtn", "https://meet.melpapp.com");
             }
 
             /**
@@ -253,7 +261,7 @@ const listenCallPackets = function (roomId, myEmailId) {
             /* Calling Tone will be play for all caller and groupt types except meeting */
             callInst.utilityObj.PlayCallDialSound();
             /* Hide invite button, if user is add to call user from private room */
-            document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideInviteBtn", "https://meetstaging.melp.us");
+            document.getElementById('jitsiConferenceFrame0').contentWindow.postMessage("hideInviteBtn", "https://meet.melpapp.com");
         }
 
         if (participantCnt > 1) {
@@ -388,7 +396,7 @@ const listenCallPackets = function (roomId, myEmailId) {
 const receiveMessage = function (event) {
     /* Below is for security    purpose, it will verify the request origin. */
     let loginUserInfo = callInst.getUserInfo();
-    if (event.origin !== "https://meetstaging.melp.us") return;
+    if (event.origin !== "https://meet.melpapp.com") return;
     // for kicked user => closeKickedParticipant
     switch (event.data) {
         case 'inviteclicked':
@@ -597,16 +605,16 @@ window.endCallScreen = function (roomId, statusCode = false) {
 window.removeToggleButtonFromChat = function (type) {
     switch (type) {
         case 'chat':
-            document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("chatEvent", "https://meetstaging.melp.us");
+            document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("chatEvent", "https://meet.melpapp.com");
             break;
         case 'invite':
-            document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("addUserEvent", "https://meetstaging.melp.us");
+            document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("addUserEvent", "https://meet.melpapp.com");
             break;
         case 'fullscreenclicked':
-            document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("fullscreenclicked", "https://meetstaging.melp.us");
+            document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("fullscreenclicked", "https://meet.melpapp.com");
             break;
         case 'msgNotification':
-            if ($("#callFrame #chatDiv").hasClass("hideCls")) document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("messageEvent", "https://meetstaging.melp.us");
+            if ($("#callFrame #chatDiv").hasClass("hideCls")) document.getElementById("jitsiConferenceFrame0").contentWindow.postMessage("messageEvent", "https://meet.melpapp.com");
             break;
     }
 };

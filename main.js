@@ -1,6 +1,14 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, desktopCapturer, session } = require('electron')
 const path = require('path')
+// const {
+//   initPopupsConfigurationMain,
+//   getPopupTarget,
+//   RemoteControlMain,
+//   setupAlwaysOnTopMain,
+//   setupPowerMonitorMain,
+//   setupScreenSharingMain
+// } = require('@jitsi/electron-sdk');
 
 // import { app, BrowserWindow } from "electron";
 // import path from "path";
@@ -9,7 +17,7 @@ const path = require('path')
 const electronStore = require('electron-store');
 electronStore.initRenderer();
 const store = new electronStore();
-let melpCalllInst , Options;
+let melpCalllInst, Options;
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -17,16 +25,20 @@ const createWindow = () => {
     height: 800,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      webSecurity: false, // Allow accessing local resources
-      allowRunningInsecureContent: true, // Allow running insecure content
-      webgl: true, // Enable WebGL rendering
-      nodeIntegration: true,
+      // webSecurity: false, // Allow accessing local resources
+      // allowRunningInsecureContent: true, // Allow running insecure content
+      // webgl: true, // Enable WebGL rendering
+      // nodeIntegration: false,
+      enableBlinkFeatures: 'WebAssemblyCSP',
+      contextIsolation: true,
+      nodeIntegration: false,
+      sandbox: false
     }
   })
 
   // and load the index.html of the app.
   mainWindow.loadFile('./src/index.html')
-  // mainWindow.loadURL('https://meetstaging.melp.us');
+  // mainWindow.loadURL('https://meet.melpapp.com');
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
@@ -47,15 +59,35 @@ ipcMain.on('electron-store-get-data', (event, key) => {
   // Send the retrieved data back to the renderer process
   event.returnValue = data;
 });
+ipcMain.on("jitsi-screen-sharing-get-sources", (_event, options) =>{
+ console.log(`Hello from main.js ${options}`);
+  desktopCapturer.getSources(options).then((sources) => {
+    console.log(`sources in desktop capturer ---> ${sources}`)
+    return sources.map(item => {
+      return {
+        ...item,
+        thumbnail: {
+          dataUrl: item.thumbnail.toDataURL()
+        }
+      }
+    });
+  })
+}
+);
+let newWindow = null;
 ipcMain.on('open-new-window', (event, args) => {
   // openNewWindow(args.url, args.name, args.size);
-  let newWindow = new BrowserWindow({
+  newWindow = new BrowserWindow({
     width: args.size.width, height: args.size.height, webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      webSecurity: false, // Allow accessing local resources
-      allowRunningInsecureContent: true, // Allow running insecure content
-      webgl: true, // Enable WebGL rendering
-      nodeIntegration: true,
+      // webSecurity: false, // Allow accessing local resources
+      // allowRunningInsecureContent: true, // Allow running insecure content
+      // webgl: true, // Enable WebGL rendering
+      // nodeIntegration: false,
+      enableBlinkFeatures: 'WebAssemblyCSP',
+      contextIsolation: true,
+      nodeIntegration: false,
+      sandbox: false
     }
   });
   newWindow.loadURL(path.join(__dirname, `./src/${args.url}`));
@@ -63,15 +95,16 @@ ipcMain.on('open-new-window', (event, args) => {
     newWindow = null;
   });
   newWindow.webContents.on('did-finish-load', () => {
-    newWindow.webContents.send('initialize-electron', { melpCalllInst , Options });
+    newWindow.webContents.send('initialize-electron', { melpCalllInst, Options });
   });
+  newWindow.webContents.openDevTools()
 });
 ipcMain.on('melpCallInst', (event, melpCallInst) => {
-    melpCalllInst =  melpCallInst;
-    console.log(`Melpcall instance in main.js ${melpCallInst}`);
+  melpCalllInst = melpCallInst;
+  console.log(`Melpcall instance in main.js ${melpCallInst}`);
 });
 ipcMain.on('options', (event, options) => {
-  Options =  options;
+  Options = options;
 });
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -97,6 +130,19 @@ app.whenReady().then(() => {
   //         }
   //     })
   // }
+  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+    let headers = details.responseHeaders;
+    if (headers['Permissions-Policy']) {
+      // Modify existing Permissions-Policy header
+      headers['Permissions-Policy'] += ', screen-wake-lock=*';
+    } else {
+      // Add Permissions-Policy header if not present
+      headers['Permissions-Policy'] = 'screen-wake-lock=*';
+    }
+
+    // Pass the modified headers back
+    callback({ responseHeaders: headers });
+  });
 
 
   app.on('activate', () => {

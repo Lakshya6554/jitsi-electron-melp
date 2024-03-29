@@ -1,9 +1,11 @@
-import { IpcRenderer } from "electron";
+// import { IpcRenderer } from "electron";
 // Import communication functions from preload.js
+import {PreloadManager} from "./preload.js";
 const { sendToMain, receiveFromMain, exampleFunction } = window.preloadAPI;
-
 exampleFunction();
 
+const pm = new PreloadManager();
+pm.hello()
 // Example usage of sending data to main.js
 sendToMain('preload-data', { message: 'Hello from communication.js to preload.js!' });
 

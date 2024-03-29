@@ -110,6 +110,9 @@ function customShortcutAction() {
 	alert('Custom shortcut triggered!');
 } */
 
+console.log('====================================');
+console.log('Global event helper loaded');
+console.log('====================================');
 
 /**
  * @Breif - Implemented visibility check

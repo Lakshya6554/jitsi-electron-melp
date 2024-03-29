@@ -2234,8 +2234,6 @@ export default class AppController {
 			}
 		} else {
 			let win = electron.openNewWindow(url,name,size)
-			let newWindow = electron.openNewWindow(url,name,size)
-
 			_this.openedWindows[`${name}`] = win;
 		}
 		if(callback) callback('callback called');
