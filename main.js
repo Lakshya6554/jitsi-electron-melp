@@ -59,8 +59,8 @@ ipcMain.on('electron-store-get-data', (event, key) => {
   // Send the retrieved data back to the renderer process
   event.returnValue = data;
 });
-ipcMain.on("jitsi-screen-sharing-get-sources", (_event, options) =>{
- console.log(`Hello from main.js ${options}`);
+ipcMain.on("jitsi-screen-sharing-get-sources", (_event, options) => {
+  console.log(`Hello from main.js ${options}`);
   desktopCapturer.getSources(options).then((sources) => {
     console.log(`sources in desktop capturer ---> ${sources}`)
     return sources.map(item => {

@@ -91,7 +91,7 @@ window.openCallScreen = function (roomId, accesstoken) {
     console.log(`options --> ${JSON.stringify(options)}`)
     // electron.setMelpCallInstance(melpCallInst , options);
     // const newMelpcallinst = { ...melpCallInst };
-    electron.setuprenderer(JSON.parse(JSON.stringify(melpCallInst)), options);
+    // electron.setuprenderer(JSON.parse(JSON.stringify(melpCallInst)), options);
     // window.jitsiNodeAPI.setupRenderer(melpCallInst, options);
     // window.jitsiNodeAPI.setuprenderer(melpCallInst , options);
     // window.jitsi
